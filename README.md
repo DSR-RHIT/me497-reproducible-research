@@ -19,7 +19,7 @@ We explore the principles and practices of reproducible research, from gathering
 Begin the tutorials that comprise Project 1
 
 - [Initialize project 1](week_01/cm004_initialize-project-1.md)
-- [Download files](week_01/cm004_downloads.md)
+- [Download files](week_01/cm005_downloads.md)
 
 
 
