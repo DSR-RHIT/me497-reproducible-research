@@ -4,11 +4,6 @@
 
 We explore the principles and practices of reproducible research, from gathering data to analyzing data and presenting results. Students implement a  workflow that includes file management, version control, literate programming, data carpentry, creating tables and graphs, and reporting---all within the context of producing reproducible technical reports.
 
-
-
-
-
-
 ## week 0 
 
 - [Syllabus](week_00/cm001_syllabus.Rmd) 
@@ -20,6 +15,8 @@ We explore the principles and practices of reproducible research, from gathering
 - [Overview of creating a reproducible report (slides)](week_00/slides002_software.pdf) 
 
 ## week 1
+
+
 
 
 ## week 2 
