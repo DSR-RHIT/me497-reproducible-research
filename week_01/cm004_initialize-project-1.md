@@ -1,10 +1,6 @@
 
 # initialize project 1
 
-
-
-
-
 ## start a private repo
 
 If you haven't requested a GitHub student academic account, please do [https://education.github.com/pack](https://education.github.com/pack). On GitHub: 
@@ -41,7 +37,10 @@ Check your course folder. It should now contain a folder `me497-project-1-yourLa
 
 ## setup the project directory tree
 
-In your project directory, create new folders (sub-directories) for `data\`, `reports\`, `resources\`, `results\`, and `scripts\`. Earlier you created a `.Renviron` file. Copy and paste it to the project folder. Your directory should look like this: 
+In your project directory, create new folders (sub-directories) for `data\`, `reports\`, `resources\`, `results\`, and `scripts\`. Earlier you created a `.Renviron` file. Copy and paste it to the project folder. 
+
+
+Your directory should look like this: 
 
 ```
 me497-project-1-YourLastName\
@@ -56,6 +55,8 @@ me497-project-1-YourLastName\
   `-- README.md
 ```
 
+
+Over time, of course, you will settle on you own approach to file organization. For this project, we'll all use this one. 
 
 
  
