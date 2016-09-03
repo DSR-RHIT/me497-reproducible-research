@@ -1,0 +1,340 @@
+\documentclass[12pt, aspectratio = 169]{beamer}
+
+% used by title slide and PDF settings
+\newcommand{\talktitle}   {Reproducible research}
+\newcommand{\talksubtitle}{An introduction for the R novice}
+\newcommand{\talkauthor}  {Richard Layton}
+
+\input{slides000_preamble.tex}
+
+\begin{document}
+
+{%% title slide -------------------------------------------
+\renewcommand\foottext{Kenji Takeda, \href{http://www.slideshare.net/Azure4Research/mar14cw14-workshop}{Reproducible research and the cloud}, Microsoft Research, 2014-06-06.}
+\begin{frame}[c]{}
+
+\begin{columns}
+\column{0.45\textwidth}
+
+{\Large\color{myviolet}\talktitle}
+
+\bigskip
+{\color{gray}\talksubtitle}
+
+\bigskip
+\bigskip
+{\color{myviolet}\talkauthor}
+
+\bigskip
+{\scriptsize\color{gray} Department of Mechanical Engineering\\
+Rose-Hulman Institute of Technology\\
+Fall 2016\\
+}
+
+\column{0.55\textwidth}
+\vspace{1\baselineskip}
+\includegraphics[width = 1\textwidth]{images/rr-cycle.png}
+
+\end{columns}
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\begin{frame}[c]{Getting started}
+\begin{itemize}
+	\item<1-> Introductions
+	\item<1-> Handouts
+	\item<2-> Mystery question: {\em\color{myviolet}What is reproducible research?}
+\end{itemize}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Victoria Stodden, F. Leisch, \& R. Peng, ed., {\em Implementing Reproducible Research}, CRC Press, 2014.
+
+Christopher Gandrud, {\em Reproducible Research with R and RStudio, 2/e}, CRC Press, 2015.}
+
+\begin{frame}[c]{Practitioners tell us:}
+
+\smallskip
+\begin{columns}[c]
+\column{0.2\textwidth}
+\includegraphics[width = 0.77\textwidth]{images/stodden-cover.jpg}
+
+\column{0.8\textwidth}
+\color{myviolet}\em Research is reproducible when the data and the code used to obtain a finding are available and sufficient for an independent researcher to recreate the finding.
+\end{columns}
+
+\smallskip
+\begin{columns}[c]
+\column{0.2\textwidth}
+\includegraphics[width = 0.77\textwidth]{images/gandrud-cover.jpg}
+
+\column{0.8\textwidth}
+\vspace{-1\baselineskip}
+\begin{itemize}
+	\item computational, data-intensive
+	\item spans the full data, analysis, \& publication workflow
+	\item most of us have received only perfunctory training (if any)
+\end{itemize}
+\end{columns}
+
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Karen EC Levy \& David Merritt Johns,
+\href{http://bds.sagepub.com/content/3/1/2053951715621568}{When open data is a Trojan Horse: The weaponization of transparency in science and governance}, {\em Big Data and Society}, 2016.}
+
+\begin{frame}[c]{Events tell us:}
+
+\begin{columns}[c]
+\column{0.35\textwidth}
+More accountability is needed because of
+
+\bigskip
+
+\begin{itemize}
+	\item data falsification
+	\item erroneous analysis
+	\item misleading presentation of results
+\end{itemize}
+
+\column{0.65\textwidth}
+\vspace{-1\baselineskip}
+\includegraphics[width = 1\textwidth]{images/reproducibility-in-the-news.png}
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Thomas Herdon, Michael Ash, \& Robert Pollin, \href{http://www.peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf}{Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff}, Political Economy Research Institute, U Mass Amherst, 2013.}
+
+\begin{frame}[c]{Reproduction showed their primary findings were false.}
+
+\begin{columns}[c]
+\column{0.6\textwidth}
+Results were used to justify austerity policies, but the major effect disappeared after correcting for
+
+\bigskip
+
+\begin{itemize}
+	\item coding errors
+	\item selective exclusion of available data
+	\item unconventional weighting of summary statistics
+\end{itemize}
+
+\column{0.4\textwidth}
+\includegraphics[width = 1\textwidth]{images/rogoff-reinhart.png}\\
+{\footnotesize\color{gray} Kenneth Rogoff \& Carmen Reinhart}
+\end{columns}
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research to begin Monday}, {\em Triangle Business Journal}, 2015-01-23. Ivan Oransky, \href{http://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
+
+\begin{frame}[c]{Reproduction showed he falsified data.}
+
+\begin{columns}[c]
+\column{0.6\textwidth}
+To obtain the results he wanted, he altered data in several ways. Consequences included:
+
+\bigskip
+
+\begin{itemize}
+	\item terminated clinical trials (real patients)
+	\item civil suit by patients
+	\item cancelled research funding
+	\item retracted journal articles (11 to date)
+\end{itemize}
+
+\column{0.4\textwidth}
+\includegraphics[width = 1\textwidth]{images/anil-potti.jpg}\\
+{\footnotesize\color{gray}Anil Potti, formerly a cancer researcher at Duke University}
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Freed Pearce, \href{https://www.theguardian.com/environment/2010/feb/09/hockey-stick-michael-mann-steve-mcintyre}{Climate change debate overheated after skeptic grasped 'hockey stick'}, {\em The Guardian}, 2010-02-09. Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. Jeff Leek, \href{http://simplystatistics.org}{De-weaponizing reproducibility}, 2015-03-13. }
+
+\begin{frame}[c]{``Weaponized'' reproduction is used to discredit scientists.}
+
+\vspace{-1\baselineskip}
+\begin{columns}[c]
+\column{0.57\textwidth}
+
+Mann's work has withstood 15 years of scrutiny---and still holds up. But he refused to share.
+
+\bigskip
+
+{\em\color{myviolet}Scientists and ``skeptics'' are in a knife fight, and you don't bring data to a knife fight.} {\hfill\small--- Paul Erlich}
+
+\bigskip
+
+{\em\color{myviolet}Why should I make the data available to you, when your aim is to try and find something wrong with it?} {\hfill\small --- Phil Jones}
+
+\column{0.43\textwidth}
+\includegraphics[width = 1\textwidth]{images/hockey-stick-graph.png}\\
+{\footnotesize\color{gray}1000 years of temperature variation with uncertainties, Michael Mann}
+\end{columns}
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Bruno Oliveira, \href{https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y}{\em Geeks and repetitive tasks}}
+\begin{frame}[c]{The benefits first accrue to you.}
+
+\begin{columns}[c]
+\column{0.75\textwidth}
+\includegraphics[width = 1\textwidth, trim = 0 0 0 20mm, clip = TRUE]{images/geek-tasks.png}
+\column{0.30\textwidth}
+\begin{itemize}
+	\item reproducible for your future self
+	\item faster updating of results
+	\item faster resumption of work after hiatus
+\end{itemize}
+
+\end{columns}
+
+
+% {\em\color{myviolet}If you do anything ``by hand'' once, you'll do it 100 times.}{\hfill\small--- Paul Wilson, UW--Madison}
+%
+% \bigskip
+%
+% {\em\color{myviolet}Your closest collaborator is you, six months ago, and you don't answer emails.} \\
+% {\hfill\small--- Karl Broman, UW--Madison}
+
+% \bigskip
+%
+% {\em\color{myviolet}To preserve sanity, stop collaborating via email  attachments \& tracking changes in Word.}\\
+% {\hfill\small--- Jenny Bryan, Univ of British Columbia}
+
+% \column{0.65\textwidth}
+% \vspace{-1\baselineskip}
+
+
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
+
+\begin{frame}[t]{Steps towards reproducibility}
+
+\vspace{-0.5\baselineskip}
+\begin{columns}[t]
+\column{0.55\textwidth}
+\begin{itemize}
+	\item Write scripts (avoid manual copy, paste, mouse-clicks)
+	\item Plan the organization and naming scheme for files
+	\item Strive for simplicity \& readability
+	\item Write for reusability \& testability
+	\item Agree on a workflow for collaborating before starting a manuscript
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{itemize}
+	\item DRY (don't repeat yourself)
+	\item Link files explicitly
+	\item Use version control
+	\item Plan data management
+	\item License your software
+	\item Manage package dependencies
+\end{itemize}
+
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
+\begin{frame}[t]{Steps towards reproducibility: in this course.}
+
+\vspace{-0.5\baselineskip}
+\begin{columns}[t]
+\column{0.55\textwidth}
+\begin{itemize}
+	\item {Write scripts (avoid manual copy, paste, mouse-clicks)}
+	\item {Plan the organization and naming scheme for files}
+	\item {Strive for simplicity \& readability}
+\end{itemize}
+\medskip
+\begin{itemize}[label = \color{palegray}$\blacktriangleright$]
+	\item {\color{palegray}Write for reusability \& testability}
+	\item {\color{palegray}Agree on a workflow for collaborating before starting a manuscript}
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{itemize}
+	\item {DRY (don't repeat yourself)}
+	\item {Link files explicitly}
+  \item {Use version control}
+\end{itemize}
+\medskip
+\begin{itemize}[label = \color{palegray}$\blacktriangleright$]
+	\item {\color{palegray}Plan data management}
+	\item {\color{palegray}License your software}
+	\item {\color{palegray}Manage package dependencies}
+\end{itemize}
+
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[c]{How the course work is organized.}
+
+\begin{itemize}
+	\item Course materials are reproducible.\\
+	{\small\bf\url{https://dsr-rhit.github.io/me497-reproducible-research/}}
+	\item \href{https://dsr-rhit.github.io/me497-reproducible-research/pages/cm001_syllabus.html}{Syllabus}
+	\item \href{https://dsr-rhit.github.io/me497-reproducible-research/}{Week-0 assignment}
+\end{itemize}
+
+
+
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[c]{Consider a sample report.}
+
+\begin{columns}[c]
+\column{0.55\textwidth}
+\begin{itemize}
+	\item<1-> Imagine that you were the author of the ``Load cell calibration report''
+	\item<2-> Mystery question: {\color{myviolet}Identify as many ``manual operations'' as possible.}
+\end{itemize}
+
+\column{0.45\textwidth}
+\vspace{-1\baselineskip}
+\includegraphics[width = 1\textwidth]{images/calibr-report-first-page.png}
+
+\end{columns}
+
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
