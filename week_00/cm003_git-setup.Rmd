@@ -1,7 +1,8 @@
 ---
-title: "setup git and github"
 output: html_document
 ---
+
+# setup git and github
 
 ## all graded work is pushed to GitHub  
 

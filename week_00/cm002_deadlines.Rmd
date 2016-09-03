@@ -1,7 +1,8 @@
 ---
-title: "project due dates"
 output: html_document
 ---
+
+# project due dates
 
 ## install software 
 
