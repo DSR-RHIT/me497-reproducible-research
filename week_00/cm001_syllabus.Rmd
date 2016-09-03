@@ -1,11 +1,9 @@
 ---
 title: "syllabus"
-author: "Richard Layton"
-date: "2016-09-03"
 output: html_document
 ---
 
-### description  
+## description  
 
 ME497/ME597 Reproducible Research (4R-0L-4C). 
 
@@ -14,14 +12,14 @@ We explore the principles and practices of reproducible research, from gathering
 The software environment is R & RStudio---no prior experience required. The course is open to all majors---no background in mechanical engineering is required. 
 
 
-### prerequisites
+## prerequisites
 
 497: Junior standing    
 597: Instructor permission required. Graduate students only with a project underway generating quantitative data.    
 
 
 
-### instructor
+## instructor
 
 Richard Layton, Ph.D., P.E.    
 Professor of Mechanical Engineering    
@@ -29,7 +27,7 @@ Moench Hall C-217
 layton@rose-hulman.edu    
 812-877-8905    
 
-### required textbook
+## required textbook
 
 Christopher Gandrud, 2015, *Reproducible Research with R and RStudio, 2/e*, CRC Press.    
 
@@ -38,7 +36,7 @@ Christopher Gandrud, 2015, *Reproducible Research with R and RStudio, 2/e*, CRC 
  
 
 
-### objectives
+## objectives
 
 After successfully completing this course, students should be able to:
 
@@ -50,7 +48,7 @@ After successfully completing this course, students should be able to:
 - Reproduce someone else's reproducible project 
 - Implement version control using Git and GitHub 
  
-### grades
+## grades
 
 Grades awarded are based on the [Institute standards](http://www.rose-hulman.edu/offices-services/registrar/rules-procedures/grades.aspx), for example, an "A" is an *honor grade*, a "B" is awarded for *thorough competence*, and a "C" indicates that *minimum standards have been met*. 
 
@@ -63,12 +61,12 @@ The major deliverables and their relative weights are:
 
 
 
-### academic accommodations
+## academic accommodations
 
 I understand that "invisible" disabilities (learning and attention deficit disorders, chronic fatigue syndrome, clinical depression, etc.) can significantly affect a student's academic performance.  I strongly encourage students to document special academic needs with staff at the Office of Student Affairs, and then to contact me as soon as possible so that we can work together to provide recommended academic accommodations while protecting your privacy.  It is the student's responsibility to request any approved, documented academic accommodations at least *one week* in advance of the event. 
 
 
-### academic integrity
+## academic integrity
 
 Do your own work. Write your own scripts. Every draft and every revision reflects your thinking.  
 
@@ -88,7 +86,7 @@ Do not compare one another's code line by line, do not share your files, do not 
 
 
 
-### caveat
+## caveat
 
 I reserve the right to modify the course content, schedule, policies, etc. outlined in this syllabus. I will do my best to give you adequate notice of revisions.  
 
