@@ -1,6 +1,6 @@
-# me497-RR Reproducible Research for the R novice
+# me497-RR 
 
-## reproducible research
+## reproducible research for the R novice
 
 We explore the principles and practices of reproducible research, from gathering data to analyzing data and presenting results. Students implement a  workflow that includes file management, version control, literate programming, data carpentry, creating tables and graphs, and reporting---all within the context of producing reproducible technical reports.
 
@@ -19,13 +19,13 @@ We explore the principles and practices of reproducible research, from gathering
 - [Introduction (slides)](slides/slides001_introduction.pdf) 
 - [Overview of creating a reproducible report (slides)](slides/slides002_software.pdf) 
 
-### week 1
+## week 1
 
 
-### week 2 
+## week 2 
 
 
-### help  
+## help  
 
 - [Quick R](http://www.statmethods.net/) for everyday R tasks  
 - [R Markdown](http://rmarkdown.rstudio.com/) for syntax help  
@@ -35,7 +35,7 @@ We explore the principles and practices of reproducible research, from gathering
 - [Advanced R](http://adv-r.had.co.nz/), when you really want to understand R
 - [ggplot2 help](http://docs.ggplot2.org/current/index.html) for all of the details 
 
-### books I recommend
+## books I recommend
 
 - [*R in Action, 2/e*](https://www.manning.com/books/r-in-action-second-edition) by Robert Kabacoff, 2015, Manning Publications. If you want to buy just one good reference for R, this is the one I recommend. It covers R basics including statistical analysis and graphics. 
 - [*R Graphics, 2/e*](https://www.crcpress.com/R-Graphics-Second-Edition/Murrell/p/book/9781439831762) by Paul Murrell, 2011, CRC Press. This is the book for learning about the four major R graphics systems (`base, grid, lattice, ggplot2`).  The author's [book website](https://www.stat.auckland.ac.nz/~paul/RG2e/) has the code for every figure in the book. 
