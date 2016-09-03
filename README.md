@@ -22,7 +22,7 @@ Reading: Chapters 2 & 3
 
 Begin the Project 1 tutorials 
 
-- [Prtoject overview](week_01/cm004_project-1_overview.md)
+- [Project overview](week_01/cm004_project-1_overview.md)
 - [Initialize project 1](week_01/cm005_project-1_initialize.md)
 - [Download files](week_01/cm006_project-1_downloads.md)
 
