@@ -2,11 +2,9 @@
 output: html_document
 ---
 
-[\\]: this is an Rmd comment
-
 # organize your files
 
-```{r include = FALSE}
+```{r echo = FALSE}
 # settings for my document
 library(knitr)
 # opts_knit$set(root.dir = '../')
