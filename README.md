@@ -1,4 +1,4 @@
-# me497-RR
+# me497-RR Reproducible Research for the R novice
 
 ## reproducible research
 
@@ -11,7 +11,7 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0 
 
-- [Syllabus](pages/cm001_syllabus.html) 
+- [Syllabus](week_00/cm001_syllabus.Rmd) 
 - [Project due dates](pages/cm002_deadlines.html) 
 - [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). Do the installation and a project setup. 
 - If you already have R and RStudio installed, update them to the most recent versions. Update your packages also. 
