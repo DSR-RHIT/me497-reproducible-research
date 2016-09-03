@@ -9,36 +9,7 @@
 
 \begin{document}
 
-{%% slide -------------------------------------------
-\renewcommand\foottext{}
 
-\begin{frame}[c]{Software overview}
-\begin{columns}
-\column{0.2\textwidth}\color{myviolet}\raggedleft
-R
-
-\bigskip R Markdown
-
-\bigskip Git
-
-\bigskip GitHub
-
-\bigskip RStudio
-
-\column{0.8\textwidth}\color{gray}
-learn a new language for data analysis and computing
-
-\bigskip learn a new mark-up syntax for formatted prose
-
-\bigskip for local version control (via RStudio)
-
-\bigskip for collaboration (vis RStudio)
-
-\bigskip one GUI to find them and in the research bind them
-
-\end{columns}
-\end{frame}
-}%%
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
@@ -180,6 +151,37 @@ output
 	\item R for computing and graphics
 	\item flexible output formats
 \end{itemize}
+
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[c]{Software overview}
+\begin{columns}
+\column{0.2\textwidth}\color{myviolet}\raggedleft
+R
+
+\bigskip R Markdown
+
+\bigskip Git
+
+\bigskip GitHub
+
+\bigskip RStudio
+
+\column{0.8\textwidth}\color{gray}
+learn a new language for data analysis and computing
+
+\bigskip learn a new mark-up syntax for formatted prose
+
+\bigskip for local version control (via RStudio)
+
+\bigskip for collaboration (vis RStudio)
+
+\bigskip one GUI to find them and in the research bind them
 
 \end{columns}
 \end{frame}
