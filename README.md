@@ -16,7 +16,7 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 1
 
-
+- [organize your files](week_01/cm004_organize-files.md)
 
 
 ## week 2 
