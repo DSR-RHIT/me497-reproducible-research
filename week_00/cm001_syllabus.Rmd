@@ -1,12 +1,11 @@
 ---
 title: "syllabus"
-tagline: "reproducible research for the R novice"
-output:
-  html_document:
-    keep_md: yes
+author: "Richard Layton"
+date: "2016-09-03"
+output: html_document
 ---
 
-### description 
+### description  
 
 ME497/ME597 Reproducible Research (4R-0L-4C). 
 
