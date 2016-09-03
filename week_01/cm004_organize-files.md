@@ -1,19 +1,14 @@
 
-
-    
-    
-   
-
 # organize your files
 
 
 
 
 
-## set up a directory tree
+## start a repo for project 1
 
-- If you haven't installed R and RStudio, [please do](002_pre-hw.html). 
-- If you haven't created an RStudio project and the `.Renviron` file for the workshop, [please do](002_pre-hw.html). 
+
+## set up a directory tree
 
 In your main project directory (I'll call it `rr-workshop` for convenience, but you may have named it differently), create new folders (sub-directories) for `data\`, `reports\`, `resources\`, etc. as shown below. The `.Rproj` and `.Renviron` files should already be there.  
 

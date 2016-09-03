@@ -1,10 +1,3 @@
----
-output:
-  html_document:
-    keep_md: yes
-  md_document:
-    variant: markdown_github
----
 
 # syllabus
 
