@@ -6,6 +6,8 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0 
 
+Reading: Chapter 1
+
 - [Syllabus](week_00/cm001_syllabus.md) 
 - [Project due dates](week_00/cm002_deadlines.md) 
 - [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). Do the installation and a project setup. 
@@ -16,10 +18,13 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 1
 
+Reading: Chapters 2 & 3
+
 Begin the Project 1 tutorials 
 
-- [Initialize project 1](week_01/cm004_initialize-project-1.md)
-- [Download files](week_01/cm005_downloads.md)
+- [Prtoject overview](week_01/cm004_project-1_overview.md)
+- [Initialize project 1](week_01/cm005_project-1_initialize.md)
+- [Download files](week_01/cm006_project-1_downloads.md)
 
 
 

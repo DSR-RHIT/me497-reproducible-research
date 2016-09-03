@@ -1,24 +1,14 @@
----
-output:
-  html_document:
-    keep_md: yes
-  md_document:
-    variant: markdown_github
---- 
 
-# download image and data files
+# download resource and data files
 
-In this first project, you take a guided tour of creating a reproducible report. The technical purpose of the work is to calibrate a force sensor and report the  outcomes. 
-
-We begin by assuming our test lab has performed the requisite testing and has provided us two files: an image of the test setup, and a data set. Both files are available online. 
-
-To retrieve these files and place them in the appropriate directories: 
+Our test lab has provided us two files: an image of the test setup, and a data set. Both files are available online. To retrieve these files and place them in the appropriate directories: 
 
 - Make sure you have a live Internet connection 
 - Launch your RStudio project. 
 - To download the *image*, copy these lines of R code, paste into the Console (lower left pane of the RStudio interface), and `Enter`. 
 
-```{r echo = TRUE, eval = FALSE}
+
+```r
 url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/images/load-cell-setup-786x989px.png"
 destination <- "resources/load-cell-setup-786x989px.png"
 download.file(url, destination, mode = "wb")
@@ -26,7 +16,8 @@ download.file(url, destination, mode = "wb")
 
 - To download the *data*, copy these lines of R code, paste into the Console, and `Enter`. 
 
-```{r echo = TRUE, eval = FALSE}
+
+```r
 url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/data/007_wide-data.csv"
 destination <- "data/007_wide-data.csv"
 download.file(url, destination)
@@ -38,6 +29,11 @@ Learn R
 - `download.file()` downloads a file from the Internet to your machine
 - `destination` is a relative path with respect to your working directory and includes the filename under which we save the file to our local machine.
 - `mode = wb` mode is for *binary* files (images and other non-text files)
+
+## learning the software
+
+As shown above in the "Learn R" list, whenever I show you some new code or markup, I give a brief description of what the code is doing. To get the most out of the tutorials, please take the time to study those remarks carefully. 
+
 
 
 ## check yourself
@@ -56,7 +52,7 @@ Your directories should contain these files:
       
     scripts\
 
-If not, navigate to [https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads](https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads) and follow the instructions. 
+If your download was not successful, navigate to [https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads](https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads) and follow the instructions. 
 
 
 
