@@ -13,7 +13,7 @@ To retrieve these files and place them in the appropriate directories:
 
 
 ```r
-url <- "https://raw.githubusercontent.com/DSR-RHIT/creating-reproducible-reports/gh-pages/resources/load-cell-setup-786x989px.png"
+url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/images/load-cell-setup-786x989px.png"
 destination <- "resources/load-cell-setup-786x989px.png"
 download.file(url, destination, mode = "wb")
 ```
@@ -22,7 +22,7 @@ download.file(url, destination, mode = "wb")
 
 
 ```r
-url <- "https://raw.githubusercontent.com/DSR-RHIT/creating-reproducible-reports/gh-pages/data/007_wide-data.csv"
+url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/data/007_wide-data.csv"
 destination <- "data/007_wide-data.csv"
 download.file(url, destination)
 ```
