@@ -52,7 +52,7 @@ After successfully completing this course, students should be able to:
  
 ### grades
 
-Grades awarded are based on the [Institute standards](www.rose-hulman.edu/offices-services/registrar/rules-procedures/grades.aspx), for example, an "A" is an *honor grade*, a "B" is awarded for *thorough competence*, and a "C" indicates that *minimum standards have been met*. 
+Grades awarded are based on the [Institute standards](http://www.rose-hulman.edu/offices-services/registrar/rules-procedures/grades.aspx), for example, an "A" is an *honor grade*, a "B" is awarded for *thorough competence*, and a "C" indicates that *minimum standards have been met*. 
 
 The major deliverables and their relative weights are: 
 
@@ -94,7 +94,7 @@ I reserve the right to modify the course content, schedule, policies, etc. outli
 
 ---
 
-[Main page](../index.html)
+[Main page](../README.md)
 
 
 
