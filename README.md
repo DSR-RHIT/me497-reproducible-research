@@ -28,6 +28,14 @@ Begin the Project 1 tutorials
 
 
 
+## week 2
+
+Complete the Project 1 tutorials
+
+
+
+
+
 
 
 
