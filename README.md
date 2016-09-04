@@ -18,23 +18,35 @@ Reading: Chapter 1
 
 ## week 1
 
-Reading: Chapters 2 & 3
+Reading 
 
-Begin the Project 1 tutorials 
+- Chapters 2 & 3 
+- *Having Git ignore files*, p.99. 
+
+Project 1 tutorials 
 
 - [Project overview](week_01/cm004_project-1_overview.md)
 - [Initialize project 1](week_01/cm005_project-1_initialize.md)
 - [Download files](week_01/cm006_project-1_downloads.md)
-
+- [Start your first script](week_01/cm007_project-1_first-script.md) 
+- [Having git ignore files](week_01/cm008_project-1_gitignore.md)  
+- [Explore the data](week_01/cm009_project-1_explore-data.md) 
+- [Tidy the data](week_01/cm010_project-1_tidy-data.md) 
 
 
 ## week 2
 
-Complete the Project 1 tutorials
+Continue the Project 1 tutorials 
 
+- [Visually check the data](week_01/cm011_project-1_graph-first-look.md)  
+- [Perform a linear regression](week_01/cm012_project-1_regression.md) 
+- [Create the calibration graph](week_01/cm013_project-1_graph-better.md) 
+- [Write the client report](week_01/cm015_project-1_report.md) 
 
+Optional tutorials 
 
-
+- [Graph extras](week_01/cm014_project-1_graph-extras.md) 
+- [Preparing a report for transmittal](week_01/cm016_project-1_rep[ort-transmittal.md) 
 
 
 

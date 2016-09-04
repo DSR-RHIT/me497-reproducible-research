@@ -2,6 +2,10 @@ library(stringr)
 library(knitr)
 library(rmarkdown)
 
+
+
+
+
 # array of folders to search for Rmd and Rnw filed to compile
 compile_these <- c("week_00", "week_01")
 
@@ -11,6 +15,7 @@ Rmd_scripts <- list.files(path = compile_these
 																, full.names = TRUE
 )
 sapply(Rmd_scripts, function(x) render(x))
+
 
 # render Rnw for slides, uses knitr::knit2pdf (takes time)
 Rnw_slide_scripts <- list.files(path = compile_these

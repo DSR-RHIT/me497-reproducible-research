@@ -1,0 +1,9 @@
+item,num,unit
+input_min,0.5,lb
+input_max,4.5,lb
+output_min,8.7,mV
+output_max,91.6,mV
+slope,19.95,mV/lb
+intercept,0.136764705882338,mV
+resid_bound,1.68823529411764,mV
+accuracy,2.11558307533538,%

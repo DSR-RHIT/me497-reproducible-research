@@ -54,6 +54,26 @@ Your directories should contain these files:
 
 If your download was not successful, navigate to [https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads](https://github.com/DSR-RHIT/creating-reproducible-reports/tree/gh-pages/resources/downloads) and follow the instructions. 
 
+## push to github
+
+For reproducibility, the data file and the image file  are pushed to GitHub. 
+
+These steps can only be taken if you have successfully set up RStudio, Git, and GitHub to talk to each other.  
+
+- In RStudio, in the upper-right pane, select the `Git` tab 
+- Check the `Staged` box for the `data/` directory, the `resources/` directory, the `007_wide-data.csv`data file and the `load-cell-setup-786x989px.png` image file. 
+
+- Click the `Commit` button 
+- Type a commit message, e.g., `data and image upload`
+- `Commit`   
+- `Close`  
+- `Push`   
+- `Close`  
+
+## check yourself
+
+Online, navigate to your project repo on GitHub. There you should find a data folder containing the CSV file and a resources folder containing the PNG file. 
+
 
 
 
