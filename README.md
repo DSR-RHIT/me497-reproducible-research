@@ -46,7 +46,7 @@ Continue the Project 1 tutorials
 Optional tutorials 
 
 - [Graph extras](week_01/cm014_project-1_graph-extras.md) 
-- [Preparing a report for transmittal](week_01/cm016_project-1_rep[ort-transmittal.md) 
+- [Preparing a report for transmittal](week_01/cm016_project-1_report-transmittal.md) 
 
 
 
