@@ -6,15 +6,22 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0 
 
-Reading: Chapter 1
+Reading
+
+- Chapter 1
+
+Materials 
 
 - [Syllabus](week_00/cm001_syllabus.md) 
 - [Project due dates](week_00/cm002_deadlines.md) 
 - [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). Do the installation and a project setup. 
 - If you already have R and RStudio installed, update them to the most recent versions. Update your packages also. 
 - [Setup Git and GitHub](week_00/cm003_git-setup.md). We will start this in class on day 2. 
-- [Introduction (slides)](week_00/slides001_introduction.pdf) 
-- [Overview of creating a reproducible report (slides)](week_00/slides002_software.pdf) 
+
+Lecture slides 
+
+- [Introduction](week_00/slides001_introduction.pdf) 
+- [Overview of creating a reproducible report](week_00/slides002_software.pdf) 
 
 ## week 1
 
@@ -33,6 +40,9 @@ Project 1 tutorials
 - [Explore the data](week_01/cm009_project-1_explore-data.md) 
 - [Tidy the data](week_01/cm010_project-1_tidy-data.md) 
 
+Lecture slides 
+
+- [Planning principles](week_01/slides003_start-report.pdf) 
 
 ## week 2
 
