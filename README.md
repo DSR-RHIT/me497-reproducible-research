@@ -10,7 +10,7 @@ We explore the principles and practices of reproducible research, from gathering
 - [Project due dates](week_00/cm002_deadlines.md) 
 - [References and links](week_00/cm017_references.md) 
 
-## coure materials
+## course materials
 
 - [Week 0](week_00/README.md) 
 - [Week 1](week_01/README.md) 
