@@ -9,10 +9,10 @@ Reading
 
 Continue the Project 1 tutorials 
 
-- [Visually check the data](week_01/cm011_project-1_graph-first-look.md)  
-- [Perform a linear regression](week_01/cm012_project-1_regression.md) 
-- [Create the calibration graph](week_01/cm013_project-1_graph-better.md) 
-- [Write the client report](week_01/cm015_project-1_report.md) 
+- [Visually check the data](cm011_project-1_graph-first-look.md)  
+- [Perform a linear regression](cm012_project-1_regression.md) 
+- [Create the calibration graph](cm013_project-1_graph-better.md) 
+- [Write the client report](cm015_project-1_report.md) 
 
 Slides 
 

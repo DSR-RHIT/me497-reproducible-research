@@ -14,6 +14,6 @@ Materials
 
 Lecture slides 
 
-- [Introduction](week_00/slides001_introduction.pdf) 
-- [Overview of creating a reproducible report](week_00/slides002_software.pdf) 
+- [Introduction](slides001_introduction.pdf) 
+- [Overview of creating a reproducible report](slides002_software.pdf) 
 
