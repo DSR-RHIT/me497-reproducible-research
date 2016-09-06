@@ -1,6 +1,6 @@
 # me497 reproducible research
 
-## week 1 course materials
+ME497 Reproducible Research
 
 Reading 
 
