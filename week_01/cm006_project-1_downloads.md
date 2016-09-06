@@ -9,7 +9,7 @@ Our test lab has provided us two files: an image of the test setup, and a data s
 
 
 ```r
-url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/images/load-cell-setup-786x989px.png"
+url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/resources"
 destination <- "resources/load-cell-setup-786x989px.png"
 download.file(url, destination, mode = "wb")
 ```
@@ -18,7 +18,7 @@ download.file(url, destination, mode = "wb")
 
 
 ```r
-url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/week_01/data/007_wide-data.csv"
+url <- "https://github.com/DSR-RHIT/me497-RR/tree/master/data"
 destination <- "data/007_wide-data.csv"
 download.file(url, destination)
 ```
