@@ -7,7 +7,7 @@ library(rmarkdown)
 
 
 # array of folders to search for Rmd and Rnw filed to compile
-compile_these <- c("week_00", "week_01")
+compile_these <- c("week_00", "week_01", "week_02")
 
 # compile Rmd to github variant md
 Rmd_scripts <- list.files(path = compile_these
