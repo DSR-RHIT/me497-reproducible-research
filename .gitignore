@@ -1,6 +1,9 @@
 # holding folders
 */holding
 
+# ignore course management folder
+*/manage
+
 # History files
 .Rhistory
 .Rapp.history
