@@ -2,7 +2,7 @@
 */holding
 
 # ignore course management folder
-*/manage
+manage
 
 # History files
 .Rhistory

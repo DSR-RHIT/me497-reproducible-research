@@ -1,0 +1,5 @@
+# Windows .Renviron file:
+R_LIBS_USER="C:/R/library"
+R_USER="C:/R"
+R_DOC_DIR="C:/R"
+HOME="C:"
