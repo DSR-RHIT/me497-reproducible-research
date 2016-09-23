@@ -1,6 +1,7 @@
 library(stringr)
 library(knitr)
 library(rmarkdown)
+library(readr)
 
 
 
@@ -15,6 +16,7 @@ Rmd_scripts <- list.files(path = compile_these
 																, full.names = TRUE
 )
 sapply(Rmd_scripts, function(x) render(x))
+
 
 
 # render Rnw for slides, uses knitr::knit2pdf (takes time)
