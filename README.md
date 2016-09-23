@@ -32,6 +32,8 @@ We explore the principles and practices of reproducible research, from gathering
 - [Perform a linear regression](cm/cm012_project-1_regression.md) 
 - [Create the calibration graph](cm/cm013_project-1_graph-better.md) 
 - [Write the client report](cm/cm015_project-1_report.md) 
+- [When the data change](cm/cm017_project-1_data-change.md) 
+- [Adding references to a report](cm/cm018_project-1_references.md)
 
 Beyond the basics 
 
@@ -40,6 +42,6 @@ Beyond the basics
 
 ## week 3
 
-- [Initialize project 2](cm/cm017_project-2_start.md) 
-- [Getting data into R](cm/cm018_getting-data-into-R.md) 
-- [Adding references to a report](cm/cm019_references.md)  
+- [Initialize project 2](cm/cm019_project-2_start.md) 
+- [Getting data into R](cm/cm020_getting-data-into-R.md) 
+  
