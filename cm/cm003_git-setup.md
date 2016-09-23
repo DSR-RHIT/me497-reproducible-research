@@ -23,7 +23,7 @@ There are a few instructions that ask you to type commands in the "shell". To ac
 -   [Register a free GitHub account](http://happygitwithr.com/github-acct.html#github-acct)
 -   [Install Git locally](http://happygitwithr.com/install-git.html#install-git)
 -   [Introduce yourself to Git](http://happygitwithr.com/hello-git.html#hello-git)
--   [Cache your username and password](http://happygitwithr.com/credential-caching.html#credential-caching) or so you donâ€™t need to authenticate yourself to GitHub interactively ad nauseum. Alternatively, you can [set up SSH keys](http://happygitwithr.com/ssh-keys.html#ssh-keys).
+-   [Cache your username and password](http://happygitwithr.com/credential-caching.html#credential-caching) or so you don't need to authenticate yourself to GitHub interactively ad nauseum. Alternatively, you can [set up SSH keys](http://happygitwithr.com/ssh-keys.html#ssh-keys).
 -   [Prove RStudio can find local Git](http://happygitwithr.com/rstudio-git-github.html#rstudio-git-github) and, therefore, can talk to GitHub
 
 ------------------------------------------------------------------------

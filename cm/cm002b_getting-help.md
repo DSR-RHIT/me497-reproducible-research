@@ -13,6 +13,7 @@ links I use regularly
 -   [R-bloggers](https://www.r-bloggers.com/), a searchable collection of R blog posts.
 -   [Stackoverflow](http://stackoverflow.com/questions/tagged/r), a searchable Q&A website for programming questions.
 -   [Advanced R](http://adv-r.had.co.nz/), when you really want to understand R
+-   [Style guide for readable code](http://adv-r.had.co.nz/Style.html), a chapter from Advanced R above.
 -   [ggplot2 help](http://docs.ggplot2.org/current/index.html) for all of the details
 
 books I recommend

@@ -202,13 +202,13 @@ The goal of this analysis is to determine the calibration equation and sensor ac
 </code></pre>
 Learn Rmd
 
--   Code results can be inserted directly into the text of a .Rmd file by enclosing the code with \`r \`.
+-   Code results can be inserted directly into the text of a .Rmd file by enclosing the code with \` r    \`.
 
 Here, for example, I've used three inline code chunks to report values in the first paragraph.
 
--   \`r sensor\_model\` is replaced in the output document by its value, "Omega LCL-005"
--   \`r force\_limit\` is replaced in the output document by its value, "5"
--   \`r force\_unit\` is replaced in the output document by its value, "lb"
+-   \` r  sensor\_model\` is replaced in the output document by its value, "Omega LCL-005"
+-   \` r  force\_limit\` is replaced in the output document by its value, "5"
+-   \` r  force\_unit\` is replaced in the output document by its value, "lb"
 
 Inline code is one of our tools for reproducibility. If the data or analysis change, inline expressions reported in the prose are automatically updated.
 

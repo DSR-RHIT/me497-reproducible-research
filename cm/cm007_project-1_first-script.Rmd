@@ -117,7 +117,7 @@ and we write the R code in between. You have 4 methods creating the code chunk d
 
 **Add a code chunk after the header** 
 
-Here’s my first code icon. Use one of the methods above to create the code chunk delimiters then copy the R code to the code chunk. These lines of R code set a couple of `knitr` options.
+Here's my first code icon. Use one of the methods above to create the code chunk delimiters then copy the R code to the code chunk. These lines of R code set a couple of `knitr` options.
 
 `r code_icon`
 
