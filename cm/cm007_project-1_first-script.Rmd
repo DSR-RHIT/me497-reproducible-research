@@ -16,7 +16,7 @@ opts_chunk$set(echo = TRUE, results = 'hide', message = FALSE, warning = FALSE)
 
 ```{r, echo = FALSE}
 # my tutorial functions for text_icon and code_icon
-source("week_01/helper_02_icons.R")
+source("cm/helper_02_icons.R")
 ```
 
 ## tutorial design
@@ -113,7 +113,7 @@ To include lines of R code in our Rmd file, we place them in a *code chunk*. A c
 
 and we write the R code in between. You have 4 methods creating the code chunk delimiters. Choose the one that suits you:
 
-1. *You may* click the ![](images/insert-code.png) icon
+1. *You may* click the ![](../resources/images/insert-code.png) icon
 2. *or* use the menu `Code > Insert Chunk`
 3. *or* use a keyboard shortcut `Ctrl + Alt + I`
 4. *or* type the delimiters directly ("back ticks", not single-quotes)

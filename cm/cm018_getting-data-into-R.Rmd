@@ -1,0 +1,35 @@
+---
+output:
+  html_document:
+    keep_md: yes
+  md_document:
+    variant: markdown_github
+--- 
+
+# getting data into R 
+
+```{r 018-01, include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
+options(echo = FALSE) # turns off echo in the console
+```
+
+One of the most common ways I receive data from collaborators is in an Excel spreadsheet. You might have some data in that format too. If so, some tips: 
+
+- Save the spreadsheet to your data directory 
+- Make no changes in the spreadsheet (if you do this once, you'll do it a 100 times). All data tidying is done via scripts. 
+- Once you and they establish the names of the data columns, don't change them later. You can add new columns, but don't change the onmes already in use. 
+- Ask your collaborators to use the formatting suggestions below to help make your job easier. 
+
+When creating a data set in Excel for a project, some tips: 
+
+- Use the top row only for the header information 
+- Data begins in the second row 
+- Avoid spaces in the columns heading labels. Use underscores. 
+
+
+
+
+
+

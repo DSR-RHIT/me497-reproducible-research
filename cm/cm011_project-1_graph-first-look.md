@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only
 - *Load* a package using `library()` every session
 
@@ -37,7 +37,7 @@ Edit the YAML header:
 
 Delete the rest of the pre-populated text. Insert knitr setup code
 
-![](images/code-icon.png)<!-- --> 
+![](../resources/images/code-icon.png)<!-- --> 
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -45,7 +45,7 @@ Delete the rest of the pre-populated text. Insert knitr setup code
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -70,27 +70,18 @@ Read more about `ggplot2` in section 10.4 of the text.
 
 ## data 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Data
 
     Read the tidy data set.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
 graph_data <- read_csv("data/02_calibr_data-tidy.csv")
 str(graph_data)
-```
-
-```
-## Classes 'tbl_df', 'tbl' and 'data.frame':	17 obs. of  5 variables:
-##  $ observ   : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ cycle    : int  1 1 1 1 1 1 1 2 2 2 ...
-##  $ test_pt  : chr  "3 up" "4 up" "5 up" "4 dn" ...
-##  $ input_lb : num  2.5 3.5 4.5 3.5 2.5 1.5 0.5 1.5 2.5 3.5 ...
-##  $ output_mV: num  51.1 70.4 88.8 69.4 49.5 30.7 8.7 29.9 49.4 70 ...
 ```
 
 ## check yourself
@@ -102,13 +93,13 @@ Confer with a neighbor.
 
 ## a simple graph
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Building the graph in layers
 
     Just show the data. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -129,11 +120,11 @@ That's all it takes to obtain a basic scatterplot. We'll be doing more to edit t
 
 ## print to file 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Print to file  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only
 - *Load* a package using `library()` every session
 
@@ -41,7 +41,7 @@ Delete the rest of the pre-populated text.
 
 Insert knitr setup code
 
-![](images/code-icon.png)<!-- --> 
+![](../resources/images/code-icon.png)<!-- --> 
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -49,7 +49,7 @@ Insert knitr setup code
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -62,13 +62,13 @@ library(ggplot2)
 
 ## data 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Data
 
     Read the tidy data set.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -79,13 +79,13 @@ str(graph_data)
 
 ## repeat our earlier draft
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Building the graph in layers
 
     Just show the data. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -99,11 +99,11 @@ This was the point at which we stopped in the earlier graph script. From here on
 
 ## building a graph in layers
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Draw the regression line. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -127,13 +127,13 @@ Confer with a neighbor
 
 ## changing the attributes of the graphical elements
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Changing the attributes of the graphical elements
 
     Start with the line and the data markers. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -152,11 +152,11 @@ Learning ggplot2
 
 R has 657 built-in named colors such as `gray70` and `black` I've used here. You can see the full list of color names by typing `colors()` in the Console. View the colors by name  [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Edit the axis labels. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -171,11 +171,11 @@ Learning ggplot2
 
 - This chunk could be read "Assign `calibr_graph` to itself, add a layer for the x-axis label, `xlab()`, and add a layer for the y-axis label, `ylab()`."
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Edit the locations of the axis markings to match the test points. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -191,11 +191,11 @@ Learning R
 - `breaks` is ggplot2 syntax for tick mark locations
 - Sequences have the form `seq (from = ..., to = ..., by = ...)` as shown here. You can shorten the code by omitting the *key* words as long as the *values* are in the order shown. For example, for the y-scale markings I could have written `seq(10, 90, 20)`. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Assign a different theme. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -210,11 +210,11 @@ Learning ggplot2
 - A theme, in ggplot2, is a collection of settings that controls the appearance of the graph. Example images of the built-in themes are [here](http://docs.ggplot2.org/current/ggtheme.html).
 - Additional themes are available in the [ggthemes package](https://github.com/jrnold/ggthemes), including themes inspired by Stephen Few, Edward Tufte, The Economist magazine, and even the classic 2003 ugly gray charts in Excel ("for ironic purposes only").
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Edit the theme.  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -235,7 +235,7 @@ The ability to edit or create a theme is the essential tool for customizing grap
 
 We've written out the layers in separate code chunks for clarity, but they could have been assembled into one code chunk, giving you an idea of how compact and readable (well, once you've learned the grammar) the `ggplot2` syntax can be. 
 
-![](images/code-icon.png)<!-- --> (optional)
+![](../resources/images/code-icon.png)<!-- --> (optional)
  
 
 ```r
@@ -259,11 +259,11 @@ Learn ggplot2. Earlier, we shortened the `seq()` function by writing the argumen
 
 ## print to file 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Print to file  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

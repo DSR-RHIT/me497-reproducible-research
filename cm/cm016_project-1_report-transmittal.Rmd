@@ -16,7 +16,7 @@ opts_chunk$set(echo = TRUE, results = 'hide', message = FALSE, warning = FALSE, 
 
 ```{r 113-02, echo = FALSE, eval = TRUE}
 # my tutorial functions for text_icon and code_icon
-source("week_01/helper_02_icons.R")
+source("cm/helper_02_icons.R")
 options(echo = FALSE) # turns of echo in the console
 ```
 

@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only (packages are like apps for R)
 - *Load* a package using `library()` every session 
 - Unless stated otherwise, add each new code chumk or text chunk to the bottom of your Rmd file. 
@@ -41,7 +41,7 @@ opts_chunk$set(echo = TRUE, collapse = TRUE)
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- --> (*add code* reminder: insert a code chunk, then transcribe the R code) 
+![](../resources/images/code-icon.png)<!-- --> (*add code* reminder: insert a code chunk, then transcribe the R code) 
 
 
 ```r
@@ -56,7 +56,7 @@ By itself,  `library(dplyr)` produces several start-up messages in our output. T
 
 ### import the image 
 
-![](images/text-icon.png)<!-- --> (*add text* reminder: type the prose verbatim into the Rmd file) 
+![](../resources/images/text-icon.png)<!-- --> (*add text* reminder: type the prose verbatim into the Rmd file) 
 
     # Import the image
 
@@ -66,7 +66,7 @@ Learn R Markdown:
 
 - In Rmd, the single hash tag `#` denotes a level-1 heading. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -87,11 +87,11 @@ To add a figure caption, use the `fig.cap` option inside the code chunk header:
 
 ### read and examine the data
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     Read the data as received and examine its structure.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -110,7 +110,7 @@ Writing readable code (see [Wickham](http://adv-r.had.co.nz/Style.html) a compre
 - Use underscores to separate words in object names
 - One space on either side of `<-`
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     The data object is a data frame. 
 
@@ -129,7 +129,7 @@ Confer with a neighbor.
 2. How many of the variables are type character? 
 3. How many are type double (i.e., double precision floating point)? 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -142,7 +142,7 @@ Learn R
 - `head()` displays the first few rows of a data frame 
 - In the output, the leftmost column of numbers are *row names*. Default row names are character numerals. 
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     The data set has mV readings in several columns, designated *cycle_1*, *cycle_2*, etc. This is wide form and will have to be reshaped to long form for analysis. 
 
@@ -154,7 +154,7 @@ Learn Rmd
 
 - A pair of asterisks `*word or phrase*` typesets in *italics*
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -174,7 +174,7 @@ Writing readable code
 
 - Starting a new line after `%>%` enhances code readability, especially when using multiple pipes in a sequence of commands  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -192,13 +192,13 @@ Confer with a neighbor.
 1. The summary shows how many NAs total?  
 2. The overall minimum mV reading is? overall maximum?  
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     For all cycles, the mean, min, and max  readings (mV) are similar. We have NA in the first and last cycles only, as expected.  
 
 ### create a data table for the report
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     # Create a data table for the report
 
@@ -210,7 +210,7 @@ Learn Rmd
 
 - A pair of back ticks \``word or phrase`\` typesets in `typwriter` font
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -223,7 +223,7 @@ table_head <- tolower(table_head)
 - `colnames()` returns the column names of the data frame
 - `tolower()` makes all strings lower case
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -235,7 +235,7 @@ table_head <- str_replace(table_head, "lb", "(lb)")
 
 - `str_replace()` (from `stringr`) replaces one string with another
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -253,7 +253,7 @@ Writing readable code
 
 - Align the assignment operator `<-` of sequential lines of code where feasible.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -263,7 +263,7 @@ table_head[cycle_true] <- cycle_head
 
 - The edited cycle-column names overwrite their original names in `table_head`
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -273,11 +273,11 @@ table_head <- gsub("^([a-z])", "\\U\\1", table_head, perl = TRUE)
 
 Here, I capitalize the first letter of each column heading using *regular expression* syntax. It's complicated; use it and ignore it for now. When you really want to no more about regular expressions, [STAT 545](http://stat545.com/block022_regular-expression.html) is a good place to start. 
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     Reassign the edited table heading to the data frame. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -285,11 +285,11 @@ Here, I capitalize the first letter of each column heading using *regular expres
 colnames(input_output_data) <- table_head
 ```
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     Print the table as it would appear in the report to check it. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -304,11 +304,11 @@ Learn knitr
 
 ### save to file 
 
-![](images/text-icon.png)<!-- --> 
+![](../resources/images/text-icon.png)<!-- --> 
 
     # Save to file
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

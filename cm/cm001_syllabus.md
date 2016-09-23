@@ -29,7 +29,7 @@ layton@rose-hulman.edu
 
 Christopher Gandrud, 2015, *Reproducible Research with R and RStudio, 2/e*, CRC Press.    
 
-![](images/gandrud-cover.jpg)    
+![](../resources/images/gandrud-cover.jpg)    
 
  
 

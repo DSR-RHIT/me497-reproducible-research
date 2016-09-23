@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only
 - *Load* a package using `library()` every session
 
@@ -36,7 +36,7 @@ Delete the rest of the pre-populated text.
 
 Insert the knitr setup code: 
 
-![](images/code-icon.png)<!-- --> 
+![](../resources/images/code-icon.png)<!-- --> 
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -48,7 +48,7 @@ Learn knitr
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -67,11 +67,11 @@ Learn R
 
 ### perform the linear regression 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Perform the linear regression 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -80,7 +80,7 @@ calibr_data <- read_csv("data/02_calibr_data-tidy.csv")
 head(calibr_data)
 ```
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     - `input_lb` is the independent variable (*x*)
     - `output_mV` is the dependent variable (*y*)
@@ -91,7 +91,7 @@ Learning Rmd:
 - A pair of asterisks produces *italic* font
 - Learn more about Rmd font styles [here](http://rmarkdown.rstudio.com/authoring_basics.html)
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -105,7 +105,7 @@ Learning R:
 - `y ~ x` is an R *formula* stating that *y* is a function of *x*, where `y` and `x` are variables (named columns) in `data_frame`
 - Learn more by typing `?lm` in your Console
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -128,13 +128,13 @@ Confer with a neighbor.
 
 ### extract relevant results 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Extract relevant results 
     
     The output of `lm()` is a list of 12 named objects. For our basic analysis we want only 3 of the 12 objects. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -158,11 +158,11 @@ Confer with a neighbor.
 In our linear model, `lm()`, the coefficient of the $x^0$ term is labeled *Intercept*; the coefficient of the $x^1$ term is labeled the 
 *input_lb* coefficient, i.e., the  coefficient of $x^1$. This is our slope.   (Higher-order polynomial-fits would have additional coefficients, of course, for $x^2, x^3$, etc.)
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Extract the named objects from inside the `relevant_results` list.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -183,7 +183,7 @@ In R, a name can be assigned to each number in a vector. Sometimes, the names ar
 
 We use the names of the numbers in `coeff` to obtain the slope and intercept of the regression.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -213,13 +213,13 @@ The previous steps could have been combined, e.g.,
 
 ### determine sensor accuracy
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Determine sensor accuracy
 
     The ANSI/ISA standard defines accuracy as the maximum positive and maximum negative residual. We conventionally report the largest absolute value of the two. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -231,11 +231,11 @@ resid_bound <- max(resid_max, resid_min) # find the largest of the two values
 - `max()` and `min()` are R functions that do the obvious
 - `abs()` returns the absolute value. The minimum residual is the largest  negative residual. For the accuracy bound we only need its magnitude. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     The standard defines output span as the difference between the max and min y-fitted values. Accuracy is usually reported as a percentage of output span. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -258,13 +258,13 @@ Confer with a neighbor.
 
 In this section, we create a data frame to save numerical values and units from the regression analysis that might be used in the client report. I would never expect us to know the complete list of values we want for the report until we write the report, therefore this data frame was actually revised a number of times while writing the client report. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Collect results 
 
     Extract min/max inputs and outputs for the report. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -274,11 +274,11 @@ output_min <- min(calibr_data[['output_mV']])
 output_max <- max(calibr_data[['output_mV']])
 ```
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Collect those results I'd like to keep handy. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -307,13 +307,13 @@ Learn R.
 
 ### write results to file
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Write results to file
     
     Save the `calibr_outcome` data frame to file. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

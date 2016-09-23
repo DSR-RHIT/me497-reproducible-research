@@ -9,8 +9,8 @@
 
 You will be writing prose and code in the same document, using R Markdown (Rmd) syntax for prose and R syntax for computing. To help you distinguish between them, I use these icons: 
 
-- ![](images/text-icon.png)<!-- --> *add text*: prose in Rmd syntax  
-- ![](images/code-icon.png)<!-- --> *add code*: code in R syntax
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: prose in Rmd syntax  
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: code in R syntax
 
 The two syntaxes will sometimes use the same characters in different ways, for example,
 
@@ -28,7 +28,7 @@ In your project main directory,
 
 The Rmd file is pre-populated with prose and some markdown syntax. Here's my first text icon to denote that we are editing the Rmd file.
 
-![](images/text-icon.png)<!-- --> In the Rmd file, edit the YAML header.
+![](../resources/images/text-icon.png)<!-- --> In the Rmd file, edit the YAML header.
 
     ---
     title: "Load-cell calibration --- data in wide form"
@@ -46,7 +46,7 @@ Learn R Markdown
 
 You have 3 methods to *Knit* the Rmd file:
 
-1. *You may* click the button ![](images/knit-html.png)<!-- -->
+1. *You may* click the button ![](../resources/images/knit-html.png)<!-- -->
 2. *or* use the menu *File > Knit Document*
 3. *or* use a keyboard shortcut `Ctrl + Shift + K`
 
@@ -65,15 +65,15 @@ We'll see most of these Rmd structures again as we work through the tutorials.
 
 If you have MS Word installed on your machine (or Libre/Open Office on Unix-alikes), you can render the Rmd to Word using the Knit pull-down menu.
 
-- If you have Word installed, ![](images/knit-word.png)<!-- -->. Did a Word doc open?
+- If you have Word installed, ![](../resources/images/knit-word.png)<!-- -->. Did a Word doc open?
 
 If you have TeX installed on your machine (MiKTeX on Windows, MacTeX 2013+ on OS X, TeX Live 2013+ on Unix-alikes), you can render the Rmd to PDF.
 
-- If you have TeX installed, ![](images/knit-pdf.png)<!-- -->. Did a PDF doc open?
+- If you have TeX installed, ![](../resources/images/knit-pdf.png)<!-- -->. Did a PDF doc open?
 
 However, HTML output renders quickly and we can put off worrying about pagination.
 
-- For now, we'll use HTML output, ![](images/knit-html.png)<!-- -->.
+- For now, we'll use HTML output, ![](../resources/images/knit-html.png)<!-- -->.
 
 
 ## cleanup
@@ -99,7 +99,7 @@ To include lines of R code in our Rmd file, we place them in a *code chunk*. A c
 
 and we write the R code in between. You have 4 methods creating the code chunk delimiters. Choose the one that suits you:
 
-1. *You may* click the ![](images/insert-code.png) icon
+1. *You may* click the ![](../resources/images/insert-code.png) icon
 2. *or* use the menu `Code > Insert Chunk`
 3. *or* use a keyboard shortcut `Ctrl + Alt + I`
 4. *or* type the delimiters directly ("back ticks", not single-quotes)
@@ -107,9 +107,9 @@ and we write the R code in between. You have 4 methods creating the code chunk d
 
 **Add a code chunk after the header** 
 
-Here’s my first code icon. Use one of the methods above to create the code chunk delimiters then copy the R code to the code chunk. These lines of R code set a couple of `knitr` options.
+Hereâ€™s my first code icon. Use one of the methods above to create the code chunk delimiters then copy the R code to the code chunk. These lines of R code set a couple of `knitr` options.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -136,7 +136,7 @@ Writing readable code (see [Wickham](http://adv-r.had.co.nz/Style.html) a compre
 - One space on either side of  `=`
 - No space before a comma, one space after a comma (just like written English)
 
-Save and ![](images/knit-icon.png)<!-- --> *knit* the document after every change to check that your script is behaving as you expect.
+Save and ![](../resources/images/knit-icon.png)<!-- --> *knit* the document after every change to check that your script is behaving as you expect.
 
 ## check yourself
 

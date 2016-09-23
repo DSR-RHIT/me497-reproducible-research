@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only
 - *Load* a package using `library()` every session
 
@@ -37,7 +37,7 @@ Delete the rest of the pre-populated text.
 
 Insert knitr setup code. 
 
-![](images/code-icon.png)<!-- --> 
+![](../resources/images/code-icon.png)<!-- --> 
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -45,7 +45,7 @@ Insert knitr setup code.
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -57,7 +57,7 @@ suppressPackageStartupMessages(library(dplyr))
 
 ## plan the data reshaping
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Plan the data reshaping
 
@@ -74,13 +74,13 @@ Learn R Markdown:
 - `- ` (hyphen, space) creates an itemized list (bullet list). A line space above and below separating the list from other paragraphs is required. 
 - To print an underscore in the Rmd prose we have to "escape" the character by writing `\_`. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     In the reshaped data set, every mV reading will appear in its own row identified by cycle number (from the existing column name) and test point.  Thus the columns with *cycle* in their name  are the ones being gathered. 
 
 The next code chunk finds the columns with `cycle` in their name. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -100,7 +100,7 @@ Notes on reproducibility
 - For a full explanation, see the previous tutorial. 
 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -113,7 +113,7 @@ Learn R
 - `tolower()` returns the vector all in lower case
 - `str_detect()` (from `stringr`) returns a logical vector with TRUE for column each name containing `cycle`
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -149,11 +149,11 @@ The new data frame has as many rows as there are observations in the original ta
 
 The columns "not gathered"" remain, e.g., test_point, input_lb, with their entries copied into the new rows, maintaining the relationships described in the original data set.
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Reshape the data to long form
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -168,7 +168,7 @@ Learn R
 - `cycle` gathers the column names, e.g., cycle_1, cycle_2, cycle_3
 - `output_mV` gathers the column data (mV), e.g., 29.9, 49.4, 70.0, 91.6, 69.0, 50.1, 30.8, 10.9, etc. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -186,7 +186,7 @@ Confer with a neighbor.
 1. The total number of observations is?
 2. The total number of measured variables is? 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     I have the columns I expected.
 
@@ -194,7 +194,7 @@ Confer with a neighbor.
 
     Result is the first tidy form, where every row is an observation and every column a variable.  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -214,13 +214,13 @@ Learn R
 
 ## add observation numbers
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Add observation numbers
 
     The test points are in the order in which the data were acquired (consistent with the ANSI/ISA standard). So the observation number is the same as the row number. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -247,13 +247,13 @@ Confer with a neighbor.
 
 ## simplify the cycle number
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Simplify the cycle number
 
     The `cycle` data are strings, *cycle_1*, *cycle_2*, etc., from the original column headings. It might be useful to replace these strings with integers, e.g. replacing the string `cycle_1` with the integer `1`. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -273,11 +273,11 @@ Learn R
 - `convert = TRUE` converts the character numerals into integers
 - `c()` operator *concatenates* elements to form a vector
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     The `prefix` column is superfluous. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -290,13 +290,13 @@ glimpse(tidy_data)
 
 ## final touches
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     # Final touches 
 
     The last steps in tidying this data set are to rearrange columns in a logical order and shorten the `test_point` variable name. It's a small enough data set that I can print it. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -313,11 +313,11 @@ Learn R
 
 ## write to file
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
     Write it to the `data` directory, ready to use for the calibration graph and the regression analysis.   
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

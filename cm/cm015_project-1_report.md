@@ -7,9 +7,9 @@
 
 How to use this tutorial 
 
-- ![](images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
-- ![](images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
-- ![](images/knit-icon.png)<!-- --> *knit* after each addition. 
+- ![](../resources/images/text-icon.png)<!-- --> *add text*: type the prose verbatim into the Rmd file 
+- ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a code chunk, then transcribe the R code 
+- ![](../resources/images/knit-icon.png)<!-- --> *knit* after each addition. 
 - *Install* packages one time only
 - *Load* a package using `library()` every session
 
@@ -36,7 +36,7 @@ Edit the YAML header:
 
 Delete the rest of the pre-populated text. Insert knitr setup code
 
-![](images/code-icon.png)<!-- --> 
+![](../resources/images/code-icon.png)<!-- --> 
 
     library(knitr)
     opts_knit$set(root.dir = '../')
@@ -48,7 +48,7 @@ Delete the rest of the pre-populated text. Insert knitr setup code
 
 Knowing the packages we'll be using, we can load them right away, near the top of the file.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -62,7 +62,7 @@ library(readr)
 
 The make and model number of the sensor were provided by the test lab but do not appear in the data set. Here, we'll assign those characteristics to variables so that if they change, we only have to change them in one place in the report.  
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -78,7 +78,7 @@ Here we import and manipulate regression outcomes we computed earlier and saved 
 
 This section is another example of code that was developed iteratively while  drafting the report. Initially, I just started the draft prose. As I worked, I  identified variables I would need in my workspace before the first paragraph, e.g., `sensor_model`, `force_limit`, and `force_unit`. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -92,7 +92,7 @@ Learn R
 
 Selecting specific numbers from these regression outcomes is easier if we convert the data frame to a list. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -116,7 +116,7 @@ Note that each item in `results_list` (accuracy, input_max, etc) is a  data fram
 
 To extract a specific value, we use `$` notation to subset twice, first to subset the top-level list, second to subset the lower-level data frame. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -129,7 +129,7 @@ slope <- results_list$slope$num
 
 Repeat for the remaining values we want for the report. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -151,7 +151,7 @@ When drafting this report, I did not necessarily know which regression outcomes 
 
 Next, there are a couple of values I have to compute to use in the report. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -170,7 +170,7 @@ Below, I check two conditions comparing the maximum force in the data set to the
 1. Should not exceed the sensor range
 2. Should be at least 90\% of the sensor range (required by the ANSI standard)
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -201,7 +201,7 @@ In either case, you should see an error statement in the `R Markdown` pane. Make
 
 In my very first draft of the report file, the heading and introduction below were right at the top of the file. The code we just completed came later, as I worked out what variables I wanted to assign to support reproducibility.  
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code># Introduction
 
@@ -224,7 +224,7 @@ Inline code is one of our tools for reproducibility. If the data or analysis cha
 
 Here we import and discuss the test setup image given to us by the lab that we saved in the `resources` directory. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code>The test setup is illustrated in Figure 1. Precision weights (0.1% accuracy) are used to apply the reference force (<code>`</code>r input_unit<code>`</code>) to the load cell and the resulting voltage readings (<code>`</code>r output_unit<code>`</code>) from the sensor are recorded. The test procedure follows the ANSI/ISA standard.
 </code></pre>
@@ -234,7 +234,7 @@ Inline code is used again to write the units of input and output.
 - \`r input\_unit\` is replaced in the output document by its value, "lb" 
 - \`r output\_unit\` is replaced in the output document by its value, "mV"
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -247,7 +247,7 @@ knitr::include_graphics("../resources/load-cell-setup-786x989px.png")
 
 Here we import and discuss the table we created earlier and saved in the `results` directory. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code># Data
 
@@ -256,7 +256,7 @@ The calibration data are shown in Table 1. The maximum force (<code>`</code>r in
 
 Again, we've used several inline code chunks for reproducibility. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -272,7 +272,7 @@ Learn knitr
 
 ## inline math symbols 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code># Results
 
@@ -290,7 +290,7 @@ Math in Rmd
 
 Here we import and discuss the graph we created earlier and saved in the `results` directory. 
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r
@@ -301,7 +301,7 @@ knitr::include_graphics("../results/05_calibr_graph.png")
 
 The calibration equation is the first of the two main results. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code>The calibration equation is
 $$
@@ -324,7 +324,7 @@ Inline code with `sprintf` formatting
 
 The accuracy of the sensor is the second of the two main results. 
 
-![](images/text-icon.png)<!-- -->
+![](../resources/images/text-icon.png)<!-- -->
 
 <pre class="r"><code>The largest residual is <code>`</code>r sprintf("%.1f", resid_bound)<code>`</code> <code>`</code>r output_unit<code>`</code> and the output span is <code>`</code>r sprintf("%.1f", output_span)<code>`</code> <code>`</code>r output_unit<code>`</code>, yielding a sensor accuracy as a percent of reading of 
 $$

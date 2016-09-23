@@ -25,7 +25,7 @@ If my collaborator is a Word-Excel-PPT user, I send them the `.docx` file. They 
 
 My usual practice is to make a copy of the `docx` file, rename it, then manually convert it to a PDF file that I can send electronically to the client. When creating the PDF, I add the transmittal date to the file name.
 
-![](images/code-icon.png)<!-- -->
+![](../resources/images/code-icon.png)<!-- -->
 
 
 ```r

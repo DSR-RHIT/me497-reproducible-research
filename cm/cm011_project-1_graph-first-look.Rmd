@@ -16,7 +16,7 @@ opts_chunk$set(echo = TRUE, include = TRUE, eval = TRUE, message = FALSE, warnin
 
 ```{r, echo = FALSE}
 # my tutorial functions for text_icon and code_icon
-source("week_02/helper_02_icons.R")
+source("cm/helper_02_icons.R")
 ```
 
 How to use this tutorial 
