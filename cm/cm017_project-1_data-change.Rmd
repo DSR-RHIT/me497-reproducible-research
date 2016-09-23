@@ -1,9 +1,8 @@
 ---
-title: "what to do when the data change"
-output:
-  html_document:
-    keep_md: yes
----
+output: github_document
+--- 
+
+# when the data change
 
 ```{r 117-01, include = FALSE}
 library(knitr)
