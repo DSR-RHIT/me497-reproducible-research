@@ -1,6 +1,6 @@
 
-reshaping data
-==============
+reshaping data from wide to long form
+=====================================
 
 Illustrate reshaping a data set from wide form to long form using the built-in `VADeaths` data set.
 

@@ -2,7 +2,7 @@
 output: github_document
 --- 
 
-# reshaping data
+# reshaping data from wide to long form
 
 ```{r setup, include = FALSE}
 library(knitr)
