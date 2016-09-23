@@ -223,8 +223,8 @@ Here we import and discuss the test setup image given to us by the lab that we s
 </code></pre>
 Inline code is used again to write the units of input and output.
 
--   \`r input\_unit\` is replaced in the output document by its value, "lb"
--   \`r output\_unit\` is replaced in the output document by its value, "mV"
+-   \` r  input\_unit\` is replaced in the output document by its value, "lb"
+-   \` r  output\_unit\` is replaced in the output document by its value, "mV"
 
 ![](../resources/images/code-icon.png)
 

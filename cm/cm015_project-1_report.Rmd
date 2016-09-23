@@ -234,8 +234,8 @@ Here we import and discuss the test setup image given to us by the lab that we s
 
 Inline code is used again to write the units of input and output. 
 
-- \`r input\_unit\` is replaced in the output document by its value, "`r input_unit`" 
-- \`r output\_unit\` is replaced in the output document by its value, "`r output_unit`"
+- \`\ r \ input\_unit\` is replaced in the output document by its value, "`r input_unit`" 
+- \`\ r \ output\_unit\` is replaced in the output document by its value, "`r output_unit`"
 
 `r code_icon`
 
