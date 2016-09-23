@@ -11,7 +11,7 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0
 
-- [Setup Git and GitHub](cm/cm003_git-setup) 
+- [Setup Git and GitHub](cm/cm003_git-setup.md) 
 
 ## week 1
 
