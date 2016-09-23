@@ -90,3 +90,7 @@ For example,
       address   = {Boca Raton, FL},
       edition   = {2},
     }
+
+------------------------------------------------------------------------
+
+[main page](../README.md)

@@ -85,4 +85,4 @@ When the new docx file appears, compare it to the original.
 
 ------------------------------------------------------------------------
 
-Back [write the client report](113_report.html)<br> Next [main page](../index.html)
+[main page](../README.md)
