@@ -11,10 +11,13 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0
 
+- [Course introduction](slides/slides001_introduction.pdf) [slides] 
+- [Software overview](slides/slides002_software.pdf) [slides]  
 - [Setup Git and GitHub](cm/cm003_git-setup.md) 
 
 ## week 1
 
+- [Three principles of reproducibility](slides/slides003_start-report.pdf) [slides]  
 - [Project 1 overview](cm/cm004_project-1_overview.md) 
 - [Initialize the project](cm/cm005_project-1_initialize.md) 
 - [Download resource and data files](cm/cm006_project-1_downloads.md) 
@@ -39,4 +42,4 @@ Beyond the basics
 
 - [Initialize project 2](cm/cm017_project-2_start.md) 
 - [Getting data into R](cm/cm018_getting-data-into-R.md) 
- 
+- [Adding references to a report](cm/cm019_references.md)  
