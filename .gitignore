@@ -1,6 +1,11 @@
 # holding folders
 */holding
 
+# all PPT
+*.pptx
+*/*.pptx
+
+
 # ignore course management folder
 manage
 
