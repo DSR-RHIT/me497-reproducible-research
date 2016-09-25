@@ -45,3 +45,7 @@ Beyond the basics
 - [Initialize project 2](cm/cm019_project-2_start.md) 
 - [Getting data into R](cm/cm020_getting-data-into-R.md) 
 - [Reshaping data from wide to long form](cm/cm021_reshaping-data.md) 
+
+## week 4 
+
+- [Review data preparation from tutorials](cm/cm022_review-data-prep.md) 
