@@ -26,7 +26,7 @@ This tutorial follows material in Chapter 7 in the text. Topics include:
 start a new script in practiceR
 -------------------------------
 
-In `practiceR/scripts/`, start a new Rmd file called `chapter7.Rmd`. Write the code chunks shown below with as much of the prose as yo9u like to explain the work.
+In `practiceR/scripts/`, start a new Rmd file called `chapter7.Rmd`. Write the code chunks shown below with as much of the prose as you like to explain the work.
 
 ![](../resources/images/code-icon.png) Start with the usual code chunk.
 
