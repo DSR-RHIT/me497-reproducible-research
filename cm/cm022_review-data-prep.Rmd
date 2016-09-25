@@ -25,7 +25,7 @@ library(tibble)
 
 These packages are all written by Hadley Wickham, who also happens to be the author of the ggplot2 package and a senior data scientist at RStudio. And quite a nice fellow in person as well. 
 
-If you subscribe to the RStudio newsletter, you can receive online notices of free webinars put on by Hadley and other folks at RStudio. I recommend it. 
+If you subscribe to the [RStudio webinar notifications](https://www.rstudio.com/resources/webinars/), you can receive online notices of free webinars put on by Hadley and other folks at RStudio. I recommend it. 
  
 ## input/output  
 
