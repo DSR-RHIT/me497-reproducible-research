@@ -2,7 +2,7 @@
 output: github_document
 --- 
 
-# tools for preparing data
+# review of tools for preparing data
 
 ```{r setup, include = FALSE}
 library(knitr)

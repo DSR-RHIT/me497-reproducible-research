@@ -1,0 +1,45 @@
+---
+output: github_document
+--- 
+
+# start a new *practiceR* project 
+
+```{r setup, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE)
+```
+
+```{r echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+
+For tutorials for practicing and learning R, you might want to create a new R Project at the top level of your course directory called something like `practiceR`.  
+
+Version control is not required.  This is your own personal project for writing scripts for learning R. 
+
+```
+overall-course-directory\
+  |-- me497-project-1-YourLastName\
+  |-- me497-project-2-YourLastName\
+  `-- practiceR\
+```
+
+The `practiceR` directory starts out like this: 
+
+```
+practiceR\  
+  |-- data\
+  |-- scripts\
+  |-- practiceR.Rproj
+  `-- .Renviron
+```
+
+
+---
+
+[main page](../README.md)  
+
+

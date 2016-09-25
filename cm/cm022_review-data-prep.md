@@ -1,6 +1,6 @@
 
-tools for preparing data
-========================
+review of tools for preparing data
+==================================
 
 Here, we briefly review the suite of tools we used in the Project 1 tutorials for preparing data for analysis.
 
