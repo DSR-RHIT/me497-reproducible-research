@@ -5,9 +5,9 @@
 *.pptx
 */*.pptx
 
-
-# ignore course management folder
+# ignore course management folders
 manage
+practiceR
 
 # History files
 .Rhistory
