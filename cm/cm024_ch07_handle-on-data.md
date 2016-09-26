@@ -76,7 +76,7 @@ The subset we'll use from this data is the `AG.CON.FERT.ZS`.
 FertConsumpData <- WDI(indicator = "AG.CON.FERT.ZS")
 ```
 
-Check you Environment pane. You should see the new object **FertConsumpData**.
+Check you Environment pane. You should see the new object **FertConsumpData**. If not, simply use the Run menu and Run All. This executes all the R code in your file independent of the prose.
 
 Our author uses CamelCase for variable names. My current practice generally is to use all lowercase letters separated by underscores, for example, **fert\_consump\_data**. But, because I'm following the text example, I'll use the text convention.
 
