@@ -51,4 +51,14 @@ Beyond the basics
 
 - [Review of tools for preparing data](cm/cm022_review-data-prep.md)  
 - [Start a new "practiceR" project](cm/cm023_practiceR.md) 
-- [Get a handle on your data (7.1.1)](cm/cm024_ch07_handle-on-data.md) 
+- [practiceR: Get a handle on your data (7.1.1)](cm/cm024_ch07_handle-on-data.md) 
+
+
+
+
+
+
+
+
+---
+[Unlicense](UNLICENSE.md)
