@@ -1,0 +1,205 @@
+---
+output: github_document
+--- 
+
+# reshaping data
+
+```{r setup, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE)
+```
+
+```{r echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+- Please launch the `practiceR` project.  
+- Open the  `chapter7.Rmd` script and continue adding to it from this tutorial. 
+
+```{r}
+# packages 
+library(dplyr)
+library(tidyr)
+library(WDI)
+```
+
+
+
+
+## data set 
+
+We'll continue with the  `WDI` data set  we loaded in the previous tutorial. The variables in the data frame include: 
+
+- `iso2c` International 2-character country abbreviation 
+- `AG.CON.FERT.ZS` Fertilizer consumption in kg per hectare 
+ 
+```{r include=FALSE}
+# input the  fertilizer consumption data
+# include false. this is a continuation of the previous tutorial
+FertConsumpData <- WDI(indicator = "AG.CON.FERT.ZS")
+head(FertConsumpData)
+```
+
+Check for NAs using `summary()`
+
+```{r}
+summary(FertConsumpData)
+```
+
+```{r include=FALSE}
+# N of NAs in set
+number_NA <- length(which(is.na(FertConsumpData$AG.CON.FERT.ZS)))
+number_rows <- nrow(FertConsumpData)
+```
+
+We have `r number_NA` NAs in the fertilizer consumption column, or `r round(100*number_NA/number_rows, 0)`%  of the `r number_rows` observations. Afdter we delete the NA entries, we should end up with `r number_rows - number_NA` rows. 
+
+To delete the NAS rows, start with `is.na()`
+
+```{r}
+find_NA <- is.na(FertConsumpData$AG.CON.FERT.ZS)
+# examine the first 50 entries
+find_NA[1:50]
+```
+
+- `is.na()` returns a logical vector with TRUE identifying the entries that are NA and FALSE identifying the entries that are not NA  
+
+
+We would prefer TRUE for the values to keep (not NA) and FALSE for the values that are NA. To do that, we use the logical NOT (`!`) as  follows, 
+
+
+```{r}
+find_not_NA <- !is.na(FertConsumpData$AG.CON.FERT.ZS)
+# examine the first 50 entries
+find_not_NA[1:50]
+```
+
+- `!is.na()` is the same as saying, "assign TRUE to data entries that are NOT NA" 
+- Compare these 50 results with the previous set and you'll see that we have reversed the position of TRUE and FALSE. 
+- **find_not_NA** has the same number of rows as the data set 
+
+
+Now we can subset the original data frame by keeping those rows that are indexed in **keep_these**
+
+```{r}
+FertConsumpData <- FertConsumpData %>%
+	filter(find_not_NA)
+```
+
+- `filter()` keeps rows for which **find_not_NA** is TRUE 
+
+```{r}
+summary(FertConsumpData)
+```
+
+The NAs are gone. 
+
+## long to wide
+
+Reshaping data from long form to wide form is useful when you want to create a data table for a report. 
+
+Use the `spread()` function to convert the long form `FertConsumpData` to wide form. `spread()` is the dual to `gather()`
+
+`r code_icon`
+```{r}
+SpreadFert <- FertConsumpData %>%
+	spread(year, AG.CON.FERT.ZS)
+```
+
+-  `year` tells `spread()` to take the unique values originally in the **year** column and spread them out as the names of the new columns, e.g. **2005**, **2006**, etc.  
+- `AG.CON.FERT.ZS` tells `spread()` that the data in the new columns comes from the original **AG.CON.FERT.ZS** column. 
+
+
+
+
+```{r}
+# examine the result 
+glimpse(SpreadFert)
+```
+
+
+
+
+
+Then arrange the rows by country
+
+`r code_icon`
+```{r}
+SpreadFert <- SpreadFert %>%
+	arrange(country)
+head(SpreadFert)
+```
+
+
+Summarize, see what we have.
+
+```{r}
+summary(SpreadFert)
+```
+
+Some NAs have reapperaed! Why?
+
+- When we spread by year, we find that not all countries have data for all years. 
+- R automatically places an NA in those missing data values. 
+
+Suppose we decide that we only want to use countries where we have data in every year. I'll use the `complete.cases()` function to remove rows that do not have data entries for all years.  
+
+
+```{r}
+find_complete <- complete.cases(SpreadFert)
+CompleteSpreadFert <- SpreadFert %>%
+	filter(find_complete)
+summary(CompleteSpreadFert)
+```
+
+Now those NAs are gone. 
+
+Ready to display as a table, omitting the second (country) column to make the table narrower. 
+
+```{r}
+# rond the number to two decimals
+CompleteSpreadFert[3:9] <- round(CompleteSpreadFert[3:9], 2)
+# all rows, omit column 2
+kable(CompleteSpreadFert[ , -2])
+```
+
+
+In a report, we might list the full table in an appaendix with possibly an subset shown in the main report to show representative values. 
+
+
+
+
+
+## wide to long 
+
+We covered this last week using the VADeaths data set. 
+
+- [Reshaping data from wide to long form](cm021_reshaping-data.md) 
+- [Visual interpretation of the gather function](../slides/slides004_visual-gather.pdf) (slides)
+
+
+For practice, we can reshape the fertilizer consumptioon data from wide back to long. 
+
+```{r}
+CompleteLongFert <- CompleteSpreadFert %>%
+	gather(year, fert_consump, 3:9)
+# look at the result
+head(CompleteLongFert)
+glimpse(CompleteLongFert)
+```
+
+Convert **year** back to a number
+
+```{r}
+CompleteLongFert$year <- as.numeric(CompleteLongFert$year)
+glimpse(CompleteLongFert)
+head(CompleteLongFert)
+```
+
+
+Cool!
+
+--- 
+[main page](../README.md)
