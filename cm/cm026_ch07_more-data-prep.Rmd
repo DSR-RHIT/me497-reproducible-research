@@ -175,6 +175,11 @@ This example illustrates the importance of examining a summary of any new variab
 
 
 
+```{r include=FALSE}
+library(readr)
+write_csv(CompleteLongFert, "results/CompleteLongFert2.csv")
+```
+
 
 
 

@@ -9,18 +9,18 @@ The table below lists each student (the author) and who they will invite to be a
 assigned collaborations
 -----------------------
 
-| Author  |         | Collaborator |
-|:--------|---------|:-------------|
-| Chris   | invites | Connor       |
-| Connor  | invites | Tyler        |
-| Tyler   | invites | Spencer      |
-| Spencer | invites | Maddy        |
-| Maddy   | invites | Davis        |
-| Davis   | invites | Matt         |
-| Matt    | invites | Emily        |
-| Emily   | invites | Tony         |
-| Tony    | invites | Sonia        |
-| Sonia   | invites | Chris        |
+| Author  |         | Collaborator | GitHub name          |
+|:--------|---------|:-------------|:---------------------|
+| Chris   | invites | Connor       | connorkis            |
+| Connor  | invites | Tyler        | Rick8404             |
+| Tyler   | invites | Spencer      | wrightsd             |
+| Spencer | invites | Maddy        | pascomd              |
+| Maddy   | invites | Davis        | bakerpd              |
+| Davis   | invites | Matt         | Mherboth1            |
+| Matt    | invites | Emily        | NordtE               |
+| Emily   | invites | Tony         | adamoam              |
+| Tony    | invites | Sonia        | sony0692             |
+| Sonia   | invites | Chris        | christopherhuntley40 |
 
 action items
 ------------

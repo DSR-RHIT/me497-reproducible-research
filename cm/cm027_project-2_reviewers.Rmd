@@ -20,7 +20,7 @@ The table below lists each student (the author) and who they will invite to be a
 ```{r}
 library(readxl)
 df <- read_excel("manage/project2reviewers.xlsx")
-names(df) <- c("Author", "", "Collaborator")
+names(df) <- c("Author", "", "Collaborator", "GitHub name")
 kable(df)
 ```
 

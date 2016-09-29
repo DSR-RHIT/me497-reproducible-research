@@ -66,12 +66,12 @@ Copy the data in the row names to a new column.
 df <- df %>%
     mutate(Age_group = row.names(df))
 df
-##   Rural.Male Rural.Female Urban.Male Urban.Female Age_group
-## 1       11.7          8.7       15.4          8.4     50-54
-## 2       18.1         11.7       24.3         13.6     55-59
-## 3       26.9         20.3       37.0         19.3     60-64
-## 4       41.0         30.9       54.6         35.1     65-69
-## 5       66.0         54.3       71.1         50.0     70-74
+##       Rural.Male Rural.Female Urban.Male Urban.Female Age_group
+## 50-54       11.7          8.7       15.4          8.4     50-54
+## 55-59       18.1         11.7       24.3         13.6     55-59
+## 60-64       26.9         20.3       37.0         19.3     60-64
+## 65-69       41.0         30.9       54.6         35.1     65-69
+## 70-74       66.0         54.3       71.1         50.0     70-74
 ```
 
 -   `mutate()` automatically eliminates the original row names
@@ -81,12 +81,12 @@ df
 df <- df %>%
     select(Age_group, Rural.Male:Urban.Female)
 df
-##   Age_group Rural.Male Rural.Female Urban.Male Urban.Female
-## 1     50-54       11.7          8.7       15.4          8.4
-## 2     55-59       18.1         11.7       24.3         13.6
-## 3     60-64       26.9         20.3       37.0         19.3
-## 4     65-69       41.0         30.9       54.6         35.1
-## 5     70-74       66.0         54.3       71.1         50.0
+##       Age_group Rural.Male Rural.Female Urban.Male Urban.Female
+## 50-54     50-54       11.7          8.7       15.4          8.4
+## 55-59     55-59       18.1         11.7       24.3         13.6
+## 60-64     60-64       26.9         20.3       37.0         19.3
+## 65-69     65-69       41.0         30.9       54.6         35.1
+## 70-74     70-74       66.0         54.3       71.1         50.0
 ```
 
 We're ready to use `gather()` to reshape the wide form to long form.
