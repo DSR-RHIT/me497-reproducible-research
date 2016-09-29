@@ -18,6 +18,7 @@ source("cm/helper_02_icons.R")
 - Please launch the `practiceR` project.  
 - Open the  `chapter7.Rmd` script and continue adding to it from this tutorial. 
 
+`r code_icon` 
 ```{r}
 # packages 
 library(dplyr)
@@ -44,20 +45,22 @@ head(FertConsumpData)
 
 Check for NAs using `summary()`
 
+`r code_icon` 
 ```{r}
 summary(FertConsumpData)
 ```
 
 ```{r include=FALSE}
 # N of NAs in set
-number_NA <- length(which(is.na(FertConsumpData$AG.CON.FERT.ZS)))
+number_NA   <- length(which(is.na(FertConsumpData$AG.CON.FERT.ZS)))
 number_rows <- nrow(FertConsumpData)
 ```
 
-We have `r number_NA` NAs in the fertilizer consumption column, or `r round(100*number_NA/number_rows, 0)`%  of the `r number_rows` observations. Afdter we delete the NA entries, we should end up with `r number_rows - number_NA` rows. 
+We have `r number_NA` NAs in the fertilizer consumption column, or `r round(100*number_NA/number_rows, 0)`%  of the `r number_rows` observations. After we delete the NA entries, we should end up with `r number_rows - number_NA` rows. 
 
 To delete the NAS rows, start with `is.na()`
 
+`r code_icon` 
 ```{r}
 find_NA <- is.na(FertConsumpData$AG.CON.FERT.ZS)
 # examine the first 50 entries
@@ -69,7 +72,7 @@ find_NA[1:50]
 
 We would prefer TRUE for the values to keep (not NA) and FALSE for the values that are NA. To do that, we use the logical NOT (`!`) as  follows, 
 
-
+`r code_icon` 
 ```{r}
 find_not_NA <- !is.na(FertConsumpData$AG.CON.FERT.ZS)
 # examine the first 50 entries
@@ -83,6 +86,7 @@ find_not_NA[1:50]
 
 Now we can subset the original data frame by keeping those rows that are indexed in **keep_these**
 
+`r code_icon` 
 ```{r}
 FertConsumpData <- FertConsumpData %>%
 	filter(find_not_NA)
@@ -90,6 +94,7 @@ FertConsumpData <- FertConsumpData %>%
 
 - `filter()` keeps rows for which **find_not_NA** is TRUE 
 
+`r code_icon` 
 ```{r}
 summary(FertConsumpData)
 ```
@@ -113,7 +118,7 @@ SpreadFert <- FertConsumpData %>%
 
 
 
-
+`r code_icon` 
 ```{r}
 # examine the result 
 glimpse(SpreadFert)
@@ -135,18 +140,19 @@ head(SpreadFert)
 
 Summarize, see what we have.
 
+`r code_icon` 
 ```{r}
 summary(SpreadFert)
 ```
 
-Some NAs have reapperaed! Why?
+Some NAs have reappeared! Why?
 
 - When we spread by year, we find that not all countries have data for all years. 
 - R automatically places an NA in those missing data values. 
 
 Suppose we decide that we only want to use countries where we have data in every year. I'll use the `complete.cases()` function to remove rows that do not have data entries for all years.  
 
-
+`r code_icon` 
 ```{r}
 find_complete <- complete.cases(SpreadFert)
 CompleteSpreadFert <- SpreadFert %>%
@@ -158,15 +164,16 @@ Now those NAs are gone.
 
 Ready to display as a table, omitting the second (country) column to make the table narrower. 
 
+`r code_icon` 
 ```{r}
-# rond the number to two decimals
+# round the number to two decimals
 CompleteSpreadFert[3:9] <- round(CompleteSpreadFert[3:9], 2)
 # all rows, omit column 2
 kable(CompleteSpreadFert[ , -2])
 ```
 
 
-In a report, we might list the full table in an appaendix with possibly an subset shown in the main report to show representative values. 
+In a report, we might list the full table in an appendix with possibly an subset shown in the main report to show representative values. 
 
 
 
@@ -180,8 +187,9 @@ We covered this last week using the VADeaths data set.
 - [Visual interpretation of the gather function](../slides/slides004_visual-gather.pdf) (slides)
 
 
-For practice, we can reshape the fertilizer consumptioon data from wide back to long. 
+For practice, we can reshape the fertilizer consumption data from wide back to long. 
 
+`r code_icon` 
 ```{r}
 CompleteLongFert <- CompleteSpreadFert %>%
 	gather(year, fert_consump, 3:9)
@@ -192,12 +200,25 @@ glimpse(CompleteLongFert)
 
 Convert **year** back to a number
 
+`r code_icon` 
 ```{r}
 CompleteLongFert$year <- as.numeric(CompleteLongFert$year)
 glimpse(CompleteLongFert)
 head(CompleteLongFert)
 ```
 
+```{r include=FALSE}
+library(readr)
+write_csv(CompleteLongFert, "results/CompleteLongFert.csv")
+```
+
+## summary of new functions 
+
+- `is.na` 
+- `!` 
+- `complete.cases()` 
+- `spread()` 
+- `as.numeric()` 
 
 Cool!
 

@@ -5,6 +5,8 @@ reshaping data
 -   Please launch the `practiceR` project.
 -   Open the `chapter7.Rmd` script and continue adding to it from this tutorial.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # packages 
 library(dplyr)
@@ -22,6 +24,8 @@ We'll continue with the `WDI` data set we loaded in the previous tutorial. The v
 
 Check for NAs using `summary()`
 
+![](../resources/images/code-icon.png)
+
 ``` r
 summary(FertConsumpData)
 ```
@@ -35,9 +39,11 @@ summary(FertConsumpData)
     ##                                        Max.   :16532   Max.   :2011  
     ##                                        NA's   :454
 
-We have 454 NAs in the fertilizer consumption column, or 25% of the 1848 observations. Afdter we delete the NA entries, we should end up with 1394 rows.
+We have 454 NAs in the fertilizer consumption column, or 25% of the 1848 observations. After we delete the NA entries, we should end up with 1394 rows.
 
 To delete the NAS rows, start with `is.na()`
+
+![](../resources/images/code-icon.png)
 
 ``` r
 find_NA <- is.na(FertConsumpData$AG.CON.FERT.ZS)
@@ -54,6 +60,8 @@ find_NA[1:50]
 -   `is.na()` returns a logical vector with TRUE identifying the entries that are NA and FALSE identifying the entries that are not NA
 
 We would prefer TRUE for the values to keep (not NA) and FALSE for the values that are NA. To do that, we use the logical NOT (`!`) as follows,
+
+![](../resources/images/code-icon.png)
 
 ``` r
 find_not_NA <- !is.na(FertConsumpData$AG.CON.FERT.ZS)
@@ -73,12 +81,16 @@ find_not_NA[1:50]
 
 Now we can subset the original data frame by keeping those rows that are indexed in **keep\_these**
 
+![](../resources/images/code-icon.png)
+
 ``` r
 FertConsumpData <- FertConsumpData %>%
     filter(find_not_NA)
 ```
 
 -   `filter()` keeps rows for which **find\_not\_NA** is TRUE
+
+![](../resources/images/code-icon.png)
 
 ``` r
 summary(FertConsumpData)
@@ -110,6 +122,8 @@ SpreadFert <- FertConsumpData %>%
 
 -   `year` tells `spread()` to take the unique values originally in the **year** column and spread them out as the names of the new columns, e.g. **2005**, **2006**, etc.
 -   `AG.CON.FERT.ZS` tells `spread()` that the data in the new columns comes from the original **AG.CON.FERT.ZS** column.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # examine the result 
@@ -148,6 +162,8 @@ head(SpreadFert)
 
 Summarize, see what we have.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 summary(SpreadFert)
 ```
@@ -177,12 +193,14 @@ summary(SpreadFert)
     ##  Max.   :11719  
     ##  NA's   :2
 
-Some NAs have reapperaed! Why?
+Some NAs have reappeared! Why?
 
 -   When we spread by year, we find that not all countries have data for all years.
 -   R automatically places an NA in those missing data values.
 
 Suppose we decide that we only want to use countries where we have data in every year. I'll use the `complete.cases()` function to remove rows that do not have data entries for all years.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 find_complete <- complete.cases(SpreadFert)
@@ -217,8 +235,10 @@ Now those NAs are gone.
 
 Ready to display as a table, omitting the second (country) column to make the table narrower.
 
+![](../resources/images/code-icon.png)
+
 ``` r
-# rond the number to two decimals
+# round the number to two decimals
 CompleteSpreadFert[3:9] <- round(CompleteSpreadFert[3:9], 2)
 # all rows, omit column 2
 kable(CompleteSpreadFert[ , -2])
@@ -421,7 +441,7 @@ kable(CompleteSpreadFert[ , -2])
 | ZM    |     27.98|     25.68|     32.33|     38.66|    25.78|    29.17|     46.15|
 | ZW    |     21.80|     32.36|     27.04|     21.99|    28.78|    34.08|     29.45|
 
-In a report, we might list the full table in an appaendix with possibly an subset shown in the main report to show representative values.
+In a report, we might list the full table in an appendix with possibly an subset shown in the main report to show representative values.
 
 wide to long
 ------------
@@ -431,7 +451,9 @@ We covered this last week using the VADeaths data set.
 -   [Reshaping data from wide to long form](cm021_reshaping-data.md)
 -   [Visual interpretation of the gather function](../slides/slides004_visual-gather.pdf) (slides)
 
-For practice, we can reshape the fertilizer consumptioon data from wide back to long.
+For practice, we can reshape the fertilizer consumption data from wide back to long.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 CompleteLongFert <- CompleteSpreadFert %>%
@@ -461,6 +483,8 @@ glimpse(CompleteLongFert)
 
 Convert **year** back to a number
 
+![](../resources/images/code-icon.png)
+
 ``` r
 CompleteLongFert$year <- as.numeric(CompleteLongFert$year)
 glimpse(CompleteLongFert)
@@ -484,6 +508,15 @@ head(CompleteLongFert)
     ## 4    AO              Angola 2005         2.26
     ## 5    AG Antigua and Barbuda 2005         6.00
     ## 6    1A          Arab World 2005        68.81
+
+summary of new functions
+------------------------
+
+-   `is.na`
+-   `!`
+-   `complete.cases()`
+-   `spread()`
+-   `as.numeric()`
 
 Cool!
 

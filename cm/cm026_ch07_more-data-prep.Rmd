@@ -1,0 +1,182 @@
+---
+output: github_document
+--- 
+
+# more data prep skills
+
+```{r setup, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE)
+```
+
+```{r echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+- Please launch the `practiceR` project.  
+- Open the  `chapter7.Rmd` script and continue adding to it from this tutorial. 
+
+`r code_icon` 
+```{r}
+# packages 
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(WDI)
+```
+
+## data set 
+
+We'll continue with the  `WDI` data frame we called **CompleteLongFert** last time. 
+
+```{r include=FALSE}
+library(readr)
+CompleteLongFert <- read_csv("results/CompleteLongFert.csv")
+```
+
+
+## renaming variables (7.1.3)
+
+"Renaming" a variable means changing a data frame column name. We can use  `dplyr::select()` function (we've used it before) to rename the columns using the format `new_name = old_name`. Quotes around the column names are not needed unless an original column name has a space in it. 
+
+`r code_icon` 
+```{r}
+CompleteLongFert <- CompleteLongFert %>%
+	select(Abbr = iso2c, Country = country, Year = year, fert_consump)
+head(CompleteLongFert, n = 10L)
+```
+
+## ordering data (7.1.4)
+
+We've covered this in earlier tutorials. Use `dplyr::arrange()` to order by row and `dplyr::select()` to order by column.   
+
+*By rows.* For example, let's order the rows of **CompleteLongFert** by Country, then by year. 
+
+`r code_icon` 
+```{r}
+CompleteLongFert <- CompleteLongFert %>%
+	arrange(Country, Year)
+# display the top 10 rows
+head(CompleteLongFert, n = 10L)
+```
+
+*By columns.* And we can put the **Year** column first using `select()`, 
+
+`r code_icon` 
+```{r}
+CompleteLongFert <- CompleteLongFert %>%
+	select(Year, Abbr, Country, fert_consump)
+# display the top 10 rows
+head(CompleteLongFert, n = 10L)
+```
+
+## recoding strings  (7.1.6)
+
+Quite often, the data entries in the tidy data set have entries that need recoding. 
+
+For example, in the fertilizer data, let's look at how Korea is identified, 
+
+`r code_icon` 
+```{r}
+find_Korea <- CompleteLongFert %>%
+	filter(str_detect(Country, "Korea"))
+find_Korea
+```
+
+The output tells us that Korea is listed in the data set as `r unique(find_Korea$Country)`, that is, what we usually refer to as South Korea. 
+
+To recode this data entry, we use `mutate()` and `replace()`
+
+`r code_icon` 
+```{r}
+CompleteLongFert <- CompleteLongFert %>%
+	mutate(Country = replace(Country, Country == "Korea, Rep.", "South Korea"))
+```
+
+- `mutate()` creates a new column or overwrites an existing column 
+- `replace()` overwrites existing text entries identified by column (`Country`) and entry (`"Korea, Rep."`) with the new string ('"South Korea"'). 
+
+
+Check the result.
+
+`r code_icon` 
+```{r}
+find_Korea <- CompleteLongFert %>%
+	filter(str_detect(Country, "Korea"))
+find_Korea
+```
+
+Good! 
+
+## creating new variable (7.1.7)
+
+Data in existing columns can be used in computations to create new variables in new columns. We use `mutate()` again. 
+
+For example, it might be useful to compute the log-base-10 of the fertilizer consumption values so that we could show both large and small numbers on the same graph scale. 
+
+`r code_icon` 
+```{r}
+CompleteLongFert <- CompleteLongFert %>%
+	mutate(log10_consump = log10(fert_consump))
+head(CompleteLongFert, n = 10L)
+```
+
+
+Note that R computes the result for each row and places the result in the correct row in the data frame. This is one of the great advantages of having data in tidy (or long) form. 
+
+Let's look at a summary of our new variable. 
+
+`r code_icon` 
+```{r}
+# summarize the log-scaled data
+summary(CompleteLongFert$log10_consump)
+```
+
+We have some `-Inf` results. That's because R returns `-Inf` for the $log_{10}(0)$. 
+
+- We could drop those observations before taking the log 
+- Or we can replace zero consumption with a very small number, e.g., 0.001, before taking the log 
+
+`r code_icon` 
+```{r}
+# find the locations of fertilizer consumption = 0
+fert_consump_0 <- CompleteLongFert$fert_consump == 0
+
+# use those indices to replace 0 with 0.001
+CompleteLongFert$fert_consump[fert_consump_0] <- 0.001
+
+# now do the log calculation over agin
+CompleteLongFert <- CompleteLongFert %>%
+	mutate(log10_consump = log10(fert_consump))
+
+# examine the result
+summary(CompleteLongFert$log10_consump)
+```
+
+And the `-Inf` values are gone. 
+
+This example illustrates the importance of examining a summary of any new variables you compute. You want to catch any strange results as soon as they appear. 
+
+
+## summary of functions used   
+
+- `arrange()` 
+- `select()` 
+- `filter()` 
+- `str_detect()` 
+- `replace()` 
+- `mutate()` 
+- `summary()` 
+
+
+
+
+
+
+
+
+--- 
+[main page](../README.md)

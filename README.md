@@ -53,7 +53,7 @@ Beyond the basics
 - [Start a new "practiceR" project](cm/cm023_practiceR.md) 
 - [practiceR: Get a handle on your data (7.1.1)](cm/cm024_ch07_handle-on-data.md) 
 - [practiceR: Reshaping data (7.1.2)](cm/cm025_ch07_reshaping-data.md)
-
+- [practiceR: More data prep skills (7.1.3, 4, 6, 7)](cm/cm026_ch07_more-data-prep.md)
 
 
 
