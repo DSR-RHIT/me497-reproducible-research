@@ -140,12 +140,12 @@ We'll continue with the `WDI` data frame we called **CompleteLongFert** last tim
     ## # A tibble: 6 × 5
     ##    Year  Abbr     Country fert_consump log10_consump
     ##   <dbl> <chr>       <chr>        <dbl>         <dbl>
-    ## 1  2005    AF Afghanistan         4.24         0.627
-    ## 2  2006    AF Afghanistan         6.29         0.799
-    ## 3  2007    AF Afghanistan         3.62         0.559
-    ## 4  2008    AF Afghanistan         2.99         0.476
-    ## 5  2009    AF Afghanistan         4.52         0.655
-    ## 6  2010    AF Afghanistan         4.25         0.628
+    ## 1  2005    AF Afghanistan         4.24     0.6273659
+    ## 2  2006    AF Afghanistan         6.29     0.7986506
+    ## 3  2007    AF Afghanistan         3.62     0.5587086
+    ## 4  2008    AF Afghanistan         2.99     0.4756712
+    ## 5  2009    AF Afghanistan         4.52     0.6551384
+    ## 6  2010    AF Afghanistan         4.25     0.6283889
 
 If we graph **fert\_consump** using a probability density graph, we obtain:
 
@@ -160,12 +160,14 @@ fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
 
 # save the graph to file 
 ggsave("results/ch7_fert-consump-1.png", fig1, width = 6, height = 4, units = "in", dpi = 300)
+```
 
+``` r
 # print the graph to screen
 knitr::include_graphics("../results/ch7_fert-consump-1.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)
+<img src="../results/ch7_fert-consump-1.png" width="1800" />
 
 The graph shows that the data set has some extreme values, say greater than 1000 kg/hectare of arable land, that we might look at more closely to decide whether or not we should keep them in the data set.
 
@@ -184,8 +186,8 @@ glimpse(FertOutliers)
     ## $ Year          <dbl> 2005, 2006, 2008, 2010, 2011, 2007, 2011, 2005, ...
     ## $ Abbr          <chr> "BH", "BH", "BH", "BH", "BH", "JO", "JO", "KW", ...
     ## $ Country       <chr> "Bahrain", "Bahrain", "Bahrain", "Bahrain", "Bah...
-    ## $ fert_consump  <dbl> 2907, 9437, 1993, 1721, 1178, 1008, 1228, 4349, ...
-    ## $ log10_consump <dbl> 3.46, 3.97, 3.30, 3.24, 3.07, 3.00, 3.09, 3.64, ...
+    ## $ fert_consump  <dbl> 2906.67, 9436.55, 1993.33, 1721.25, 1178.12, 100...
+    ## $ log10_consump <dbl> 3.463396, 3.974813, 3.299579, 3.235844, 3.071190...
 
 What countries are these? Using a `$` subset and the `unique()` function:
 
@@ -217,7 +219,7 @@ glimpse(SubsetLongFert)
     ## $ Abbr          <chr> "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AL", ...
     ## $ Country       <chr> "Afghanistan", "Afghanistan", "Afghanistan", "Af...
     ## $ fert_consump  <dbl> 4.24, 6.29, 3.62, 2.99, 4.52, 4.25, 6.33, 111.60...
-    ## $ log10_consump <dbl> 0.627, 0.799, 0.559, 0.476, 0.655, 0.628, 0.801,...
+    ## $ log10_consump <dbl> 0.6273659, 0.7986506, 0.5587086, 0.4756712, 0.65...
 
 Looking more closely at the rows of this data set, I find there are entries that are not actually countries. The following list, while not comprehensive, gives you an idea:
 
@@ -310,7 +312,7 @@ glimpse(Fert_Countries)
     ## $ Abbr          <chr> "AF", "AF", "AF", "AF", "AF", "AF", "AF", "AL", ...
     ## $ Country       <chr> "Afghanistan", "Afghanistan", "Afghanistan", "Af...
     ## $ fert_consump  <dbl> 4.24, 6.29, 3.62, 2.99, 4.52, 4.25, 6.33, 111.60...
-    ## $ log10_consump <dbl> 0.627, 0.799, 0.559, 0.476, 0.655, 0.628, 0.801,...
+    ## $ log10_consump <dbl> 0.6273659, 0.7986506, 0.5587086, 0.4756712, 0.65...
 
 -   `%in%` returns a logical vector with TRUE indicating that an element of **Abbr** matches an element of **these\_are\_countries**.
 -   The new data set with countries only has 1046 rows compared to the 1358 we started with.
@@ -328,12 +330,14 @@ fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
 
 # save the graph to file
 ggsave("results/ch7_fert-consump-2.png", fig2, width = 6, height = 4, units = "in", dpi = 300)
+```
 
+``` r
 #  import the figure and print to screen  
 knitr::include_graphics("../results/ch7_fert-consump-2.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)
+<img src="../results/ch7_fert-consump-2.png" width="1800" />
 
 ------------------------------------------------------------------------
 
