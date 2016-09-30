@@ -152,15 +152,20 @@ If we graph **fert\_consump** using a probability density graph, we obtain:
 ![](../resources/images/code-icon.png)
 
 ``` r
+# create the graph
 fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
     geom_density() + 
     xlab("Fertilizer consumption (kg/hectare)") +
     ylab("Density")
 
-print(fig1)
+# save the graph to file 
+ggsave("results/ch7_fert-consump-1.png", fig1, width = 6, height = 4, units = "in", dpi = 300)
+
+# print the graph to screen
+knitr::include_graphics("../results/ch7_fert-consump-1.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)<img src="../results/ch7_fert-consump-1.png" width="1800" />
 
 The graph shows that the data set has some extreme values, say greater than 1000 kg/hectare of arable land, that we might look at more closely to decide whether or not we should keep them in the data set.
 
@@ -315,15 +320,20 @@ Let's take a look at the distribution of the fertilizer consumption data now:
 ![](../resources/images/code-icon.png)
 
 ``` r
+# create the graph
 fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
     geom_density() + 
     xlab("Fertilizer consumption (kg/hectare)") +
     ylab("Density")
 
-print(fig2)
+# save the graph to file
+ggsave("results/ch7_fert-consump-2.png", fig2, width = 6, height = 4, units = "in", dpi = 300)
+
+#  import the figure and print to screen  
+knitr::include_graphics("../results/ch7_fert-consump-2.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)<img src="../results/ch7_fert-consump-2.png" width="1800" />
 
 ------------------------------------------------------------------------
 
