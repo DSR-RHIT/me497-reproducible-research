@@ -55,7 +55,7 @@ Beyond the basics
 - [practiceR: Reshaping data (7.1.2)](cm/cm025_ch07_reshaping-data.md) 
 - [practiceR: More data prep skills (7.1.3, 4, 6, 7)](cm/cm026_ch07_more-data-prep.md) 
 - [Project 2 collaboration assignment](cm/cm027_project-2_reviewers.md) 
-- [Subsetting (7.1.5)](cm/cm028_subsetting.md) 
+- [Subsetting (7.1.5)](cm/cm028_ch07_subsetting.md) 
 
 
 ---
