@@ -107,6 +107,7 @@ Similarly, we used `$` subsetting to extract other  **results_list** numbers and
 
 We'll continue with the  `WDI` data frame we called **CompleteLongFert** last time. Here's a reminder of what that data frame looks like:
 
+`r code_icon` 
 ```{r include=3, echo=FALSE}
 library(readr)
 CompleteLongFert <- read_csv("results/CompleteLongFert2.csv")
@@ -115,7 +116,7 @@ head(CompleteLongFert)
 
 
 If we graph **fert_consump** using a probability density graph, we obtain: 
-
+`r code_icon` 
 ```{r}
 ggplot(CompleteLongFert, aes(fert_consump)) +
 	geom_density() + 
@@ -127,6 +128,7 @@ The graph shows that the data set has some extreme values, say greater than 1000
 
 To subset the potential outliers, we use a logical test: 
 
+`r code_icon` 
 ```{r}
 FertOutliers <- CompleteLongFert %>%
 	filter(fert_consump > 1000)
@@ -135,6 +137,7 @@ glimpse(FertOutliers)
 
 What countries are these? Using a `$` subset and the `unique()` function: 
 
+`r code_icon` 
 ```{r}
 unique(FertOutliers$Country)
 ```
@@ -143,6 +146,7 @@ These countries have relatively small proportions of arable land, thus their fer
 
 To subset the data to omit these countries, we use a logical test again, bu this time we only keep those countries that have a consumption less than or equal to 1000. 
 
+`r code_icon` 
 ```{r}
 SubsetLongFert <- CompleteLongFert %>%
 	filter(fert_consump <= 1000)
@@ -172,7 +176,7 @@ I found an online data set of [country codes](http://www.iso.org/iso/home/standa
 To download this data set, I run the following lines just once, then comment them out. 
 
 
-
+`r code_icon` 
 ```{r}
 # url <- "http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_txt-temp.htm"
 # destination <- "data/country_codes.txt"
@@ -182,6 +186,7 @@ To download this data set, I run the following lines just once, then comment the
 
 The data file is not a CSV file. If you open it you'll see that the data are separated by semicolons `;` --- no problem. That's what `readr::read_csv2()` is for. 
 
+`r code_icon` 
 ```{r}
 country_codes <- read_csv2("data/country_codes.txt")
 head(country_codes)
@@ -194,6 +199,7 @@ head(country_codes)
 
 Now I'll subset the column of codes:
 
+`r code_icon` 
 ```{r}
 these_are_countries <- country_codes$code
 glimpse(these_are_countries)
@@ -202,6 +208,7 @@ glimpse(these_are_countries)
 
 And now I'll use these codes to subset the fertilizer data, keeping only those rows whose country codes match the **keep_these** list. 
 
+`r code_icon` 
 ```{r}
 Fert_Countries <- SubsetLongFert %>%
 	filter(Abbr %in% these_are_countries)
@@ -213,7 +220,7 @@ glimpse(Fert_Countries)
 
 Let's take a look at the distribution of the fertilizer consumption data now: 
 
-
+`r code_icon` 
 ```{r}
 ggplot(Fert_Countries, aes(fert_consump)) +
 	geom_density() + 

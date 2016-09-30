@@ -135,6 +135,8 @@ subsetting by data values (7.1.5)
 
 We'll continue with the `WDI` data frame we called **CompleteLongFert** last time. Here's a reminder of what that data frame looks like:
 
+![](../resources/images/code-icon.png)
+
     ## # A tibble: 6 × 5
     ##    Year  Abbr     Country fert_consump log10_consump
     ##   <dbl> <chr>       <chr>        <dbl>         <dbl>
@@ -145,7 +147,7 @@ We'll continue with the `WDI` data frame we called **CompleteLongFert** last tim
     ## 5  2009    AF Afghanistan         4.52         0.655
     ## 6  2010    AF Afghanistan         4.25         0.628
 
-If we graph **fert\_consump** using a probability density graph, we obtain:
+If we graph **fert\_consump** using a probability density graph, we obtain: ![](../resources/images/code-icon.png)
 
 ``` r
 ggplot(CompleteLongFert, aes(fert_consump)) +
@@ -159,6 +161,8 @@ ggplot(CompleteLongFert, aes(fert_consump)) +
 The graph shows that the data set has some extreme values, say greater than 1000 kg/hectare of arable land, that we might look at more closely to decide whether or not we should keep them in the data set.
 
 To subset the potential outliers, we use a logical test:
+
+![](../resources/images/code-icon.png)
 
 ``` r
 FertOutliers <- CompleteLongFert %>%
@@ -176,6 +180,8 @@ glimpse(FertOutliers)
 
 What countries are these? Using a `$` subset and the `unique()` function:
 
+![](../resources/images/code-icon.png)
+
 ``` r
 unique(FertOutliers$Country)
 ```
@@ -187,6 +193,8 @@ unique(FertOutliers$Country)
 These countries have relatively small proportions of arable land, thus their fertilizer consumption per unit area of arable land is unsurprisingly high.
 
 To subset the data to omit these countries, we use a logical test again, bu this time we only keep those countries that have a consumption less than or equal to 1000.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 SubsetLongFert <- CompleteLongFert %>%
@@ -223,6 +231,8 @@ I found an online data set of [country codes](http://www.iso.org/iso/home/standa
 
 To download this data set, I run the following lines just once, then comment them out.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # url <- "http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_txt-temp.htm"
 # destination <- "data/country_codes.txt"
@@ -230,6 +240,8 @@ To download this data set, I run the following lines just once, then comment the
 ```
 
 The data file is not a CSV file. If you open it you'll see that the data are separated by semicolons `;` --- no problem. That's what `readr::read_csv2()` is for.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 country_codes <- read_csv2("data/country_codes.txt")
@@ -264,6 +276,8 @@ head(country_codes)
 
 Now I'll subset the column of codes:
 
+![](../resources/images/code-icon.png)
+
 ``` r
 these_are_countries <- country_codes$code
 glimpse(these_are_countries)
@@ -272,6 +286,8 @@ glimpse(these_are_countries)
     ##  chr [1:249] "AF" "AX" "AL" "DZ" "AS" "AD" "AO" "AI" ...
 
 And now I'll use these codes to subset the fertilizer data, keeping only those rows whose country codes match the **keep\_these** list.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 Fert_Countries <- SubsetLongFert %>%
@@ -291,6 +307,8 @@ glimpse(Fert_Countries)
 -   The new data set with countries only has 1046 rows compared to the 1358 we started with.
 
 Let's take a look at the distribution of the fertilizer consumption data now:
+
+![](../resources/images/code-icon.png)
 
 ``` r
 ggplot(Fert_Countries, aes(fert_consump)) +
