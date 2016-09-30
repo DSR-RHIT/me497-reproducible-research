@@ -118,7 +118,7 @@ head(CompleteLongFert)
 If we graph **fert_consump** using a probability density graph, we obtain: 
 
 `r code_icon` 
-```{r}
+```{r results = 'hide'}
 # create the graph
 fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
 	geom_density() + 
@@ -232,7 +232,7 @@ glimpse(Fert_Countries)
 Let's take a look at the distribution of the fertilizer consumption data now: 
 
 `r code_icon` 
-```{r}
+```{r results = 'hide'}
 # create the graph
 fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
 	geom_density() + 

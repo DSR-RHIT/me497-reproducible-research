@@ -165,7 +165,7 @@ ggsave("results/ch7_fert-consump-1.png", fig1, width = 6, height = 4, units = "i
 knitr::include_graphics("../results/ch7_fert-consump-1.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)<img src="../results/ch7_fert-consump-1.png" width="1800" />
+![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 The graph shows that the data set has some extreme values, say greater than 1000 kg/hectare of arable land, that we might look at more closely to decide whether or not we should keep them in the data set.
 
@@ -333,7 +333,7 @@ ggsave("results/ch7_fert-consump-2.png", fig2, width = 6, height = 4, units = "i
 knitr::include_graphics("../results/ch7_fert-consump-2.png")
 ```
 
-![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)<img src="../results/ch7_fert-consump-2.png" width="1800" />
+![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)
 
 ------------------------------------------------------------------------
 
