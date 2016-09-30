@@ -147,13 +147,17 @@ We'll continue with the `WDI` data frame we called **CompleteLongFert** last tim
     ## 5  2009    AF Afghanistan         4.52         0.655
     ## 6  2010    AF Afghanistan         4.25         0.628
 
-If we graph **fert\_consump** using a probability density graph, we obtain: ![](../resources/images/code-icon.png)
+If we graph **fert\_consump** using a probability density graph, we obtain:
+
+![](../resources/images/code-icon.png)
 
 ``` r
-ggplot(CompleteLongFert, aes(fert_consump)) +
+fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
     geom_density() + 
     xlab("Fertilizer consumption (kg/hectare)") +
     ylab("Density")
+
+print(fig1)
 ```
 
 ![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-8-1.png)
@@ -311,10 +315,12 @@ Let's take a look at the distribution of the fertilizer consumption data now:
 ![](../resources/images/code-icon.png)
 
 ``` r
-ggplot(Fert_Countries, aes(fert_consump)) +
+fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
     geom_density() + 
     xlab("Fertilizer consumption (kg/hectare)") +
     ylab("Density")
+
+print(fig2)
 ```
 
 ![](cm028_ch07_subsetting_files/figure-markdown_github/unnamed-chunk-17-1.png)

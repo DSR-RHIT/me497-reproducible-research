@@ -7,7 +7,7 @@ output: github_document
 ```{r setup, echo = FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
-opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE)
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE, fig.keep = 'high')
 ```
 
 ```{r echo = FALSE}
@@ -18,7 +18,7 @@ source("cm/helper_02_icons.R")
 - Please launch the `practiceR` project.  
 - Open the  `chapter7.Rmd` script and continue adding to it from this tutorial. 
 
-`r code_icon` 
+`r code_icon`  
 ```{r}
 # packages 
 library(plyr)
@@ -107,7 +107,7 @@ Similarly, we used `$` subsetting to extract other  **results_list** numbers and
 
 We'll continue with the  `WDI` data frame we called **CompleteLongFert** last time. Here's a reminder of what that data frame looks like:
 
-`r code_icon` 
+`r code_icon`  
 ```{r include=3, echo=FALSE}
 library(readr)
 CompleteLongFert <- read_csv("results/CompleteLongFert2.csv")
@@ -116,12 +116,15 @@ head(CompleteLongFert)
 
 
 If we graph **fert_consump** using a probability density graph, we obtain: 
+
 `r code_icon` 
 ```{r}
-ggplot(CompleteLongFert, aes(fert_consump)) +
+fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
 	geom_density() + 
 	xlab("Fertilizer consumption (kg/hectare)") +
 	ylab("Density")
+
+print(fig1)
 ```
 
 The graph shows that the data set has some extreme values, say greater than 1000 kg/hectare of arable land, that we might look at more closely to decide whether or not we should keep them in the data set. 
@@ -222,10 +225,12 @@ Let's take a look at the distribution of the fertilizer consumption data now:
 
 `r code_icon` 
 ```{r}
-ggplot(Fert_Countries, aes(fert_consump)) +
+fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
 	geom_density() + 
 	xlab("Fertilizer consumption (kg/hectare)") +
 	ylab("Density")
+
+print(fig2)
 ```
 
 
