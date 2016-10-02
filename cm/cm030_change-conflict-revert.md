@@ -15,7 +15,7 @@ Via RStudio, the stage-commit-pull-push process will automatically merge everyon
 
 In the absence of conflicts, Git History shows a tidy, linear sequence of commits. To see the history, in RStudio *Environment* pane, select *Git &gt; History*, for example:
 
-<img src="../resources/images/git-history-1.png" width="711" />
+<img src="../resources/images/git-history-1.PNG" width="711" />
 
 -   Each entry is a commit with date and author shown
 -   Select an entry in the History window to see the changes that were made in that commit: green highlights are new; red highlights are old
