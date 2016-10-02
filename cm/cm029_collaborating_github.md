@@ -97,7 +97,13 @@ just in case Alice made changes since the last time Carlos updated the remote re
 alice works
 -----------
 
-Alice works on her project at her own pace locally. Alice sets aside some time for reviewing and responding to Carlos' questions and comments (if any):
+Alice works on her project at her own pace locally.
+
+If you start a work session and edit your files and then *Pull*, you might get a message like this one. All you have to do is *Stage* and *Commit* the files locally, then you can *Pull*.
+
+<img src="../resources/images/stage-before-pull.png" width="681" />
+
+Alice also sets aside some time for reviewing and responding to Carlos' questions and comments (if any):
 
 -   *Stage* and *Commit* changes (DO NOT *Push* to GitHub yet)
 -   Add to the *gitignore* file when necessary
@@ -105,7 +111,7 @@ Alice works on her project at her own pace locally. Alice sets aside some time f
 -   Check Git History to see if Carlos made changes
 -   If Carlos made no changes, *Push*
 
-If Carlos did make changes, Alice responds as described following the next section.
+If Carlos did make changes, Alice responds as described after the next section.
 
 carlos works
 ------------
