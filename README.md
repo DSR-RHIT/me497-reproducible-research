@@ -57,6 +57,10 @@ Beyond the basics
 - [Project 2 collaboration assignment](cm/cm027_project-2_reviewers.md) 
 - [Subsetting (7.1.5)](cm/cm028_ch07_subsetting.md) 
 
+## week 5 
+
+- [Roles and tasks for collaborating via GitHub](cm/cm029_collaborating-github.md)
+- [Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
 
 ---
 [Unlicense](UNLICENSE.md)

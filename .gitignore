@@ -8,6 +8,7 @@
 # ignore course management folders
 manage
 practiceR
+using-github-with-rstudio
 
 # History files
 .Rhistory
