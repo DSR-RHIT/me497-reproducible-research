@@ -15,7 +15,7 @@ Via RStudio, the stage-commit-pull-push process will automatically merge everyon
 
 In the absence of conflicts, Git History shows a tidy, linear sequence of commits. To see the history, in RStudio *Environment* pane, select *Git &gt; History*, for example:
 
-<img src="../resources/images/git-history-1.PNG" width="711" />
+![](../resources/images/git-history-1.PNG)
 
 -   Each entry is a commit with date and author shown
 -   Select an entry in the History window to see the changes that were made in that commit: green highlights are new; red highlights are old
@@ -30,13 +30,13 @@ Suppose Alice and Carlos are working locally, having pulled from the same versio
 -   One of them will be first to *stage-commit-pull-push*. No problem.
 -   The other will *stage-commit-pull* and receive a CONFLICT message, telling them to "fix conflicts and then commit", for example, "
 
-<img src="../resources/images/conflict-01-pull-message.png" width="631" />
+![](../resources/images/conflict-01-pull-message.png)
 
 To illustrate a conflict, my collaborator and I both edited the date in the YAML header of one of the calibration project scripts.
 
 RStudio IDs the conflict with `<<<<<<<< HEAD` and `>>>>>>>> long SHA number`, for example,
 
-<img src="../resources/images/conflict-02-brackets-shown.png" width="394" />
+![](../resources/images/conflict-02-brackets-shown.png)
 
 In the Rmd script,
 
@@ -49,12 +49,18 @@ In the Rmd script,
 
 When the conflict is resolved, the history graphically illustrates the conflict as a branch and the resolution as a merging of the branch with the main trunk. In this example, `graphdr` was the author and Micah was the collaborator. Micah resolved the conflict.
 
-<img src="../resources/images/conflict-03-resolved-history.png" width="714" />
+![](../resources/images/conflict-03-resolved-history.png)
 
 revert to a previous version
 ----------------------------
 
-Coming soon.
+If you make changes to files and find that you no longer need the changes, you can *revert* the changes. This resets the file to the last version in the repository, erasing any changes you have made. **Be careful!!** There is no way to undo a revert.
+
+-   Find the file you wish to revert in the Git tab
+-   Right click on the file and choose "Revert"
+-   Double check to make sure this is the correct file and confirm the warning
+
+![](../resources/images/revert-git-context-menu.png)
 
 ------------------------------------------------------------------------
 
