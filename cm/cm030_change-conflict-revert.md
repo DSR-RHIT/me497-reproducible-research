@@ -102,7 +102,7 @@ In this approach, Git treats this new change just like any other change, so the 
 
 So we actually haven't "reverted"---we copied an historical version and saved it as the current version.
 
-This approach suits *our* collaborative goals, but in future projects you may find that you need to learn the *Shell* commands and processes for conventional reverting.
+This approach suits *our* collaborative goals, but in future projects you may find that you need to learn the correct Shell commands and processes for conventional reverting.
 
 ------------------------------------------------------------------------
 

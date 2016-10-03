@@ -51,11 +51,10 @@ find_NA <- is.na(FertConsumpData$AG.CON.FERT.ZS)
 find_NA[1:50]
 ```
 
-    ##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-    ## [12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-    ## [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-    ## [34] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
-    ## [45]  TRUE  TRUE  TRUE  TRUE FALSE FALSE
+    ##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+    ## [14] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+    ## [27] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+    ## [40]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE
 
 -   `is.na()` returns a logical vector with TRUE identifying the entries that are NA and FALSE identifying the entries that are not NA
 
@@ -69,11 +68,10 @@ find_not_NA <- !is.na(FertConsumpData$AG.CON.FERT.ZS)
 find_not_NA[1:50]
 ```
 
-    ##  [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
-    ## [12]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
-    ## [23]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
-    ## [34]  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-    ## [45] FALSE FALSE FALSE FALSE  TRUE  TRUE
+    ##  [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+    ## [14]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+    ## [27]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE
+    ## [40] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE
 
 -   `!is.na()` is the same as saying, "assign TRUE to data entries that are NOT NA"
 -   Compare these 50 results with the previous set and you'll see that we have reversed the position of TRUE and FALSE.
@@ -132,15 +130,15 @@ glimpse(SpreadFert)
 
     ## Observations: 203
     ## Variables: 9
-    ## $ iso2c   <chr> "1A", "1W", "7E", "8S", "AE", "AF", "AG", "AL", "AM", ...
-    ## $ country <chr> "Arab World", "World", "Europe & Central Asia (excludi...
-    ## $ 2005    <dbl> 68.813, 104.755, 25.661, 124.285, 218.544, 4.240, 6.00...
-    ## $ 2006    <dbl> 5.94e+01, 1.08e+02, 3.17e+01, 1.31e+02, 9.11e+02, 6.29...
-    ## $ 2007    <dbl> 61.657, 113.608, 33.839, 134.698, 1104.933, 3.619, 0.5...
-    ## $ 2008    <dbl> 64.878, 108.481, 33.635, 143.780, 423.643, 2.988, 3.50...
-    ## $ 2009    <dbl> 58.08, 107.40, 37.80, 157.76, 1324.85, 4.52, 13.25, 89...
-    ## $ 2010    <dbl> 63.24, 116.21, 37.77, 166.44, 674.90, 4.25, 3.00, 97.3...
-    ## $ 2011    <dbl> 74.51, 120.55, 41.05, 168.76, 757.65, 6.33, 3.25, 97.1...
+    ## $ iso2c   <chr> "1A", "1W", "7E", "8S", "AE", "AF", "AG", "AL", "AM", "AO", "AR", ...
+    ## $ country <chr> "Arab World", "World", "Europe & Central Asia (excluding high inco...
+    ## $ 2005    <dbl> 68.813, 104.755, 25.661, 124.285, 218.544, 4.240, 6.000, 111.597, ...
+    ## $ 2006    <dbl> 5.94e+01, 1.08e+02, 3.17e+01, 1.31e+02, 9.11e+02, 6.29e+00, 4.50e+...
+    ## $ 2007    <dbl> 61.657, 113.608, 33.839, 134.698, 1104.933, 3.619, 0.500, 87.168, ...
+    ## $ 2008    <dbl> 64.878, 108.481, 33.635, 143.780, 423.643, 2.988, 3.500, 75.877, 1...
+    ## $ 2009    <dbl> 58.08, 107.40, 37.80, 157.76, 1324.85, 4.52, 13.25, 89.39, 29.67, ...
+    ## $ 2010    <dbl> 63.24, 116.21, 37.77, 166.44, 674.90, 4.25, 3.00, 97.32, 24.20, 8....
+    ## $ 2011    <dbl> 74.51, 120.55, 41.05, 168.76, 757.65, 6.33, 3.25, 97.14, 27.37, 8....
 
 Then arrange the rows by country
 
@@ -168,30 +166,22 @@ Summarize, see what we have.
 summary(SpreadFert)
 ```
 
-    ##     iso2c             country               2005            2006      
-    ##  Length:203         Length:203         Min.   :    0   Min.   :    0  
-    ##  Class :character   Class :character   1st Qu.:   18   1st Qu.:   20  
-    ##  Mode  :character   Mode  :character   Median :   90   Median :   91  
-    ##                                        Mean   :  248   Mean   :  284  
-    ##                                        3rd Qu.:  152   3rd Qu.:  147  
-    ##                                        Max.   :13753   Max.   :16532  
-    ##                                        NA's   :6       NA's   :5      
-    ##       2007            2008            2009           2010     
-    ##  Min.   :    0   Min.   :    0   Min.   :   0   Min.   :   0  
-    ##  1st Qu.:   21   1st Qu.:   18   1st Qu.:  20   1st Qu.:  23  
-    ##  Median :   90   Median :   87   Median :  77   Median :  84  
-    ##  Mean   :  255   Mean   :  231   Mean   : 163   Mean   : 188  
-    ##  3rd Qu.:  164   3rd Qu.:  144   3rd Qu.: 129   3rd Qu.: 162  
-    ##  Max.   :16243   Max.   :16267   Max.   :4663   Max.   :6226  
-    ##  NA's   :5       NA's   :5       NA's   :2      NA's   :2     
-    ##       2011      
-    ##  Min.   :    0  
-    ##  1st Qu.:   27  
-    ##  Median :   95  
-    ##  Mean   :  235  
-    ##  3rd Qu.:  169  
-    ##  Max.   :11719  
-    ##  NA's   :2
+    ##     iso2c             country               2005            2006            2007      
+    ##  Length:203         Length:203         Min.   :    0   Min.   :    0   Min.   :    0  
+    ##  Class :character   Class :character   1st Qu.:   18   1st Qu.:   20   1st Qu.:   21  
+    ##  Mode  :character   Mode  :character   Median :   90   Median :   91   Median :   90  
+    ##                                        Mean   :  248   Mean   :  284   Mean   :  255  
+    ##                                        3rd Qu.:  152   3rd Qu.:  147   3rd Qu.:  164  
+    ##                                        Max.   :13753   Max.   :16532   Max.   :16243  
+    ##                                        NA's   :6       NA's   :5       NA's   :5      
+    ##       2008            2009           2010           2011      
+    ##  Min.   :    0   Min.   :   0   Min.   :   0   Min.   :    0  
+    ##  1st Qu.:   18   1st Qu.:  20   1st Qu.:  23   1st Qu.:   27  
+    ##  Median :   87   Median :  77   Median :  84   Median :   95  
+    ##  Mean   :  231   Mean   : 163   Mean   : 188   Mean   :  235  
+    ##  3rd Qu.:  144   3rd Qu.: 129   3rd Qu.: 162   3rd Qu.:  169  
+    ##  Max.   :16267   Max.   :4663   Max.   :6226   Max.   :11719  
+    ##  NA's   :5       NA's   :2      NA's   :2      NA's   :2
 
 Some NAs have reappeared! Why?
 
@@ -209,27 +199,20 @@ CompleteSpreadFert <- SpreadFert %>%
 summary(CompleteSpreadFert)
 ```
 
-    ##     iso2c             country               2005            2006      
-    ##  Length:194         Length:194         Min.   :    0   Min.   :    0  
-    ##  Class :character   Class :character   1st Qu.:   20   1st Qu.:   20  
-    ##  Mode  :character   Mode  :character   Median :   92   Median :   91  
-    ##                                        Mean   :  251   Mean   :  288  
-    ##                                        3rd Qu.:  152   3rd Qu.:  147  
-    ##                                        Max.   :13753   Max.   :16532  
-    ##       2007            2008            2009           2010     
-    ##  Min.   :    0   Min.   :    0   Min.   :   0   Min.   :   0  
-    ##  1st Qu.:   21   1st Qu.:   19   1st Qu.:  21   1st Qu.:  23  
-    ##  Median :   90   Median :   87   Median :  77   Median :  85  
-    ##  Mean   :  259   Mean   :  234   Mean   : 166   Mean   : 192  
-    ##  3rd Qu.:  164   3rd Qu.:  144   3rd Qu.: 129   3rd Qu.: 163  
-    ##  Max.   :16243   Max.   :16267   Max.   :4663   Max.   :6226  
-    ##       2011      
-    ##  Min.   :    0  
-    ##  1st Qu.:   27  
-    ##  Median :   96  
-    ##  Mean   :  241  
-    ##  3rd Qu.:  169  
-    ##  Max.   :11719
+    ##     iso2c             country               2005            2006            2007      
+    ##  Length:194         Length:194         Min.   :    0   Min.   :    0   Min.   :    0  
+    ##  Class :character   Class :character   1st Qu.:   20   1st Qu.:   20   1st Qu.:   21  
+    ##  Mode  :character   Mode  :character   Median :   92   Median :   91   Median :   90  
+    ##                                        Mean   :  251   Mean   :  288   Mean   :  259  
+    ##                                        3rd Qu.:  152   3rd Qu.:  147   3rd Qu.:  164  
+    ##                                        Max.   :13753   Max.   :16532   Max.   :16243  
+    ##       2008            2009           2010           2011      
+    ##  Min.   :    0   Min.   :   0   Min.   :   0   Min.   :    0  
+    ##  1st Qu.:   19   1st Qu.:  21   1st Qu.:  23   1st Qu.:   27  
+    ##  Median :   87   Median :  77   Median :  85   Median :   96  
+    ##  Mean   :  234   Mean   : 166   Mean   : 192   Mean   :  241  
+    ##  3rd Qu.:  144   3rd Qu.: 129   3rd Qu.: 163   3rd Qu.:  169  
+    ##  Max.   :16267   Max.   :4663   Max.   :6226   Max.   :11719
 
 Now those NAs are gone.
 
@@ -476,10 +459,10 @@ glimpse(CompleteLongFert)
 
     ## Observations: 1,358
     ## Variables: 4
-    ## $ iso2c        <chr> "AF", "AL", "DZ", "AO", "AG", "1A", "AR", "AM", "...
-    ## $ country      <chr> "Afghanistan", "Albania", "Algeria", "Angola", "A...
-    ## $ year         <chr> "2005", "2005", "2005", "2005", "2005", "2005", "...
-    ## $ fert_consump <dbl> 4.24, 111.60, 7.43, 2.26, 6.00, 68.81, 36.40, 22....
+    ## $ iso2c        <chr> "AF", "AL", "DZ", "AO", "AG", "1A", "AR", "AM", "AU", "AT", "...
+    ## $ country      <chr> "Afghanistan", "Albania", "Algeria", "Angola", "Antigua and B...
+    ## $ year         <chr> "2005", "2005", "2005", "2005", "2005", "2005", "2005", "2005...
+    ## $ fert_consump <dbl> 4.24, 111.60, 7.43, 2.26, 6.00, 68.81, 36.40, 22.69, 44.85, 1...
 
 Convert **year** back to a number
 
@@ -492,10 +475,10 @@ glimpse(CompleteLongFert)
 
     ## Observations: 1,358
     ## Variables: 4
-    ## $ iso2c        <chr> "AF", "AL", "DZ", "AO", "AG", "1A", "AR", "AM", "...
-    ## $ country      <chr> "Afghanistan", "Albania", "Algeria", "Angola", "A...
-    ## $ year         <dbl> 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2...
-    ## $ fert_consump <dbl> 4.24, 111.60, 7.43, 2.26, 6.00, 68.81, 36.40, 22....
+    ## $ iso2c        <chr> "AF", "AL", "DZ", "AO", "AG", "1A", "AR", "AM", "AU", "AT", "...
+    ## $ country      <chr> "Afghanistan", "Albania", "Algeria", "Angola", "Antigua and B...
+    ## $ year         <dbl> 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2...
+    ## $ fert_consump <dbl> 4.24, 111.60, 7.43, 2.26, 6.00, 68.81, 36.40, 22.69, 44.85, 1...
 
 ``` r
 head(CompleteLongFert)

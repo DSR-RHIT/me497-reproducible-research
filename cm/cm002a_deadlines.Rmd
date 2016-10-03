@@ -25,7 +25,7 @@ output: github_document
 - Create a new private repo for recreating the prior work you identified earlier 
 - Recreate this prior work, but make it reproducible  
 - Practice giving feedback on someone else's reproducible project 
-- **Complete by start of week 6**
+- **Complete by ~~start~~ end of week 6**
 
 ## project 3 
 
