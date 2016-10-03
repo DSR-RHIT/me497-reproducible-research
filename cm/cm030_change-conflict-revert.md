@@ -57,8 +57,8 @@ revert to a previous version
 If you make changes to files and find that you no longer need the changes, you can *revert* the changes. This resets the file to the last version in the repository, erasing any changes you have made. **Be careful!!** There is no way to undo a revert.
 
 -   Find the file you wish to revert in the Git tab
--   Right click on the file and choose "Revert"
--   Double check to make sure this is the correct file and confirm the warning
+-   Right click on the file and choose "Revert..."
+-   Verify this is the correct file and confirm the warning
 
 ![](../resources/images/revert-git-context-menu.png)
 
