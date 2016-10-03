@@ -11,7 +11,9 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0
 
-Reading: Chapter 1    
+Reading: Chapter 1. 
+
+All readings from the course textbook unless otherwise noted, Chistopher Gandrud (2015) *Reproducible Research with R and RStudio 2/e*, CRC Press, Taylor and Francis Group: Boca Raton, FL. 
 
 If you are already an R and RStudio user, please update R, RStudio, and your packages to the most recent versions. 
 
@@ -56,6 +58,8 @@ Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).
 
 ## week 4 
 
+Reading: Chapter 7 
+
 - [Review of tools for preparing data](cm/cm022_review-data-prep.md) 
 - [Start a new "practiceR" project](cm/cm023_practiceR.md) 
 - [practiceR: Get a handle on your data (7.1.1)](cm/cm024_ch07_handle-on-data.md) 
@@ -69,6 +73,28 @@ Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).
 - [Roles and tasks for collaborating via GitHub](cm/cm029_collaborating-github.md)
 - [Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
 - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)
+
+## week 6 
+
+
+---
+
+## supplementary reading  
+
+- A guide to enhancing reproducibility in scientific results and writing.  [web](http://ropensci.github.io/reproducibility-guide/) 
+- Drummond C (2012) Reproducible research: a dissenting opinion.   [pdf](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
+- Bray A, Çetinkaya-Rundel M, & Stangl D (2014) Taking a chance in the classroom: Five concrete reasons your students should be learning to analyze data in the reproducible paradigm, *Chance*, **27**(3), 53–56.  [web](http://chance.amstat.org/2014/09/reproducible-paradigm/) 
+- McCullough BD & Heiser DA (2008) On the accuracy of statistical procedures in Microsoft Excel 2007, *Computational Statistics & Data Analysis*, **52**, 4570–4578. [pdf](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
+- Sandve GK, Nekrutenko A, Taylor J, & Hovig E (2013) Ten simple rules for reproducible computational research, *PLoS Comput Biol* **9**(10). [web](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
+- David H. Bailey, Jonathan M. Borwein and Victoria Stodden (2016) Facilitating reproducibility in scientific computing: Principles and practice , in Harald Atmanspacher and Sabine Maasen, eds, *Reproducibility: Principles, Problems, Practices*, John Wiley and Sons, New York. [pdf](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
+- Greg Wilson, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy K. Teal (2016) Good enough practices for scientific computing  [web](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
+- Karl Broman, Initial steps towards reproducible research [web](http://kbroman.org/steps2rr/) 
+- Jenny Bryan (2014) Naming things, *Reproducible Science Workshop*  (slides)  [web](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
+
+
+
+
+
 
 ---
 [Unlicense](UNLICENSE.md)
