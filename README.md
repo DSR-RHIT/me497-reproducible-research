@@ -11,9 +11,9 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0
 
-Reading: Chapter 1 
+Reading: Chapter 1    
 
-If you are already an R and RStudio user, please update R, RStudio, and your packages to the most recent versions.  
+If you are already an R and RStudio user, please update R, RStudio, and your packages to the most recent versions. 
 
 - [Course introduction](slides/slides001_introduction.pdf) [slides] 
 - [Software overview](slides/slides002_software.pdf) [slides] 
@@ -23,6 +23,9 @@ If you are already an R and RStudio user, please update R, RStudio, and your pac
 
 
 ## week 1
+
+
+Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).  
 
 - [Three principles of reproducibility](slides/slides003_start-report.pdf) [slides]  
 - [Project 1 overview](cm/cm004_project-1_overview.md) 
