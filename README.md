@@ -33,10 +33,7 @@ We explore the principles and practices of reproducible research, from gathering
 - [Create the calibration graph](cm/cm013_project-1_graph-better.md) 
 - [Write the client report](cm/cm015_project-1_report.md) 
 - [When the data change](cm/cm017_project-1_data-change.md) 
-- [Adding references to a report](cm/cm018_project-1_references.md)
-
-Beyond the basics 
-
+- [Adding references to a report](cm/cm018_project-1_references.md) 
 - [Graph extras](cm/cm014_project-1_graph-extras.md) 
 - [Preparing a report for transmittal](cm/cm016_project-1_report-transmittal.md) 
 

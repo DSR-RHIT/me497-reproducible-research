@@ -104,7 +104,13 @@ The data we downloaded looks like this:
 head(FertConsumpData)
 ```
 
-    ## NULL
+    ##   iso2c    country AG.CON.FERT.ZS year
+    ## 1    1A Arab World           74.5 2011
+    ## 2    1A Arab World           63.2 2010
+    ## 3    1A Arab World           58.1 2009
+    ## 4    1A Arab World           64.9 2008
+    ## 5    1A Arab World           61.7 2007
+    ## 6    1A Arab World           59.4 2006
 
 Looks like we have 4 variables. What data structure do we have?
 
@@ -115,7 +121,12 @@ library(dplyr)
 glimpse(FertConsumpData)
 ```
 
-    ##  NULL
+    ## Observations: 1,848
+    ## Variables: 4
+    ## $ iso2c          <chr> "1A", "1A", "1A", "1A", "1A", "1A", "1A", "S3",...
+    ## $ country        <chr> "Arab World", "Arab World", "Arab World", "Arab...
+    ## $ AG.CON.FERT.ZS <dbl> 74.5, 63.2, 58.1, 64.9, 61.7, 59.4, 68.8, 74.1,...
+    ## $ year           <dbl> 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2011,...
 
 -   The number of observations is the number of rows.
 -   The number of variables is the number of columns.
@@ -127,7 +138,7 @@ glimpse(FertConsumpData)
 dim(FertConsumpData)
 ```
 
-    ## NULL
+    ## [1] 1848    4
 
 -   `dim()` returns the dimensions of the object
 -   Because **FertConsumpData** is a 2-dimensional array, we could also use `nrow()` and `ncol`
@@ -138,19 +149,19 @@ dim(FertConsumpData)
 nrow(FertConsumpData)
 ```
 
-    ## NULL
+    ## [1] 1848
 
 ``` r
 ncol(FertConsumpData)
 ```
 
-    ## NULL
+    ## [1] 4
 
 ``` r
 colnames(FertConsumpData)
 ```
 
-    ## NULL
+    ## [1] "iso2c"          "country"        "AG.CON.FERT.ZS" "year"
 
 Examine basic statistics of the 4 columns
 
@@ -160,14 +171,20 @@ Examine basic statistics of the 4 columns
 summary(FertConsumpData)
 ```
 
-    ## Length  Class   Mode 
-    ##      0   NULL   NULL
+    ##     iso2c             country          AG.CON.FERT.ZS       year     
+    ##  Length:1848        Length:1848        Min.   :    0   Min.   :2005  
+    ##  Class :character   Class :character   1st Qu.:   20   1st Qu.:2006  
+    ##  Mode  :character   Mode  :character   Median :   87   Median :2008  
+    ##                                        Mean   :  229   Mean   :2008  
+    ##                                        3rd Qu.:  154   3rd Qu.:2010  
+    ##                                        Max.   :16532   Max.   :2011  
+    ##                                        NA's   :454
 
 ``` r
 class(FertConsumpData)
 ```
 
-    ## [1] "NULL"
+    ## [1] "data.frame"
 
 -   From the summary, we see that we have missing values (NAs)
 -   The object is a data frame (which we like)
