@@ -13,9 +13,12 @@ We explore the principles and practices of reproducible research, from gathering
 
 Reading: Chapter 1 
 
+If you are already an R and RStudio user, please update R, RStudio, and your packages to the most recent versions.  
+
 - [Course introduction](slides/slides001_introduction.pdf) [slides] 
-- [Software overview](slides/slides002_software.pdf) [slides]  
-- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). Do the installation and a project setup. If you already have R and RStudio installed, update them to the most recent versions. Update your packages also. 
+- [Software overview](slides/slides002_software.pdf) [slides] 
+- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio) 
+- [Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [Setup Git and GitHub](cm/cm003_git-setup.md) 
 
 
