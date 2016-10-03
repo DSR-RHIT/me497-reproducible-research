@@ -40,6 +40,8 @@ Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).
 
 ## week 2
 
+Reading: Section 11.2 
+
 - [Visually check the data](cm/cm011_project-1_graph-first-look.md) 
 - [Perform a linear regression](cm/cm012_project-1_regression.md) 
 - [Create the calibration graph](cm/cm013_project-1_graph-better.md) 
@@ -50,6 +52,8 @@ Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).
 - [Preparing a report for transmittal](cm/cm016_project-1_report-transmittal.md) 
 
 ## week 3
+
+Reading: Sections 6.2 and 6.3
 
 - [Initialize project 2](cm/cm019_project-2_start.md) 
 - [Getting data into R](cm/cm020_getting-data-into-R.md) 
@@ -70,30 +74,44 @@ Reading: Chapter 7
 
 ## week 5 
 
+Reading: Sections 5.3 and 5.4 
+
 - [Roles and tasks for collaborating via GitHub](cm/cm029_collaborating-github.md)
 - [Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
 - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)
 
 ## week 6 
 
+Reading: Sections 4.1, 4.2, and 4.3
+
+## week 7 
+
+Reading: Sections 9.1, 9.2.2, and 9.3.1 
+
+## week 8 
+
+Reading: Sections 10.1.2, 10.2, and 10.4 
+
+## week 9 
+
+Reading: Sections 13.1 and 13.2 
+
+## week 10 
+
 
 ---
 
 ## supplementary reading  
 
-- A guide to enhancing reproducibility in scientific results and writing.  [web](http://ropensci.github.io/reproducibility-guide/) 
-- Drummond C (2012) Reproducible research: a dissenting opinion.   [pdf](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
-- Bray A, Çetinkaya-Rundel M, & Stangl D (2014) Taking a chance in the classroom: Five concrete reasons your students should be learning to analyze data in the reproducible paradigm, *Chance*, **27**(3), 53–56.  [web](http://chance.amstat.org/2014/09/reproducible-paradigm/) 
-- McCullough BD & Heiser DA (2008) On the accuracy of statistical procedures in Microsoft Excel 2007, *Computational Statistics & Data Analysis*, **52**, 4570–4578. [pdf](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
-- Sandve GK, Nekrutenko A, Taylor J, & Hovig E (2013) Ten simple rules for reproducible computational research, *PLoS Comput Biol* **9**(10). [web](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
-- David H. Bailey, Jonathan M. Borwein and Victoria Stodden (2016) Facilitating reproducibility in scientific computing: Principles and practice , in Harald Atmanspacher and Sabine Maasen, eds, *Reproducibility: Principles, Problems, Practices*, John Wiley and Sons, New York. [pdf](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
-- Greg Wilson, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy K. Teal (2016) Good enough practices for scientific computing  [web](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
-- Karl Broman, Initial steps towards reproducible research [web](http://kbroman.org/steps2rr/) 
-- Jenny Bryan (2014) Naming things, *Reproducible Science Workshop*  (slides)  [web](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
-
-
-
-
+- [A guide to enhancing reproducibility in scientific results and writing](http://ropensci.github.io/reproducibility-guide/) 
+- [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
+- [Five concrete reasons your students should be learning to analyze data in the reproducible paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/) 
+- [On the accuracy of statistical procedures in Microsoft Excel 2007](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
+- [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
+- [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
+- [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
+- [Initial steps towards reproducible research](http://kbroman.org/steps2rr/) 
+- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
 
 
 ---
