@@ -11,9 +11,13 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## week 0
 
+Reading: Chapter 1 
+
 - [Course introduction](slides/slides001_introduction.pdf) [slides] 
 - [Software overview](slides/slides002_software.pdf) [slides]  
+- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). Do the installation and a project setup. If you already have R and RStudio installed, update them to the most recent versions. Update your packages also. 
 - [Setup Git and GitHub](cm/cm003_git-setup.md) 
+
 
 ## week 1
 
