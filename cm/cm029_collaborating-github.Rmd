@@ -20,7 +20,7 @@ The way we are using version control for collaboration, we get four primary bene
 - Reproducing one another's work 
 - Reviewing and commenting on one another's changes 
 - Resolving conflicts 
-- Reverting to a previous version of a script 
+- Revert most recent changes 
 
 This page describes your tasks as both author and collaborator 
 
@@ -58,7 +58,7 @@ Images
 - "commit" to record changes  locally 
 - "push" local to GitHub 
 - "pull" GitHub to local 
-- "revert" to change a file back to an earlier version, deleting all subsequent changes 
+- "revert" to undo the most recent changes 
 - "history" illustrates commits by everyone   
 - "conflict" when author and collaborator change the same line of the script at the same time 
 - "gitignore" lists local files excused from version control, that is, not "seen" by git so never staged, committed, pushed, or pulled --- and therefore not shared with collaborators 
