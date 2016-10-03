@@ -51,8 +51,8 @@ When the conflict is resolved, the history graphically illustrates the conflict 
 
 ![](../resources/images/conflict-03-resolved-history.png)
 
-revert to a previous version
-----------------------------
+revert modifications
+--------------------
 
 If you make changes to files and find that you no longer need the changes, you can *revert* the changes. This resets the file to the last version in the repository, erasing any changes you have made. **Be careful!!** There is no way to undo a revert.
 
