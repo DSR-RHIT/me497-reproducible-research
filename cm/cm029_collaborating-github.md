@@ -5,7 +5,7 @@ roles and tasks for collaborating via GitHub
 The way we are using version control for collaboration, we get four primary benefits:
 
 -   Reproducing one another's work
--   Reviewing and commenting on one anothers' changes
+-   Reviewing and commenting on one another's changes
 -   Resolving conflicts
 -   Reverting to a previous version of a script
 
@@ -185,6 +185,8 @@ Start by knitting the first script. Assess the contents following these guidelin
 -   Do you believe the data carpentry? Is it logical? Is it reasonable?
 -   Does the script lay out a rational argument for each step in the process? Did the author omit an explanation that was obvious to them but not obvious to you?
 -   Again, write your thoughts in the prose sections (using block quotes) and in the code chunks (well-commented) as you see fit.
+
+Use this [comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/) as you review Alice's work. (And your own work too of course.)
 
 The next time you review the work, review Alice's responses and assess whether or not your questions have been adequately addressed.
 

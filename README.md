@@ -58,6 +58,7 @@ We explore the principles and practices of reproducible research, from gathering
 
 - [Roles and tasks for collaborating via GitHub](cm/cm029_collaborating-github.md)
 - [Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
+- [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)
 
 ---
 [Unlicense](UNLICENSE.md)
