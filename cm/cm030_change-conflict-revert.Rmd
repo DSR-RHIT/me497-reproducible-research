@@ -78,9 +78,11 @@ When the conflict is resolved, the history graphically illustrates the conflict 
 knitr::include_graphics("../resources/images/conflict-03-resolved-history.png")
 ```
 
-## revert modifications 
+## revert before commit   
 
-If you make changes to files and find that you no longer need the changes, you can *revert* the changes. This resets the file to the last version in the repository, erasing any changes you have made. **Be careful!!** There is no way to undo a revert.
+If you make changes to files and find that you no longer need the changes, you can *revert* the changes easily if you haven't yet staged and committed them.  
+
+*Revert* resets the file to the last version in the repository, erasing any changes you have made. **Be careful!!** There is no way to undo a revert.
 
 - Find the file you wish to revert in the Git tab
 - Right click on the file and choose "Revert..."
@@ -90,10 +92,53 @@ If you make changes to files and find that you no longer need the changes, you c
 knitr::include_graphics("../resources/images/revert-git-context-menu.png")
 ```
 
+## revert to an earlier committed version 
+
+My approach here is sort of ad-hoc and hacky, but it does work. 
+
+In RStudio, in the *Environment* pane, select *Git > History*. 
 
 
 
+- The `subject` column lists the commit messages. (see below) 
+- Find the commit you want to revert to and select that line. For example, below, I've selected the commit called "pre-pull micah" 
+- When you've selected a line, the files affected by that commit appear in the lower half of the window. 
+- Select the Rmd file you want, for example, I've selected `cm/cm029_collaborating-github.Rmd`. 
 
+```{r echo=FALSE}
+knitr::include_graphics("../resources/images/revert-hack-01.png")
+```
+
+
+- When the Rmd file is selected, the file changes appear in a new window as shown below. For example, in this commit, I corrected an apostrophe error (red was old, green is new).  
+- Notice off to the right, a link named `View file @ 5e12b714` (the 8-character label is a unique commit identifier). 
+- Clink the `View File` link 
+
+```{r echo=FALSE}
+knitr::include_graphics("../resources/images/revert-hack-02.png")
+```
+
+- The `View File` link shows you the Rmd file associated with the commit you selected earlier. (below) 
+- Review this file carefully to be sure it is the version you want. 
+
+```{r echo=FALSE}
+knitr::include_graphics("../resources/images/revert-hack-03.png")
+```
+
+If this is the file you want , here's the hacky part: copy and paste.
+
+- Copy the contents of the `View File` window 
+- Open the original script locally 
+- Replace the contents with the `View File` contents you just copied 
+- Save, Knit, Stage 
+- Commit *using a meaningful commit message* because this commit is unlike our usual incremental changes 
+- Pull, Push 
+
+In this approach, Git treats this new change just like any other change, so the History will continue to show all earlier versions, including the one just before this version. 
+ 
+So we actually haven't "reverted"---we copied an historical version and saved it as the current version. 
+
+This approach suits *our* collaborative goals, but in future projects you may find that you need to learn the correct Shell commands and processes for conventional reverting.  
 
 
 

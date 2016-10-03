@@ -20,7 +20,7 @@ The way we are using version control for collaboration, we get four primary bene
 - Reproducing one another's work 
 - Reviewing and commenting on one another's changes 
 - Resolving conflicts 
-- Revert most recent changes 
+- Revert to an earlier version of a file  
 
 This page describes your tasks as both author and collaborator 
 
@@ -52,16 +52,26 @@ Images
 
 ## git jargon   
 
-- "local" is your personal computer 
-- "remote" is the GitHub server 
-- "stage" to select files to commit  locally 
+- "clone" a project from a remote repo to a local directory 
 - "commit" to record changes  locally 
-- "push" local to GitHub 
-- "pull" GitHub to local 
-- "revert" to undo the most recent changes 
-- "history" illustrates commits by everyone   
 - "conflict" when author and collaborator change the same line of the script at the same time 
 - "gitignore" lists local files excused from version control, that is, not "seen" by git so never staged, committed, pushed, or pulled --- and therefore not shared with collaborators 
+- "history" illustrates commits by everyone 
+- "local" is your personal computer 
+- "pull" fetch files from GitHub and merge with your local version of the project 
+- "push" send committed changes to the remote repo 
+- "remote" is the GitHub server 
+- "revert" to recover an earlier version of a file 
+- "stage" to select files to commit  locally 
+
+
+
+
+
+
+  
+
+
 
 
 ## alice starts  
