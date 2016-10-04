@@ -140,6 +140,14 @@ So we actually haven't "reverted"---we copied an historical version and saved it
 
 This approach suits *our* collaborative goals, but in future projects you may find that you need to learn the correct Shell commands and processes for conventional reverting.  
 
+## recovering a portion of a script 
+
+The approach described above for recovering an entire script can be used to recover a portion of a script. 
+
+- Find the earlier file like we did above 
+- Find the code chuink or prose section you want 
+- Copy and paste it into your current script 
+
 
 
 
