@@ -82,7 +82,8 @@ Reading: Sections 5.3 and 5.4
 
 ## week 6 
 
-Reading: Sections 4.1, 4.2, and 4.3
+Reading: Sections 4.1, 4.2, and 4.3    
+Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
 
 ## week 7 
 
@@ -109,7 +110,6 @@ Reading: Sections 13.1 and 13.2
 - [On the accuracy of statistical procedures in Microsoft Excel 2007](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
 - [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
 - [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
-- [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
 - [Initial steps towards reproducible research](http://kbroman.org/steps2rr/) 
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
 
