@@ -86,6 +86,11 @@ Reading: Sections 4.1, 4.2, and 4.3
 Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)    
 Both Alice and Carlos wrap up their Project 2 work by the end of the week. 
 
+- [Project 3 abstracts.](cm/cm031_project-3-descriptions.md) Read and rate. 
+
+
+
+
 ## week 7 
 
 Reading: Sections 9.1, 9.2.2, and 9.3.1 
