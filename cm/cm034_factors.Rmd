@@ -1,0 +1,305 @@
+---
+output: github_document
+--- 
+
+# factors 
+
+```{r setup, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+```
+
+```{r echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+Factors are a special type of vector useful for categorical data. I've found them occasionally useful as conditioning variables in graphs. 
+
+As a reminder, the commonly encountered vectors types in R:  
+
+- double (numeric double precision) 
+- integer (numeric integers)
+- complex (numbers), e.g., `z <- 2 + 5i` 
+- character (strings) 
+- factor 
+
+
+## start a new script in practiceR 
+
+- In `practiceR/scripts/`, start a new Rmd file called `factor_play.Rmd`. 
+- Copy the code chunks in this tutorial into `factor_play.Rmd` and add as much prose as you like to explain the work. 
+
+`r code_icon` 
+```{r}
+library(dplyr)
+library(readr)
+```
+
+The standard R installation includes US "state" data sets, with all data arranged according to alphabetical order of the state names. (Learn more by typing `?state`  in your Console.) There are 7 data sets, named:  
+
+```
+state.abb 
+state.area 
+state.center 
+state.division 
+state.name 
+state.region 
+state.x77 
+````
+Let's take a look at several:  
+
+`r code_icon`
+```{r}
+# examine the state abbreviations data 
+glimpse(state.abb)
+
+# examine the state name data 
+glimpse(state.name)
+
+# summarize the area data 
+summary(state.area)
+```
+
+Let's collect several of these vectors in a new data frame, renaming the variables to eliminate the "dot" in the variable names. Write the data to file for later use. 
+
+`r code_icon`
+```{r}
+# create a new data frame
+state_df <- data_frame(abbr = state.abb, 
+		name   = state.name, 
+		area   = state.area, 
+		region = state.region)
+
+# write the df to file for later use 
+write_csv(state_df, "data/cm034_state.csv")
+```
+
+## factors 
+
+Take a closer look at the new data frame. 
+
+`r code_icon` 
+```{r}
+# examine the data frame
+glimpse(state_df)
+```
+
+The output includes `region <fctr>` telling us that region is a "factor." Let's look more closely at its attributes. I'll start by extracting the region column as a stand-alone vector.  
+
+`r code_icon`  
+```{r}
+# extract the region column, first fifteen rows  
+first_15 <- state_df$region[1:15]
+
+# confirm region is a factor
+class(first_15)
+ 
+# factors have levels 
+levels(first_15)
+```
+
+The `levels` attribute tells us the vector has 4 distinct values, in the order shown: 
+
+- level 1 is "`r levels(first_15)[1]`" 
+- level 2 is "`r levels(first_15)[2]`" 
+- level 3 is "`r levels(first_15)[3]`" 
+- level 4 is "`r levels(first_15)[4]`" 
+
+Printing out the values, the data appear to be characters: 
+
+`r code_icon` 
+```{r}
+# the region data appear to be characters  
+first_15
+```
+
+But `typeof()` tells us that this vector is composed of integers:   
+
+`r code_icon` 
+```{r}
+# the region data are of type "integer" 
+typeof(first_15)
+```
+
+We can see the integers themselves by removing the "class" attribute, 
+
+`r code_icon` 
+```{r}
+# the values are actually encoded as integers 
+unclass(first_15)[1:15]
+```
+
+The integers represent levels, e.g.  
+
+- `r unclass(first_15)[1]` is `r first_15[1]` (`r state_df$name[1]`) 
+- `r unclass(first_15)[2]` is `r first_15[2]` (`r state_df$name[2]`) 
+- `r unclass(first_15)[3]` is `r first_15[3]` (`r state_df$name[3]`) 
+- `r unclass(first_15)[4]` is `r first_15[4]` (`r state_df$name[4]`) 
+- `r unclass(first_15)[5]` is `r first_15[5]` (`r state_df$name[5]`) 
+- `r unclass(first_15)[6]` is `r first_15[6]` (`r state_df$name[6]`) 
+- `r unclass(first_15)[7]` is `r first_15[7]` (`r state_df$name[7]`) 
+- etc. 
+
+## reordering factors 
+
+Suppose I wanted to reorder the integers assigned to the factor levels. I can select any order I want, e.g., 
+
+`r code_icon` 
+```{r}
+first_15 <- factor(first_15,
+		levels = c("West", "South", "North Central", "Northeast"))
+```
+
+- `levels = c(...)` allows me to rewrite the 4 levels in the new order I want 
+- `factor()` maintains the vector as a factor type 
+
+Check the new ordering: 
+
+`r code_icon` 
+```{r}
+# levels in their new order match the order I assigned above
+levels(first_15)
+```
+
+Compare the new integer vector to the one reported earlier: 
+
+`r code_icon` 
+```{r}
+# the integer vector for the first 15 states in their new order 
+unclass(first_15)[1:15]
+```
+
+The first few entries encode the same states and regions as before, but the integers encoding the factor levels have changed according to the order I wrote them out in the `levels = c(...)` argument earlier.    
+
+- `r unclass(first_15)[1]` is `r first_15[1]` (`r state_df$name[1]`) 
+- `r unclass(first_15)[2]` is `r first_15[2]` (`r state_df$name[2]`) 
+- `r unclass(first_15)[3]` is `r first_15[3]` (`r state_df$name[3]`) 
+- `r unclass(first_15)[4]` is `r first_15[4]` (`r state_df$name[4]`) 
+- `r unclass(first_15)[5]` is `r first_15[5]` (`r state_df$name[5]`) 
+- `r unclass(first_15)[6]` is `r first_15[6]` (`r state_df$name[6]`) 
+- `r unclass(first_15)[7]` is `r first_15[7]` (`r state_df$name[7]`) 
+- etc. 
+
+
+
+
+
+## factor-character conversion  
+
+In  early versions of R there was a memory advantage to using factors instead of character vectors. This is no longer the case. However, as a consequence of this legacy: 
+
+> *Many basic R functions automatically convert characters to factors when loading data.* 
+
+The automatic conversion of characters to factors can cause data carpentry problems if it catches you unaware.  To illustrate, let's use `read.csv()` to read the data file we saved earlier, 
+
+`r code_icon` 
+```{r}
+# read a CSV file that has string columns 
+test_df <- read.csv("data/cm034_state.csv")
+
+# examine the data 
+glimpse(test_df)
+```
+
+All of the character variables are now factors. 
+
+To illustrate the sorts of problems you might encounter, let's suppose we needed to edit the abbreviation of Alabama from AL to AB. 
+
+`r code_icon` 
+```{r warning = TRUE}
+# state abbreviations vector
+abbr <- test_df$abbr
+
+# the one I want to edit
+abbr[1]
+
+# try changing it
+abbr[1] <- "AB"
+
+# examine the result
+abbr[1]
+```
+
+The edit fails, the abbreviation is replaced with NA, and  I get a warning message. The levels of a factor *are the only values* the elements of the vector can take on. 
+
+I can't edit factors like I would characters. If I convert the factors to characters, editing works as we would expect.  
+
+`r code_icon` 
+```{r}
+# state abbreviations vector converted to characters
+abbr <- as.character(test_df$abbr)
+
+# the one I want to edit
+abbr[1]
+
+# try changing it
+abbr[1] <- "AB"
+
+# examine the result
+abbr[1]
+```
+
+
+When reading data using `read.csv()`, to prevent the conversion of strings to factors, add the `stringsAsFactors = FALSE` argument. 
+
+`r code_icon` 
+```{r}
+# read a CSV file that has string columns 
+test_df <- read.csv("data/cm034_state.csv", stringsAsFactors = FALSE)
+
+# examine the data
+glimpse(test_df)
+```
+
+Better yet, use `read_csv()` instead. It reads strings as strings.  
+ 
+ `r code_icon` 
+```{r}
+# try read_csv() from the readr package 
+test_df <- read_csv("data/cm034_state.csv")
+
+# examine the data
+glimpse(test_df)
+```
+
+After using `read_csv()`, if we wanted `region` to be a factor, we can explicitly convert it using  `as.factor()`. 
+
+`r code_icon` 
+```{r}
+# convert a vector to a factor 
+test_df$region <- as.factor(test_df$region)
+
+# examine the result
+glimpse(test_df)
+```
+
+When I convert a character vector to a factor, the levels are arranged in alphabetical order for encoding by the integers  $1...k$. 
+
+`r code_icon` 
+```{r}
+# the levels are encoded in alphabetical order
+levels(test_df$region)
+```
+
+
+
+
+
+## factor summary
+
+- Elements of a factor vector are its "levels". 
+- The levels of a factor are the only values it can assume. 
+- The number of levels $k$ is the number of unique values in the vector. 
+- Levels are encoded as integers representing the level numbers, $1...k$. 
+- Levels can be re-ordered using `factor(..., levels = c())`. 
+- Many basic R functions automatically convert characters to factors. 
+- Use `as.factor()` and `as.character()` for converting between factors and characters. 
+
+
+
+
+
+--- 
+[main page](../README.md)
