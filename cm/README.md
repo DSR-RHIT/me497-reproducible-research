@@ -15,7 +15,7 @@
 - [Getting help ](cm002b_getting-help.md) 
 
 - [Start your first script](cm007_project-1_first-script.md) (Project 1) 
-- [Start a new "practiceR" project](cm023_practiceR.md) (Tutorials)
+- [Start a new "practiceR" project](cm023_practiceR.md) (Tutorials) 
 
 - [Project due dates](cm002a_deadlines.md) 
 - [Project 1: Overview](cm004_project-1_overview.md) 
@@ -57,11 +57,11 @@
 
 ## analysis 
 
-- [Perform a linear regression](cm012_project-1_regression.md) (Project 1)
+- [Perform a linear regression](cm012_project-1_regression.md) (Project 1) 
 
 ## graphs 
 
-- [Visually check the data](cm011_project-1_graph-first-look.md) (Project 1)
+- [Visually check the data](cm011_project-1_graph-first-look.md) (Project 1) 
 - [Create the calibration graph](cm013_project-1_graph-better.md) (Project 1) 
 - [Graph extras](cm014_project-1_graph-extras.md) (Project 1) 
 
@@ -99,4 +99,7 @@ Optional reading
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
 
 
----
+
+--- 
+
+[main page](../README.md) 
