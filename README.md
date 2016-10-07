@@ -1,6 +1,9 @@
 
 # me497-RR
 
+- On this main page, course material is organized by week. 
+- [See course material organized by topic](cm/README.md)  
+
 ## reproducible research for the R novice
 
 We explore the principles and practices of reproducible research, from gathering data to analyzing data and presenting results. Students implement a  workflow that includes file management, version control, literate programming, data carpentry, creating tables and graphs, and reporting---all within the context of producing reproducible technical reports. 
@@ -101,7 +104,7 @@ Project
 Reading: Sections 4.1, 4.2, and 4.3    
 Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)  
 
-- [Factors](cm/cm034_factors.md)
+- [practiceR: Factors](cm/cm034_factors.md)
  
 
 Project 
@@ -127,19 +130,6 @@ Reading: Sections 13.1 and 13.2
 ## week 10 
 
 Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
-
----
-
-## supplementary reading  
-
-- [A guide to enhancing reproducibility in scientific results and writing](http://ropensci.github.io/reproducibility-guide/) 
-- [Five concrete reasons your students should be learning to analyze data in the reproducible paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/) 
-- [On the accuracy of statistical procedures in Microsoft Excel 2007](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
-- [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
-- [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
-- [Initial steps towards reproducible research](http://kbroman.org/steps2rr/) 
-- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
-
 
 ---
 [Unlicense](UNLICENSE.md)
