@@ -1,9 +1,7 @@
 
-# me497-RR 
+# course materials by topic
 
-## course materials by topic
-
-- On the [main page](../README.md) course material is organized by week. 
+- On the [ME497-RR main page](../README.md) course material is organized by week. 
 - On this page, course material is organized by topic. 
 
 ## course management
@@ -13,11 +11,15 @@
 - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides] 
 - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
 - [Getting help ](cm002b_getting-help.md) 
-- [Start your first script](cm007_project-1_first-script.md) (Project 1) 
-- [Start a new "practiceR" project](cm023_practiceR.md) (Tutorials) 
-- [Project due dates](cm002a_deadlines.md) 
+
+
+
+Projects 
+
+- [Schedule of projects](cm002a_deadlines.md) 
 - [Project 1: Overview](cm004_project-1_overview.md) 
 - [Project 1: Initialize](cm005_project-1_initialize.md) 
+- [Project 1: Start your first script](cm007_project-1_first-script.md) 
 - [Project 2: Initialize](cm019_project-2_start.md) 
 - [Project 2: Collaboration assignment](cm027_project-2_reviewers.md) 
 - [Project 3: Abstracts](cm031_project-3-descriptions.md) 
@@ -45,7 +47,9 @@
 - [Visual interpretation of the gather function](../slides/slides004_visual-gather.pdf)  [slides] 
 - [Tidy the data](cm010_project-1_tidy-data.md) (Project 1) 
 
+Tutorials
 
+- [Start a new "practiceR" project](cm023_practiceR.md)  
 - [practiceR: Get a handle on your data (7.1.1)](cm024_ch07_handle-on-data.md) 
 - [practiceR: Reshaping data (7.1.2)](cm025_ch07_reshaping-data.md) 
 - [practiceR: More data prep skills (7.1.3, 4, 6, 7)](cm026_ch07_more-data-prep.md) 
@@ -72,6 +76,8 @@
 
 ## reading
 
+Gandrud C (2015) *Reproducible Research with R and RStudio*, CRC Press. 
+
 - Chapter 1 
 - Chapters 2 & 3 and *Having Git ignore files* (p.99) 
 - Sections 4.1, 4.2, and 4.3 
@@ -82,6 +88,8 @@
 - Sections 10.1.2, 10.2, and 10.4 
 - Section 11.2 
 - Sections 13.1 and 13.2 
+
+Readings for class discussion 
 
 - [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
 - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
