@@ -104,8 +104,8 @@ Project
 Reading: Sections 4.1, 4.2, and 4.3    
 Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)  
 
-- [practiceR: Factors](cm/cm032_factors.md)
- 
+- [practiceR: Introduction to factors](cm/cm032_factors.md) 
+- [practiceR: Working with factors](cm/cm0323_working-with-factors.md) 
 
 Project 
 

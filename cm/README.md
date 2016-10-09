@@ -54,7 +54,8 @@ Tutorials
 - [practiceR: Reshaping data (7.1.2)](cm025_ch07_reshaping-data.md) 
 - [practiceR: More data prep skills (7.1.3, 4, 6, 7)](cm026_ch07_more-data-prep.md) 
 - [practiceR: Subsetting (7.1.5)](cm028_ch07_subsetting.md) 
-- [practiceR: Factors](cm/cm032_factors.md) 
+- [practiceR: Introduction to factors](cm032_factors.md) 
+- [practiceR: Working with factors](cm0323_working-with-factors.md) 
 
 
 ## analysis 

@@ -1,8 +1,6 @@
 
-factors
-=======
-
-Factors are a special type of vector useful for categorical data. I've found them occasionally useful as conditioning variables in graphs.
+introduction to factors
+=======================
 
 As a reminder, the commonly encountered vectors types in R:
 
@@ -10,7 +8,19 @@ As a reminder, the commonly encountered vectors types in R:
 -   integer (numeric integers)
 -   complex (numbers), e.g., `z <- 2 + 5i`
 -   character (strings)
--   factor
+-   factor `<-` today's topic
+
+categorical data
+----------------
+
+*Categorical variables* in a data set describe qualitative properties. The range of possible values (or levels) a categorical variable can assume is finite. Two examples of categorical data and their levels:
+
+-   Category "cardinal directions" has 4 levels (north, west, south, east)
+-   Category "gender identity" has [58 levels](http://abcnews.go.com/blogs/headlines/2014/02/heres-a-list-of-58-gender-options-for-facebook-users/) (agender, androgyne, androgynous, bigender, cis, cisgender, cis female, cis male. etc.). Other sources list even more levels.
+
+Some categorical data have an intrinsic order (*ordinal* data) and others do not (*nominal* data). For example, the data values "low", "medium", and "high" have an intrinsic order while the data values "north", "west", "south", and "east" do not.
+
+*Factors* are a data type in R specialized for categorical data, ordered or unordered.
 
 start a new script in practiceR
 -------------------------------
@@ -35,26 +45,31 @@ The standard R installation includes US "state" data sets, with all data arrange
     state.region 
     state.x77 
 
-Let's take a look at several:
+Let's take a look at several variables, one numerical (area) and three that are categorical (abbreviation, name, and region):
 
 ![](../resources/images/code-icon.png)
 
 ``` r
-# examine the state abbreviations data 
+# examine the vector of abbreviations
 glimpse(state.abb)
 ##  chr [1:50] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" ...
 
-# examine the state name data 
+# examine the vector of names  
 glimpse(state.name)
 ##  chr [1:50] "Alabama" "Alaska" "Arizona" "Arkansas" ...
 
-# summarize the area data 
-summary(state.area)
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1214   37320   56220   72370   83230  589800
+# examine the vector of areas  
+glimpse(state.area)
+##  num [1:50] 51609 589757 113909 53104 158693 ...
+
+# examine the vector of regions 
+glimpse(state.region)
+##  Factor w/ 4 levels "Northeast","South",..: 2 4 4 2 4 4 1 2 2 2 ...
 ```
 
-Let's collect several of these vectors in a new data frame, renaming the variables to eliminate the "dot" in the variable names. Write the data to file for later use.
+Of the categorical variables, two are encoded as characters (abbreviation and state) and one is encoded as a factor (region).
+
+Let's collect these 4 vectors in a new data frame, renaming the variables to eliminate the "dot" in the variable names and writing the data to file for later use.
 
 ![](../resources/images/code-icon.png)
 
@@ -69,15 +84,13 @@ state_df <- data_frame(abbr = state.abb,
 write_csv(state_df, "data/cm034_state.csv")
 ```
 
-factors
--------
+strings or factors
+------------------
 
-Take a closer look at the new data frame.
-
-![](../resources/images/code-icon.png)
+We saw above that categorical data in R can be represented as strings or factors. The data frame we created above retained the data types of the original vectors:
 
 ``` r
-# examine the data frame
+# examine the new data frame 
 glimpse(state_df)
 ## Observations: 50
 ## Variables: 4
@@ -87,7 +100,24 @@ glimpse(state_df)
 ## $ region <fctr> South, West, West, South, West, West, Northeast, South...
 ```
 
-The output includes `region <fctr>` telling us that region is a "factor." Let's look more closely at its attributes. I'll start by extracting the region column as a stand-alone vector.
+-   `abbr <chr>` is a vector of character strings
+-   `name <chr>` is a vector of character strings
+-   `area <dbl>` is a double-precision number
+-   `region <fctr>` is a factor
+
+You will encounter categorical data in both forms, characters and factors, and should recognize the attributes of both:
+
+-   Character strings are suitable for unordered (nominal) data.
+-   Factors are suitable for either type, ordered or unordered.
+-   Factor levels are *viewed* as character strings but are *encoded* as integer values \(1...k\).
+-   Integer encoding (hidden from casual view) assigns an implicit order, even for unordered values.
+
+*Integer encoding* is the aspect of factors that is both useful and sometimes puzzling if it catches you unaware. Hence this tutorial.
+
+factors are encoded as integers
+-------------------------------
+
+Let's look more closely at the attributes of the factor. I'll start by extracting part of the region column as a stand-alone vector.
 
 ![](../resources/images/code-icon.png)
 
@@ -144,7 +174,7 @@ unclass(first_15)[1:15]
 ##  [1] 2 4 4 2 4 4 1 2 2 2 4 4 3 3 3
 ```
 
-The integers represent levels, e.g.
+The integers represent the factor levels:
 
 -   2 is South (Alabama)
 -   4 is West (Alaska)
@@ -155,199 +185,16 @@ The integers represent levels, e.g.
 -   1 is Northeast (Connecticut)
 -   etc.
 
-reordering factors
-------------------
+This example illustrates that factors in R always have an implicit order, even for unordered (nominal) data, because factors are encoded as integer sequence \(1 ... k\).
 
-Suppose I wanted to reorder the integers assigned to the factor levels. I can select any order I want, e.g.,
+summary
+-------
 
-![](../resources/images/code-icon.png)
-
-``` r
-first_15 <- factor(first_15,
-        levels = c("West", "South", "North Central", "Northeast"))
-```
-
--   `levels = c(...)` allows me to rewrite the 4 levels in the new order I want
--   `factor()` maintains the vector as a factor type
-
-Check the new ordering:
-
-![](../resources/images/code-icon.png)
-
-``` r
-# levels in their new order match the order I assigned above
-levels(first_15)
-## [1] "West"          "South"         "North Central" "Northeast"
-```
-
-Compare the new integer vector to the one reported earlier:
-
-![](../resources/images/code-icon.png)
-
-``` r
-# the integer vector for the first 15 states in their new order 
-unclass(first_15)[1:15]
-##  [1] 2 1 1 2 1 1 4 2 2 2 1 1 3 3 3
-```
-
-The first few entries encode the same states and regions as before, but the integers encoding the factor levels have changed according to the order I wrote them out in the `levels = c(...)` argument earlier.
-
--   2 is South (Alabama)
--   1 is West (Alaska)
--   1 is West (Arizona)
--   2 is South (Arkansas)
--   1 is West (California)
--   1 is West (Colorado)
--   4 is Northeast (Connecticut)
--   etc.
-
-factor-character conversion
----------------------------
-
-In early versions of R there was a memory advantage to using factors instead of character vectors. This is no longer the case. However, as a consequence of this legacy:
-
-> *Many basic R functions automatically convert characters to factors when loading data.*
-
-The automatic conversion of characters to factors can cause data carpentry problems if it catches you unaware. To illustrate, let's use `read.csv()` to read the data file we saved earlier,
-
-![](../resources/images/code-icon.png)
-
-``` r
-# read a CSV file that has string columns 
-test_df <- read.csv("data/cm034_state.csv")
-
-# examine the data 
-glimpse(test_df)
-## Observations: 50
-## Variables: 4
-## $ abbr   <fctr> AL, AK, AZ, AR, CA, CO, CT, DE, FL, GA, HI, ID, IL, IN...
-## $ name   <fctr> Alabama, Alaska, Arizona, Arkansas, California, Colora...
-## $ area   <dbl> 51609, 589757, 113909, 53104, 158693, 104247, 5009, 205...
-## $ region <fctr> South, West, West, South, West, West, Northeast, South...
-```
-
-All of the character variables are now factors.
-
-To illustrate the sorts of problems you might encounter, let's suppose we needed to edit the abbreviation of Alabama from AL to AB.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# state abbreviations vector
-abbr <- test_df$abbr
-
-# the one I want to edit
-abbr[1]
-## [1] AL
-## 50 Levels: AK AL AR AZ CA CO CT DE FL GA HI IA ID IL IN KS KY LA MA ... WY
-
-# try changing it
-abbr[1] <- "AB"
-## Warning in `[<-.factor`(`*tmp*`, 1, value = "AB"): invalid factor level, NA
-## generated
-
-# examine the result
-abbr[1]
-## [1] <NA>
-## 50 Levels: AK AL AR AZ CA CO CT DE FL GA HI IA ID IL IN KS KY LA MA ... WY
-```
-
-The edit fails, the abbreviation is replaced with NA, and I get a warning message. The levels of a factor *are the only values* the elements of the vector can take on.
-
-I can't edit factors like I would characters. If I convert the factors to characters, editing works as we would expect.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# state abbreviations vector converted to characters
-abbr <- as.character(test_df$abbr)
-
-# the one I want to edit
-abbr[1]
-## [1] "AL"
-
-# try changing it
-abbr[1] <- "AB"
-
-# examine the result
-abbr[1]
-## [1] "AB"
-```
-
-When reading data using `read.csv()`, to prevent the conversion of strings to factors, add the `stringsAsFactors = FALSE` argument.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# read a CSV file that has string columns 
-test_df <- read.csv("data/cm034_state.csv", stringsAsFactors = FALSE)
-
-# examine the data
-glimpse(test_df)
-## Observations: 50
-## Variables: 4
-## $ abbr   <chr> "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "...
-## $ name   <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California...
-## $ area   <dbl> 51609, 589757, 113909, 53104, 158693, 104247, 5009, 205...
-## $ region <chr> "South", "West", "West", "South", "West", "West", "Nort...
-```
-
-Better yet, use `read_csv()` instead. It reads strings as strings.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# try read_csv() from the readr package 
-test_df <- read_csv("data/cm034_state.csv")
-
-# examine the data
-glimpse(test_df)
-## Observations: 50
-## Variables: 4
-## $ abbr   <chr> "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "...
-## $ name   <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California...
-## $ area   <dbl> 51609, 589757, 113909, 53104, 158693, 104247, 5009, 205...
-## $ region <chr> "South", "West", "West", "South", "West", "West", "Nort...
-```
-
-After using `read_csv()`, if we wanted `region` to be a factor, we can explicitly convert it using `as.factor()`.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# convert a vector to a factor 
-test_df$region <- as.factor(test_df$region)
-
-# examine the result
-glimpse(test_df)
-## Observations: 50
-## Variables: 4
-## $ abbr   <chr> "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "...
-## $ name   <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California...
-## $ area   <dbl> 51609, 589757, 113909, 53104, 158693, 104247, 5009, 205...
-## $ region <fctr> South, West, West, South, West, West, Northeast, South...
-```
-
-When I convert a character vector to a factor, the levels are arranged in alphabetical order for encoding by the integers \(1...k\).
-
-![](../resources/images/code-icon.png)
-
-``` r
-# the levels are encoded in alphabetical order
-levels(test_df$region)
-## [1] "North Central" "Northeast"     "South"         "West"
-```
-
-factor summary
---------------
-
+-   Categorical data can be represented in R as strings or factors.
+-   Categorical data can be intrinsically ordered or unordered.
 -   Elements of a factor vector are its "levels".
--   The levels of a factor are the only values it can assume.
 -   The number of levels \(k\) is the number of unique values in the vector.
--   Levels are encoded as integers representing the level numbers, \(1...k\).
--   Levels can be re-ordered using `factor(..., levels = c())`.
--   Many basic R functions automatically convert characters to factors.
--   Use `as.factor()` and `as.character()` for converting between factors and characters.
+-   Levels are encoded in R as integers representing the level numbers, \(1...k\).
 
 ------------------------------------------------------------------------
 

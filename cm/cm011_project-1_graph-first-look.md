@@ -80,29 +80,28 @@ data
 ``` r
 graph_data <- read_csv("data/02_calibr_data-tidy.csv")
 str(graph_data)
+## Classes 'tbl_df', 'tbl' and 'data.frame':    17 obs. of  5 variables:
+##  $ observ   : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ cycle    : int  1 1 1 1 1 1 1 2 2 2 ...
+##  $ test_pt  : chr  "3 up" "4 up" "5 up" "4 dn" ...
+##  $ input_lb : num  2.5 3.5 4.5 3.5 2.5 1.5 0.5 1.5 2.5 3.5 ...
+##  $ output_mV: num  51.1 70.4 88.8 69.4 49.5 30.7 8.7 29.9 49.4 70 ...
+##  - attr(*, "spec")=List of 2
+##   ..$ cols   :List of 5
+##   .. ..$ observ   : list()
+##   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+##   .. ..$ cycle    : list()
+##   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+##   .. ..$ test_pt  : list()
+##   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
+##   .. ..$ input_lb : list()
+##   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+##   .. ..$ output_mV: list()
+##   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+##   ..$ default: list()
+##   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+##   ..- attr(*, "class")= chr "col_spec"
 ```
-
-    ## Classes 'tbl_df', 'tbl' and 'data.frame':    17 obs. of  5 variables:
-    ##  $ observ   : int  1 2 3 4 5 6 7 8 9 10 ...
-    ##  $ cycle    : int  1 1 1 1 1 1 1 2 2 2 ...
-    ##  $ test_pt  : chr  "3 up" "4 up" "5 up" "4 dn" ...
-    ##  $ input_lb : num  2.5 3.5 4.5 3.5 2.5 1.5 0.5 1.5 2.5 3.5 ...
-    ##  $ output_mV: num  51.1 70.4 88.8 69.4 49.5 30.7 8.7 29.9 49.4 70 ...
-    ##  - attr(*, "spec")=List of 2
-    ##   ..$ cols   :List of 5
-    ##   .. ..$ observ   : list()
-    ##   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-    ##   .. ..$ cycle    : list()
-    ##   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-    ##   .. ..$ test_pt  : list()
-    ##   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-    ##   .. ..$ input_lb : list()
-    ##   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-    ##   .. ..$ output_mV: list()
-    ##   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-    ##   ..$ default: list()
-    ##   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-    ##   ..- attr(*, "class")= chr "col_spec"
 
 check yourself
 --------------
