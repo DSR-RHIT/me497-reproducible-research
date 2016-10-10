@@ -8,7 +8,7 @@ The data structure for which dot plots are suited are:
 
 -   Observations include one categorical variable and one quantitative variable.
 -   The same where the categories are *conditioned* by additional categories.
--   In any case, there is just one numerical quantity displayed, usually along the horizontal (\(x\)) axis.
+-   In any case, there is just one numerical quantity displayed, usually along the horizontal \(x\) axis.
 
 data
 ----
@@ -54,10 +54,10 @@ Examine the area data more closely.
 ``` r
 summary(state_df$area)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1214   37320   56220   72370   83230  589800
+##    1210   37300   56200   72400   83200  590000
 ```
 
-With area values in the hundreds of thousands of square miles, the graph scale is easier to read if we report are in thousands of square miles.
+With area values in the hundreds of thousands of square miles, the graph scale is easier to read if we display in thousands of square miles.
 
 ![](../resources/images/code-icon.png)
 
@@ -83,6 +83,8 @@ typeof(state_df$region)
 levels(state_df$region)
 ## [1] "West"          "North Central" "South"         "Northeast"
 ```
+
+The West region has a collection of states with the largest median area; the Northeast has the smallest median state area.
 
 graph
 -----
@@ -113,7 +115,16 @@ fig
 
 ![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
-Next, I'll add some formatting layers, most of which you saw in Project 1.
+Next, I'll add some formatting layers, most of which you saw in Project 1, to
+
+-   Set the x-scale limits and tick mark locations
+-   Set the x label and omit the y label
+-   Assign a title
+-   Use the black and white theme
+-   Omit the x-grid
+-   Include the y-grid as gray lines
+-   Adjust the title font size and location
+-   Omit the y tick marks
 
 ![](../resources/images/code-icon.png)
 
@@ -134,7 +145,7 @@ fig
 
 ![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
-The graph is a little bit compressed vertically, so I'll print to file and read the PNG file back in to control the resolution and dimensions. I usually do a bit of sizing trial and error before I get an output I like.
+The graph is a bit compressed vertically, so I'll print to file to control the resolution and dimensions, then read the PNG file back in to the document. I usually do a bit of sizing trial and error before I get an output I like.
 
 ![](../resources/images/code-icon.png)
 
@@ -173,7 +184,11 @@ fig
 
 ![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
-Ouch, that's ugly. A typical data set will have an entry for every intersection of the two categorical variables, but here a state name can only belong to one region. To eliminate the names that don't exist in a region, we use the `scales = "free_y"` argument.
+Ouch, that's ugly.
+
+A typical data set will have an entry for every intersection of the two categorical variables, but here a state name can only belong to one region.
+
+To eliminate the names that don't exist in a region, we use the `scales = "free_y"` argument.
 
 Add to the existing code.
 
@@ -186,7 +201,9 @@ fig
 
 ![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
-The default is for the panels to have the same vertical height. But the number of states in a region is not constant, hence the panels all have different numbers of rows. To allow the panel heights to self-adjust for equal row spacing, we add the `space = "free"` argument.
+The default is for the panels to have the same vertical height. But the number of states in a region is not constant, hence the panels all have different numbers of rows.
+
+To allow the panel heights to self-adjust for equal row spacing, we add the `space = "free"` argument.
 
 Add to the existing code and write to file.
 
@@ -202,7 +219,7 @@ ggsave("results/cm035_dot-plot-conditioned.png", plot = fig,
 knitr::include_graphics("../results/cm035_dot-plot-conditioned.png")
 ```
 
-<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
+![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-15-1.png)<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
 
 Pretty neat!
 
