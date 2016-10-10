@@ -68,6 +68,11 @@ Tutorials
 - [Create the calibration graph](cm013_project-1_graph-better.md) (Project 1) 
 - [Graph extras](cm014_project-1_graph-extras.md) (Project 1) 
 
+Tutorials 
+
+- [Graph tour overview](cm034_graph-tour-overview.md) 
+- [practiceR: Dot plot](cm035_dot-plots.md) 
+
 ## reporting 
 
 - [Write the client report](cm015_project-1_report.md) (Project 1) 
