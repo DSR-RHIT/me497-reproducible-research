@@ -33,12 +33,6 @@ Extract the numbers and units we want.
 ``` r
 # itemized results that are cited in the report 
 results      <- read_csv('results/04_calibr_outcomes.csv')
-## Parsed with column specification:
-## cols(
-##   item = col_character(),
-##   num = col_double(),
-##   unit = col_character()
-## )
 
 # extract numbers and units
 slope        <- results$num[results$item == "slope"]
@@ -62,18 +56,7 @@ recreate the basic graph
 
 ``` r
 graph_data <- read_csv("data/02_calibr_data-tidy.csv")
-```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   observ = col_integer(),
-    ##   cycle = col_integer(),
-    ##   test_pt = col_character(),
-    ##   input_lb = col_double(),
-    ##   output_mV = col_double()
-    ## )
-
-``` r
 calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
     geom_smooth(method = 'lm', se = FALSE, color = 'gray70',  size = 0.5) + 
     geom_point(size = 1.5, stroke = 0.7, shape = 21, color = 'black', fill= 'gray70') +

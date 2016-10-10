@@ -23,7 +23,7 @@ Projects
 - [Project 2: Initialize](cm019_project-2_start.md) 
 - [Project 2: Collaboration assignment](cm027_project-2_reviewers.md) 
 - [Project 3: Abstracts](cm031_project-3-descriptions.md) 
-
+- [Project 3: Getting started](cm037_project-3_collabs.md)
 
 
 ## software 

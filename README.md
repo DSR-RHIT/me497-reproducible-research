@@ -114,7 +114,8 @@ Reading for class discussion: [Good enough practices for scientific computing](h
 Project 
 
 - Alice and Carlos wrap up Project 2 by the end of the week.
-- [Project 3 abstracts.](cm/cm031_project-3-descriptions.md) Read and rate. 
+- [Project 3: Abstracts.](cm/cm031_project-3-descriptions.md) Read and rate. 
+- [Project 3: Getting started](cm/cm037_project-3_collabs.md)
 
 
 
