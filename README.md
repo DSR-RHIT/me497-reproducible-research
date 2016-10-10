@@ -122,7 +122,11 @@ Project
 
 ## week 7 
 
-Reading: Sections 9.1, 9.2.2, and 9.3.1 
+Reading: Sections 9.1, 9.2.2, and 9.3.1    
+Reading for class discussion:
+
+- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
+- [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
 
 ## week 8 
 

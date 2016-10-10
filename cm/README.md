@@ -99,16 +99,17 @@ Readings for class discussion
 
 - [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
 - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
+- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
+- [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
 
 Optional reading 
 
 - [A guide to enhancing reproducibility in scientific results and writing](http://ropensci.github.io/reproducibility-guide/) 
 - [Five concrete reasons your students should be learning to analyze data in the reproducible paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/) 
-- [On the accuracy of statistical procedures in Microsoft Excel 2007](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) 
 - [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
 - [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
 - [Initial steps towards reproducible research](http://kbroman.org/steps2rr/) 
-- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) 
+
 
 
 
