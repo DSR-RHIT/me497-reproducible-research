@@ -54,7 +54,7 @@ Examine the area data more closely.
 ``` r
 summary(state_df$area)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1210   37300   56200   72400   83200  590000
+##    1214   37320   56220   72370   83230  589800
 ```
 
 With area values in the hundreds of thousands of square miles, the graph scale is easier to read if we report are in thousands of square miles.
@@ -142,12 +142,14 @@ The graph is a little bit compressed vertically, so I'll print to file and read 
 # print to file
 ggsave("results/cm035_dot-plot.png", plot = fig, 
     width = 6.5, height = 7.5, units = "in", dpi = 100)
+```
 
+``` r
 # read the PNG file back in to the document
 knitr::include_graphics("../results/cm035_dot-plot.png")
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-11-1.png)<img src="../results/cm035_dot-plot.png" width="650" />
+<img src="../results/cm035_dot-plot.png" width="650" />
 
 conditioning
 ------------
@@ -169,7 +171,7 @@ fig <- fig +
 fig
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 Ouch, that's ugly. A typical data set will have an entry for every intersection of the two categorical variables, but here a state name can only belong to one region. To eliminate the names that don't exist in a region, we use the `scales = "free_y"` argument.
 
@@ -182,7 +184,7 @@ fig <- fig +
 fig
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 The default is for the panels to have the same vertical height. But the number of states in a region is not constant, hence the panels all have different numbers of rows. To allow the panel heights to self-adjust for equal row spacing, we add the `space = "free"` argument.
 
@@ -200,7 +202,7 @@ ggsave("results/cm035_dot-plot-conditioned.png", plot = fig,
 knitr::include_graphics("../results/cm035_dot-plot-conditioned.png")
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-14-1.png)<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
+<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
 
 Pretty neat!
 

@@ -125,11 +125,13 @@ fig
 The graph is a little bit compressed vertically, so I'll print to file and read the PNG file back in to control the resolution and dimensions. I usually do a bit of sizing trial and error before I get an output I like. 
 
 `r code_icon` 
-```{r}
+```{r results='hide'}
 # print to file
 ggsave("results/cm035_dot-plot.png", plot = fig, 
     width = 6.5, height = 7.5, units = "in", dpi = 100)
+```
 
+```{r}
 # read the PNG file back in to the document
 knitr::include_graphics("../results/cm035_dot-plot.png")
 ```
