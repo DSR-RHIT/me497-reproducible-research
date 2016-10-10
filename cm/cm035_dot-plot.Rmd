@@ -7,7 +7,7 @@ output: github_document
 ```{r setup, echo = FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
-opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'none')
 ```
 
 ```{r echo = FALSE}

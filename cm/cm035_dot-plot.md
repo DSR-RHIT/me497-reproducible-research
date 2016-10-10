@@ -100,8 +100,6 @@ fig <- ggplot(state_df, aes(x = scaled_area, y = name)) +
 fig
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-8-1.png)
-
 To easily make visual comparisons, we'd like the rows of the dot plot ordered in descending values of the areas. The `reorder(name, scaled_area)` argument can be read, "Reorder the rows (names of the states) from top to bottom in order of descending scaled area (the x variable)."
 
 Edit the previous code.
@@ -112,8 +110,6 @@ fig <- ggplot(state_df, aes(x = scaled_area, y = reorder(name, scaled_area))) +
 
 fig
 ```
-
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 Next, I'll add some formatting layers, most of which you saw in Project 1, to
 
@@ -142,8 +138,6 @@ fig <- fig +
 
 fig
 ```
-
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 The graph is a bit compressed vertically, so I'll print to file to control the resolution and dimensions, then read the PNG file back in to the document. I usually do a bit of sizing trial and error before I get an output I like.
 
@@ -182,8 +176,6 @@ fig <- fig +
 fig
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-13-1.png)
-
 Ouch, that's ugly.
 
 A typical data set will have an entry for every intersection of the two categorical variables, but here a state name can only belong to one region.
@@ -198,8 +190,6 @@ fig <- fig +
 
 fig
 ```
-
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 The default is for the panels to have the same vertical height. But the number of states in a region is not constant, hence the panels all have different numbers of rows.
 
@@ -219,7 +209,7 @@ ggsave("results/cm035_dot-plot-conditioned.png", plot = fig,
 knitr::include_graphics("../results/cm035_dot-plot-conditioned.png")
 ```
 
-![](cm035_dot-plot_files/figure-markdown_github/unnamed-chunk-15-1.png)<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
+<img src="../results/cm035_dot-plot-conditioned.png" width="650" />
 
 Pretty neat!
 
