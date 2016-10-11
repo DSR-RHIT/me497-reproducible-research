@@ -108,7 +108,7 @@ Reading for class discussion: [Good enough practices for scientific computing](h
 - [practiceR: Working with factors](cm/cm033_working-with-factors.md) 
 - [Graph tour overview](cm/cm034_graph-tour-overview.md) 
 - [practiceR: Dot plot](cm/cm035_dot-plot.md) 
-
+- [Deleting unnecessary files](cm/cm037_unlink-files.md) 
 
 
 Project 

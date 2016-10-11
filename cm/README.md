@@ -12,8 +12,6 @@
 - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
 - [Getting help ](cm002b_getting-help.md) 
 
-
-
 Projects 
 
 - [Schedule of projects](cm002a_deadlines.md) 
@@ -32,12 +30,15 @@ Projects
 - [R and RStudio: Install](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [RStudio: Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [Git and GitHub: Setup](cm003_git-setup.md) 
-- [Git: Ignore files](cm008_project-1_gitignore.md) 
 - [GitHub: Collaborating](cm029_collaborating-github.md) 
 - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md) 
 
-## data 
+## file management 
 
+- [Git: Ignore files](cm008_project-1_gitignore.md) 
+- [Deleting unnecessary files](cm037_unlink-files.md) 
+
+## data 
 
 - [Review of tools for preparing data](cm022_review-data-prep.md) 
 - [Getting data into R](cm020_getting-data-into-R.md) 
