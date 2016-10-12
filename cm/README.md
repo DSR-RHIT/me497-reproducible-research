@@ -73,6 +73,7 @@ Tutorials
 
 - [Graph tour overview](cm034_graph-tour-overview.md) 
 - [practiceR: Dot plot](cm035_dot-plot.md) 
+- [practiceR: Histogram](cm036_histogram.md) 
 
 ## reporting 
 

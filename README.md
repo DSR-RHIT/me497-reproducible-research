@@ -109,7 +109,7 @@ Reading for class discussion: [Good enough practices for scientific computing](h
 - [Graph tour overview](cm/cm034_graph-tour-overview.md) 
 - [practiceR: Dot plot](cm/cm035_dot-plot.md) 
 - [Deleting unnecessary files](cm/cm037_unlink-files.md) 
-
+- [practiceR: Histogram](cm/cm036_histogram.md) 
 
 Project 
 
