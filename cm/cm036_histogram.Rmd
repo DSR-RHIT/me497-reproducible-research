@@ -79,7 +79,7 @@ p <- ggplot(SpeedSki, aes(x = Speed, fill = Sex)) +
 p # to print the graph
 ```
 
-Facets (multiple panels) are created using `facet_wrap()`. By disaggregating the data by Sex, we eliminate any overlap in the two groups of data. The  `ncol= 1` argument aligns the two panels in a column. 
+Facets (multiple panels) are created using `facet_wrap()` when conditioning by one variable. By disaggregating the data by Sex, we eliminate any overlap in the two groups of data. The  `ncol= 1` argument aligns the panels in 1 column. 
 
 `r code_icon`
 ```{r cm036-07}
@@ -103,7 +103,7 @@ As Unwin notes in his discussion of these data,
 
 > As well as emphasizing that there were many more competitors in the men's competition than in the women's, the plots show that the fastest person was a man and that a woman was the slowest. What is surprising (and more interesting) is that the fastest woman was almost as fast as the fastest men and that there were two distinct groups of women, the fast ones and the slow ones.
 
-Conditioning the data further by Sex and Event helps explain these results. 
+Conditioning the data further by Sex and Event helps explain these results. Here, we replace the `facet_wrap()` we used earlier with `facet_grid()` because we are conditioning by two variables, (Sex category has 2 levels, Event category has 3 levels) creating a $2\times 3$ grid of panels. 
 
 `r code_icon`
 ```{r cm036-09}
@@ -148,6 +148,21 @@ p <- p +
 	scale_fill_manual(values = c(medBr, medBG)) 
 
 p
+```
+
+## one-chunk
+
+Of course, the steps I've shown could have been done in a single code chunk, e.g., 
+
+```{r cm036-11, results = 'hide', fig.keep = 'none'}
+ggplot(SpeedSki, aes(x = Speed, fill = Sex)) + 
+  geom_histogram(binwidth = set_bin, color = "white") + 
+  scale_fill_manual(values = c(medBr, medBG)) + 
+  facet_grid(Sex ~ Event) + 
+  xlim(160, 220) + 
+  xlab("Speed (km/hr)") + 
+  ylab("") + 
+  theme(legend.position = "none", panel.background = element_rect(fill = "gray90", colour = "gray90", size = 0.5, linetype = "solid")) 
 ```
 
 
