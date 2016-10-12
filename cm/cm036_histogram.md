@@ -56,7 +56,7 @@ p <- ggplot(SpeedSki, aes(x = Speed)) +
 p # to print the graph
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-04-1.png)
 
 We can play around with the bin-width to adjust the resolution of the histogram. A bin width of 2 km/hr gives a useful distribution. You can try others. In this chunk, I also set my own x-scale limits.
 
@@ -74,7 +74,7 @@ p <- ggplot(SpeedSki, aes(x = Speed)) +
 p # to print the graph
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-05-1.png)
 
 Let's condition the data by Sex. The conditioning is assigned using the `fill = Sex` argument of the `aes()` specification. Conditioning automatically assigns a color palette and inserts a legend.
 
@@ -88,7 +88,7 @@ p <- ggplot(SpeedSki, aes(x = Speed, fill = Sex)) +
 p # to print the graph
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-06-1.png)
 
 Facets (multiple panels) are created using `facet_wrap()`. By disaggregating the data by Sex, we eliminate any overlap in the two groups of data. The `ncol= 1` argument aligns the two panels in a column.
 
@@ -101,7 +101,7 @@ p <- p + facet_wrap(~ Sex, ncol = 1)
 p # to print the graph
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-07-1.png)
 
 The panels are labeled so we can dispense with the legend.
 
@@ -114,7 +114,7 @@ p <- p + theme(legend.position = "none")
 p # to print the graph
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-08-1.png)
 
 As Unwin notes in his discussion of these data,
 
@@ -130,7 +130,7 @@ p <- p + facet_grid(Sex ~ Event)
 p
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-09-1.png)
 
 A much clearer picture emerges.
 
@@ -171,7 +171,7 @@ p <- p +
 p
 ```
 
-![](cm036_histogram_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](cm036_histogram_files/figure-markdown_github/cm036-10-1.png)
 
 references
 ----------

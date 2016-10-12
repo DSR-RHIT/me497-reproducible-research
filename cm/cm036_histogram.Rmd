@@ -4,13 +4,13 @@ output: github_document
 
 # histogram  
 
-```{r setup, echo = FALSE}
+```{r cm036-01, echo = FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
 ```
 
-```{r echo = FALSE}
+```{r cm036-02, echo = FALSE}
 # functions for text_icon and code_icon
 source("cm/helper_02_icons.R")
 ```
@@ -28,7 +28,7 @@ We're going to use data from the 2011 World Speed Skiing Championships. The data
 Load the package and examine the `SpeedSki` data frame. The data frame is already tidy. 
 
 `r code_icon`
-```{r}
+```{r cm036-03}
 # load the package that has the data we want 
 library(GDAdata)
 
@@ -45,7 +45,7 @@ Variable **Speed** is a number (km/hr) while variables **Event** and **Sex** are
 First graph is a histogram of the counts of all speeds. 
  
  `r code_icon`
-```{r}
+```{r cm036-04}
 library(ggplot2)
 p <- ggplot(SpeedSki, aes(x = Speed)) + 
 	geom_histogram()
@@ -56,7 +56,7 @@ p # to print the graph
 We can play around with the bin-width to adjust the resolution of the histogram. A bin width of 2 km/hr gives a useful distribution. You can try others. In this chunk, I also set my own x-scale limits. 
 
 `r code_icon` Edit the earlier code chunk 
-```{r}
+```{r cm036-05}
 # histogram bin width
 set_bin <- 2
 
@@ -71,7 +71,7 @@ p # to print the graph
 Let's condition the data by Sex. The conditioning is assigned using the `fill = Sex` argument of the `aes()` specification. Conditioning automatically assigns a color palette and inserts a legend. 
 
 `r code_icon` Edit the earlier code chunk 
-```{r}
+```{r cm036-06}
 p <- ggplot(SpeedSki, aes(x = Speed, fill = Sex)) + 
 	geom_histogram(binwidth = set_bin) + 
 	xlim(160, 220)
@@ -82,7 +82,7 @@ p # to print the graph
 Facets (multiple panels) are created using `facet_wrap()`. By disaggregating the data by Sex, we eliminate any overlap in the two groups of data. The  `ncol= 1` argument aligns the two panels in a column. 
 
 `r code_icon`
-```{r}
+```{r cm036-07}
 # the facet can be added as a layer 
 p <- p + facet_wrap(~ Sex, ncol = 1)
 
@@ -92,7 +92,7 @@ p # to print the graph
 The panels are labeled so we can dispense with the legend. 
 
 `r code_icon`
-```{r}
+```{r cm036-08}
 # omit the legend
 p <- p + theme(legend.position = "none")
 
@@ -106,7 +106,7 @@ As Unwin notes in his discussion of these data,
 Conditioning the data further by Sex and Event helps explain these results. 
 
 `r code_icon`
-```{r}
+```{r cm036-09}
 p <- p + facet_grid(Sex ~ Event)
 
 p
@@ -123,7 +123,7 @@ A much clearer picture emerges.
 Some final tweaks to make the graph more presentable. 
 
 `r code_icon`
-```{r}
+```{r cm036-10}
 # outline the bins
 p <- p +
 	geom_histogram(binwidth = set_bin, color = "white")
