@@ -21,7 +21,7 @@ Two possible approaches:
 ```{r, setup, include = FALSE}
 library(knitr)
 opts_knit$set(root.dir = '../')
-opts_chunk$set(echo = TRUE, fig.keep='none')
+opts_chunk$set(echo = TRUE, fig.keep='high')
 ```
 
 Packages
