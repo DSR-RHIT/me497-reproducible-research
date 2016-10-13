@@ -109,11 +109,10 @@ Reading for class discussion: [Good enough practices for scientific computing](h
 - [Graph tour overview](cm/cm034_graph-tour-overview.md) 
 - [practiceR: Dot plot](cm/cm035_dot-plot.md) 
 - [Deleting unnecessary files](cm/cm037_unlink-files.md) 
-- [practiceR: Histogram](cm/cm036_histogram.md) 
 
 Project 
 
-- Alice and Carlos wrap up Project 2 by the end of the week.
+- [Project 2: Wrap-up](cm/cm040_project-2_wrapup.md) 
 - [Project 3: Abstracts.](cm/cm031_project-3-descriptions.md) Read and rate. 
 - [Project 3: Getting started](cm/cm037_project-3_collabs.md)
 
@@ -127,6 +126,11 @@ Reading for class discussion:
 
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
 - [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
+
+- [practiceR: Histogram](cm/cm036_histogram.md) 
+
+
+
 
 ## week 8 
 
