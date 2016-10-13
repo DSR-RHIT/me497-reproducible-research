@@ -4,13 +4,13 @@ output: github_document
 
 # subsetting 
 
-```{r setup, echo = FALSE}
+```{r 028-01, echo = FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE, fig.keep = 'high')
 ```
 
-```{r echo = FALSE}
+```{r 028-02, echo = FALSE}
 # functions for text_icon and code_icon
 source("cm/helper_02_icons.R")
 ```
@@ -19,7 +19,7 @@ source("cm/helper_02_icons.R")
 - Open the  `chapter7.Rmd` script and continue adding to it from this tutorial. 
 
 `r code_icon`  
-```{r}
+```{r 028-03}
 # packages 
 library(plyr)
 library(dplyr)
@@ -64,26 +64,26 @@ where we subsetted **relevant_results** using `[[]]` to extract **coeff** and an
 
 Again, in writing the report for Project 1, we had a data frame **results_df** that contained the results of the regression analysis that we wanted to use in the final report. 
 
-```{r, echo=TRUE}
+```{r 028-04, echo=TRUE}
 # itemized results that are cited in the report 
 results_df <- read_csv('results/04_calibr_outcomes.csv') 
 ```
 
 We converted that data frame to a list using `dlply`: 
-```{r}
+```{r 028-05}
 # specific numbers are easier to extract from a list
 results_list <- dlply(results_df, 'item')
 ```
 
 **results_list** is a list of data frames that includes a **slope** data frame with three entries: `item`, `num`, and `unit` (see the bottom of the list). 
 
-```{r}
+```{r 028-06}
 str(results_list)
 ```
 
 We can use `$` subsets to extract the numerical value of the slope by:  
 
-```{r}
+```{r 028-07}
 # extract the slope data frame from results_list
 slope_df <- results_list$slope
 
@@ -108,7 +108,7 @@ Similarly, we used `$` subsetting to extract other  **results_list** numbers and
 We'll continue with the  `WDI` data frame we called **CompleteLongFert** last time. Here's a reminder of what that data frame looks like:
 
 `r code_icon`  
-```{r include=3, echo=FALSE}
+```{r  028-08, include=3, echo=FALSE}
 library(readr)
 CompleteLongFert <- read_csv("results/CompleteLongFert2.csv")
 head(CompleteLongFert)
@@ -118,7 +118,7 @@ head(CompleteLongFert)
 If we graph **fert_consump** using a probability density graph, we obtain: 
 
 `r code_icon` 
-```{r results = 'hide'}
+```{r  028-09, results = 'hide'}
 # create the graph
 fig1 <- ggplot(CompleteLongFert, aes(fert_consump)) +
 	geom_density() + 
@@ -130,7 +130,7 @@ ggsave("results/ch7_fert-consump-1.png", fig1, width = 6, height = 4, units = "i
 ```
 
 `r code_icon` 
-```{r} 
+```{r 028-10} 
 # print the graph to screen
 knitr::include_graphics("../results/ch7_fert-consump-1.png")
 ```
@@ -143,7 +143,7 @@ The graph shows that the data set has some extreme values, say greater than 1000
 To subset the potential outliers, we use a logical test: 
 
 `r code_icon` 
-```{r}
+```{r 028-11}
 FertOutliers <- CompleteLongFert %>%
 	filter(fert_consump > 1000)
 glimpse(FertOutliers)
@@ -152,7 +152,7 @@ glimpse(FertOutliers)
 What countries are these? Using a `$` subset and the `unique()` function: 
 
 `r code_icon` 
-```{r}
+```{r 028-12}
 unique(FertOutliers$Country)
 ```
 
@@ -161,7 +161,7 @@ These countries have relatively small proportions of arable land, thus their fer
 To subset the data to omit these countries, we use a logical test again, bu this time we only keep those countries that have a consumption less than or equal to 1000. 
 
 `r code_icon` 
-```{r}
+```{r 028-13}
 SubsetLongFert <- CompleteLongFert %>%
 	filter(fert_consump <= 1000)
 glimpse(SubsetLongFert)
@@ -169,7 +169,7 @@ glimpse(SubsetLongFert)
 
 Looking more closely at the rows of this data set, I find there are entries that are not actually countries. The following list, while not comprehensive, gives you an idea:  
 
-```{r}
+```{r 028-14}
 ##  [30] "Caribbean small states"                              
 ##  [31] "Central Europe and the Baltics" 
 ##  [46] "Early-demographic dividend"   
@@ -191,7 +191,7 @@ To download this data set, I run the following lines just once, then comment the
 
 
 `r code_icon` 
-```{r}
+```{r 028-15}
 # url <- "http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_txt-temp.htm"
 # destination <- "data/country_codes.txt"
 # download.file(url, destination)
@@ -201,7 +201,7 @@ To download this data set, I run the following lines just once, then comment the
 The data file is not a CSV file. If you open it you'll see that the data are separated by semicolons `;` --- no problem. That's what `readr::read_csv2()` is for. 
 
 `r code_icon` 
-```{r}
+```{r 028-16}
 country_codes <- read_csv2("data/country_codes.txt")
 head(country_codes)
 
@@ -214,7 +214,7 @@ head(country_codes)
 Now I'll subset the column of codes:
 
 `r code_icon` 
-```{r}
+```{r 028-17}
 these_are_countries <- country_codes$code
 glimpse(these_are_countries)
 ```
@@ -223,7 +223,7 @@ glimpse(these_are_countries)
 And now I'll use these codes to subset the fertilizer data, keeping only those rows whose country codes match the **keep_these** list. 
 
 `r code_icon` 
-```{r}
+```{r 028-18}
 Fert_Countries <- SubsetLongFert %>%
 	filter(Abbr %in% these_are_countries)
 glimpse(Fert_Countries)
@@ -235,7 +235,7 @@ glimpse(Fert_Countries)
 Let's take a look at the distribution of the fertilizer consumption data now: 
 
 `r code_icon` 
-```{r results = 'hide'}
+```{r  028-19, results = 'hide'}
 # create the graph
 fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
 	geom_density() + 
@@ -247,7 +247,7 @@ ggsave("results/ch7_fert-consump-2.png", fig2, width = 6, height = 4, units = "i
 ```
 
 `r code_icon` 
-```{r} 
+```{ 028-20} 
 #  import the figure and print to screen  
 knitr::include_graphics("../results/ch7_fert-consump-2.png")
 ```

@@ -334,14 +334,7 @@ fig2 <- ggplot(Fert_Countries, aes(fert_consump)) +
 ggsave("results/ch7_fert-consump-2.png", fig2, width = 6, height = 4, units = "in", dpi = 300)
 ```
 
-![](../resources/images/code-icon.png)
-
-``` r
-#  import the figure and print to screen  
-knitr::include_graphics("../results/ch7_fert-consump-2.png")
-```
-
-<img src="../results/ch7_fert-consump-2.png" width="1800" />
+![](../resources/images/code-icon.png) `{ 028-20}  #  import the figure and print to screen   knitr::include_graphics("../results/ch7_fert-consump-2.png")`
 
 ------------------------------------------------------------------------
 
