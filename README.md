@@ -141,7 +141,14 @@ Reading for class discussion: [Naming things](https://rawgit.com/Reproducible-Sc
 Tutorials 
 
 - [practiceR: Histogram](cm/cm036_histogram.md) 
-- 
+
+Reporting 
+
+- [Controlling Word styles](cm/cm041_word-styles.md) 
+
+
+
+
 
 Project 
 

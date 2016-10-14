@@ -82,6 +82,7 @@ Tutorials
 - [When the data change](cm/cm017_project-1_data-change.md)  (Project 1) 
 - [Adding references to a report](cm018_project-1_references.md) (Project 1) 
 - [Preparing a report for transmittal](cm016_project-1_report-transmittal.md) (Project 1) 
+- [Controlling Word styles](cm041_word-styles.md) 
 
 ## reading
 
