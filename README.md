@@ -16,11 +16,13 @@ Text: Chistopher Gandrud (2015) *Reproducible Research with R and RStudio 2/e*, 
 
 ## week 0
 
-If you are already an R and RStudio user, please update R, RStudio, and your packages to the most recent versions.
-
-Reading: Chapter 1. 
+Reading: Chapter 1 
 
 - [Course introduction](slides/slides001_introduction.pdf) [slides] 
+
+Software 
+
+- If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
 - [Software overview](slides/slides002_software.pdf) [slides] 
 - [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio) 
@@ -34,13 +36,16 @@ Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).
 
 - [Three principles of reproducibility](slides/slides003_start-report.pdf) [slides]  
 
-Project 
+File management 
+
+- [Having Git ignore files](cm/cm008_project-1_gitignore.md) 
+
+Project 1 tutorials 
 
 - [Project 1 overview](cm/cm004_project-1_overview.md) 
 - [Initialize the project](cm/cm005_project-1_initialize.md) 
 - [Download resource and data files](cm/cm006_project-1_downloads.md) 
 - [Start your first script](cm/cm007_project-1_first-script.md) 
-- [Having Git ignore files](cm/cm008_project-1_gitignore.md) 
 - [Explore the data](cm/cm009_project-1_explore-data.md) 
 - [Tidy the data](cm/cm010_project-1_tidy-data.md) 
 
@@ -48,7 +53,7 @@ Project
 
 Reading: Section 11.2 
 
-Project 
+Project 1 tutorials 
 
 - [Visually check the data](cm/cm011_project-1_graph-first-look.md) 
 - [Perform a linear regression](cm/cm012_project-1_regression.md) 
@@ -64,7 +69,9 @@ Optional
 
 ## week 3
 
-Reading: Sections 6.2 and 6.3
+Reading: Sections 6.2 and 6.3 
+
+Tutorials 
 
 - [Getting data into R](cm/cm020_getting-data-into-R.md) 
 - [Reshaping data from wide to long form](cm/cm021_reshaping-data.md) 
@@ -77,6 +84,8 @@ Project
 ## week 4 
 
 Reading: Chapter 7 
+
+Tutorials 
 
 - [Review of tools for preparing data](cm/cm022_review-data-prep.md) 
 - [Start a new "practiceR" project](cm/cm023_practiceR.md) 
@@ -95,8 +104,8 @@ Reading: Sections 5.3 and 5.4
 
 Project 
 
-- [Roles and tasks for collaborating via GitHub](cm/cm029_collaborating-github.md) 
-- [Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
+- [GitHub: Collaborating](cm/cm029_collaborating-github.md) 
+- [GitHub: Managing changes and conflicts](cm/cm030_change-conflict-revert.md) 
 - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
 
 ## week 6 
@@ -104,16 +113,21 @@ Project
 Reading: Sections 4.1, 4.2, and 4.3    
 Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)  
 
-- [practiceR: Introduction to factors](cm/cm032_factors.md) 
-- [practiceR: Working with factors](cm/cm033_working-with-factors.md) 
+Tutorials 
+
 - [Graph tour overview](cm/cm034_graph-tour-overview.md) 
 - [practiceR: Dot plot](cm/cm035_dot-plot.md) 
+- [practiceR: Introduction to factors](cm/cm032_factors.md) 
+- [practiceR: Working with factors](cm/cm033_working-with-factors.md) 
+
+File management  
+
 - [Deleting unnecessary files](cm/cm037_unlink-files.md) 
 
 Project 
 
 - [Project 2: Wrap-up](cm/cm040_project-2_wrapup.md) 
-- [Project 3: Abstracts.](cm/cm031_project-3-descriptions.md) Read and rate. 
+- [Project 3: Abstracts.](cm/cm031_project-3-descriptions.md) 
 - [Project 3: Getting started](cm/cm037_project-3_collabs.md)
 
 
@@ -122,27 +136,43 @@ Project
 ## week 7 
 
 Reading: Sections 9.1, 9.2.2, and 9.3.1    
-Reading for class discussion:
+Reading for class discussion: [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation) and Hadley Wickham's [Style guide](http://adv-r.had.co.nz/Style.html)  
 
-- [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
-- [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
+Tutorials 
 
 - [practiceR: Histogram](cm/cm036_histogram.md) 
+- 
+
+Project 
+
+- 
+- 
 
 
 
 
 ## week 8 
 
-Reading: Sections 10.1.2, 10.2, and 10.4 
+Reading: Sections 10.1.2, 10.2, and 10.4    
+Reading for class discussion: 
+
+- 
+- 
 
 ## week 9 
 
-Reading: Sections 13.1 and 13.2 
+Reading: Sections 13.1 and 13.2    
+Reading for class discussion: 
+
+- 
+- 
 
 ## week 10 
 
 Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
+
+- 
+- 
 
 ---
 [Unlicense](UNLICENSE.md)
