@@ -15,8 +15,6 @@ If you find additional methods, or develop tricks of your own, let me know and I
 - [Centering figures and captions](cm042_docx-center-figure.md) 
 
  
-
-
 ---
 
 [main page](../README.md)
