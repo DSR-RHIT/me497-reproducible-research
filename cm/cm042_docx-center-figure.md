@@ -9,7 +9,7 @@ word styles
 
 In R Markdown, you control the formatting of a Word document output by modifying predefined Word styles. For more information on creating and editing the reference styles file generally, see my article [Happy collaboration with Rmd to docx](http://rmarkdown.rstudio.com/articles_docx.html).
 
-For centering figures and captions, I suggest modifying the rarely used, predefined *Heading 6* style in the same way that Norbert Köhler, in his article [R Markdown: How to insert page breaks in a MS Word document](http://datascienceplus.com/r-markdown-how-to-insert-page-breaks-in-a-ms-word-document/), suggests dedicating the rarely used, predefined *Heading 5* style for inserting page breaks.
+For centering figures and captions, I suggest modifying the rarely used, predefined *Heading 6* style in the same way that Norbert KÃ¶hler, in his article [R Markdown: How to insert page breaks in a MS Word document](http://datascienceplus.com/r-markdown-how-to-insert-page-breaks-in-a-ms-word-document/), suggests dedicating the rarely used, predefined *Heading 5* style for inserting page breaks.
 
 getting started
 ---------------
