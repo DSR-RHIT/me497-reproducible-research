@@ -38,6 +38,8 @@ Projects
 
 - [Git: Ignore files](cm008_project-1_gitignore.md) 
 - [Deleting unnecessary files](cm037_unlink-files.md) 
+- [Fixing the .Rproj won't launch problem](cm043_rstudion_Rproj-not-open.md) 
+- [Preventable version control conflicts](cm044_prevetable-vc-conflicts.md) 
 
 ## data 
 

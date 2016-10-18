@@ -146,7 +146,10 @@ Reporting
 
 - [Controlling Word styles](cm/cm041_word-styles.md) 
 
+File management 
 
+- [.Rproj won't launch](cm/cm043_rstudion_Rproj-not-open.md) 
+- [Preventable version control conflicts](cm/cm044_prevetable-vc-conflicts.md) 
 
 
 
