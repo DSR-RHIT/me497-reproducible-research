@@ -24,7 +24,7 @@ using-github-with-rstudio
 /*.Rcheck/
 # RStudio files
 .Rproj.user/
-*.Rproj
+me497-RR.Rproj
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
