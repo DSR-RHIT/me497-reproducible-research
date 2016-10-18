@@ -85,7 +85,7 @@ The correction is actually fairly straightforward.
 -   Save it as `project_name.Rproj`
 -   You should now be able to launch the file in RStudio as usual. Try it.
 
-To prevent future conflicts of this sort, please read [Preventable version control conflicts](cm044_add-to-gitignre.md)
+To prevent future conflicts of this sort, please read [Preventable version control conflicts](cm044_preventable-vc-conflicts.md)
 
 ------------------------------------------------------------------------
 
