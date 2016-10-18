@@ -1,31 +1,39 @@
-#misc folders
-print_pages
-student_work
-# holding folders
-*/holding
-*/*/holding
-# all PPT
-*.pptx
-*/*.pptx
 # ignore course management folders
 manage
 practiceR
+print_pages
+student_work
 using-github-with-rstudio
-# History files
-.Rhistory
-.Rapp.history
-# Session Data files
-.RData
-# Example code in package build process
-*-Ex.R
-# Output files from R CMD build
-/*.tar.gz
-# Output files from R CMD check
-/*.Rcheck/
-# RStudio files
+
+# ignore holding folders
+holding
+*/holding
+*/*/holding
+
+# ignore all PPT
+*.pptx
+*/*.pptx
+
+# ignore all HTML
+*.html
+*/*.html
+
+# ignore RStudio files
 .Rproj.user/
 *.Rproj
 
+# R and R markdown output
+# history
+.Rhistory
+.Rapp.history
+# session data
+.RData
+# example code in package build process
+*-Ex.R
+# output files from R CMD build
+/*.tar.gz
+# output files from R CMD check
+/*.Rcheck/
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
@@ -34,10 +42,7 @@ vignettes/*.pdf
 # knitr and R markdown default cache directories
 /*_cache/
 /cache/
-# Temporary files created by R markdown
+# temporary files created by R markdown
 *.utf8.md
 *.knit.md
-.Rproj.user
-# HTML created by compiling Rmd
-*.html
-*/*.html
+
