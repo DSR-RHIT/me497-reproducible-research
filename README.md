@@ -148,8 +148,8 @@ Reporting
 
 File management 
 
-- [.Rproj won't launch](cm/cm043_rstudion_Rproj-not-open.md) 
-- [Preventable version control conflicts](cm/cm044_prevetable-vc-conflicts.md) 
+- [Fixing the .Rproj won't launch problem](cm/cm043_rstudio_Rproj-not-open.md) 
+- [Preventable version control conflicts](cm/cm044_preventable-vc-conflicts.md) 
 
 
 
