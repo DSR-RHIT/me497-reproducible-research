@@ -23,6 +23,7 @@ holding
 *.Rproj
 
 # R and R markdown output
+.Renviron
 # history
 .Rhistory
 .Rapp.history
