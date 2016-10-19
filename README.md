@@ -141,6 +141,7 @@ Reading for class discussion: [Naming things](https://rawgit.com/Reproducible-Sc
 Tutorials 
 
 - [practiceR: Histogram](cm/cm036_histogram.md) 
+- [practiceR: Line graph](cm/cm045_line-graph.md) 
 
 Reporting 
 

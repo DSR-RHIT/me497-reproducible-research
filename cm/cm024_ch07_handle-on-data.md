@@ -123,10 +123,10 @@ glimpse(FertConsumpData)
 
     ## Observations: 1,848
     ## Variables: 4
-    ## $ iso2c          <chr> "1A", "1A", "1A", "1A", "1A", "1A", "1A", "S3",...
-    ## $ country        <chr> "Arab World", "Arab World", "Arab World", "Arab...
-    ## $ AG.CON.FERT.ZS <dbl> 74.5, 63.2, 58.1, 64.9, 61.7, 59.4, 68.8, 74.1,...
-    ## $ year           <dbl> 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2011,...
+    ## $ iso2c          <chr> "1A", "1A", "1A", "1A", "1A", "1A...
+    ## $ country        <chr> "Arab World", "Arab World", "Arab...
+    ## $ AG.CON.FERT.ZS <dbl> 74.5, 63.2, 58.1, 64.9, 61.7, 59....
+    ## $ year           <dbl> 2011, 2010, 2009, 2008, 2007, 200...
 
 -   The number of observations is the number of rows.
 -   The number of variables is the number of columns.
@@ -161,7 +161,8 @@ ncol(FertConsumpData)
 colnames(FertConsumpData)
 ```
 
-    ## [1] "iso2c"          "country"        "AG.CON.FERT.ZS" "year"
+    ## [1] "iso2c"          "country"        "AG.CON.FERT.ZS"
+    ## [4] "year"
 
 Examine basic statistics of the 4 columns
 
@@ -171,14 +172,22 @@ Examine basic statistics of the 4 columns
 summary(FertConsumpData)
 ```
 
-    ##     iso2c             country          AG.CON.FERT.ZS       year     
-    ##  Length:1848        Length:1848        Min.   :    0   Min.   :2005  
-    ##  Class :character   Class :character   1st Qu.:   20   1st Qu.:2006  
-    ##  Mode  :character   Mode  :character   Median :   87   Median :2008  
-    ##                                        Mean   :  229   Mean   :2008  
-    ##                                        3rd Qu.:  154   3rd Qu.:2010  
-    ##                                        Max.   :16532   Max.   :2011  
-    ##                                        NA's   :454
+    ##     iso2c             country          AG.CON.FERT.ZS 
+    ##  Length:1848        Length:1848        Min.   :    0  
+    ##  Class :character   Class :character   1st Qu.:   20  
+    ##  Mode  :character   Mode  :character   Median :   87  
+    ##                                        Mean   :  229  
+    ##                                        3rd Qu.:  154  
+    ##                                        Max.   :16532  
+    ##                                        NA's   :454    
+    ##       year     
+    ##  Min.   :2005  
+    ##  1st Qu.:2006  
+    ##  Median :2008  
+    ##  Mean   :2008  
+    ##  3rd Qu.:2010  
+    ##  Max.   :2011  
+    ## 
 
 ``` r
 class(FertConsumpData)
