@@ -31,12 +31,13 @@ Projects
 - [R and RStudio: Install](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [RStudio: Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio) 
 - [Git and GitHub: Setup](cm003_git-setup.md) 
-- [GitHub: Collaborating](cm029_collaborating-github.md) 
-- [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md) 
+
 
 ## file management 
 
 - [Git: Ignore files](cm008_project-1_gitignore.md) 
+- [GitHub: Collaborating](cm029_collaborating-github.md) 
+- [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md) 
 - [Deleting unnecessary files](cm037_unlink-files.md) 
 - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md) 
 - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md) 
