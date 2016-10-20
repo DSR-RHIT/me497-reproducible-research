@@ -195,7 +195,7 @@ df[production_order, ]
 Next we use `production_order` to reorder the country level encoding. Recall, the country variable is a factor, encoded by integers \(1:5\).
 
 ``` r
-# reorder the country panels by increasing magnitude of production 
+# reorder the country levels by increasing magnitude of production 
 new_levels <- unique(df$country[production_order])
 
 # show the new ordering of levels 
