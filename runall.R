@@ -4,11 +4,8 @@ library(rmarkdown)
 library(readr)
 
 
-
-
-
 # array of folders to search for Rmd and Rnw filed to compile
-compile_these <- c("cm/cm044*") # "cm", "print_pages", "slides"
+compile_these <- c("cm") # "cm", "print_pages", "slides"
 
 # delete old md files before rendering Rmd to md
 # delete_these <- paste0(compile_these, "/*.md")
@@ -21,7 +18,8 @@ Rmd_scripts <- list.files(path = compile_these
 )
 sapply(Rmd_scripts, function(x) render(x))
 
-
+# or just do one file
+render("cm/cm044_preventable-vc-conflicts.Rmd")
 
 # render Rnw for slides, uses knitr::knit2pdf (takes time)
 Rnw_slide_scripts <- list.files(path = compile_these
