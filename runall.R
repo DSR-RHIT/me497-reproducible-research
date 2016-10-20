@@ -8,7 +8,7 @@ library(readr)
 
 
 # array of folders to search for Rmd and Rnw filed to compile
-compile_these <- c("cm") # "cm", "print_pages", "slides"
+compile_these <- c("cm/cm044*") # "cm", "print_pages", "slides"
 
 # delete old md files before rendering Rmd to md
 # delete_these <- paste0(compile_these, "/*.md")
@@ -16,7 +16,7 @@ compile_these <- c("cm") # "cm", "print_pages", "slides"
 
 # compile Rmd to github variant md
 Rmd_scripts <- list.files(path = compile_these
-																, pattern = "\\.Rmd$"
+																, pattern = "\\.Rmd"
 																, full.names = TRUE
 )
 sapply(Rmd_scripts, function(x) render(x))

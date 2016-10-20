@@ -26,9 +26,17 @@ Here's the task for that one person:
 ```
 
 - Save 
-- Commit the `.gitignore` file 
+- Locally, move your `.Rproj` file to another local directory (e.g., cut and paste). The idea here is to remove it from the project directory, but save it so you can bring it back later. 
+- In git, a "delete file" appears for `.Rproj`. 
+- Commit the changes to the `.gitignore` and the `.Rproj` files 
 - PUSH to GitHub 
 - PULL to make sure everything is OK 
+- Check the GitHub repo. The `.Rproj` file should be gone. 
+- Locally, return the `.Rproj` file from its temporary location to the project directory. 
+- Check your RStudio Git pane. The file should not appear because you have told git to ignore it. 
+
+Communicate with your collaborators
+
 - Tell your collaborators that you have pushed the new version 
 - Every other member of the team can now PULL and everyone should have the same version and can continue working. 
 
