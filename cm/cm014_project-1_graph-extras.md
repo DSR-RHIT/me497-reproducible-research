@@ -21,6 +21,25 @@ Packages
 ``` r
 library(readr)
 library(plyr)
+```
+
+    ## -------------------------------------------------------------------------
+
+    ## You have loaded plyr after dplyr - this is likely to cause problems.
+    ## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+    ## library(plyr); library(dplyr)
+
+    ## -------------------------------------------------------------------------
+
+    ## 
+    ## Attaching package: 'plyr'
+
+    ## The following objects are masked from 'package:dplyr':
+    ## 
+    ##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+    ##     summarize
+
+``` r
 suppressPackageStartupMessages(library(dplyr))
 library(ggplot2)
 ```
@@ -33,6 +52,12 @@ Extract the numbers and units we want.
 ``` r
 # itemized results that are cited in the report 
 results      <- read_csv('results/04_calibr_outcomes.csv')
+## Parsed with column specification:
+## cols(
+##   item = col_character(),
+##   num = col_double(),
+##   unit = col_character()
+## )
 
 # extract numbers and units
 slope        <- results$num[results$item == "slope"]
@@ -56,7 +81,18 @@ recreate the basic graph
 
 ``` r
 graph_data <- read_csv("data/02_calibr_data-tidy.csv")
+```
 
+    ## Parsed with column specification:
+    ## cols(
+    ##   observ = col_integer(),
+    ##   cycle = col_integer(),
+    ##   test_pt = col_character(),
+    ##   input_lb = col_double(),
+    ##   output_mV = col_double()
+    ## )
+
+``` r
 calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
     geom_smooth(method = 'lm', se = FALSE, color = 'gray70',  size = 0.5) + 
     geom_point(size = 1.5, stroke = 0.7, shape = 21, color = 'black', fill= 'gray70') +
@@ -133,8 +169,9 @@ Find the unique values in the input forces and sort them.
 ``` r
 x_test_seq <- sort(unique(graph_data$input_lb))
 x_test_seq
-## [1] 0.5 1.5 2.5 3.5 4.5
 ```
+
+    ## [1] 0.5 1.5 2.5 3.5 4.5
 
 Find the equivalent (nominal) values in the output mV readings. Sort and round to the nearest 10 mV (to be used as tick mark locations).
 
@@ -142,8 +179,9 @@ Find the equivalent (nominal) values in the output mV readings. Sort and round t
 # round to the nearest 10
 y_nominal_seq <- sort(unique(plyr::round_any(graph_data$output_mV, 10)))
 y_nominal_seq
-## [1] 10 30 50 70 90
 ```
+
+    ## [1] 10 30 50 70 90
 
 ``` r
 set.seed(20160824)
@@ -227,7 +265,6 @@ print(calibr_graph)
 ![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 ``` r
-
 ggsave("results/07_calibr_graph-extras.png", plot = calibr_graph, width = 6, height = 4, units = "in", dpi = 300)
 ```
 

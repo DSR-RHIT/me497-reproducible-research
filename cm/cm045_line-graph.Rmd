@@ -85,7 +85,9 @@ ggplot(df, aes(x = year, y = production)) +
 
 ## panel order 
 
-For quantitative data, the panels should be ordered, usually in order of increasing values, e.g., the production data. First, let's check the order of countries (the order of the levels of the factor).  
+For quantitative data, the panels should be ordered, usually in order of increasing values, e.g., the production data. 
+
+First, let's look at the existing order of the levels of the country column (a factor). 
 
 ```{r cm045-09}
 # confirm that the country variable is a factor
@@ -95,30 +97,68 @@ class(df$country)
 levels(df$country)
 ```
 
-Alphabetical, as expected. The graph panels from left to right are also in this order. To change panel order, we change the factor level order. 
+Alphabetical, as expected. The graph panels from left to right are also in this order. 
+
+To change the order of the graph panels, we have to change the order of the factor levels. In a previous example using factors, we simply typed  the levels in the order we wanted them using the `levels` argument of the `factor()` function. 
+
+However, in this example we want to automate the reordering of the factor levels based on the data in the production column. 
+
+To start, let's print the data frame. 
 
 ```{r cm045-10}
- # re-order the country panels by increasing magnitude of production 
-new_levels <- levels(factor(df$country[order(df$production)]))
+# take a look at the data frame
+df
+```
+
+Then create a vector of indices ordered by the production numbers. 
+
+```{r}
+# determine the order of the production numbers 
+production_order <- order(df$production)
+
+# ordering produces a vector of integers (indices)
+production_order 
+```
+
+By default, `order()` places the elements of its argument in ascending order.  
+
+- The first element in `production_order` is `r production_order[1]`. Looking at the data frame, we see that the row with the lowest production number is `r df[production_order[1], ]`, in row `r production_order[1]`.  
+- The last element in `production_order` is `r production_order[20]`. Looking at the data frame, we see that the row with the highest  production number is `r df[production_order[20], ]`, in row `r production_order[20]`.  
+
+Thus `production_order` is essentially a vector of row numbers (or indices) that orders the rows of the data frame in increasing order of production.  We can show that. 
+
+```{r}
+# reorder the rows of the data frame and print
+df[production_order, ]
+```
+
+Next we use `production_order` to reorder the country level encoding.  Recall, the country variable is a factor, encoded by integers $1:`r length(unique(levels(df$country)))`$. 
+
+```{r}
+# reorder the country panels by increasing magnitude of production 
+new_levels <- unique(df$country[production_order])
+
+# show the new ordering of levels 
+new_levels
+```
+
+You can see that the levels are no longer in alphabetical order. Instead they are in order of increasing production. 
+
+Finally, we use the `levels` argument of the `factor()` function to assign the new levels in the order we've found. 
+
+```{r}
 df$country <- factor(df$country, levels = new_levels)
 ```
 
-In this chunk, we: 
+Important to note that the reordering of the levels has no effect on the ordering of the rows of the data frame. All we've done is reorder the integers that encode the factor variable. 
 
-- start with production (a numerical vector) and country (a factor vector with 5 levels) 
-- recall that the levels of a factor are encoded as integers 
-- find the order of the production values and use that to order the factor integers  
-- enforce country as a factor, extract the levels (in their new order), and temporarily assign to `new_levels`
-- apply `factor()` to country and assign its `levels` using `new_levels` 
-- new country overwrites original country 
+Finally, the code to this point has been presented in small chunks for understanding, but we can actually do the same work with one line: 
 
-In this overwriting, remember that the rows of the data frame never changed. Only the integers that encode the levels of `country` changed 
-
-Have a look at the new order of the panel levels---yes, they are in a new order. 
-
-```{r cm045-11}
-# check the new order of the factor levels 
-unique(levels(df$country))
+```{r}
+# reorder country levels by order of increasing production 
+df$country <- factor(df$country, 
+	  levels = unique(df$country[production_order])
+	  )
 ```
 
 Create the graph again using the same code as before. The result shows that from left top right, the panels are in increasing order of production. 
