@@ -159,23 +159,16 @@ File management
 Reading: Sections 10.1.2, 10.2, and 10.4    
 Reading for class discussion: [Everybody makes mistakes](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
 
-- 
-- 
 
 ## week 9 
 
 Reading: Sections 13.1 and 13.2    
 Reading for class discussion: 
 
-- 
-- 
-
 ## week 10 
 
 Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 
-- 
-- 
 
 ---
 [Unlicense](UNLICENSE.md)
