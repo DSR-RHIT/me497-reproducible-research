@@ -19,7 +19,7 @@ source("cm/helper_02_icons.R")
 
 We're going to use the car production data from Figure 8.13 in Robbins. I've saved it as a CSV file you can download from the course repo. 
 
-- In the `data/` directory of the course repo, find the data file  `course-repo/data/fig-08-13_data-car-production.csv` 
+- In the `data/` directory of the course repo, find the data file  `fig-08-13_data-car-production.csv` 
 - Download and save it to your `practiceR/data/` directory 
 - Create `line-graph.Rmd` in your `practiceR/scripts/` directory. Write the code chunks in the tutorial with as much of the prose as you like  to explain the work. 
 
