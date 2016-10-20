@@ -157,7 +157,7 @@ File management
 ## week 8 
 
 Reading: Sections 10.1.2, 10.2, and 10.4    
-Reading for class discussion: 
+Reading for class discussion: [Everybody makes mistakes](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
 
 - 
 - 

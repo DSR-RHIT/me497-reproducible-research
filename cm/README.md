@@ -109,6 +109,7 @@ Readings for class discussion
 - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
 - [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
+- [Everybody makes mistakes](../resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
 
 Optional reading 
 
