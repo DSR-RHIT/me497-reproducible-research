@@ -1,0 +1,169 @@
+---
+output: github_document
+--- 
+
+# scatterplot  
+
+```{r cm046-01, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+```
+
+```{r cm046-02, echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+## getting started 
+
+We're using the `olives` data set from the `extracat` package. The `olives` data are measurements of fatty acid content in Italian olive oils.  
+
+Install `extracat` in the usual fashion, *Packages > Install > extracat*. 
+
+Then we can load the packages we're planning to use. 
+
+```{r cm046-03}
+# packages we'll be using
+library(extracat) 
+library(ggplot2)
+library(dplyr)
+```
+
+## data 
+
+```{r cm046-04}
+# load the data set
+data(olives)
+
+# examine the data 
+glimpse(olives)
+```
+
+For our scatterplot explorations, we'll use the data for linoleic acid and oleic acid. 
+
+- Linoleic acid is a polyunsaturated omega-6 fatty acid that makes up about 3.5-21% of olive oil. 
+- Oleic acid is a monounsaturated omega-9 fatty acid that makes up 55-83% of olive oil. 
+
+
+## graph
+
+The first version of the graph is a straightforward scatterplot. 
+
+```{r cm046-05}
+# all the data in one panel 
+p <- ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
+	geom_point()
+p
+```
+
+There appears to be an inverse relationship between the two acids. Let's add a locally-weighted, low-order-polynomial regression, called a "loess" smooth fit. The gray envelope is a bound on uncertainty. 
+
+```{r cm046-06}
+# add a loess fitted curve 
+p <- p + stat_smooth(method = "loess")
+p
+```
+
+The loess curve is fairly linear except at the extremes, so if we do a curve fit, a linear fit is probably OK. 
+
+```{r cm046-07}
+# change to a linear regression 
+p <- ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
+	geom_point() +
+	stat_smooth(method = "lm")
+p
+```
+
+
+## comparing subsets
+
+The data set includes two geographic variables, **Area** and **Region**. 
+
+```{r cm046-08}
+# examine the Area variable 
+summary(olives$Area)
+
+# examine the Region variable
+summary(olives$Region)
+```
+
+I'm going to condition the data by **Region**. First, I'll leave all the data in one panel, but use color to identify the three regions.
+
+```{r cm046-09}
+# identify regions by color 
+p <- ggplot(data = olives, aes(x = oleic, y = linoleic, color = Region)) + 
+	geom_point()
+p
+```
+
+Next, I'm going to separate the regions into different panels using `facet_wrap()`. 
+
+```{r cm046-10}
+# produce one panel per region 
+p <- p + facet_wrap(~Region)
+p
+```
+
+The next version has the same three panels but I plot the full data set underneath the regional data to make it easier to compare the regional data to the other regions overall.  First, I create identical regional panels that show all the data from all the regions using a gray data marker.  
+
+```{r cm046-11}
+# show all the data in every panel
+p <- facetshade(data = olives, aes(x = oleic, y = linoleic), f = ~Region) + 
+	geom_point(color = alpha("black", 0.05))
+p
+```
+
+- `facetshade()` is the function that allows us to print all the data in every panel 
+- `f = ...` argument of `facetshade)()` specifies the conditioning variable, in this case, Region. 
+- `alpha()` specifies the color transparency level  
+
+Next I overprint the regional data only in color. 
+
+```{r cm046-12}
+# print the data by region in color
+p <- p + geom_point(data = olives, color = "red")
+p
+```
+
+
+
+
+
+
+
+## edit for publication 
+
+I'd like to edit the axis labels to include units, but they aren't given in the data set help page. I think the numbers are in mg of fatty acid per 10 g of oil. For example, the first entry in the oleic acid column is `r olives$oleic[1]`. If that number has units of mg oleic / 10 g oil, then: 
+
+`r olives$oleic[1]` mg oleic / 10 g oil    
+   = `r olives$oleic[1]/10`  mg oleic / g oil    
+   = `r olives$oleic[1]/10/1000` g oleic / g oil, i.e., gram/gram    
+   = `r olives$oleic[1]/10/1000*100`%    
+
+This percentage is within the expected range of 55-83%. Thus a data value of `r olives$oleic[1]` is a percentage of  `r olives$oleic[1]/100`%. I just divide my columns by 100 to obtain fatty acid content as a percentage of the total mass of olive oil. 
+
+```{r cm046-13}
+# convert the data to a percentage of oil mass 
+olives <- olives %>%
+	mutate(oleic = oleic/100) %>%
+	mutate(linoleic = linoleic/100)
+```
+
+
+New graph with the scales in percent, edit the axis labels, and add an individual regression for each region subset. 
+
+```{r cm046-14}
+# final version 
+p <- facetshade(data = olives, aes(x = oleic, y = linoleic), f = . ~ Region) + 
+	geom_point(color = alpha("black", 0.05)) + 
+	geom_point(data = olives, color = "red") + 
+	labs(x = "Oleic acid (%)", y = "Linoleic acid (%)") + 
+	stat_smooth(data = olives, method = "lm")
+p
+```
+
+That's good enough. 
+
+--- 
+[main page](../README.md)
