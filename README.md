@@ -159,6 +159,10 @@ File management
 Reading: Sections 10.1.2, 10.2, and 10.4    
 Reading for class discussion: [Everybody makes mistakes](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
 
+Tutorials 
+
+- [practiceR: Scatterplot](cm/cm046_scatterplot.md) 
+
 
 ## week 9 
 

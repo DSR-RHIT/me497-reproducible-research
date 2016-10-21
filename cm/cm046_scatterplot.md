@@ -7,9 +7,12 @@ getting started
 
 We're using the `olives` data set from the `extracat` package. The `olives` data are measurements of fatty acid content in Italian olive oils.
 
-Install `extracat` in the usual fashion, *Packages &gt; Install &gt; extracat*.
+-   Install `extracat` in the usual fashion, *Packages &gt; Install &gt; extracat*.
+-   Create `scatterplot.Rmd` in your `practiceR/scripts/` directory. Write the code chunks in the tutorial with as much of the prose as you like to explain the work.
 
 Then we can load the packages we're planning to use.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # packages we'll be using
@@ -20,6 +23,8 @@ library(dplyr)
 
 data
 ----
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # load the data set
@@ -52,6 +57,8 @@ graph
 
 The first version of the graph is a straightforward scatterplot.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # all the data in one panel 
 p <- ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
@@ -63,6 +70,8 @@ p
 
 There appears to be an inverse relationship between the two acids. Let's add a locally-weighted, low-order-polynomial regression, called a "loess" smooth fit. The gray envelope is a bound on uncertainty.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # add a loess fitted curve 
 p <- p + stat_smooth(method = "loess")
@@ -72,6 +81,8 @@ p
 ![](cm046_scatterplot_files/figure-markdown_github/cm046-06-1.png)
 
 The loess curve is fairly linear except at the extremes, so if we do a curve fit, a linear fit is probably OK.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # change to a linear regression 
@@ -87,6 +98,8 @@ comparing subsets
 -----------------
 
 The data set includes two geographic variables, **Area** and **Region**.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # examine the Area variable 
@@ -106,6 +119,8 @@ summary(olives$Region)
 
 I'm going to condition the data by **Region**. First, I'll leave all the data in one panel, but use color to identify the three regions.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # identify regions by color 
 p <- ggplot(data = olives, aes(x = oleic, y = linoleic, color = Region)) + 
@@ -117,6 +132,8 @@ p
 
 Next, I'm going to separate the regions into different panels using `facet_wrap()`.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # produce one panel per region 
 p <- p + facet_wrap(~Region)
@@ -126,6 +143,8 @@ p
 ![](cm046_scatterplot_files/figure-markdown_github/cm046-10-1.png)
 
 The next version has the same three panels but I plot the full data set underneath the regional data to make it easier to compare the regional data to the other regions overall. First, I create identical regional panels that show all the data from all the regions using a gray data marker.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # show all the data in every panel
@@ -141,6 +160,8 @@ p
 -   `alpha()` specifies the color transparency level
 
 Next I overprint the regional data only in color.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # print the data by region in color
@@ -162,6 +183,8 @@ I'd like to edit the axis labels to include units, but they aren't given in the 
 
 This percentage is within the expected range of 55-83%. Thus a data value of 7709 is a percentage of 77.09%. I just divide my columns by 100 to obtain fatty acid content as a percentage of the total mass of olive oil.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 # convert the data to a percentage of oil mass 
 olives <- olives %>%
@@ -170,6 +193,8 @@ olives <- olives %>%
 ```
 
 New graph with the scales in percent, edit the axis labels, and add an individual regression for each region subset.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 # final version 
