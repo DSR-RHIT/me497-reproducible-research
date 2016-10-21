@@ -136,43 +136,18 @@ Next, I'm going to separate the regions into different panels using `facet_wrap(
 
 ``` r
 # produce one panel per region 
-p <- p + facet_wrap(~Region)
+p <- ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
+    geom_point() + 
+    facet_wrap(~Region)
 p
 ```
 
 ![](cm046_scatterplot_files/figure-markdown_github/cm046-10-1.png)
 
-The next version has the same three panels but I plot the full data set underneath the regional data to make it easier to compare the regional data to the other regions overall. First, I create identical regional panels that show all the data from all the regions using a gray data marker.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# show all the data in every panel
-p <- facetshade(data = olives, aes(x = oleic, y = linoleic), f = ~Region) + 
-    geom_point(color = alpha("black", 0.05))
-p
-```
-
-![](cm046_scatterplot_files/figure-markdown_github/cm046-11-1.png)
-
--   `facetshade()` is the function that allows us to print all the data in every panel
--   `f = ...` argument of `facetshade)()` specifies the conditioning variable, in this case, Region.
--   `alpha()` specifies the color transparency level
-
-Next I overprint the regional data only in color.
-
-![](../resources/images/code-icon.png)
-
-``` r
-# print the data by region in color
-p <- p + geom_point(data = olives, color = "red")
-p
-```
-
-![](cm046_scatterplot_files/figure-markdown_github/cm046-12-1.png)
+With regions in separate panels, color coding is no longer needed.
 
 edit for publication
---------------------
+====================
 
 I'd like to edit the axis labels to include units, but they aren't given in the data set help page. I think the numbers are in mg of fatty acid per 10 g of oil. For example, the first entry in the oleic acid column is 7709. If that number has units of mg oleic / 10 g oil, then:
 
@@ -181,7 +156,7 @@ I'd like to edit the axis labels to include units, but they aren't given in the 
  = 0.7709 g oleic / g oil, i.e., gram/gram
  = 77.09%
 
-This percentage is within the expected range of 55-83%. Thus a data value of 7709 is a percentage of 77.09%. I just divide my columns by 100 to obtain fatty acid content as a percentage of the total mass of olive oil.
+This percentage is within the expected range of 55-83%. Thus a data value of 7709 actually represents 77.09%. Thus I will divide my columns by 100 to obtain fatty acid content as a percentage of the total mass of olive oil.
 
 ![](../resources/images/code-icon.png)
 
@@ -192,23 +167,61 @@ olives <- olives %>%
     mutate(linoleic = linoleic/100)
 ```
 
-New graph with the scales in percent, edit the axis labels, and add an individual regression for each region subset.
+New graph with the scales in percent; edit the axis labels.
 
 ![](../resources/images/code-icon.png)
 
 ``` r
-# final version 
-p <- facetshade(data = olives, aes(x = oleic, y = linoleic), f = . ~ Region) + 
-    geom_point(color = alpha("black", 0.05)) + 
-    geom_point(data = olives, color = "red") + 
-    labs(x = "Oleic acid (%)", y = "Linoleic acid (%)") + 
-    stat_smooth(data = olives, method = "lm")
+p <- ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
+    geom_point() + 
+    facet_wrap(~Region) + 
+    labs(x = "Oleic acid (%)", y = "Linoleic acid (%)")
+p
+```
+
+![](cm046_scatterplot_files/figure-markdown_github/cm046-12-1.png)
+
+With both scales in percent, I would like a 1:1 aspect ratio so that a 5% change on one axis is the same length on the other axis.
+
+``` r
+p <- p + coord_fixed(ratio = 1)
+p
+```
+
+![](cm046_scatterplot_files/figure-markdown_github/cm046-13-1.png)
+
+That's sort of squished, so let's put the panels in a column instead of a row.
+
+``` r
+p <- p + facet_wrap(~Region, ncol = 1)
 p
 ```
 
 ![](cm046_scatterplot_files/figure-markdown_github/cm046-14-1.png)
 
-That's good enough.
+Lastly, I can add a regression to each panel.
+
+``` r
+p <- p + stat_smooth(data = olives, method = "lm")
+p
+```
+
+![](cm046_scatterplot_files/figure-markdown_github/cm046-15-1.png)
+
+As always,the graph could have been be drawn in one code chunk, e.g.,
+
+``` r
+ggplot(data = olives, aes(x = oleic, y = linoleic)) + 
+    geom_point() + 
+    facet_wrap(~Region, ncol = 1) + 
+    labs(x = "Oleic acid (%)", y = "Linoleic acid (%)") + 
+    coord_fixed(ratio = 1) + 
+    stat_smooth(data = olives, method = "lm")
+```
+
+Some publications are printed in two-column format. To keep the total page count down (some publications charge authors for extra pages), you can arrange your panels in a single column like this one and place them in a single column of the two-column format.
+
+Of course, if you publish electronically, e.g., writing your own blog, there is no page count nor any page breaks, so you can orient your figures for onscreen viewing.
 
 ------------------------------------------------------------------------
 
