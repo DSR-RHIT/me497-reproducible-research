@@ -152,6 +152,7 @@ p
 
 With both scales in percent, I would like a 1:1 aspect ratio so that a 5% change on one axis is the same length on the other axis. 
 
+`r code_icon`
 ```{r cm046-13}
 p <- p + coord_fixed(ratio = 1)
 p
@@ -159,6 +160,7 @@ p
 
 That's sort of squished, so let's put the panels in a column instead of a row. 
 
+`r code_icon`
 ```{r cm046-14}
 p <- p + facet_wrap(~Region, ncol = 1)
 p
@@ -166,6 +168,7 @@ p
 
 Lastly, I can add a regression to each panel. 
 
+`r code_icon`
 ```{r cm046-15}
 p <- p + stat_smooth(data = olives, method = "lm")
 p

@@ -183,6 +183,8 @@ p
 
 With both scales in percent, I would like a 1:1 aspect ratio so that a 5% change on one axis is the same length on the other axis.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 p <- p + coord_fixed(ratio = 1)
 p
@@ -192,6 +194,8 @@ p
 
 That's sort of squished, so let's put the panels in a column instead of a row.
 
+![](../resources/images/code-icon.png)
+
 ``` r
 p <- p + facet_wrap(~Region, ncol = 1)
 p
@@ -200,6 +204,8 @@ p
 ![](cm046_scatterplot_files/figure-markdown_github/cm046-14-1.png)
 
 Lastly, I can add a regression to each panel.
+
+![](../resources/images/code-icon.png)
 
 ``` r
 p <- p + stat_smooth(data = olives, method = "lm")
