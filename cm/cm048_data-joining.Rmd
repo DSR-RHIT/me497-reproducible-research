@@ -1,0 +1,154 @@
+---
+output: github_document
+--- 
+
+# joining data frames  
+
+```{r cm046-01, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+```
+
+```{r cm046-02, echo = FALSE}
+# functions for text_icon and code_icon
+source("cm/helper_02_icons.R")
+```
+
+## getting started 
+
+The data is a summary CSV file you created in an earlier tutorial using the Starfleet students data set. 
+
+```{r}
+# packages we'll use
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+## data 
+
+Read in the data file. 
+
+```{r}
+# read in the data 
+df1 <- read_csv("data/cm047_starfleet-students-top5.csv")
+```
+
+In the earlier tutorial we had converted the character variables to factors. But when we use `write_csv()`, the factor integer encoding is left behind. Thus when we read in the data now, both **Specgen** and **Finish** are character variables.  
+
+```{r}
+# examine it 
+glimpse(df1)
+```
+
+## group and summarize 
+
+We have a count of the number of graduates of each Species/Sex group in each discipline 
+
+Suppose we would like to express those counts as percentages of the total number of graduates in each discipline To find the totals, we do another grouping to find the total number of students graduating in each discipline. 
+
+```{r}
+# group by the Discipline in Finish 
+my_grouping <- group_by(df1, Finish)
+
+# summarize by aggregating all students in a discipline 
+by_dspn <- summarize(my_grouping, Count_dspn = sum(Count))
+```
+
+- `group_by()` groups the original data frame by the discipline, i.e., **Finish** 
+- `my_grouping` is the new grouped data frame 
+- `summarize()` operates on `my_grouping` creating a new data frame `by_dspn` 
+- `sum()` operates on **Count** (from the `my_grouping` data frame) and assigns the totals to **Count_dspn** (in the `by_dspn` data frame) 
+
+```{r}
+# examine the result
+by_dspn
+```
+
+The new data frame `by_dspn` has one row per discipline and only two columns: 
+
+
+- **Finish** because it was the variable we grouped by  
+- **Count_dspn** because it was the sum we created 
+
+## join 
+
+
+Recall the original data frame, 
+
+```{r}
+df1
+```
+
+Adjacent to **Count** I want to add a new column **Count_dspn** with the totals from `by_dspn`. For example, every row of `df1` that has `Engineering` in **Finish** would have a value of `r by_dspn$Count_dspn[by_dspn$Finish == "Engineering"]` in the new column. That total comes from the `Engineering` row of `by_dspn`: 
+
+```{r}
+by_dspn
+```
+
+Copying the totals from `by_dspn` into a new column in `df1` and matching the correct rows by major is called *joining*. 
+
+We join data frames by telling R to match rows "by" the values in columns that the two data frames have in common, in this case, the **Finish** column. We're doing what's called a  *left join*, where the operation returns all rows from `df1` and all the columns from both `df1` and `by_dspn`. 
+
+```{r}
+# join the majors totals to the original data frame
+df2 <- left_join(df1, by_dspn, by = "Finish")
+
+# examine the result
+df2
+```
+
+Every row with the same discipline has the same total in the new column.
+
+## compute percentages 
+
+Now that we have total numbers of graduates by discipline,  we can compute the percentage of totals for each Species/Sex group. I've rounded the percentages to one place. 
+
+```{r}
+# compute population fractions 
+df2 <- df2 %>%
+	mutate(Percent = round(100 * Count / Count_dspn, 1))
+
+# arrange by major and percentages
+df2 <- df2 %>%
+	arrange(Finish, desc(Percent))
+
+# have a look
+df2
+```
+
+
+## graph 
+
+The graph will be similar to the previous graph, so we'll want the groups and majors to be factors. The graph will display percentages, but the rows and panels are still ordered by **Count**, i.e., the numbers of students in the categories.
+
+```{r}
+# make the two categorical vectors into factors, ordered by count
+df2$Specgen <- factor(df2$Specgen, 
+  levels = unique(df2$Specgen[order(df2$Count)])
+  )
+
+df2$Finish <- factor(df2$Finish, 
+  levels = unique(df2$Finish[order(df2$Count)])
+  )
+```
+
+And graph. 
+
+```{r}
+fig <- ggplot(data = df2, aes(x = Percent, y = Specgen)) + 
+	geom_point() + 
+	facet_wrap(~Finish, ncol = 1) + 
+	labs(x = "Graduates in discipline (%)", y = "")
+
+ggsave("results/cm048_destinations.png", plot = fig, 
+             width = 4, height = 6.5, units = "in", dpi = 125)
+```
+
+
+![](../results/cm048_destinations.png) 
+ 
+
+--- 
+[main page](../README.md)
