@@ -162,7 +162,8 @@ Reading for class discussion: [Everybody makes mistakes](resources/readings/Rein
 Tutorials 
 
 - [practiceR: Scatterplot](cm/cm046_scatterplot.md) 
-
+- [practiceR: Data grouping](cm/cm047_data-grouping.md) 
+- [practiceR: Data joining](cm/cm048_data-joining.md) 
 
 ## week 9 
 

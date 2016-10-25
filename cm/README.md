@@ -61,6 +61,8 @@ Tutorials
 - [practiceR: Subsetting (7.1.5)](cm028_ch07_subsetting.md) 
 - [practiceR: Introduction to factors](cm032_factors.md) 
 - [practiceR: Working with factors](cm033_working-with-factors.md) 
+- [practiceR: Data grouping](cm047_data-grouping.md) 
+- [practiceR: Data joining](cm048_data-joining.md) 
 
 
 ## analysis 
