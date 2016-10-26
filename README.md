@@ -168,7 +168,7 @@ Tutorials
 ## week 9 
 
 Reading: Sections 13.1 and 13.2    
-Reading for class discussion: 
+Reading for class discussion: [What computational scientisits need to know about intellectual property law: A primer](resources/readings/Stodden2014-IntellectualPropertyPrimer.pdf)
 
 ## week 10 
 
