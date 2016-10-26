@@ -20,7 +20,7 @@ sapply(Rmd_scripts, function(x) render(x))
 
 # or just do one file
 # library(rmarkdown)
-# render("cm/cm047_data-grouping.Rmd")
+# render("cm/cm048_data-joining.Rmd")
 
 # render Rnw for slides, uses knitr::knit2pdf (takes time)
 Rnw_slide_scripts <- list.files(path = compile_these

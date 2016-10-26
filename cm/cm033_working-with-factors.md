@@ -312,6 +312,13 @@ summary
 -   Many basic R functions automatically convert characters to factors.
 -   Use `as.factor()` and `as.character()` for converting between factors and characters.
 
+but wait, there's more
+----------------------
+
+The `forcats` package by Hadley Wickham (Sep, 2016) has a great set of tools for working with factors. From the package description:
+
+> Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, 'anonymising', and manually 'recoding').
+
 ------------------------------------------------------------------------
 
 [main page](../README.md)

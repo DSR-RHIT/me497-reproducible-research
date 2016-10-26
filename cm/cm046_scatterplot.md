@@ -153,7 +153,7 @@ I'd like to edit the axis labels to include units, but they aren't given in the 
 
 7709 mg oleic / 10 g oil
  = 770.9 mg oleic / g oil
- = 0.7709 g oleic / g oil, i.e., gram/gram
+ = 0.771 g oleic / g oil, i.e., gram/gram
  = 77.09%
 
 This percentage is within the expected range of 55-83%. Thus a data value of 7709 actually represents 77.09%. Thus I will divide my columns by 100 to obtain fatty acid content as a percentage of the total mass of olive oil.

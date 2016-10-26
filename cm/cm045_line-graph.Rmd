@@ -8,6 +8,8 @@ output: github_document
 library(knitr)
 opts_knit$set(root.dir = "../")
 opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+
+# This script can be updated by adding the forcats package, fct_reorder() function for reordering levels of a factor 
 ```
 
 ```{r cm045-02, echo = FALSE}
@@ -30,6 +32,7 @@ The data frame is already tidy.
 ```{r cm045-03}
 library(readr)
 library(dplyr)
+library(forcats)
 df <- read_csv('data/fig-08-13_data-car-production.csv')
 glimpse(df)
 ```
@@ -104,63 +107,30 @@ To change the order of the graph panels, we have to change the order of the fact
 
 However, in this example we want to automate the reordering of the factor levels based on the data in the production column. 
 
-To start, let's print the data frame. 
-
-```{r cm045-10}
-# take a look at the data frame
-df
-```
-
-Then create a vector of indices ordered by the production numbers. 
+The `forcats` package has a function called `fct_reorder()` for reordering the levels of a factor according to the order of another variable. 
 
 ```{r}
-# determine the order of the production numbers 
-production_order <- order(df$production)
-
-# ordering produces a vector of integers (indices)
-production_order 
+# reorder the levels of country by the median of the production numbers 
+df$country <- fct_reorder(df$country, df$production, fun = median, .desc = FALSE)
 ```
 
-By default, `order()` places the elements of its argument in ascending order.  
+- the first argument `df$country` is the factor we want to reorder 
+- `df$production` is the variable used to create the ordering 
+- `fun = median` is the function to use in ordering the data 
+- `.desc` orders in ascending or descending order 
 
-- The first element in `production_order` is `r production_order[1]`. Looking at the data frame, we see that the row with the lowest production number is `r df[production_order[1], ]`, in row `r production_order[1]`.  
-- The last element in `production_order` is `r production_order[20]`. Looking at the data frame, we see that the row with the highest  production number is `r df[production_order[20], ]`, in row `r production_order[20]`.  
-
-Thus `production_order` is essentially a vector of row numbers (or indices) that orders the rows of the data frame in increasing order of production.  We can show that. 
-
-```{r}
-# reorder the rows of the data frame and print
-df[production_order, ]
-```
-
-Next we use `production_order` to reorder the country level encoding.  Recall, the country variable is a factor, encoded by integers $1:`r length(unique(levels(df$country)))`$. 
 
 ```{r}
 # reorder the country levels by increasing magnitude of production 
-new_levels <- unique(df$country[production_order])
+# new_levels <- unique(df$country[production_order])
 
 # show the new ordering of levels 
-new_levels
+levels(df$country)
 ```
 
 You can see that the levels are no longer in alphabetical order. Instead they are in order of increasing production. 
 
-Finally, we use the `levels` argument of the `factor()` function to assign the new levels in the order we've found. 
-
-```{r}
-df$country <- factor(df$country, levels = new_levels)
-```
-
 Important to note that the reordering of the levels has no effect on the ordering of the rows of the data frame. All we've done is reorder the integers that encode the factor variable. 
-
-Finally, the code to this point has been presented in small chunks for understanding, but we can actually do the same work with one line: 
-
-```{r}
-# reorder country levels by order of increasing production 
-df$country <- factor(df$country, 
-	  levels = unique(df$country[production_order])
-	  )
-```
 
 Create the graph again using the same code as before. The result shows that from left top right, the panels are in increasing order of production. 
 
@@ -168,7 +138,7 @@ Create the graph again using the same code as before. The result shows that from
 p <- ggplot(df, aes(x = year, y = production)) +
   geom_line() +
   geom_point() +
-  facet_grid(.~ country)  
+  facet_grid(.~ country) 
 p
 ```
 
