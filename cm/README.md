@@ -18,6 +18,7 @@ Projects
 - [Project 1: Overview](cm004_project-1_overview.md) 
 - [Project 1: Initialize](cm005_project-1_initialize.md) 
 - [Project 1: Start your first script](cm007_project-1_first-script.md) 
+- [Project 1: Wrap-up](cm049_project-1_wrapup.md) 
 - [Project 2: Initialize](cm019_project-2_start.md) 
 - [Project 2: Collaboration assignment](cm027_project-2_reviewers.md) 
 - [Project 2: Wrap-up](cm040_project-2_wrapup.md) 

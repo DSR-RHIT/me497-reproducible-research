@@ -61,6 +61,7 @@ Project 1 tutorials
 - [Write the client report](cm/cm015_project-1_report.md) 
 - [When the data change](cm/cm017_project-1_data-change.md) 
 - [Adding references to a report](cm/cm018_project-1_references.md) 
+- [Project 1: Wrap-up](cm/cm049_project-1_wrapup.md) 
 
 Optional  
 
