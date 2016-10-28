@@ -52,20 +52,19 @@ Once your `.gitignore` file is up to date, you should:
 
 What grades mean
 
-A (4) Honors-level work    
-B (3) Thorough competence    
-C (2) Meets minimum expectations    
-D (1) Fails to meet minimum expectations    
+- A (4) Honors-level work 
+- B (3) Thorough competence 
+- C (2) Meets minimum expectations 
+- D (1) Fails to meet minimum expectations 
 
 Rubric
 
-4/4 Did the scripts run for me without editing?    
-4/4 After any corrections, did the scripts run error-free?    
-4/4 Was the client report client-ready?    
-4/4 Did the author run the scripts with the 6-cycle data set?    
-4/4 Did the scripts run the 6-cycle data set correctly?    
-    
-20/20 (100%) Project score    
+- 4/4 Did the scripts run for me without editing? 
+- 4/4 After any corrections, did the scripts run error-free? 
+- 4/4 Was the client report client-ready? 
+- 4/4 Did the author run the scripts with the 6-cycle data set? 
+- 4/4 Did the scripts run the 6-cycle data set correctly? 
+- 20/20 (100%) Project score    
 
 Great! You're done.    
 
