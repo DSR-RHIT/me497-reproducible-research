@@ -169,7 +169,11 @@ Tutorials
 ## week 9 
 
 Reading: Sections 13.1 and 13.2    
-Reading for class discussion: [What computational scientists need to know about intellectual property law: A primer](resources/readings/Stodden2014-IntellectualPropertyPrimer.pdf)
+Reading for class discussion: [What computational scientists need to know about intellectual property law: A primer](resources/readings/Stodden2014-IntellectualPropertyPrimer.pdf) 
+
+Tutorials 
+
+- [practiceR: Numbering tables and figures](cm/cm050_Rmd-to-docx_table-numbers.md) 
 
 ## week 10 
 

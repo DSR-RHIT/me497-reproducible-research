@@ -91,6 +91,7 @@ Tutorials
 - [Adding references to a report](cm018_project-1_references.md) (Project 1) 
 - [Preparing a report for transmittal](cm016_project-1_report-transmittal.md) (Project 1) 
 - [Controlling Word styles](cm041_word-styles.md) 
+- [Numbering tables and figures](cm050_Rmd-to-docx_table-numbers.md) 
 
 ## reading
 
