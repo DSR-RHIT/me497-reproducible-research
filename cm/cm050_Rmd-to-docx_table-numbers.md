@@ -2,7 +2,7 @@
 Rmd to docx: numbering tables and figures
 =========================================
 
-As Norbert KÃ¶hler says, "R Markdown has no native method to number and reference table and figure captions". The `captioner` packages gives us a method for auto-numbering figures and tables and automatically updating the in-text reference numbers as well.
+As Norbert Köhler says, "R Markdown has no native method to number and reference table and figure captions". The `captioner` packages gives us a method for auto-numbering figures and tables and automatically updating the in-text reference numbers as well.
 
 This tutorial is adapted from Norbert's blog post plus Andrew Dolman's comments on that post.
 
@@ -238,7 +238,7 @@ Norbert KÃ¶hler, in his write-up, collects all the captions in a single code c
 references
 ----------
 
-1.  Norbert KÃ¶hler (2016-10-22) [R Markdown: How to number and reference tables](http://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/)
+1.  Norbert Köhler (2016-10-22) [R Markdown: How to number and reference tables](http://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/)
 2.  Andrew Dolman (2016) [Testing captioner](https://onedrive.live.com/?authkey=%21AApYWBGHNR06Y5I&cid=FCFCD3FD042AF7F1&id=FCFCD3FD042AF7F1%2118306&parId=FCFCD3FD042AF7F1%21322&action=locate) from the comments section of Norbert's blog post.
 
 ------------------------------------------------------------------------
