@@ -180,7 +180,7 @@ Create a table caption.
 `r code_icon`
 ```{r results = 'hide'}
 figure_nums(name = "one_figure", 
-	caption = "An auto-numbered figure caption that is part of the figure image.")
+	caption = "An auto-numbered figure caption.")
 ```
 
 Refer to it by number in an inline reference. 

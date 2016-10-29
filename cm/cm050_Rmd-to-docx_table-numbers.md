@@ -163,7 +163,7 @@ Create a table caption.
 
 ``` r
 figure_nums(name = "one_figure", 
-    caption = "An auto-numbered figure caption that is part of the figure image.")
+    caption = "An auto-numbered figure caption.")
 ```
 
 Refer to it by number in an inline reference.
@@ -191,7 +191,7 @@ Regarding the spline curve fit:
 -   `bs()` is a polynomial B-spline from the `splines` package
 -   For a complete list of spline functions, use `library(help = "splines")`
 
-![Figure 1: An auto-numbered figure caption that is part of the figure image.](cm050_Rmd-to-docx_table-numbers_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![Figure 1: An auto-numbered figure caption.](cm050_Rmd-to-docx_table-numbers_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 Create a new caption.
 
