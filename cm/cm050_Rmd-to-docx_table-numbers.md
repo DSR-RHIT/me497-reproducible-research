@@ -233,7 +233,7 @@ If the tables or figures are added or deleted, all numbers will automatically up
 final thoughts
 --------------
 
-Norbert KÃ¶hler, in his write-up, collects all the captions in a single code chunk at the top of the script. I prefer to create the captions at the point in the script where I create the table of graph. Your mileage may vary.
+Norbert Köhler, in his write-up, collects all the captions in a single code chunk at the top of the script. I prefer to create the captions at the point in the script where I create the table of graph. Your mileage may vary.
 
 references
 ----------
