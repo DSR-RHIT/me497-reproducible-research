@@ -18,9 +18,9 @@ sapply(Rmd_scripts, function(x) render(x))
 
 
 
-# # or just do one file
-# # library(rmarkdown)
-# # render("cm/cm048_data-joining.Rmd")
+# or just do one file
+# library(rmarkdown)
+# render("cm/cm050_Rmd-to-docx_table-numbers.Rmd")
 #
 # # render Rnw for slides, uses knitr::knit2pdf (takes time)
 # Rnw_slide_scripts <- list.files(path = compile_these
