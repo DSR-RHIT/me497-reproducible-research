@@ -21,15 +21,23 @@ Two possible approaches:
 ```{r, setup, include = FALSE}
 library(knitr)
 opts_knit$set(root.dir = '../')
-opts_chunk$set(echo = TRUE, fig.keep='high')
+opts_chunk$set(echo = TRUE, fig.keep = 'high')
 ```
 
 Packages
 
+When running all scripts in order, I occasionally run into the problem that dplyr has been installed before plyr. To avoid that problem, I "unload" dplyr first, then reload plyr and dplyr in order. 
+
 ```{r}
-library(readr)
+unloadNamespace("dplyr")
 library(plyr)
 suppressPackageStartupMessages(library(dplyr))
+```
+
+Other packages. 
+
+```{r}
+library(readr)
 library(ggplot2)
 ```
 

@@ -18,29 +18,18 @@ Two possible approaches:
 
 Packages
 
+When running all scripts in order, I occasionally run into the problem that dplyr has been installed before plyr. To avoid that problem, I "unload" dplyr first, then reload plyr and dplyr in order.
+
 ``` r
-library(readr)
+unloadNamespace("dplyr")
 library(plyr)
+suppressPackageStartupMessages(library(dplyr))
 ```
 
-    ## -------------------------------------------------------------------------
-
-    ## You have loaded plyr after dplyr - this is likely to cause problems.
-    ## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-    ## library(plyr); library(dplyr)
-
-    ## -------------------------------------------------------------------------
-
-    ## 
-    ## Attaching package: 'plyr'
-
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     arrange, count, desc, failwith, id, mutate, rename, summarise,
-    ##     summarize
+Other packages.
 
 ``` r
-suppressPackageStartupMessages(library(dplyr))
+library(readr)
 library(ggplot2)
 ```
 
@@ -106,7 +95,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 jitter
 ------
@@ -131,7 +120,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 axis units from the data table
 ------------------------------
@@ -159,7 +148,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 axis tick marks from the data
 -----------------------------
@@ -202,7 +191,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 adding the calibration equation
 -------------------------------
@@ -233,7 +222,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 font sizing
 -----------
@@ -262,7 +251,7 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-11-1.png)
 
 ``` r
 ggsave("results/07_calibr_graph-extras.png", plot = calibr_graph, width = 6, height = 4, units = "in", dpi = 300)
