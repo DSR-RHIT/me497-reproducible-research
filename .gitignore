@@ -5,6 +5,10 @@ print_pages
 student_work
 using-github-with-rstudio
 
+# files
+render_cm.R
+cleanall.R
+
 # ignore holding folders
 holding
 */holding
