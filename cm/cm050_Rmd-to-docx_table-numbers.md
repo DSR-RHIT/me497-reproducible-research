@@ -4,7 +4,7 @@ Rmd to docx: numbering tables and figures
 
 As Norbert Köhler says, "R Markdown has no native method to number and reference table and figure captions". The `captioner` packages gives us a method for auto-numbering figures and tables and automatically updating the in-text reference numbers as well.
 
-This tutorial is adapted from Norbert's blog post plus Andrew Dolman's comments on that post.
+This tutorial is adapted from Norbert Köhler's [blog post](http://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/) plus Andrew Dolman's [comments](https://onedrive.live.com/?authkey=%21AApYWBGHNR06Y5I&cid=FCFCD3FD042AF7F1&id=FCFCD3FD042AF7F1%2118306&parId=FCFCD3FD042AF7F1%21322&action=locate) on that post.
 
 When complete, your output document should be a 2-page docx file with two tables and two figures with automatically-generated table and figure numbers.
 
@@ -17,223 +17,217 @@ install
 
 The purpose of last line above is to install the latest development version of `knitr` so we can take advantage of the knitr option `row.names = FALSE` when using `kable()` to print a table. Plus we get recent bug fixes.
 
-practiceR
----------
+getting started
+---------------
 
 -   Launch your `practiceR` project
 -   Open a new Rmd file. Mine is called `test-captioner.Rmd`.
 -   Both `word_document` and `html_document` can be used in the YAML header.
 -   For `pdf_document`, see the references for additional lines needed.
 
-<!-- -->
+The YAML header.
 
     ---
     title: "Testing *captioner*"
-    author: "Richard Layton"
-    date: "2016-10-29"
     output:
       word_document:
         fig_caption: yes
     ---
 
-![](../resources/images/code-icon.png) Start with the usual setup.
-
-    # initialize knitr
-    library(knitr)
-    opts_knit$set(root.dir = "../")
-    opts_chunk$set(echo = TRUE)
-
-![](../resources/images/code-icon.png) Load packages. The `splines` package is part of the base R installation, used later for a spline curve fit.
+The usual setup.
 
 ``` r
-# packages 
+# the usual setup
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE)
+```
+
+Load packages.
+
+``` r
+# packages  
 library(captioner)
 library(ggplot2)
 library(splines)
 ```
 
-### assign prefixes
+assign prefixes
+---------------
 
-We assign the prefixes we want to use for Tables and Figures. I've used "Table" and "Figure". Some publications might expect you to abbreviate, e.g., "Tab." or "Fig.".
+Use `captioner()` to set the prefixes we want to use for our tables and figures. Here, I'm using the full words. Some folks prefer to use abbreviations, "Fig." and "Tab.".
 
-![](../resources/images/code-icon.png)
+``` r
+# assign the prefixes
+auto_tab_ID <- captioner(prefix = "Table")
+auto_fig_ID <- captioner(prefix = "Figure")
+```
 
-<pre><code>```{r, results = 'hide'}
-# assign table and figure prefixes 
-table_nums  <- captioner(prefix = "Table")
-figure_nums <- captioner(prefix = "Figure")
-<code>```</code>
-</code></pre>
--   `captioner()` function assigns the table and figure caption prefixes
--   `results = 'hide'` is a knitr option to suppress an unnecessary printout
--   Knit your document
+The function names on the left, `auto_tab_ID` and `auto_fig_ID`, are arbitrary.
 
-tables
-------
+create a table caption
+----------------------
 
-Start a new section in the output document.
-
-![](../resources/images/text-icon.png)
+Begin the report. Start with a level 1 heading.
 
     # Tables 
 
-First, we write a code chunk that creates a caption and assigns it a name. The name is used later as a reference-ID to add the caption to the table and to make an in-line references to the table.
-
-![](../resources/images/code-icon.png)
+We create *table captions* using `auto_tab_ID()`. The `name` argument is a unique string to identify the table prefix and `caption` string.
 
 ``` r
-# you may assign your own name and caption 
-table_nums(name = "a_table", caption = "A descriptive caption for the table.")
+# assign the table prefix, number, and caption 
+auto_tab_ID(name = "a_table", caption = "A descriptive caption for the table.")
 ```
 
-Use the caption number in an inline reference.
+The table number (in this case, Table 1) is determined by the order of appearance of the `auto_tab_ID()` function in the script. This is its first use, so the table number is "1".
 
-![](../resources/images/text-icon.png)
+refer to the table inline
+-------------------------
 
-<pre><code>In this sentence, I use an inline reference to 
-<code>`</code>r table_nums(name = "a_table",  display = "cite")<code>`</code>. 
-The table follows.
+In a typical technical report, the paragraph just before a table includes an inline reference to the table. For example:
+
+> An excerpt of data from our fabulous experiment is shown in Table 1.
+
+To construct this sentence, we an inline code chunk and the function `auto_tab_ID()` with an added argument `display = "cite"` to print the table number but not the caption.
+
+<pre><code>An excerpt of data from our fabulous experiment is shown in 
+<code>`</code>r auto_tab_ID("a_table", display = "cite")<code>`</code>. 
 </code></pre>
-The arguments for `table_nums()` include:
+kable() the table
+-----------------
 
--   `name = "a_table"` identifies the table we're citing
--   `"display = full"` shows the entire caption with prefix and number
--   `"display = cite "` displays just the prefix and number, without the caption
--   `"display = num"` displays just the number
+Keeping things simple, I'll use `knitr::kable()` to print data from the `cars` data set.
 
-Use the caption and print the table.
-
-![](../resources/images/code-icon.png)
+The `kable()` function has a `caption` argument we use to invoke the `auto_tab_ID()` function.
 
 ``` r
-# print the table with the caption assigned by its ID
-kable(head(cars), caption = table_nums("a_table"), row.names = FALSE)
+# get some data
+df <- head(cars, n = 5L)
+
+# print the table with caption
+kable(df, caption = auto_tab_ID("a_table"), row.names = FALSE)
 ```
 
-When using `kable()` to print a table
+I haven't printed the table here, but it should appear in your docx output.
 
--   the `row.names = FALSE` argument only works if you've installed the development version of knitr
--   the `caption = table_nums()` argument is how we assign the caption generated by `captioner`
+In docx output, table captions are formatted with the *Table Caption* style. The style can be edited using methods described in [Controlling Word Styles](https://github.com/DSR-RHIT/me497-RR/blob/master/cm/cm041_word-styles.md).
 
-Create a caption for a second table.
+make a second table
+-------------------
 
-![](../resources/images/code-icon.png)
+I'm going to create another table to demonstrate that the next table is indeed assigned the number "2".
 
 ``` r
-# create a second table caption 
-table_nums("another_table", "A boring table.")
+# create a caption for a second table 
+auto_tab_ID("another_table", "A boring table.")
 ```
 
-Use the caption number in an inline reference.
+Having created another caption, I can make an inline reference to the next table.
 
-![](../resources/images/text-icon.png)
+> More amazing results are shown in Table 2.
 
-<pre><code>But the results in 
-<code>`</code>r table_nums(name = "another_table",  display = "cite")<code>`</code> 
-are not as interesting. 
+Created using this Rmd script:
+
+<pre><code>More amazing results are shown in 
+<code>`</code>r auto_tab_ID("another_table", display = "cite")<code>`</code>. 
 </code></pre>
-Use the caption and print the second table. The tables are automatically numbered in sequence.
-
-![](../resources/images/code-icon.png)
+New table:
 
 ``` r
-kable(tail(cars), caption = table_nums("another_table"), row.names = FALSE)
+# get some data
+df <- tail(cars, n = 5L)
+
+# print the table with caption
+kable(df, caption = auto_tab_ID("another_table"), row.names = FALSE)
 ```
 
-Once the table has been identified, it can be referred to as many times as needed. The inline R code will insert the correct table number.
+All tables are automatically renumbered if tables are added or deleted.
 
-![](../resources/images/text-icon.png)
+create a figure caption
+-----------------------
 
-<pre><code>Well, maybe the results in  
-<code>`</code>r table_nums(name = "another_table",  display = "cite")<code>`</code> 
-are not as boring as we thought.
-</code></pre>
-figures
--------
-
-Start a new section in the output document.
-
-![](../resources/images/text-icon.png)
+Create another level 1 heading.
 
     # Figures 
 
-Create a table caption.
-
-![](../resources/images/code-icon.png)
+Create my first figure caption using `auto_fig_ID()`.
 
 ``` r
-figure_nums(name = "one_figure", 
-    caption = "An auto-numbered figure caption.")
+auto_fig_ID(name = "one_figure", caption = "An auto-numbered figure caption.")
 ```
 
-Refer to it by number in an inline reference.
+The figure number (in this case, Figure 1) is determined by the order of appearance of the `auto_fig_ID()` function in the script. This is its first use, so the figure number is "1".
 
-![](../resources/images/text-icon.png)
+refer to the figure inline
+--------------------------
 
-<pre><code>This sentence allows me to insert an inline reference to  
-<code>`</code>r figure_nums("one_figure",  display = "cite")<code>`</code>.
+Inline references are typical.
+
+> More amazing results are shown in Figure 1.
+
+Created using this Rmd script:
+
+<pre><code>More amazing results are shown in 
+<code>`</code>r auto_fig_ID("one_figure", display = "cite")<code>`</code>. 
 </code></pre>
-Create the figure. Note that the caption function call a `knitr` argument in the code chunk header:
+make a figure
+-------------
 
--   `fig.cap` is a knitr argument for assigning our caption
--   `fig.height` is a knitr argument in inches
+In contrast to table captions, we create *figure captions* using the `fig.cap` argument inside `{r }` header that starts a code chunk
 
-![](../resources/images/code-icon.png)
+For example, create a code chunk with these arguments:
 
-<pre><code>```{r fig.cap = figure_nums("one_figure"), fig.height = 3}
+<pre><code>```{r fig.cap = auto_fig_ID("one_figure"), fig.height = 3}
+
+<code>```</code></code></pre>
+and with this graph code:
+
+``` r
 ggplot(data = cars, aes(x = speed, y = dist)) + 
     geom_point() + 
     geom_smooth(method = "lm", formula = y ~ bs(x, 3), se = FALSE)
-<code>```</code>
-</code></pre>
-Regarding the spline curve fit:
+```
+
+Just for fun, I've included a spline fit:
 
 -   `bs()` is a polynomial B-spline from the `splines` package
 -   For a complete list of spline functions, use `library(help = "splines")`
 
-![Figure 1: An auto-numbered figure caption.](cm050_Rmd-to-docx_table-numbers_files/figure-markdown_github/unnamed-chunk-10-1.png)
+make a second figure
+--------------------
 
-Create a new caption.
+Demonstrate the next figure is auto-numbered "2".
 
-![](../resources/images/code-icon.png)
+New caption:
 
 ``` r
-figure_nums("another_figure", "Same data with a linear fit.")
+# create a caption for a second figure 
+auto_fig_ID("another_figure", "Same data with a linear fit.")
 ```
 
-Another inline reference.
+New inline reference:
 
-![](../resources/images/text-icon.png)
+> If we do the same graph with a linear fit, we get Figure 2.
 
-<pre><code>If we do the same graph with a linear fit, we get  
-<code>`</code>r figure_nums("another_figure",  display = "cite")<code>`</code>.
+Created using this Rmd script:
+
+<pre><code>If we do the same graph with a linear fit, we get 
+<code>`</code>r auto_fig_ID("another_figure", display = "cite")<code>`</code>. 
 </code></pre>
-And a new graph.
+New code chunk:
 
-![](../resources/images/code-icon.png)
+<pre><code>```{r fig.cap = auto_fig_ID("another_figure"), fig.height = 3}
 
-<pre><code>```{r fig.cap = figure_nums("another_figure"), fig.height = 3}
+<code>```</code></code></pre>
+with this graph code, using a linear regression instead of a spline.
+
+``` r
 ggplot(data = cars, aes(x = speed, y = dist)) + 
     geom_point() + 
     geom_smooth(method = "lm", se = FALSE)
-<code>```</code>
-</code></pre>
-![Figure 2: Same data with a linear fit.](cm050_Rmd-to-docx_table-numbers_files/figure-markdown_github/unnamed-chunk-12-1.png)
+```
 
-![](../resources/images/text-icon.png)
-
-<pre><code>So there we are. Anywhere in the document we can refer back to  
-<code>`</code>r table_nums("a_table",  display = "cite")<code>`</code>, 
-<code>`</code>r table_nums("another_table",  display = "cite")<code>`</code>, 
-<code>`</code>r figure_nums("one_figure",  display = "cite")<code>`</code>, or 
-<code>`</code>r figure_nums("another_figure",  display = "cite"<code>`</code>.
-</code></pre>
-If the tables or figures are added or deleted, all numbers will automatically update.
-
-final thoughts
---------------
-
-Norbert Köhler, in his write-up, collects all the captions in a single code chunk at the top of the script. I prefer to create the captions at the point in the script where I create the table of graph. Your mileage may vary.
+That's all folks!
 
 references
 ----------
