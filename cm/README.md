@@ -125,7 +125,7 @@ Readings for class discussion
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
 - [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
 - [Everybody makes mistakes](../resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf) 
-- [What computational scientists need to know about intellectual property law: A primer](../resources/readings/Stodden2014-IntellectualPropertyPrimer.pdf)
+- [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/) 
 
 Optional reading 
 
