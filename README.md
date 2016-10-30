@@ -1,5 +1,5 @@
 
-# me497-RR
+# me497-reproducible-research
 
 - On this main page, course material is organized by week. 
 - [See course material organized by topic](cm/README.md)  
