@@ -189,4 +189,4 @@ Reading for class discussion: [Reproducible research: a dissenting opinion](http
 - [richard layton music](http://www.richardlaytonmusic.com/)
 
 ---
-[Unlicense](UNLICENSE.md)
+[License](LICENSE.md)
