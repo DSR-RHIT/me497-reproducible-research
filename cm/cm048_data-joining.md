@@ -48,7 +48,7 @@ Suppose we would like to express those counts as percentages of the total number
 my_grouping <- group_by(df1, Finish)
 
 # summarize by aggregating all students in a discipline 
-by_dspn <- summarize(my_grouping, Count_dspn = sum(Count))
+by_dspn <- dplyr::summarize(my_grouping, Count_dspn = sum(Count))
 ```
 
 -   `group_by()` groups the original data frame by the discipline, i.e., **Finish**

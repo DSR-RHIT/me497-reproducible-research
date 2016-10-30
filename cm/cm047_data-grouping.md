@@ -14,6 +14,7 @@ We are using a database from Starfleet Academy showing the progress of students 
 ``` r
 # packages we'll use
 library(readr)
+library(plyr)
 library(dplyr)
 library(ggplot2)
 ```
@@ -120,7 +121,7 @@ For example, let's count the number of Males and Females across all species. The
 ``` r
 # count by sex only 
 my_grouping <- group_by(df0, Sex)
-df1         <- summarize(my_grouping, Count = n())
+df1         <- dplyr::summarize(my_grouping, Count = n())
 ```
 
 -   `n()` returns the number of instances (or frequency) of the grouped value
@@ -141,7 +142,7 @@ We could have grouped by Species.
 ``` r
 # count by ethnicity 
 my_grouping <- group_by(df0, Species)
-df2         <- summarize(my_grouping, Count = n())
+df2         <- dplyr::summarize(my_grouping, Count = n())
 
 # result
 df2
@@ -159,7 +160,7 @@ Next, let's count by Sex and Species.
 ``` r
 # count by sex and ethnicity 
 my_grouping <- group_by(df0, Sex, Species)
-df3         <- summarize(my_grouping, Count = n())
+df3         <- dplyr::summarize(my_grouping, Count = n())
 
 # print the result
 df3
@@ -183,7 +184,7 @@ Or, by Sex and Discipline at graduation.
 ``` r
 # count by sex and finish  
 my_grouping <- group_by(df0, Sex, Finish)
-df3         <- summarize(my_grouping, Count = n())
+df3         <- dplyr::summarize(my_grouping, Count = n())
 
 # print the result
 df3
@@ -242,12 +243,12 @@ glimpse(df4)
 
 I kept only the two columns `Specgen` and `Finish`. Note the number of observations is 55279. Each row is still one student.
 
-Now we can count using the `group_by()` and `summarize()`functions from `dplyr`.
+Now we can count using the `group_by()` and `summarize()`functions from `dplyr`. (I use the syntax `dplyr::summarize()` to ensure that the dplyr version of summarize is used rather than the plyr version of summarize.)
 
 ``` r
 # count by sex only 
 my_grouping <- group_by(df4, Specgen, Finish)
-df5         <- summarize(my_grouping, Count = n())
+df5         <- dplyr::summarize(my_grouping, Count = n())
 
 # examine the result
 glimpse(df5)
