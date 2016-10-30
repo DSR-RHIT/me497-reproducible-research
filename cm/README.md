@@ -16,23 +16,23 @@
 
 - [Schedule of projects](cm002a_deadlines.md) 
 
-######
+Project 1
 
-- [Project 1: Overview](cm004_project-1_overview.md) 
-- [Project 1: Initialize](cm005_project-1_initialize.md) 
-- [Project 1: Start your first script](cm007_project-1_first-script.md) 
-- [Project 1: Wrap-up](cm049_project-1_wrapup.md) 
+- [Overview](cm004_project-1_overview.md) 
+- [Initialize](cm005_project-1_initialize.md) 
+- [Start your first script](cm007_project-1_first-script.md) 
+- [Wrap-up](cm049_project-1_wrapup.md) 
 
-###### 
+Project 2
 
-- [Project 2: Initialize](cm019_project-2_start.md) 
-- [Project 2: Collaboration assignment](cm027_project-2_reviewers.md) 
-- [Project 2: Wrap-up](cm040_project-2_wrapup.md) 
+- [Initialize](cm019_project-2_start.md) 
+- [Collaboration assignment](cm027_project-2_reviewers.md) 
+- [Wrap-up](cm040_project-2_wrapup.md) 
 
-######
+Project 3
 
-- [Project 3: Abstracts](cm031_project-3-descriptions.md) 
-- [Project 3: Getting started](cm037_project-3_collabs.md)
+- [Abstracts](cm031_project-3-descriptions.md) 
+- [Getting started](cm037_project-3_collabs.md)
 
 
 ## software 
