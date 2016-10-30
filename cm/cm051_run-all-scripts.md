@@ -24,7 +24,7 @@ Start with the usual knitr initialization.
     opts_knit$set(root.dir = "../")
     opts_chunk$set(echo = TRUE)
 
-We're need the `rmarkdown` package to knit each script.
+We need the `rmarkdown` package to knit each script.
 
 ``` r
 # package
