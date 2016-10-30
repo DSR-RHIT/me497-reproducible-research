@@ -183,6 +183,10 @@ File management
 
 Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 
+## about
+
+- [richard layton data display](http://www.graphdoctor.com/) 
+- [richard layton music](http://www.richardlaytonmusic.com/)
 
 ---
 [Unlicense](UNLICENSE.md)
