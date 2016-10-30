@@ -174,6 +174,7 @@ Reading for class discussion: [What computational scientists need to know about 
 Tutorials 
 
 - [practiceR: Numbering tables and figures](cm/cm050_Rmd-to-docx_table-numbers.md) 
+- [Run all scripts in sequence](cm/cm051_run-all-scripts.md) 
 
 ## week 10 
 

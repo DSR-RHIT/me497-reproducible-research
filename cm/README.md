@@ -51,6 +51,7 @@ Project 3
 - [Deleting unnecessary files](cm037_unlink-files.md) 
 - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md) 
 - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md) 
+- [Run all scripts in sequence](cm051_run-all-scripts.md) 
 
 ## data 
 

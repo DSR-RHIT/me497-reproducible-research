@@ -3,15 +3,21 @@
 # compile them using uses rmarkdown::render()
 # not as good as a makefile but does the job
 
+# package
 library(rmarkdown)
+
+#  identify the path to the directory we want
+path_to_Rmds <- "cm"
 
 # find all files that end in .Rmd
 Rmd_scripts <- list.files(
-	path = "cm"
+	path = path_to_Rmds
 	, pattern = "\\.Rmd$"
 	, full.names = TRUE
 )
 
-# render each
+# render each script
 sapply(Rmd_scripts, function(x) render(x))
 
+
+# render("cm/cm051_run-all-scripts.Rmd")
