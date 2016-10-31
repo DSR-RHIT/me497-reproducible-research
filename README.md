@@ -8,7 +8,7 @@
 
 We explore the principles and practices of reproducible research, from gathering data to analyzing data and presenting results. Students implement a  workflow that includes file management, version control, literate programming, data carpentry, creating tables and graphs, and reporting---all within the context of producing reproducible technical reports. 
 
-Text: Christopher Gandrud (2015) *Reproducible Research with R and RStudio 2/e*, CRC Press, Taylor and Francis Group: Boca Raton, FL. 
+Text: Christopher Gandrud (2015) [*Reproducible Research with R and RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book), CRC Press, Taylor and Francis Group: Boca Raton, FL. 
 
 - [Syllabus](cm/cm001_syllabus.md) 
 - [Project due dates](cm/cm002a_deadlines.md) 

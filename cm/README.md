@@ -134,6 +134,9 @@ Optional reading
 - [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) 
 - [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf) 
 - [Initial steps towards reproducible research](http://kbroman.org/steps2rr/) 
+- [Disseminating reproducible research is fundamentally a language and communication problem](http://simplystatistics.org/2016/05/13/reproducible-research-language/) 
+- [De-weaponizing reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/) 
+- [The real reason reproducible research is important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/) 
 
 
 
