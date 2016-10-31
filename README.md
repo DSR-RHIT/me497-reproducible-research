@@ -14,6 +14,7 @@ Text: Christopher Gandrud (2015) [*Reproducible Research with R and RStudio 2/e*
 - [Project due dates](cm/cm002a_deadlines.md) 
 - [Getting help ](cm/cm002b_getting-help.md) 
 
+
 ## week 0
 
 Reading: Chapter 1 
