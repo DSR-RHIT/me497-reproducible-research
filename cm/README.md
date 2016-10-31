@@ -121,11 +121,11 @@ Gandrud C (2015) *Reproducible Research with R and RStudio*, CRC Press.
 Readings for class discussion 
 
 - [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/) 
-- [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)    
 - [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham) 
 - [Everybody makes mistakes](../resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf) 
 - [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/) 
+- [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 
 Optional reading 
 
