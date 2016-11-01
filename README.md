@@ -184,6 +184,14 @@ File management
 
 Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf) 
 
+- [Project 3 wrapup](cm/cm052_project-3_wrapup.md) 
+
+
+
+
+
+
+
 ## about
 
 - [richard layton data display](http://www.graphdoctor.com/) 

@@ -32,7 +32,8 @@ Project 2
 Project 3
 
 - [Abstracts](cm031_project-3-descriptions.md) 
-- [Getting started](cm037_project-3_collabs.md)
+- [Getting started](cm037_project-3_collabs.md) 
+- [Project 3 wrapup](cm052_project-3_wrapup.md) 
 
 
 ## software 
