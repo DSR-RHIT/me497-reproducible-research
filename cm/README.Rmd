@@ -1,4 +1,6 @@
-
+---
+output: html_document
+---
 # course materials by topic
 
 - On the [ME497-RR main page](../README.md) course material is organized by week. 
