@@ -2,27 +2,41 @@
 output: github_document
 ---
 
-# me497-reproducible-research
+# me497 by topic
 
-- [Organized by chronology](../README.md)
-- Organized by topic (this page)
+## Reproducible research for the R novice 
+
+For course material organized by week, see the [course main page](../README.md). 
+*Description*
+
+We explore the principles and practices of reproducible research, from gathering data to analyzing data and presenting results. Students implement a  workflow that includes file management, version control, literate programming, data carpentry, creating tables and graphs, and reporting---all within the context of producing reproducible technical reports. 
 
 ## course management
 
-- [Syllabus](cm001_syllabus.md) 
-- [Course introduction](../slides/slides001_introduction.pdf) [slides] 
-- [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides] 
-- [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
+- [Syllabus](cm001_syllabus.md)  
+- Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for Data Science*,  O'Reilly Media [free e-copy online](http://r4ds.had.co.nz/)  
+- Optional reference text: Christopher Gandrud (2015) [*Reproducible Research with R and RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book), CRC Press, Taylor and Francis Group: Boca Raton, FL   
 - [Getting help ](cm002b_getting-help.md) 
+- [Course introduction](../slides/slides001_introduction.pdf) [slides] 
+
+
+<!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
+<!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
+
 
 
 ## software
 
+- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
+- [Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
+- Install the [tidyverse](https://www.tidyverse.org)  
+- [Setup Git and GitHub](cm003_git-setup.md) 
 - [Software overview](../slides/slides002_software.pdf) [slides]
-- [R and RStudio: Install](https://github.com/DSR-RHIT/install-R-and-RStudio)
-- [RStudio: Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio)
-- [Git and GitHub: Setup](cm003_git-setup.md)
 
+## reading 
+
+- [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html) Readings labeled by chapter are from the required text unless noted otherwise.   
+- [Calibration report](../readings/calibration-report.pdf) 
 
 
 
@@ -155,6 +169,11 @@ output: github_document
 
 
 
---- 
+## about
 
-[main page](../README.md) 
+- [my data visualization course](https://github.com/DSR-RHIT/me447-visualizing-data) 
+- [my data display blog](http://www.graphdoctor.com) 
+- [my music blog](http://www.richardlaytonmusic.com)
+
+---
+[License](../LICENSE.md)

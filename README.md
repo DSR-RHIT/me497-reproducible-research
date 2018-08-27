@@ -1,10 +1,12 @@
 
-# me497-reproducible-research
+# me497 by week
 
-  - Organized by chronology (this page)
-  - [Organized by topic](cm/README.md)
+## Reproducible research for the R novice
 
-## reproducible research for the R novice
+For course material organized by topic, see the [course topic
+page](cm/README.md).
+
+*Description*
 
 We explore the principles and practices of reproducible research, from
 gathering data to analyzing data and presenting results. Students
@@ -29,13 +31,15 @@ reports.
     CRC Press, Taylor and Francis Group: Boca Raton, FL  
   - [Getting help](cm/cm002b_getting-help.md)
 
-*Reading*
+*Reading assigment*
+
+All chapter-readings are from the required text unless noted otherwise.
 
   - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)  
   - [Calibration
     report](https://github.com/DSR-RHIT/me497-reproducible-research/tree/master/resources/readings/calibration-report.pdf)
 
-*Software*
+*Software assignment*
 
   - [Install R and
     RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). If you
@@ -46,13 +50,31 @@ reports.
   - Install the [tidyverse](https://www.tidyverse.org)  
   - [Setup Git and GitHub](cm/cm003_git-setup.md)
 
-*Slides*
+*Lecture slides*
 
-  - [Course introduction](slides/slides001_introduction.pdf)
-  - [Software
-overview](slides/slides002_software.pdf)
+  - [Course introduction](slides/slides001_introduction.pdf) \[slides\]
+  - [Software overview](slides/slides002_software.pdf)
+\[slides\]
 
-<!-- ## week 1 -->
+## week 1
+
+## week 2
+
+## week 3
+
+## week 4
+
+## week 5
+
+## week 6
+
+## week 7
+
+## week 8
+
+## week 9
+
+## week 10
 
 <!-- Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).   -->
 
@@ -238,10 +260,10 @@ overview](slides/slides002_software.pdf)
 
 ## about
 
-  - [data visualization
+  - [my data visualization
     course](https://github.com/DSR-RHIT/me447-visualizing-data)
-  - [richard layton data display](http://www.graphdoctor.com)
-  - [richard layton music](http://www.richardlaytonmusic.com)
+  - [my data display blog](http://www.graphdoctor.com)
+  - [my music blog](http://www.richardlaytonmusic.com)
 
 -----
 
