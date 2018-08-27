@@ -96,6 +96,9 @@ auto_tab_ID(name = "a_table", caption = "A descriptive caption for the table.")
 The table number (in this case, Table 1) is determined by the order of appearance of the `auto_tab_ID()` function in the script. This is its first use, so the table number is "1". 
 
 
+
+
+
 ## refer to the table inline  
 
 In a typical technical report, the paragraph just before a table includes an inline reference to the table. For example:  
