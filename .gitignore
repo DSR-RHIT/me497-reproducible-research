@@ -15,6 +15,10 @@ holding
 */holding
 */*/holding
 
+# ignore all TEX
+*.tex
+*/*.tex
+
 # ignore all PPT
 *.pptx
 */*.pptx

@@ -28,31 +28,30 @@
 \bigskip
 {\scriptsize\color{gray} Department of Mechanical Engineering\\
 Rose-Hulman Institute of Technology\\
-Fall 2016\\
+Fall 2018\\
 }
 
 \column{0.55\textwidth}
 \vspace{1\baselineskip}
-\includegraphics[width = 1\textwidth]{images/rr-cycle.png}
+\includegraphics[width = 1\textwidth]{rr-cycle.png}
 
 \end{columns}
 \end{frame}
 }%%
 
 
+
 {%% slide -------------------------------------------
 \begin{frame}[c]{Getting started}
 \begin{itemize}
-	\item<1-> Introductions
-	\item<1-> Handouts
-	\item<2-> Mystery question: {\em\color{myviolet}What is reproducible research?}
+	\item Introductions
+	\item Mystery question: {\em\color{myviolet}What is reproducible research?}
 \end{itemize}
 \end{frame}
 }%%
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Victoria Stodden, F. Leisch, \& R. Peng, ed., {\em Implementing Reproducible Research}, CRC Press, 2014.
-
+\renewcommand\foottext{Victoria Stodden, F. Leisch, \& R. Peng, ed., {\em Implementing Reproducible Research}, CRC Press, 2014.\\
 Christopher Gandrud, {\em Reproducible Research with R and RStudio, 2/e}, CRC Press, 2015.}
 
 \begin{frame}[c]{Practitioners tell us:}
@@ -60,7 +59,7 @@ Christopher Gandrud, {\em Reproducible Research with R and RStudio, 2/e}, CRC Pr
 \smallskip
 \begin{columns}[c]
 \column{0.2\textwidth}
-\includegraphics[width = 0.77\textwidth]{images/stodden-cover.jpg}
+\includegraphics[width = 0.77\textwidth]{stodden-cover.jpg}
 
 \column{0.8\textwidth}
 \color{myviolet}\em Research is reproducible when the data and the code used to obtain a finding are available and sufficient for an independent researcher to recreate the finding.
@@ -69,7 +68,7 @@ Christopher Gandrud, {\em Reproducible Research with R and RStudio, 2/e}, CRC Pr
 \smallskip
 \begin{columns}[c]
 \column{0.2\textwidth}
-\includegraphics[width = 0.77\textwidth]{images/gandrud-cover.jpg}
+\includegraphics[width = 0.77\textwidth]{gandrud-cover.jpg}
 
 \column{0.8\textwidth}
 \vspace{-1\baselineskip}
@@ -103,7 +102,7 @@ More accountability is needed because of
 
 \column{0.65\textwidth}
 \vspace{-1\baselineskip}
-\includegraphics[width = 1\textwidth]{images/reproducibility-in-the-news.png}
+\includegraphics[width = 1\textwidth]{reproducibility-in-the-news.png}
 \end{columns}
 \end{frame}
 }%%
@@ -111,7 +110,7 @@ More accountability is needed because of
 {%% slide -------------------------------------------
 \renewcommand\foottext{Thomas Herdon, Michael Ash, \& Robert Pollin, \href{http://www.peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf}{Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff}, Political Economy Research Institute, U Mass Amherst, 2013.}
 
-\begin{frame}[c]{Reproduction showed their primary findings were false.}
+\begin{frame}[c]{Reproduction showed their primary findings were false}
 
 \begin{columns}[c]
 \column{0.6\textwidth}
@@ -126,7 +125,7 @@ Results were used to justify austerity policies, but the major effect disappeare
 \end{itemize}
 
 \column{0.4\textwidth}
-\includegraphics[width = 1\textwidth]{images/rogoff-reinhart.png}\\
+\includegraphics[width = 1\textwidth]{rogoff-reinhart.png}\\
 {\footnotesize\color{gray} Kenneth Rogoff \& Carmen Reinhart}
 \end{columns}
 \end{frame}
@@ -136,7 +135,7 @@ Results were used to justify austerity policies, but the major effect disappeare
 {%% slide -------------------------------------------
 \renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research to begin Monday}, {\em Triangle Business Journal}, 2015-01-23. Ivan Oransky, \href{http://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
 
-\begin{frame}[c]{Reproduction showed he falsified data.}
+\begin{frame}[c]{Reproduction showed he falsified data}
 
 \begin{columns}[c]
 \column{0.6\textwidth}
@@ -152,7 +151,7 @@ To obtain the results he wanted, he altered data in several ways. Consequences i
 \end{itemize}
 
 \column{0.4\textwidth}
-\includegraphics[width = 1\textwidth]{images/anil-potti.jpg}\\
+\includegraphics[width = 1\textwidth]{anil-potti.jpg}\\
 {\footnotesize\color{gray}Anil Potti, formerly a cancer researcher at Duke University}
 \end{columns}
 \end{frame}
@@ -161,7 +160,7 @@ To obtain the results he wanted, he altered data in several ways. Consequences i
 {%% slide -------------------------------------------
 \renewcommand\foottext{Freed Pearce, \href{https://www.theguardian.com/environment/2010/feb/09/hockey-stick-michael-mann-steve-mcintyre}{Climate change debate overheated after skeptic grasped 'hockey stick'}, {\em The Guardian}, 2010-02-09. Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. Jeff Leek, \href{http://simplystatistics.org}{De-weaponizing reproducibility}, 2015-03-13. }
 
-\begin{frame}[c]{``Weaponized'' reproduction is used to discredit scientists.}
+\begin{frame}[c]{Reproduction is also used to {\em discredit scientists}}
 
 \vspace{-1\baselineskip}
 \begin{columns}[c]
@@ -178,7 +177,7 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 {\em\color{myviolet}Why should I make the data available to you, when your aim is to try and find something wrong with it?} {\hfill\small --- Phil Jones}
 
 \column{0.43\textwidth}
-\includegraphics[width = 1\textwidth]{images/hockey-stick-graph.png}\\
+\includegraphics[width = 1\textwidth]{hockey-stick-graph.png}\\
 {\footnotesize\color{gray}1000 years of temperature variation with uncertainties, Michael Mann}
 \end{columns}
 \end{frame}
@@ -187,11 +186,11 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{Bruno Oliveira, \href{https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y}{\em Geeks and repetitive tasks}}
-\begin{frame}[c]{The benefits first accrue to you.}
+\begin{frame}[c]{The benefits first accrue to you}
 
 \begin{columns}[c]
 \column{0.75\textwidth}
-\includegraphics[width = 1\textwidth, trim = 0 0 0 20mm, clip = TRUE]{images/geek-tasks.png}
+\includegraphics[width = 1\textwidth, trim = 0 0 0 20mm, clip = TRUE]{geek-tasks.png}
 \column{0.30\textwidth}
 \begin{itemize}
 	\item reproducible for your future self
@@ -253,7 +252,7 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
-\begin{frame}[t]{Steps towards reproducibility: in this course.}
+\begin{frame}[t]{Steps towards reproducibility: in this course}
 
 \vspace{-0.5\baselineskip}
 \begin{columns}[t]
@@ -288,13 +287,13 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[c]{How the course work is organized.}
+\begin{frame}[c]{How the course is organized}
 
 \begin{itemize}
 	\item Course materials are reproducible.\\
-	{\small\bf\url{https://dsr-rhit.github.io/me497-reproducible-research/}}
-	\item \href{https://dsr-rhit.github.io/me497-reproducible-research/pages/cm001_syllabus.html}{Syllabus}
-	\item \href{https://dsr-rhit.github.io/me497-reproducible-research/}{Week-0 assignment}
+	{\small\bf\url{https://github.com/DSR-RHIT/me497-reproducible-research}}
+	\item \href{https://github.com/DSR-RHIT/me497-reproducible-research/blob/master/cm/cm001_syllabus.md}{Syllabus}
+	\item \href{https://github.com/DSR-RHIT/me497-reproducible-research}{Week 0 assignments}
 \end{itemize}
 
 
@@ -304,34 +303,24 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[c]{Consider a sample report.}
+\begin{frame}[c]{Consider a sample report}
 
 \begin{columns}[c]
 \column{0.55\textwidth}
 \begin{itemize}
-	\item<1-> Imagine that you were the author of the ``Load cell calibration report''
-	\item<2-> Mystery question: {\color{myviolet}Identify as many ``manual operations'' as possible.}
+	\item Imagine that you were the author of the ``Load cell calibration report''
+	\item Mystery question: {\color{myviolet}Identify as many ``manual operations'' as possible.}
 \end{itemize}
 
 \column{0.45\textwidth}
 \vspace{-1\baselineskip}
-\includegraphics[width = 1\textwidth]{images/calibr-report-first-page.png}
+\includegraphics[width = 1\textwidth]{calibr-report-first-page.png}
 
 \end{columns}
 
 
 \end{frame}
 }%%
-
-
-
-
-
-
-
-
-
-
 
 
 
