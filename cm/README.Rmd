@@ -1,10 +1,11 @@
 ---
-output: html_document
+output: github_document
 ---
-# course materials by topic
 
-- On the [ME497-RR main page](../README.md) course material is organized by week. 
-- On this page, course material is organized by topic. 
+# me497-reproducible-research
+
+- [Organized by chronology](../README.md)
+- Organized by topic (this page)
 
 ## course management
 

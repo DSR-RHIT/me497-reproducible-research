@@ -13,23 +13,26 @@ literate programming, data carpentry, creating tables and graphs, and
 reporting—all within the context of producing reproducible technical
 reports.
 
-Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for Data
-Science*, O’Reilly Media. [free e-copy online](http://r4ds.had.co.nz/).
-
-Reference text: Christopher Gandrud (2015) [*Reproducible Research with
-R and RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book),
-CRC Press, Taylor and Francis Group: Boca Raton, FL.
-
-  - [Syllabus](cm/cm001_syllabus.md)
-  - [Getting help](cm/cm002b_getting-help.md)
-
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
 
 ## week 0
 
+*Getting started*
+
+  - [Syllabus](cm/cm001_syllabus.md)  
+  - Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for
+    Data Science*, O’Reilly Media [free e-copy
+    online](http://r4ds.had.co.nz/)  
+  - Optional reference text: Christopher Gandrud (2015) [*Reproducible
+    Research with R and
+    RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book),
+    CRC Press, Taylor and Francis Group: Boca Raton, FL  
+  - [Getting help](cm/cm002b_getting-help.md)
+
 *Slides*
 
   - [Course introduction](slides/slides001_introduction.pdf)
+  - [Software overview](slides/slides002_software.pdf)
 
 *Reading*
 
@@ -39,12 +42,15 @@ CRC Press, Taylor and Francis Group: Boca Raton, FL.
 
   - If you already use R and RStudio, please update R, RStudio, and
     packages to the most recent versions.
-  - [Software overview](slides/slides002_software.pdf) \[slides\]
+
   - [Install R and
-    RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio)
+    RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio)  
+
   - [Set up an R
-    Project](https://github.com/DSR-RHIT/install-R-and-RStudio)
-  - Install the [tidyverse](https://www.tidyverse.org)
+    Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
+
+  - Install the [tidyverse](https://www.tidyverse.org)  
+
   - [Setup Git and
 GitHub](cm/cm003_git-setup.md)
 
