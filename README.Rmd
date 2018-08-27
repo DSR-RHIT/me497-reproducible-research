@@ -24,25 +24,22 @@ We explore the principles and practices of reproducible research, from gathering
 - Optional reference text: Christopher Gandrud (2015) [*Reproducible Research with R and RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book), CRC Press, Taylor and Francis Group: Boca Raton, FL   
 - [Getting help ](cm/cm002b_getting-help.md)  
 
-*Slides*
-
-- [Course introduction](slides/slides001_introduction.pdf) 
-- [Software overview](slides/slides002_software.pdf) 
-
 *Reading*
 
-- [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)
+- [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)  
+- [Calibration report](https://github.com/DSR-RHIT/me497-reproducible-research/tree/master/resources/readings/calibration-report.pdf)
 
 *Software* 
 
-- If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
- 
-- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio)  
+- [Install R and RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
 - [Set up an R Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
 - Install the [tidyverse](https://www.tidyverse.org)  
 - [Setup Git and GitHub](cm/cm003_git-setup.md)  
 
+*Slides*
 
+- [Course introduction](slides/slides001_introduction.pdf) 
+- [Software overview](slides/slides002_software.pdf) 
 
 <!-- ## week 1 -->
 
