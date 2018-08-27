@@ -35,8 +35,15 @@ We explore the principles and practices of reproducible research, from gathering
 
 ## reading 
 
-- [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html) Readings labeled by chapter are from the required text unless noted otherwise.   
+Text chapters
+
+- [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html) Readings labeled by chapter are from the required text unless noted otherwise.  
+
+Samples 
+
 - [Calibration report](../resources/readings/calibration-report.pdf) 
+
+For class discussion 
 
 
 

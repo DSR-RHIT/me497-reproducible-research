@@ -45,11 +45,18 @@ reports.
 
 ## reading
 
+Text chapters
+
   - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)
     Readings labeled by chapter are from the required text unless noted
-    otherwise.  
-  - [Calibration
-report](../resources/readings/calibration-report.pdf)
+    otherwise.
+
+Samples
+
+  - [Calibration report](../resources/readings/calibration-report.pdf)
+
+For class
+discussion
 
 <!-- ## projects  -->
 
