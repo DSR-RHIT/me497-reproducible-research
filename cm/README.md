@@ -49,7 +49,7 @@ reports.
     Readings labeled by chapter are from the required text unless noted
     otherwise.  
   - [Calibration
-report](../readings/calibration-report.pdf)
+report](../resources/readings/calibration-report.pdf)
 
 <!-- ## projects  -->
 

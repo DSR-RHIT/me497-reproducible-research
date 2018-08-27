@@ -33,11 +33,10 @@ reports.
 
 *Reading assigment*
 
-All chapter-readings are from the required text unless noted otherwise.
-
-  - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)  
-  - [Calibration
-    report](https://github.com/DSR-RHIT/me497-reproducible-research/tree/master/resources/readings/calibration-report.pdf)
+  - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)
+    Readings labeled by chapter are from the required text unless noted
+    otherwise.
+  - [Calibration report](resources/readings/calibration-report.pdf)
 
 *Software assignment*
 
