@@ -3,7 +3,7 @@
 
 ME497 / ME597 Reproducible Research
 
-  - [About the course](cm/cm000_about-the-course.md)  
+  - [About the course](cm000_about-the-course.md)  
   - [Main page](../README.md) to search course material organized
     chronologically
 
