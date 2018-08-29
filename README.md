@@ -255,10 +255,10 @@ Technology.
 
 ## about
 
-  - [my data visualization
+  - [My data visualization
     course](https://github.com/DSR-RHIT/me447-visualizing-data)
-  - [my data display blog](http://www.graphdoctor.com)
-  - [my music blog](http://www.richardlaytonmusic.com)
+  - [My data display blog](http://www.graphdoctor.com)
+  - [My music blog](http://www.richardlaytonmusic.com)
 
 -----
 

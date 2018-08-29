@@ -221,9 +221,9 @@ A course for the R novice by Richard Layton at Rose-Hulman Institute of Technolo
 
 ## about
 
-- [my data visualization course](https://github.com/DSR-RHIT/me447-visualizing-data) 
-- [my data display blog](http://www.graphdoctor.com) 
-- [my music blog](http://www.richardlaytonmusic.com)
+- [My data visualization course](https://github.com/DSR-RHIT/me447-visualizing-data) 
+- [My data display blog](http://www.graphdoctor.com) 
+- [My music blog](http://www.richardlaytonmusic.com)
 
 ---
 [License](LICENSE.md)
