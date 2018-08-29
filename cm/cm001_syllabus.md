@@ -62,7 +62,7 @@ After successfully completing this course, students should be able to:
 ## grades
 
 Grades awarded are based on the [Institute
-standards](http://www.rose-hulman.edu/offices-services/registrar/rules-procedures/grades.aspx),
+standards](https://www.rose-hulman.edu/campus-life/student-services/registrar/rules-and-procedures/grades.html),
 for example, an “A” is an *honor grade*, a “B” is awarded for *thorough
 competence*, and a “C” indicates that *minimum standards have been met*.
 

@@ -6,7 +6,7 @@
 \usepackage{listings}
 \lstset{% general command to set parameter(s)
     basicstyle = \scriptsize\ttfamily\bfseries, % print whole listing small
-    keywordstyle = \color{black}\bfseries,%keywords
+    keywordstyle = \color{black}\bfseries, % keywords
     identifierstyle = , % nothing happens
     commentstyle = \color{white}, % white comments
     stringstyle = \ttfamily, % typewriter type for strings
@@ -56,20 +56,20 @@ urlcolor = myviolet   % color of external links
 
 % custom footline with note on left and page number on the right
 \makeatother%
-\setbeamertemplate{footline}%
-{%
-\leavevmode%
-% the {12} linespacing option does not seem to work
-\hbox{\fontsize{7}{9}\selectfont%
-% on the left, I have a space for permissions note or full citation
-\begin{beamercolorbox}[wd = 0.88\paperwidth, ht = 5ex, dp = 3mm, leftskip = 3mm, rightskip = 0mm]{}\color{gray}\foottext%
-\end{beamercolorbox}%
-% on the right is the slide number
-\begin{beamercolorbox}[wd = 0.12\paperwidth, ht = 5ex, dp = 3mm, leftskip = 0mm, rightskip = 3mm]{}\hfill\insertpagenumber%
-\end{beamercolorbox}%
-}%
-\vskip0pt%
-}%
+  \setbeamertemplate{footline}%
+  {%
+  \leavevmode%
+  % the {12} linespacing option does not seem to work
+  \hbox{\fontsize{7}{9}\selectfont%
+  % on the left, I have a space for permissions note or full citation
+  \begin{beamercolorbox}[wd = 0.88\paperwidth, ht = 5ex, dp = 3mm, leftskip = 3mm, rightskip = 0mm]{}\color{gray}\foottext%
+  \end{beamercolorbox}%
+  % on the right is the slide number
+  \begin{beamercolorbox}[wd = 0.12\paperwidth, ht = 5ex, dp = 3mm, leftskip = 0mm, rightskip = 3mm]{}\hfill\insertpagenumber%
+  \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+  }%
 \makeatletter%
 
 % used for text in a footer, e.g., a full citation or permissions

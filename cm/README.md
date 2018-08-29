@@ -3,8 +3,7 @@
 
 ## Reproducible research for the R novice
 
-For course material organized by week, see the [course main
-page](../README.md). *Description*
+*Description*
 
 We explore the principles and practices of reproducible research, from
 gathering data to analyzing data and presenting results. Students
@@ -15,6 +14,9 @@ reports.
 
 ## course management
 
+For course material organized by week, see the [course main
+page](../README.md).
+
   - [Syllabus](cm001_syllabus.md)  
   - Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for
     Data Science*, O’Reilly Media [free e-copy
@@ -24,14 +26,14 @@ reports.
     RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book),
     CRC Press, Taylor and Francis Group: Boca Raton, FL  
   - [Getting help](cm002b_getting-help.md)
-  - [Course introduction](../slides/slides001_introduction.pdf)
-    \[slides\]
+  - [Course introduction](../slides/slides001_introduction.pdf) \[slides
+    001\]
 
 <!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
 
 <!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
 
-## software
+## software assignments
 
   - [Install R and
     RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). If you
@@ -41,9 +43,9 @@ reports.
     Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
   - Install the [tidyverse](https://www.tidyverse.org)  
   - [Setup Git and GitHub](cm003_git-setup.md)
-  - [Software overview](../slides/slides002_software.pdf) \[slides\]
+  - [Software overview](../slides/slides002_software.pdf) \[slides 002\]
 
-## reading
+## reading assignments
 
 Text chapters
 
@@ -88,7 +90,7 @@ discussion
 
 <!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
 
-<!-- ## file management  -->
+## file management
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 
@@ -104,7 +106,7 @@ discussion
 
 <!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
 
-<!-- ## data  -->
+## data
 
 <!-- - [Review of tools for preparing data](cm022_review-data-prep.md)  -->
 
@@ -140,11 +142,11 @@ discussion
 
 <!-- - [practiceR: Data joining](cm048_data-joining.md)  -->
 
-<!-- ## analysis  -->
+## analysis
 
 <!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
 
-<!-- ## graphs  -->
+## graphs
 
 <!-- - [Visually check the data](cm011_project-1_graph-first-look.md) (Project 1)  -->
 
@@ -164,7 +166,7 @@ discussion
 
 <!-- - [practiceR: Scatterplot](cm046_scatterplot.md)  -->
 
-<!-- ## reporting  -->
+## reporting
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 

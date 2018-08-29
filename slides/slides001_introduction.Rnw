@@ -1,4 +1,5 @@
-\documentclass[12pt, aspectratio = 169]{beamer}
+\documentclass[11pt, aspectratio = 1610]{beamer}
+% possible aspect ratio values are: 1610, 149, 54, 43 and 32.
 
 % used by title slide and PDF settings
 \newcommand{\talktitle}   {Reproducible research}
@@ -10,18 +11,19 @@
 \begin{document}
 
 {%% title slide -------------------------------------------
-\renewcommand\foottext{Kenji Takeda, \href{http://www.slideshare.net/Azure4Research/mar14cw14-workshop}{Reproducible research and the cloud}, Microsoft Research, 2014-06-06.}
+\renewcommand\foottext{Roger Peng (2011) Reproducible research in computational science. {\em Science} {\bf 334}(6060), 1226--1227.}
 \begin{frame}[c]{}
 
-\begin{columns}
-\column{0.45\textwidth}
-
+\bigskip
 {\Large\color{myviolet}\talktitle}
 
 \bigskip
 {\color{gray}\talksubtitle}
 
 \bigskip
+\hspace{2em}
+\includegraphics[width = 0.8\textwidth]{nihms382015f1.jpg}
+
 \bigskip
 {\color{myviolet}\talkauthor}
 
@@ -30,12 +32,6 @@
 Rose-Hulman Institute of Technology\\
 Fall 2018\\
 }
-
-\column{0.55\textwidth}
-\vspace{1\baselineskip}
-\includegraphics[width = 1\textwidth]{rr-cycle.png}
-
-\end{columns}
 \end{frame}
 }%%
 
@@ -51,7 +47,7 @@ Fall 2018\\
 }%%
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Victoria Stodden, F. Leisch, \& R. Peng, ed., {\em Implementing Reproducible Research}, CRC Press, 2014.\\
+\renewcommand\foottext{Victoria Stodden, F. Leisch, \& R. Peng, ed., {\em Implementing Reproducible Research}, CRC Press, 2014.\newline
 Christopher Gandrud, {\em Reproducible Research with R and RStudio, 2/e}, CRC Press, 2015.}
 
 \begin{frame}[c]{Practitioners tell us:}
@@ -133,7 +129,8 @@ Results were used to justify austerity policies, but the major effect disappeare
 
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research to begin Monday}, {\em Triangle Business Journal}, 2015-01-23. Ivan Oransky, \href{http://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
+\renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research}, {\em Triangle Business Journal}, 2015-01-23. \newline
+Ivan Oransky, \href{http://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
 
 \begin{frame}[c]{Reproduction showed he falsified data}
 
@@ -158,7 +155,9 @@ To obtain the results he wanted, he altered data in several ways. Consequences i
 }%%
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Freed Pearce, \href{https://www.theguardian.com/environment/2010/feb/09/hockey-stick-michael-mann-steve-mcintyre}{Climate change debate overheated after skeptic grasped 'hockey stick'}, {\em The Guardian}, 2010-02-09. Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. Jeff Leek, \href{http://simplystatistics.org}{De-weaponizing reproducibility}, 2015-03-13. }
+\renewcommand\foottext{Freed Pearce, \href{https://www.theguardian.com/environment/2010/feb/09/hockey-stick-michael-mann-steve-mcintyre}{Climate change debate overheated after skeptic grasped 'hockey stick'}, {\em The Guardian}, 2010-02-09.\newline
+Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. \newline
+Jeff Leek, \href{http://simplystatistics.org}{De-weaponizing reproducibility}, 2015-03-13. }
 
 \begin{frame}[c]{Reproduction is also used to {\em discredit scientists}}
 
@@ -185,7 +184,8 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Bruno Oliveira, \href{https://plus.google.com/+BrunoOliveira/posts/MGxauXypb1Y}{\em Geeks and repetitive tasks}}
+\renewcommand\foottext{Bruno Olivera (2012) \href{https://plus.google.com/102451193315916178828/posts/MGxauXypb1Y}{Geeks and repetitive tasks}}
+
 \begin{frame}[c]{The benefits first accrue to you}
 
 \begin{columns}[c]
@@ -199,29 +199,15 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 \end{itemize}
 
 \end{columns}
-
-
-% {\em\color{myviolet}If you do anything ``by hand'' once, you'll do it 100 times.}{\hfill\small--- Paul Wilson, UW--Madison}
-%
-% \bigskip
-%
-% {\em\color{myviolet}Your closest collaborator is you, six months ago, and you don't answer emails.} \\
-% {\hfill\small--- Karl Broman, UW--Madison}
-
-% \bigskip
-%
-% {\em\color{myviolet}To preserve sanity, stop collaborating via email  attachments \& tracking changes in Word.}\\
-% {\hfill\small--- Jenny Bryan, Univ of British Columbia}
-
-% \column{0.65\textwidth}
-% \vspace{-1\baselineskip}
-
-
 \end{frame}
-}%%
+
+
+
+
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
+\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. \newline
+Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
 
 \begin{frame}[t]{Steps towards reproducibility}
 
@@ -251,7 +237,9 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 }%%
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}. Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
+\renewcommand\foottext{Karl Broman, \href{http://kbroman.org/steps2rr/}{Initial steps toward reproducible research}.\newline
+Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg Wilson, \href{https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/index.md}{Good enough practices for scientific computing}, 2016-01.}
+
 \begin{frame}[t]{Steps towards reproducibility: in this course}
 
 \vspace{-0.5\baselineskip}
@@ -285,8 +273,34 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 \end{frame}
 }%%
 
+
+
+
+
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
+
+\begin{frame}[c]{Our focus is on explicitly linking the report, paper, or talk to the data and scripts that generate the findings}
+
+\begin{columns}[c]
+\column{0.5\textwidth}
+\includegraphics[width = 1\textwidth]{rr-flow-2.png}
+{\small R Markdown (.Rmd) files are the central link}
+\column{0.5\textwidth}
+Changes are automatically updated and embedded in the output document.
+
+\bigskip
+Cut and paste no more!
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
 \begin{frame}[c]{How the course is organized}
 
 \begin{itemize}
@@ -317,8 +331,6 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 \includegraphics[width = 1\textwidth]{calibr-report-first-page.png}
 
 \end{columns}
-
-
 \end{frame}
 }%%
 

@@ -3,10 +3,37 @@
 
 ## Reproducible research for the R novice
 
-For course material organized by topic, see the [course topic
-page](cm/README.md).
+*What is reproducible research?*
 
-*Description*
+Reproducible research is about explicitly linking a technical report,
+paper, or talk to the software, scripts, and data files that generate
+the findings.
+
+![](resources/images/rr-flow-2.png)
+
+Learn to write explicitly connected scripts to link your prose to the
+computing that performs data carpentry and analysis, creates data
+graphics and tables of results, and places the results directly in the
+output document.
+
+Cut and paste no more\!
+
+*Why you?*
+
+  - You know that your workflow is disorganized but you don’t know what
+    to do about it  
+  - You redo your analysis and graphs, and copy and paste them into a
+    document—again and again  
+  - You enjoy making software do your bidding and ultimately saving time
+    over the life of a project
+
+*Who benefits?*
+
+  - Your future self  
+  - Your collaborators  
+  - Your organization
+
+*Course description*
 
 We explore the principles and practices of reproducible research, from
 gathering data to analyzing data and presenting results. Students
@@ -19,7 +46,10 @@ reports.
 
 ## week 0
 
-*Getting started*
+For course material organized by topic, see the [course topic
+page](cm/README.md).
+
+*Course management*
 
   - [Syllabus](cm/cm001_syllabus.md)  
   - Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for
@@ -51,9 +81,10 @@ reports.
 
 *Lecture slides*
 
-  - [Course introduction](slides/slides001_introduction.pdf) \[slides\]
-  - [Software overview](slides/slides002_software.pdf)
-\[slides\]
+  - [Course introduction](slides/slides001_introduction.pdf) \[slides
+    001\]
+  - [Software overview](slides/slides002_software.pdf) \[slides
+002\]
 
 ## week 1
 
