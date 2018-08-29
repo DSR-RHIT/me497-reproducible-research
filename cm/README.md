@@ -1,23 +1,18 @@
 
-# me497 by topic
+# index
 
-## Reproducible research for the R novice
+ME497 / ME597 Reproducible Research
 
-*Description*
+  - [About the course](cm/cm000_about-the-course.md)  
+  - [Main page](../README.md) to search course material organized
+    chronologically
 
-We explore the principles and practices of reproducible research, from
-gathering data to analyzing data and presenting results. Students
-implement a workflow that includes file management, version control,
-literate programming, data carpentry, creating tables and graphs, and
-reporting—all within the context of producing reproducible technical
-reports.
+![](../resources/images/rr-flow-2.png)
 
 ## course management
 
-For course material organized by week, see the [course main
-page](../README.md).
-
-  - [Syllabus](cm001_syllabus.md)  
+  - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
+    study, policies, and procedures  
   - Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for
     Data Science*, O’Reilly Media [free e-copy
     online](http://r4ds.had.co.nz/)  
@@ -240,11 +235,11 @@ discussion
 
 ## about
 
-  - [my data visualization
+  - [My data visualization
     course](https://github.com/DSR-RHIT/me447-visualizing-data)
-  - [my data display blog](http://www.graphdoctor.com)
-  - [my music blog](http://www.richardlaytonmusic.com)
+  - [My data display blog](http://www.graphdoctor.com)
+  - [My music blog](http://www.richardlaytonmusic.com)
 
 -----
 
-[License](../LICENSE.md)
+[Main page](../README.md)
