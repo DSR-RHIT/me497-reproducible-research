@@ -1,8 +1,8 @@
 
-reshaping data from wide to long form
-=====================================
+# reshaping data from wide to long form
 
-Illustrate reshaping a data set from wide form to long form using the built-in `VADeaths` data set.
+Illustrate reshaping a data set from wide form to long form using the
+built-in `VADeaths` data set.
 
 ``` r
 # load libraries
@@ -17,7 +17,8 @@ The `data()` function creates a list of data sets available in R.
 data()
 ```
 
-One of these in the `VADeaths` data set. Type `?VADeaths` in the Console to see a description of the data set.
+One of these in the `VADeaths` data set. Type `?VADeaths` in the Console
+to see a description of the data set.
 
 ``` r
 # Load the data into your workspace
@@ -31,7 +32,7 @@ class(VADeaths)
 ## [1] "matrix"
 ```
 
-Let's print the data set.
+Let’s print the data set.
 
 ``` r
 VADeaths
@@ -43,10 +44,14 @@ VADeaths
 ## 70-74       66.0         54.3       71.1         50.0
 ```
 
--   I see that the age group data is stored in the row names.
--   the column names contain two pieces of information: geographic location (urban or rural) and sex (male or female).
+  - I see that the age group data is stored in the row names.
+  - the column names contain two pieces of information: geographic
+    location (urban or rural) and sex (male or female).
 
-Before reshaping a data set, plan the final organization. For example, this data set has 4 variables that I'll label `Age_group`, `Geo_region`, `Sex`, and `Death_rate`. Each variable is a column in the final, tidy data set. Each row is one observation.
+Before reshaping a data set, plan the final organization. For example,
+this data set has 4 variables that I’ll label `Age_group`, `Geo_region`,
+`Sex`, and `Death_rate`. Each variable is a column in the final, tidy
+data set. Each row is one observation.
 
 ``` r
 # convert the matrix to a data frame
@@ -74,7 +79,9 @@ df
 ## 5       66.0         54.3       71.1         50.0     70-74
 ```
 
--   `mutate()` automatically eliminates the original row names
+  - `mutate()` automatically eliminates the original row names
+
+<!-- end list -->
 
 ``` r
 # Use select() to arrange columns
@@ -89,7 +96,7 @@ df
 ## 5     70-74       66.0         54.3       71.1         50.0
 ```
 
-We're ready to use `gather()` to reshape the wide form to long form.
+We’re ready to use `gather()` to reshape the wide form to long form.
 
 ``` r
 # gather from wide to long format
@@ -97,11 +104,17 @@ df <- df %>%
     gather(Geo_Sex, Death_rate, Rural.Male:Urban.Female)
 ```
 
-Examine the `gather(Geo_Sex, Death_rate, Rural.Male:Urban.Female)` function one argument at a time
+Examine the `gather(Geo_Sex, Death_rate, Rural.Male:Urban.Female)`
+function one argument at a time
 
--   `Geo_Sex` is a new column for gathering the *column names* of the original columns labeled `Rural.Male`, `Rural.Female`, etc.
--   `Death_rate` is a new column for gathering the *column data* of the original columns labeled `Rural.Male`, `Rural.Female`, etc.
--   `Rural.Male:Urban.Female` tells R the range of columns to be gathered.
+  - `Geo_Sex` is a new column for gathering the *column names* of the
+    original columns labeled `Rural.Male`, `Rural.Female`, etc.
+  - `Death_rate` is a new column for gathering the *column data* of the
+    original columns labeled `Rural.Male`, `Rural.Female`, etc.
+  - `Rural.Male:Urban.Female` tells R the range of columns to be
+    gathered.
+
+<!-- end list -->
 
 ``` r
 # examine the long form data frame after gathering
@@ -129,9 +142,11 @@ df
 ## 20     70-74 Urban.Female       50.0
 ```
 
--   Note that the `Age_group` column from the original data frame is repeated as many times as necessary in the new long form.
+  - Note that the `Age_group` column from the original data frame is
+    repeated as many times as necessary in the new long form.
 
-Next, we separate the two pieces of information in the `Geo_Sex` column into separate columns (separate variables).
+Next, we separate the two pieces of information in the `Geo_Sex` column
+into separate columns (separate variables).
 
 ``` r
 # separate the two types of data in Geo_Sex to two columns
@@ -139,7 +154,11 @@ df <- df %>%
     separate(Geo_Sex, into = c('Geo_region', 'Sex'), sep = '\\.')
 ```
 
-The character the denotes the separation (in this case) is a period. If you look at the help page for `separate()`, you'll see that the separation character has to be a regular expression., thus we have to "escape" the period by writing `sep = '\.'`. This creates an error too because we have to escape the backslash, hence `sep = '\\.'`.
+The character the denotes the separation (in this case) is a period. If
+you look at the help page for `separate()`, you’ll see that the
+separation character has to be a regular expression., thus we have to
+“escape” the period by writing `sep = '\.'`. This creates an error too
+because we have to escape the backslash, hence `sep = '\\.'`.
 
 ``` r
 # examine data frame after separating geography from sex
@@ -167,7 +186,8 @@ df
 ## 20     70-74      Urban Female       50.0
 ```
 
-We can rearrange the data frame by rows and columns if that helps readability.
+We can rearrange the data frame by rows and columns if that helps
+readability.
 
 ``` r
 # use arrange() to arrange by row 
@@ -211,6 +231,6 @@ glimpse(df)
 ## $ Death_rate <dbl> 8.7, 11.7, 20.3, 30.9, 54.3, 8.4, 13.6, 19.3, 35.1,...
 ```
 
-------------------------------------------------------------------------
+-----
 
 [main page](../README.md)

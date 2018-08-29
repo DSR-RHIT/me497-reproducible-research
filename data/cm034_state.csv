@@ -1,51 +1,51 @@
 abbr,name,area,region
-AL,Alabama,51609.0,South
-AK,Alaska,589757.0,West
-AZ,Arizona,113909.0,West
-AR,Arkansas,53104.0,South
-CA,California,158693.0,West
-CO,Colorado,104247.0,West
-CT,Connecticut,5009.0,Northeast
-DE,Delaware,2057.0,South
-FL,Florida,58560.0,South
-GA,Georgia,58876.0,South
-HI,Hawaii,6450.0,West
-ID,Idaho,83557.0,West
-IL,Illinois,56400.0,North Central
-IN,Indiana,36291.0,North Central
-IA,Iowa,56290.0,North Central
-KS,Kansas,82264.0,North Central
-KY,Kentucky,40395.0,South
-LA,Louisiana,48523.0,South
-ME,Maine,33215.0,Northeast
-MD,Maryland,10577.0,South
-MA,Massachusetts,8257.0,Northeast
-MI,Michigan,58216.0,North Central
-MN,Minnesota,84068.0,North Central
-MS,Mississippi,47716.0,South
-MO,Missouri,69686.0,North Central
-MT,Montana,147138.0,West
-NE,Nebraska,77227.0,North Central
-NV,Nevada,110540.0,West
-NH,New Hampshire,9304.0,Northeast
-NJ,New Jersey,7836.0,Northeast
-NM,New Mexico,121666.0,West
-NY,New York,49576.0,Northeast
-NC,North Carolina,52586.0,South
-ND,North Dakota,70665.0,North Central
-OH,Ohio,41222.0,North Central
-OK,Oklahoma,69919.0,South
-OR,Oregon,96981.0,West
-PA,Pennsylvania,45333.0,Northeast
-RI,Rhode Island,1214.0,Northeast
-SC,South Carolina,31055.0,South
-SD,South Dakota,77047.0,North Central
-TN,Tennessee,42244.0,South
-TX,Texas,267339.0,South
-UT,Utah,84916.0,West
-VT,Vermont,9609.0,Northeast
-VA,Virginia,40815.0,South
-WA,Washington,68192.0,West
-WV,West Virginia,24181.0,South
-WI,Wisconsin,56154.0,North Central
-WY,Wyoming,97914.0,West
+AL,Alabama,51609,South
+AK,Alaska,589757,West
+AZ,Arizona,113909,West
+AR,Arkansas,53104,South
+CA,California,158693,West
+CO,Colorado,104247,West
+CT,Connecticut,5009,Northeast
+DE,Delaware,2057,South
+FL,Florida,58560,South
+GA,Georgia,58876,South
+HI,Hawaii,6450,West
+ID,Idaho,83557,West
+IL,Illinois,56400,North Central
+IN,Indiana,36291,North Central
+IA,Iowa,56290,North Central
+KS,Kansas,82264,North Central
+KY,Kentucky,40395,South
+LA,Louisiana,48523,South
+ME,Maine,33215,Northeast
+MD,Maryland,10577,South
+MA,Massachusetts,8257,Northeast
+MI,Michigan,58216,North Central
+MN,Minnesota,84068,North Central
+MS,Mississippi,47716,South
+MO,Missouri,69686,North Central
+MT,Montana,147138,West
+NE,Nebraska,77227,North Central
+NV,Nevada,110540,West
+NH,New Hampshire,9304,Northeast
+NJ,New Jersey,7836,Northeast
+NM,New Mexico,121666,West
+NY,New York,49576,Northeast
+NC,North Carolina,52586,South
+ND,North Dakota,70665,North Central
+OH,Ohio,41222,North Central
+OK,Oklahoma,69919,South
+OR,Oregon,96981,West
+PA,Pennsylvania,45333,Northeast
+RI,Rhode Island,1214,Northeast
+SC,South Carolina,31055,South
+SD,South Dakota,77047,North Central
+TN,Tennessee,42244,South
+TX,Texas,267339,South
+UT,Utah,84916,West
+VT,Vermont,9609,Northeast
+VA,Virginia,40815,South
+WA,Washington,68192,West
+WV,West Virginia,24181,South
+WI,Wisconsin,56154,North Central
+WY,Wyoming,97914,West

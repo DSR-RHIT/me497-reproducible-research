@@ -1,26 +1,28 @@
 
-tidy the data
-=============
+# tidy the data
 
 How to use this tutorial
 
--   ![](../resources/images/text-icon.png) *add text*: type the prose verbatim into the Rmd file
--   ![](../resources/images/code-icon.png) *add code*: insert a code chunk, then transcribe the R code
--   ![](../resources/images/knit-icon.png) *knit* after each addition.
--   *Install* packages one time only
--   *Load* a package using `library()` every session
+  - ![](../resources/images/text-icon.png)<!-- --> *add text*: type the
+    prose verbatim into the Rmd file
+  - ![](../resources/images/code-icon.png)<!-- --> *add code*: insert a
+    code chunk, then transcribe the R code
+  - ![](../resources/images/knit-icon.png)<!-- --> *knit* after each
+    addition.
+  - *Install* packages one time only
+  - *Load* a package using `library()` every session
 
 Packages used in this tutorial
 
--   readr
--   tidyr
--   stringr
--   dplyr
+  - readr
+  - tidyr
+  - stringr
+  - dplyr
 
-open a new Rmd script
----------------------
+## open a new Rmd script
 
-Open a new Rmd file, and name it `02_calibr_data-tidy.Rmd`. Save it to the `scripts` directory.
+Open a new Rmd file, and name it `02_calibr_data-tidy.Rmd`. Save it to
+the `scripts` directory.
 
 Edit the YAML header:
 
@@ -35,15 +37,16 @@ Delete the rest of the pre-populated text.
 
 Insert knitr setup code.
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
     library(knitr)
     opts_knit$set(root.dir = '../')
     opts_chunk$set(echo = TRUE, collapse = TRUE)
 
-Knowing the packages we'll be using, we can load them right away, near the top of the file.
+Knowing the packages we’ll be using, we can load them right away, near
+the top of the file.
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 library(readr)
@@ -52,15 +55,14 @@ library(stringr)
 suppressPackageStartupMessages(library(dplyr))
 ```
 
-plan the data reshaping
------------------------
+## plan the data reshaping
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     # Plan the data reshaping
-
+    
     For analysis, the data set should be in tidy (long) form, with every column a variable and every row an observation. The tidy form will have these variable names:
-
+    
     - observ (observation number)
     - cycle (cycle number)
     - test\_pt (test point number and direction)
@@ -69,16 +71,20 @@ plan the data reshaping
 
 Learn R Markdown:
 
--   `-` (hyphen, space) creates an itemized list (bullet list). A line space above and below separating the list from other paragraphs is required.
--   To print an underscore in the Rmd prose we have to "escape" the character by writing `\_`.
+  - `-` (hyphen, space) creates an itemized list (bullet list). A line
+    space above and below separating the list from other paragraphs is
+    required.
+  - To print an underscore in the Rmd prose we have to “escape” the
+    character by writing
+    `\_`.
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     In the reshaped data set, every mV reading will appear in its own row identified by cycle number (from the existing column name) and test point.  Thus the columns with *cycle* in their name  are the ones being gathered. 
 
 The next code chunk finds the columns with `cycle` in their name.
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # active data set
@@ -89,14 +95,16 @@ all_col_names <- colnames(data_received)
 
 Learn R
 
--   `colnames()` returns the column names (variable names) of the data frame
+  - `colnames()` returns the column names (variable names) of the data
+    frame
 
 Notes on reproducibility
 
--   Reading `01_calibr_data-active-report.csv` file is a consequence of DRY (don't repeat yourself).
--   For a full explanation, see the previous tutorial.
+  - Reading `01_calibr_data-active-report.csv` file is a consequence of
+    DRY (don’t repeat yourself).
+  - For a full explanation, see the previous tutorial.
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # TF, does the column name include "cycle"
@@ -105,10 +113,11 @@ detect_cycle_col <- str_detect(tolower(all_col_names), 'cycle')
 
 Learn R
 
--   `tolower()` returns the vector all in lower case
--   `str_detect()` (from `stringr`) returns a logical vector with TRUE for column each name containing `cycle`
+  - `tolower()` returns the vector all in lower case
+  - `str_detect()` (from `stringr`) returns a logical vector with TRUE
+    for column each name containing `cycle`
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # extract indices of TRUE
@@ -117,39 +126,50 @@ is_a_cycle_col <- which(detect_cycle_col)
 is_a_cycle_col
 ```
 
-We know which columns contain the mV readings *for this data set*. However, those column numbers can change when we receive data updates. So we want the script to extract this type of information *from the data*.
+We know which columns contain the mV readings *for this data set*.
+However, those column numbers can change when we receive data updates.
+So we want the script to extract this type of information *from the
+data*.
 
 Writing readable code
 
--   Don't hard code numbers --- use variables to reduce bugs, improve readability, and support reproducibility
+  - Don’t hard code numbers — use variables to reduce bugs, improve
+    readability, and support reproducibility
 
 Learn R
 
--   `which()` returns the indices of the position of TRUE
--   Writing a variable on a line of its own, e.g., `is_a_cycle_col`, prints its value(s)
--   `is_a_cycle_col` is a vector of integers. The number in brackets `[1]` is the index of the first element in the row of output.
+  - `which()` returns the indices of the position of TRUE
+  - Writing a variable on a line of its own, e.g., `is_a_cycle_col`,
+    prints its value(s)
+  - `is_a_cycle_col` is a vector of integers. The number in brackets
+    `[1]` is the index of the first element in the row of output.
 
-check yourself
---------------
+## check yourself
 
 Confer with a neighbor
 
 1.  What are the indices to the cycle columns?
 
-reshape the data to long form
------------------------------
+## reshape the data to long form
 
-We will gather the cycle numbers (the *names* of the original columns) in one new column and gather the mV readings (the *data values* in the original columns) in another new column. The `gather()` function from `tidyr` arranges each cycle and reading side by side in a new observation row.
+We will gather the cycle numbers (the *names* of the original columns)
+in one new column and gather the mV readings (the *data values* in the
+original columns) in another new column. The `gather()` function from
+`tidyr` arranges each cycle and reading side by side in a new
+observation row.
 
-The new data frame has as many rows as there are observations in the original table.
+The new data frame has as many rows as there are observations in the
+original table.
 
-The columns "not gathered"" remain, e.g., test\_point, input\_lb, with their entries copied into the new rows, maintaining the relationships described in the original data set.
+The columns “not gathered”" remain, e.g., test\_point, input\_lb, with
+their entries copied into the new rows, maintaining the relationships
+described in the original data set.
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     # Reshape the data to long form
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # gather the columns of mV readings
@@ -159,11 +179,15 @@ long_data <- data_received %>%
 
 Learn R
 
--   We can read this code as, start with `data_received`, *then* gather the variables (columns) designated by `is_a_cycle_col` into two new columns named `cycle` and `output_mV`, and assign the result to `long_data`.
--   `cycle` gathers the column names, e.g., cycle\_1, cycle\_2, cycle\_3
--   `output_mV` gathers the column data (mV), e.g., 29.9, 49.4, 70.0, 91.6, 69.0, 50.1, 30.8, 10.9, etc.
+  - We can read this code as, start with `data_received`, *then* gather
+    the variables (columns) designated by `is_a_cycle_col` into two new
+    columns named `cycle` and `output_mV`, and assign the result to
+    `long_data`.
+  - `cycle` gathers the column names, e.g., cycle\_1, cycle\_2, cycle\_3
+  - `output_mV` gathers the column data (mV), e.g., 29.9, 49.4, 70.0,
+    91.6, 69.0, 50.1, 30.8, 10.9, etc.
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # examine its structure
@@ -173,23 +197,24 @@ glimpse(long_data)
 summary(long_data) 
 ```
 
-check yourself
---------------
+## check yourself
 
 Confer with a neighbor.
 
 1.  The total number of observations is?
 2.  The total number of measured variables is?
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
-    I have the columns I expected.
+``` 
+I have the columns I expected.
 
-    All the NA values are in the mV readings column and can be safely deleted because they represent readings never taken (per the ANSI/ISA standard). 
+All the NA values are in the mV readings column and can be safely deleted because they represent readings never taken (per the ANSI/ISA standard). 
 
-    Result is the first tidy form, where every row is an observation and every column a variable.  
+Result is the first tidy form, where every row is an observation and every column a variable.  
+```
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # omit NAs
@@ -202,20 +227,22 @@ glimpse(tidy_data)
 
 Learn R
 
--   `filter()` (from `dplyr`) returns all rows for which the logical expression is TRUE (deleting rows for which the expression is FALSE)
--   `%in%` returns a logical vector indicating if the left operand (`!output_mV`) matches the right operand (`NA`)
--   `!` is logical negation (NOT), so we can keep all the rows that are "not NA"
+  - `filter()` (from `dplyr`) returns all rows for which the logical
+    expression is TRUE (deleting rows for which the expression is FALSE)
+  - `%in%` returns a logical vector indicating if the left operand
+    (`!output_mV`) matches the right operand (`NA`)
+  - `!` is logical negation (NOT), so we can keep all the rows that are
+    “not NA”
 
-add observation numbers
------------------------
+## add observation numbers
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     # Add observation numbers
-
+    
     The test points are in the order in which the data were acquired (consistent with the ANSI/ISA standard). So the observation number is the same as the row number. 
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # observation number is a sequence of integers, from 1 to the number of rows
@@ -229,27 +256,26 @@ head(tidy_data, n = 3L)
 
 Learn R
 
--   `nrow()` returns the number of rows in the data frame
--   `mutate()` creates a new column called `observ`
--   The `:` operator creates a sequence
+  - `nrow()` returns the number of rows in the data frame
+  - `mutate()` creates a new column called `observ`  
+  - The `:` operator creates a sequence
 
-check yourself
---------------
+## check yourself
 
 Confer with a neighbor.
 
-1.  What is the difference between the `observ` variable and the `output_mV` variable?
+1.  What is the difference between the `observ` variable and the
+    `output_mV` variable?
 
-simplify the cycle number
--------------------------
+## simplify the cycle number
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     # Simplify the cycle number
-
+    
     The `cycle` data are strings, *cycle_1*, *cycle_2*, etc., from the original column headings. It might be useful to replace these strings with integers, e.g. replacing the string `cycle_1` with the integer `1`. 
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 # separate cycle character, convert numerals to integers
@@ -262,17 +288,18 @@ head(tidy_data, n = 3)
 
 Learn R
 
--   `separate()` (from `tidyr`) turns one column of strings into multiple columns of strings
--   `into` assigns the new column names
--   `sep` assigns the character separator
--   `convert = TRUE` converts the character numerals into integers
--   `c()` operator *concatenates* elements to form a vector
+  - `separate()` (from `tidyr`) turns one column of strings into
+    multiple columns of strings
+  - `into` assigns the new column names
+  - `sep` assigns the character separator
+  - `convert = TRUE` converts the character numerals into integers
+  - `c()` operator *concatenates* elements to form a vector
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     The `prefix` column is superfluous. 
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 tidy_data <- tidy_data %>%
@@ -282,16 +309,15 @@ tidy_data <- tidy_data %>%
 glimpse(tidy_data)
 ```
 
-final touches
--------------
+## final touches
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
     # Final touches 
-
+    
     The last steps in tidying this data set are to rearrange columns in a logical order and shorten the `test_point` variable name. It's a small enough data set that I can print it. 
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 tidy_data <- tidy_data %>%
@@ -302,63 +328,64 @@ print(tidy_data)
 
 Learn R
 
--   `select()` reorders the columns in the order listed
--   `test_pt = test_point` renames the existing column as in `new_name = old_name`
+  - `select()` reorders the columns in the order listed
+  - `test_pt = test_point` renames the existing column as in `new_name =
+    old_name`
 
-write to file
--------------
+## write to file
 
-![](../resources/images/text-icon.png)
+![](../resources/images/text-icon.png)<!-- -->
 
-    Write it to the `data` directory, ready to use for the calibration graph and the regression analysis.   
+``` 
+Write it to the `data` directory, ready to use for the calibration graph and the regression analysis.   
+```
 
-![](../resources/images/code-icon.png)
+![](../resources/images/code-icon.png)<!-- -->
 
 ``` r
 write_csv(tidy_data, "data/02_calibr_data-tidy.csv")
 ```
 
-check yourself
---------------
+## check yourself
 
 Your directories should contain these files:
 
-    data\
-      |-- 007_wide-data.csv
-      |-- 01_calibr_data_active-report.csv
-      `-- 02_calibr_data-tidy.csv
+``` 
+data\
+  |-- 007_wide-data.csv
+  |-- 01_calibr_data_active-report.csv
+  `-- 02_calibr_data-tidy.csv
 
-    reports\
+reports\
 
-    resources\
-      `-- load-cell-setup-786x989px.png 
-      
-    results\
-      `-- 01_calibr_data-wide.csv 
-      
-    scripts\
-      |-- 01_calibr_data-wide.Rmd 
-      `-- 02_calibr_data-tidy.Rmd 
-      
+resources\
+  `-- load-cell-setup-786x989px.png 
+  
+results\
+  `-- 01_calibr_data-wide.csv 
+  
+scripts\
+  |-- 01_calibr_data-wide.Rmd 
+  `-- 02_calibr_data-tidy.Rmd 
+  
+```
 
-push to github
---------------
+## push to github
 
--   RStudio Environment pane,`Git` tab
--   Check the `Staged` box for new files and folders
--   `Commit`
--   Type a unique commit message
--   `Commit`
--   `Close`
--   `Push`
--   `Close`
+  - RStudio Environment pane,`Git` tab  
+  - Check the `Staged` box for new files and folders
+  - `Commit`
+  - Type a unique commit message
+  - `Commit`
+  - `Close`
+  - `Push`
+  - `Close`
 
-check yourself
---------------
+## check yourself
 
--   Online, navigate to your project repo on GitHub.
--   The new files and folders should be there
+  - Online, navigate to your project repo on GitHub.
+  - The new files and folders should be there
 
-------------------------------------------------------------------------
+-----
 
 [main page](../README.md)

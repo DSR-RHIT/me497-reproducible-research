@@ -7,7 +7,7 @@ output: github_document
 ME497 / ME597 Reproducible Research
 
 - [About the course](cm/cm000_about-the-course.md)  
-- [Main page](../README.md) to search course material organized chronologically  
+- [Main page](README.md) to search course material organized chronologically  
 
 ![](../resources/images/rr-flow-2.png) 
 

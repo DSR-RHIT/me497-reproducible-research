@@ -1,24 +1,33 @@
 
-graph extras
-============
+# graph extras
 
 Topics:
 
--   Jitter the data markers to reduce printing overlap and set a random seed so jittering is repeatable
--   Use the results table to dynamically assign units to the axis labels and set tick mark locations
--   Use the results table to dynamically edit the calibration equation and print it on the graph
--   Format the calibration equation for significant figures
--   Change font sizes
+  - Jitter the data markers to reduce printing overlap and set a random
+    seed so jittering is repeatable
+  - Use the results table to dynamically assign units to the axis labels
+    and set tick mark locations
+  - Use the results table to dynamically edit the calibration equation
+    and print it on the graph
+  - Format the calibration equation for significant figures
+  - Change font sizes
 
 Two possible approaches:
 
-1.  If you wish, you may add the code in this file to your existing graph script `05_calibr_graph.Rmd`.
+1.  If you wish, you may add the code in this file to your existing
+    graph script `05_calibr_graph.Rmd`.
 
-2.  Another option is to leave the original graph script alone and create a new graph script to explore the graph extras without disturbing the original file. In that case, I would violate the DRY rule by copying `05_calibr_graph.Rmd` and saving it as `07_calibr_graph-extras.Rmd`
+2.  Another option is to leave the original graph script alone and
+    create a new graph script to explore the graph extras without
+    disturbing the original file. In that case, I would violate the DRY
+    rule by copying `05_calibr_graph.Rmd` and saving it as
+    `07_calibr_graph-extras.Rmd`
 
 Packages
 
-When running all scripts in order, I occasionally run into the problem that dplyr has been installed before plyr. To avoid that problem, I "unload" dplyr first, then reload plyr and dplyr in order.
+When running all scripts in order, I occasionally run into the problem
+that dplyr has been installed before plyr. To avoid that problem, I
+“unload” dplyr first, then reload plyr and dplyr in order.
 
 ``` r
 unloadNamespace("dplyr")
@@ -33,8 +42,7 @@ library(readr)
 library(ggplot2)
 ```
 
-retrieve data we saved earlier
-------------------------------
+## retrieve data we saved earlier
 
 Extract the numbers and units we want.
 
@@ -65,8 +73,7 @@ output_span <- output_max - output_min
 input_range_fraction <- round(input_max / 5 * 100, 1)
 ```
 
-recreate the basic graph
-------------------------
+## recreate the basic graph
 
 ``` r
 graph_data <- read_csv("data/02_calibr_data-tidy.csv")
@@ -95,14 +102,17 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-jitter
-------
+## jitter
 
-Add the `position` argument to `geom_point()`, Play with `width` and `height` until jitter is useful but not overdone.
+Add the `position` argument to `geom_point()`, Play with `width` and
+`height` until jitter is useful but not overdone.
 
-Next add `set.seed()` before the graph is created. An easy way to set a seed is to use a number based on today's date, e.g., `set.seed(20160824)`. After setting the seed, you may have to tweak the jitter `width` and `height` again.
+Next add `set.seed()` before the graph is created. An easy way to set a
+seed is to use a number based on today’s date, e.g.,
+`set.seed(20160824)`. After setting the seed, you may have to tweak the
+jitter `width` and `height` again.
 
 ``` r
 set.seed(20160824) # ===== NEW LINE
@@ -120,14 +130,16 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-axis units from the data table
-------------------------------
+## axis units from the data table
 
-If he units change in the analysis and are correctly saved to file, then that change can propagate here without manually editing the file.
+If he units change in the analysis and are correctly saved to file, then
+that change can propagate here without manually editing the file.
 
-Before the graph, create a x-label string and y-label string using `paste0`. Those strings then become the arguments of the `xlab()` and `ylab()` functions.
+Before the graph, create a x-label string and y-label string using
+`paste0`. Those strings then become the arguments of the `xlab()` and
+`ylab()` functions.
 
 ``` r
 set.seed(20160824)
@@ -148,10 +160,9 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
-axis tick marks from the data
------------------------------
+## axis tick marks from the data
 
 Find the unique values in the input forces and sort them.
 
@@ -162,7 +173,8 @@ x_test_seq
 
     ## [1] 0.5 1.5 2.5 3.5 4.5
 
-Find the equivalent (nominal) values in the output mV readings. Sort and round to the nearest 10 mV (to be used as tick mark locations).
+Find the equivalent (nominal) values in the output mV readings. Sort and
+round to the nearest 10 mV (to be used as tick mark locations).
 
 ``` r
 # round to the nearest 10
@@ -191,14 +203,16 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-adding the calibration equation
--------------------------------
+## adding the calibration equation
 
-Create the text string and use `sprintf()` syntax to control significant figures.
+Create the text string and use `sprintf()` syntax to control significant
+figures.
 
-Use the `annotate()` function to add the text to the plot, positioning it using the minimum x-value and the maximum y-value (upper-left quadrant of plot).
+Use the `annotate()` function to add the text to the plot, positioning
+it using the minimum x-value and the maximum y-value (upper-left
+quadrant of plot).
 
 ``` r
 set.seed(20160824)
@@ -222,12 +236,13 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
-font sizing
------------
+## font sizing
 
-Lastly, we edit the font sizes used by editing the theme. We add two lines, one inside the annotate function (size units are mm) and one inside the theme function (units are points).
+Lastly, we edit the font sizes used by editing the theme. We add two
+lines, one inside the annotate function (size units are mm) and one
+inside the theme function (units are points).
 
 ``` r
 set.seed(20160824)
@@ -251,12 +266,12 @@ calibr_graph <- ggplot(graph_data, aes(input_lb, output_mV)) +
 print(calibr_graph)
 ```
 
-![](cm014_project-1_graph-extras_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![](cm014_project-1_graph-extras_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ``` r
 ggsave("results/07_calibr_graph-extras.png", plot = calibr_graph, width = 6, height = 4, units = "in", dpi = 300)
 ```
 
-------------------------------------------------------------------------
+-----
 
 [main page](../README.md)

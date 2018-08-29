@@ -123,4 +123,4 @@ notice of revisions.
 
 -----
 
-[main page](../README.md)
+[Main page](../README.md)
