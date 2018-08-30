@@ -18,6 +18,26 @@ holding
 # ignore all TEX
 *.tex
 */*.tex
+*.toc
+*/*.toc
+*.toc
+*concordance*
+*/*concordance*
+*.snm
+*/*.snm
+*.nav
+*/*.nav
+*.gz
+*/*.gz
+*.log
+*/*.log
+*.aux
+*/*.aux
+*.out
+*/*.out
+*.vrb
+*/*.vrb
+
 
 # ignore all PPT
 *.pptx
