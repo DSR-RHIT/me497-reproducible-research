@@ -42,6 +42,11 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
     001\]
   - [Software overview](slides/slides002_software.pdf) \[slides 002\]
 
+*Project assignments*
+
+  - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597
+    students only
+
 ## week 1
 
 *Project assignments*

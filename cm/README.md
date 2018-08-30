@@ -63,8 +63,7 @@ For class discussion
 
 ## project 1
 
-  - [Project 1 getting
-started](cm7101_project-1_start.md)
+  - [Project 1 getting started](cm7101_project-1_start.md)
 
 <!-- - [Initialize](cm019_project-2_start.md)  -->
 
@@ -79,6 +78,12 @@ started](cm7101_project-1_start.md)
 <!-- - [Getting started](cm037_project-3_collabs.md)  -->
 
 <!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
+
+## project 3
+
+  - [Project 3 getting started](cm7301_project-3_start.md) ME 597
+    students
+only
 
 ## file management
 

@@ -37,6 +37,10 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 - [Course introduction](slides/slides001_introduction.pdf) [slides 001] 
 - [Software overview](slides/slides002_software.pdf) [slides 002] 
 
+*Project assignments*
+
+- [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597 students only
+
 ## week 1
 
 *Project assignments*

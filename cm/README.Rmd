@@ -75,6 +75,9 @@ For class discussion
 <!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
 
 
+## project 3
+
+- [Project 3 getting started](cm7301_project-3_start.md) ME 597 students only
 
 
 
