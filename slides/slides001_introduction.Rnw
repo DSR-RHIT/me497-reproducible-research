@@ -130,21 +130,21 @@ Results were used to justify austerity policies, but the major effect disappeare
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research}, {\em Triangle Business Journal}, 2015-01-23. \newline
-Ivan Oransky, \href{http://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
+Ivan Oransky, \href{https://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
 
 \begin{frame}[c]{Reproduction showed he falsified data}
 
 \begin{columns}[c]
 \column{0.6\textwidth}
-To obtain the results he wanted, he altered data in several ways. Consequences included:
+To obtain the results he wanted, he altered data in several ways. To date (2018) consequences include:
 
 \bigskip
 
 \begin{itemize}
-	\item terminated clinical trials (real patients)
-	\item civil suit by patients
-	\item cancelled research funding
-	\item retracted journal articles (11 to date)
+	\item clinical trials (real patients) terminated
+	\item 11 cases of malpractice settled
+	\item 18 journal articles retracted
+	\item NIH requires Duke obtain preapproval for funding changes
 \end{itemize}
 
 \column{0.4\textwidth}
