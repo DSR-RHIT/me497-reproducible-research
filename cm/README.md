@@ -26,10 +26,9 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## software getting started
 
-  - [Install R and
-    RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). If you
-    already use R and RStudio, please update R, RStudio, and packages to
-    the most recent versions.
+  - [Install R and RStudio](cm0010_install-R-RStudio.md). If you already
+    use R and RStudio, please update R, RStudio, and packages to the
+    most recent versions.
   - [Set up an R
     Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
   - Install the [tidyverse](https://www.tidyverse.org)  
