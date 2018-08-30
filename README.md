@@ -4,7 +4,7 @@
 ME497 / ME597 Reproducible Research. An introductory course for the R
 novice by Richard Layton at Rose-Hulman Institute of Technology.
 
-  - [About the course](cm/cm000_about-the-course.md)  
+  - [About the course](cm/cm0001_about-the-course.md)  
   - [Course index](cm/README.md)
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
@@ -15,11 +15,11 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Course management*
 
-  - [Calendar](cm/cm000_calendar.md) for an outline of our agendas and
+  - [Calendar](cm/cm0002_calendar.md) for an outline of our agendas and
     due dates
-  - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
+  - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures
-  - [Getting help](cm/cm002b_getting-help.md)
+  - [Getting help](cm/cm0004_getting-help.md)
 
 *Reading assigments*
 
@@ -34,7 +34,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
     the most recent versions.
   - [Set up an R Project](cm/cm0011_setup-R-project.md)  
   - Install the [tidyverse](https://www.tidyverse.org)  
-  - [Setup Git and GitHub](cm/cm003_git-setup.md)
+  - [Setup Git and GitHub](cm/cm0012_setup-git.md)
 
 *Lecture slides*
 
