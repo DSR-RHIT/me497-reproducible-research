@@ -1,7 +1,8 @@
 
 # index
 
-ME497 / ME597 Reproducible Research
+ME497 / ME597 Reproducible Research. An introductory course for the R
+novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [About the course](cm000_about-the-course.md)  
   - [Main page](../README.md) to search course material organized
@@ -13,13 +14,6 @@ ME497 / ME597 Reproducible Research
 
   - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
     study, policies, and procedures  
-  - Required text: (2017) Garrett Grolemund and Hadley Wickham, *R for
-    Data Science*, O’Reilly Media [free e-copy
-    online](http://r4ds.had.co.nz/)  
-  - Optional reference text: Christopher Gandrud (2015) [*Reproducible
-    Research with R and
-    RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book),
-    CRC Press, Taylor and Francis Group: Boca Raton, FL  
   - [Getting help](cm002b_getting-help.md)
   - [Course introduction](../slides/slides001_introduction.pdf) \[slides
     001\]
@@ -28,7 +22,7 @@ ME497 / ME597 Reproducible Research
 
 <!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
 
-## software assignments
+## software getting started
 
   - [Install R and
     RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). If you
@@ -44,22 +38,20 @@ ME497 / ME597 Reproducible Research
 
 Text chapters
 
-  - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)
-    Readings labeled by chapter are from the required text unless noted
-    otherwise.
+  - *Preface* pp. ix–xxv (physical copy) or
+    [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)
 
 Samples
 
   - [Calibration report](../resources/readings/calibration-report.pdf)
 
-For class
-discussion
+For class discussion
 
-<!-- ## projects  -->
+<!-- ## project assignments -->
 
 <!-- - [Schedule of projects](cm002a_deadlines.md)  -->
 
-<!-- Project 1 -->
+<!-- old Project 1 -->
 
 <!-- - [Overview](cm004_project-1_overview.md)  -->
 
@@ -69,7 +61,10 @@ discussion
 
 <!-- - [Wrap-up](cm049_project-1_wrapup.md)  -->
 
-<!-- Project 2 -->
+## project 1
+
+  - [Project 1 getting
+started](cm7101_project-1_start.md)
 
 <!-- - [Initialize](cm019_project-2_start.md)  -->
 
@@ -77,7 +72,7 @@ discussion
 
 <!-- - [Wrap-up](cm040_project-2_wrapup.md)  -->
 
-<!-- Project 3 -->
+## project 2
 
 <!-- - [Abstracts](cm031_project-3-descriptions.md)  -->
 

@@ -1,8 +1,8 @@
 
 # reproducible research
 
-A course for the R novice by Richard Layton at Rose-Hulman Institute of
-Technology.
+ME497 / ME597 Reproducible Research. An introductory course for the R
+novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [About the course](cm/cm000_about-the-course.md)  
   - [Course index](cm/README.md)
@@ -17,23 +17,15 @@ Technology.
 
   - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
     study, policies, and procedures
-  - Required text: Garrett Grolemund and Hadley Wickham (2017) *R for
-    Data Science*, O’Reilly Media [free e-copy
-    online](http://r4ds.had.co.nz/)  
-  - Optional reference text: Christopher Gandrud (2015) [*Reproducible
-    Research with R and
-    RStudio 2/e*](https://github.com/christophergandrud/Rep-Res-Book),
-    CRC Press, Taylor and Francis Group: Boca Raton, FL  
   - [Getting help](cm/cm002b_getting-help.md)
 
-*Reading assigment*
+*Reading assigments*
 
-  - [Ch. 1 Introduction](http://r4ds.had.co.nz/introduction.html)
-    Readings labeled by chapter are from the required text unless noted
-    otherwise.
+  - *Preface* pp. ix–xxv (physical copy) or
+    [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)  
   - [Calibration report](resources/readings/calibration-report.pdf)
 
-*Software assignment*
+*Software getting started*
 
   - [Install R and
     RStudio](https://github.com/DSR-RHIT/install-R-and-RStudio). If you
@@ -48,10 +40,13 @@ Technology.
 
   - [Course introduction](slides/slides001_introduction.pdf) \[slides
     001\]
-  - [Software overview](slides/slides002_software.pdf) \[slides
-002\]
+  - [Software overview](slides/slides002_software.pdf) \[slides 002\]
 
 ## week 1
+
+*Project assignments*
+
+  - [Project 1 getting started](cm/cm7101_project-1_start.md)
 
 ## week 2
 
@@ -70,6 +65,29 @@ Technology.
 ## week 9
 
 ## week 10
+
+*Course management*
+
+*Reading assigments*
+
+*File management*
+
+*Data*
+
+*Analysis*
+
+*Graphs*
+
+*Tutorials*
+
+*Project assignments*
+
+*Reporting*
+
+*Lecture
+slides*
+
+<!-- ## week 1 -->
 
 <!-- Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).   -->
 
