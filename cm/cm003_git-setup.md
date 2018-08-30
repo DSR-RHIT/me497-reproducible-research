@@ -16,10 +16,8 @@ of weeks, using Git and GitHub will become second nature.
 ## setup git and github
 
 [Jenny Bryan](https://github.com/jennybc) provided these instructions
-for a workshop I attended last June. She estimates that the setup work
-will take you 1–2 hours.
-
-Follow the instructions slowly and deliberately.
+for a workshop I attended. She estimates that the setup work will take
+you 1–2 hours. Follow the instructions slowly and deliberately.
 
 There are a few instructions that ask you to type commands in the
 “shell”. To access the shell, open RStudio and use the pulldown menu
