@@ -106,7 +106,7 @@ More accountability is needed because of
 {%% slide -------------------------------------------
 \renewcommand\foottext{Thomas Herdon, Michael Ash, \& Robert Pollin, \href{http://www.peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf}{Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff}, Political Economy Research Institute, U Mass Amherst, 2013.}
 
-\begin{frame}[c]{Reproduction showed their primary findings were false}
+\begin{frame}[c]{Reproduction revealed that their primary findings were false}
 
 \begin{columns}[c]
 \column{0.6\textwidth}
@@ -132,7 +132,7 @@ Results were used to justify austerity policies, but the major effect disappeare
 \renewcommand\foottext{Jason deBruyn, \href{http://www.bizjournals.com/triangle/news/2015/01/23/trial-involving-disgraced-scientist-and-bunk-duke.html}{Trial involving disgraced scientist and bunk Duke research}, {\em Triangle Business Journal}, 2015-01-23. \newline
 Ivan Oransky, \href{https://retractionwatch.com/2015/11/07/its-official-anil-potti-faked-data-say-feds/}{It's official: Anil Potti faked cancer research data, say Feds}, {\em Retraction Watch}, 2015-11-07.}
 
-\begin{frame}[c]{Reproduction showed he falsified data}
+\begin{frame}[c]{Reproduction revealed that he falsified data}
 
 \begin{columns}[c]
 \column{0.6\textwidth}
@@ -141,10 +141,9 @@ To obtain the results he wanted, he altered data in several ways. To date (2018)
 \bigskip
 
 \begin{itemize}
-	\item clinical trials (real patients) terminated
-	\item 11 cases of malpractice settled
-	\item 18 journal articles retracted
-	\item NIH requires Duke obtain preapproval for funding changes
+	\item clinical trials (real patients) terminated and 11 malpractice suits    settled
+	\item 18 research journal articles retracted
+	\item Duke University must now obtain preapproval from NIH for funding changes
 \end{itemize}
 
 \column{0.4\textwidth}
@@ -159,7 +158,7 @@ To obtain the results he wanted, he altered data in several ways. To date (2018)
 Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. \newline
 Jeff Leek, \href{http://simplystatistics.org}{De-weaponizing reproducibility}, 2015-03-13. }
 
-\begin{frame}[c]{Reproduction is also used to {\em discredit scientists}}
+\begin{frame}[c]{Reproduction, however, is also used to {\em discredit scientists}}
 
 \vspace{-1\baselineskip}
 \begin{columns}[c]
@@ -181,6 +180,29 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 \end{columns}
 \end{frame}
 }%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[c]{Our focus is on explicitly linking the report, paper, or talk to the data and scripts that generate the findings}
+
+\begin{columns}[c]
+\column{0.5\textwidth}
+\includegraphics[width = 1\textwidth]{rr-flow-2.png}
+{\small R Markdown (.Rmd) files are the central link}
+\column{0.5\textwidth}
+Changes are automatically updated and embedded in the output document.
+
+\bigskip
+Cut and paste no more!
+\end{columns}
+\end{frame}
+}%%
+
+
 
 
 {%% slide -------------------------------------------
@@ -276,24 +298,25 @@ Jenny Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, Tracy Teal, and Greg
 
 
 
-
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-
-\begin{frame}[c]{Our focus is on explicitly linking the report, paper, or talk to the data and scripts that generate the findings}
+\begin{frame}[c]{Consider a sample report}
 
 \begin{columns}[c]
-\column{0.5\textwidth}
-\includegraphics[width = 1\textwidth]{rr-flow-2.png}
-{\small R Markdown (.Rmd) files are the central link}
-\column{0.5\textwidth}
-Changes are automatically updated and embedded in the output document.
+\column{0.55\textwidth}
+\begin{itemize}
+	\item Imagine that you were the author of the ``Load cell calibration report''
+	\item Mystery question: {\color{myviolet}Identify as many ``manual operations'' as possible.}
+\end{itemize}
 
-\bigskip
-Cut and paste no more!
+\column{0.45\textwidth}
+\vspace{-1\baselineskip}
+\includegraphics[width = 1\textwidth]{calibr-report-first-page.png}
+
 \end{columns}
 \end{frame}
 }%%
+
 
 
 
@@ -315,24 +338,7 @@ Cut and paste no more!
 \end{frame}
 }%%
 
-{%% slide -------------------------------------------
-\renewcommand\foottext{}
-\begin{frame}[c]{Consider a sample report}
 
-\begin{columns}[c]
-\column{0.55\textwidth}
-\begin{itemize}
-	\item Imagine that you were the author of the ``Load cell calibration report''
-	\item Mystery question: {\color{myviolet}Identify as many ``manual operations'' as possible.}
-\end{itemize}
-
-\column{0.45\textwidth}
-\vspace{-1\baselineskip}
-\includegraphics[width = 1\textwidth]{calibr-report-first-page.png}
-
-\end{columns}
-\end{frame}
-}%%
 
 
 
