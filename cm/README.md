@@ -14,7 +14,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [Calendar](cm0002_calendar.md) for an outline of our agendas and due
     dates  
-  - [Syllabus](cm003_syllabus.md) for the outline of the course of
+  - [Syllabus](cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm0004_getting-help.md)
   - [Course introduction](../slides/slides001_introduction.pdf) \[slides

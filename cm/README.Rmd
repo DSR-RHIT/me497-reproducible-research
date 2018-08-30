@@ -14,7 +14,7 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 ## course management
 
 - [Calendar](cm0002_calendar.md) for an outline of our agendas and due dates  
-- [Syllabus](cm003_syllabus.md) for the outline of the course of study, policies,  and procedures  
+- [Syllabus](cm0003_syllabus.md) for the outline of the course of study, policies,  and procedures  
 - [Getting help ](cm0004_getting-help.md) 
 - [Course introduction](../slides/slides001_introduction.pdf) [slides 001] 
 
