@@ -32,8 +32,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
   - [Install R and RStudio](cm/cm0010_install-R-RStudio.md). If you
     already use R and RStudio, please update R, RStudio, and packages to
     the most recent versions.
-  - [Set up an R
-    Project](https://github.com/DSR-RHIT/install-R-and-RStudio)  
+  - [Set up an R Project](cm/cm0011_setup-R-project.md)  
   - Install the [tidyverse](https://www.tidyverse.org)  
   - [Setup Git and GitHub](cm/cm003_git-setup.md)
 
