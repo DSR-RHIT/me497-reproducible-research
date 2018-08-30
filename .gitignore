@@ -20,7 +20,6 @@ holding
 */*.tex
 *.toc
 */*.toc
-*.toc
 *concordance*
 */*concordance*
 *.snm
