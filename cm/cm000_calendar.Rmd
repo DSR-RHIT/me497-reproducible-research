@@ -1,0 +1,29 @@
+---
+output: html_document
+--- 
+
+
+```{r echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(readxl)
+```
+
+## calendar 
+
+```{r}
+calendar <- read_excel("manage/calendar.xlsx")
+calendar[is.na(calendar)] <- ""
+kable(calendar)
+```
+
+
+
+
+
+
+

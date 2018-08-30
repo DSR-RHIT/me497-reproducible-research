@@ -15,6 +15,8 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Course management*
 
+  - [Calendar](cm/cm000_calendar.md) for an outline of our agendas and
+    due dates
   - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
     study, policies, and procedures
   - [Getting help](cm/cm002b_getting-help.md)

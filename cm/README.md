@@ -12,7 +12,9 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## course management
 
-  - [Syllabus](cm/cm001_syllabus.md) for the outline of the course of
+  - [Calendar](cm000_calendar.md) for an outline of our agendas and due
+    dates  
+  - [Syllabus](cm001_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm002b_getting-help.md)
   - [Course introduction](../slides/slides001_introduction.pdf) \[slides
