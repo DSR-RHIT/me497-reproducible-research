@@ -29,6 +29,13 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 - R Markdown: text pp. 423--426 or online [27.1 &  27.2](http://r4ds.had.co.nz/r-markdown.html)
 
 
+*Tips*
+
+- If you Google for help, set the Tools > Anytime > Past year to obtain recent advice and avoid advice that is out of date 
+- When installing R and RStudio for the first time, make sure you login as an administrator (localmgr on Windows)  
+- Follow the instructions slowly and deliberately 
+
+
 
 <!-- *Reading assigments* -->
 

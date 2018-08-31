@@ -43,7 +43,7 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 - [Calibration report](../resources/readings/calibration-report.pdf) 
 
-*For class discussion *
+*For class discussion*
 
 
 

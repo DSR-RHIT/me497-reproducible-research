@@ -46,7 +46,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [Calibration report](../resources/readings/calibration-report.pdf)
 
-*For class discussion *
+*For class discussion*
 
 <!-- ## project assignments -->
 
