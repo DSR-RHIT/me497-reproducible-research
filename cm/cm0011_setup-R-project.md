@@ -25,9 +25,9 @@ For 597 students, I suggest:
 Each subfolder will become a separate R project. To create an R project
 for `practice_work`
 
-  - Open RStudio. File menu \> New Project \> Existing Directory. Use
+  - Open RStudio. *File menu \> New Project \> Existing Directory*. Use
     the Browse button to find the `practice_work` folder you just
-    created, then Select \> Create Project.
+    created, then *Select \> Create Project*.
   - In the future, repeat the steps to create R projects for each of
     your reproducibility projects.
   - In practice, you would create an R project for any specific piece of
@@ -47,18 +47,16 @@ for `practice_work`
 
 ## create top level library for packages
 
-Packages are like “apps” for R.
+Packages are like “apps” for R. If we store packages in a directory
+separate from the base R installation, then when you update the R
+version you are using, you don’t have to reinstall every package, saving
+a lot of time.
 
 At the top level of your drive, create a new directory named “R”. In
 that directory create a new folder named “library”, for example,
 
   - Windows: `C:/R/library`
   - Linux: `~/R/library`
-
-The purpose of creating this directory is to provide a home for R
-packages independent of the base R installation. Then when you update
-the R version you are using, you don’t have to reinstall every package,
-saving a lot of time.
 
 ## the *.Renviron* file
 
@@ -79,6 +77,12 @@ In this file, write one line of text,
 
 Whenever you create a new RStudio Project, paste a copy of the
 *.Renviron* file in the project root directory.
+
+At this point, your `practice_work` directory should include:
+
+    practice_work
+        |-- practice_work.Rproj
+        `-- .Renviron
 
 ## test it
 
