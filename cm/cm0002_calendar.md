@@ -5,7 +5,7 @@
 | :---- | :-- | :------------------------------------ | :------------------------------------------------- | :---------------------------------------------- |
 | 0     | R   | Introduction to reproducible research | [Install R & RStudio](cm0010_install-R-RStudio.md) |                                                 |
 |       | F   | Framework of a reproducible report    | [Setup an R project](cm0011_setup-R-project.md)    | [Proposal meeting](cm7301_project-3_start.md)   |
-|       |     |                                       | [Install Git & set up GitHub](cm0012_setup-git.md) |                                                 |
+|       |     |                                       | [Setup Git & GitHub](cm0012_setup-git.md)          |                                                 |
 | 1     | M   |                                       | [Start Project 1](cm7101_project-1_start.md)       |                                                 |
 |       | T   |                                       |                                                    |                                                 |
 |       | R   |                                       |                                                    |                                                 |
