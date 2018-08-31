@@ -35,17 +35,18 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## reading assignments
 
-Text chapters
+*Text*
 
-  - *Preface* pp. ix–xxv (physical copy) or
-    [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)
-  - [R Markdown 27.1, 27.2](http://r4ds.had.co.nz/r-markdown.html)
+  - Preface: text pp. ix–xxv, or online
+    [1.1–1.8](http://r4ds.had.co.nz/introduction.html)
+  - R Markdown: text pp. 423–426 or online [27.1
+    & 27.2](http://r4ds.had.co.nz/r-markdown.html)
 
-Samples
+*Samples*
 
   - [Calibration report](../resources/readings/calibration-report.pdf)
 
-For class discussion
+*For class discussion *
 
 <!-- ## project assignments -->
 

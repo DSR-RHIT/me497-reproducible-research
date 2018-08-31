@@ -20,8 +20,16 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
   - [Course introduction](slides/slides001_introduction.pdf) \[slides
     001\]
   - [Framework for reproducible reports](slides/slides002_framework.pdf)
-    \[slides
-002\]
+    \[slides 002\]
+
+*Reading*
+
+  - [Calibration report](resources/readings/calibration-report.pdf) in
+    class
+  - Preface: text pp. ix–xxv, or online
+    [1.1–1.8](http://r4ds.had.co.nz/introduction.html)
+  - R Markdown: text pp. 423–426 or online [27.1
+    & 27.2](http://r4ds.had.co.nz/r-markdown.html)
 
 <!-- *Reading assigments* -->
 
