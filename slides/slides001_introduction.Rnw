@@ -11,14 +11,14 @@
 \begin{document}
 
 {%% title slide -------------------------------------------
-\renewcommand\foottext{Roger Peng (2011) Reproducible research in computational science. {\em Science} {\bf 334}(6060), 1226--1227.}
+\renewcommand\foottext{Image from Roger Peng (2011) Reproducible research in computational science. {\em Science} {\bf 334}(6060), 1226--1227.}
 \begin{frame}[c]{}
 
 \bigskip
 {\Large\color{myviolet}\talktitle}
 
-\bigskip
-{\color{gray}\talksubtitle}
+\medskip
+{\color{gray}\small\talksubtitle}
 
 \bigskip
 \hspace{2em}
@@ -28,8 +28,7 @@
 {\color{myviolet}\talkauthor}
 
 \bigskip
-{\scriptsize\color{gray} Department of Mechanical Engineering\\
-Rose-Hulman Institute of Technology\\
+{\scriptsize\color{gray} Rose-Hulman Institute of Technology\\
 Fall 2018\\
 }
 \end{frame}

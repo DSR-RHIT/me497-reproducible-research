@@ -32,7 +32,6 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
   - [Set up an R Project](cm0011_setup-R-project.md)  
   - Install the [tidyverse](https://www.tidyverse.org)  
   - [Setup Git and GitHub](cm0012_setup-git.md)
-  - [Software overview](../slides/slides002_software.pdf) \[slides 002\]
 
 ## reading assignments
 
@@ -162,6 +161,10 @@ only
 <!-- - [practiceR: Scatterplot](cm046_scatterplot.md)  -->
 
 ## reporting
+
+  - [Framework for reproducible reports](slides/slides002_framework.pdf)
+    \[slides
+002\]
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 

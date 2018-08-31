@@ -61,17 +61,17 @@ Carlos, CC BY-NC-ND 2.0 (2008) by Anibal de la Torre, \url{https://goo.gl/kTWnIK
 \column{0.33\textwidth}
   \raggedright
   Alice (the author)
-  \includegraphics[height = 1\textwidth]{../resources/images/alice.jpg}
+  \includegraphics[height = 1\textwidth]{alice.jpg}
 
 \column{0.33\textwidth}
   \centering
   The remote repository
-  \includegraphics[height = 1\textwidth]{../resources/images/github-logo.png}
+  \includegraphics[height = 1\textwidth]{/github-logo.png}
 
 \column{0.33\textwidth}
   \raggedleft
   Carlos (the collaborator)
-  \includegraphics[height = 1\textwidth]{../resources/images/carlos.jpg}
+  \includegraphics[height = 1\textwidth]{carlos.jpg}
 
 \end{columns}
 \end{frame}
@@ -95,13 +95,13 @@ Carlos, CC BY-NC-ND 2.0 (2008) by Anibal de la Torre, \url{https://goo.gl/kTWnIK
   \begin{tikzpicture}
 
     \node (alice) {\includegraphics[height = 1\textwidth]%
-    {../resources/images/alice.jpg}};
+    {alice.jpg}};
 
-    \only<2>{\node at (alice.east) [xshift=7mm] {\includegraphics[width=1.5cm]{../resources/images/create-right.png}};}
+    \only<2>{\node at (alice.east) [xshift=7mm] {\includegraphics[width=1.5cm]{create-right.png}};}
 
-    \only<3>{\node at (alice) [xshift=0mm, yshift = -10mm] {\includegraphics[width=1\textwidth]{../resources/images/create-new-local-project.png}};}
+    \only<3>{\node at (alice) [xshift=0mm, yshift = -10mm] {\includegraphics[width=1\textwidth]{create-new-local-project.png}};}
 
-    \only<3>{\node at (alice.east) [xshift=7mm, yshift = -10mm] {\includegraphics[width=1.5cm]{../resources/images/create-left.png}};}
+    \only<3>{\node at (alice.east) [xshift=7mm, yshift = -10mm] {\includegraphics[width=1.5cm]{create-left.png}};}
 
   \end{tikzpicture}
 
@@ -111,9 +111,9 @@ Carlos, CC BY-NC-ND 2.0 (2008) by Anibal de la Torre, \url{https://goo.gl/kTWnIK
   \begin{tikzpicture}
 
     \only<1>{\node (githublogo) {\includegraphics[height = 1\textwidth]%
-    {../resources/images/github-logo.png}};}
+    {github-logo.png}};}
 
-    \only<2-3>{\node at (githublogo) {\includegraphics[height = 0.8\textwidth]{../resources/images/create-new-repo.png}};}
+    \only<2-3>{\node at (githublogo) {\includegraphics[height = 0.8\textwidth]{create-new-repo.png}};}
 
   \end{tikzpicture}
 
@@ -163,13 +163,13 @@ Alice (the author)
 
 \begin{tikzpicture}
 
-\node (img1) {\includegraphics[height = 1\textwidth]{../resources/images/alice.jpg}};
+\node (img1) {\includegraphics[height = 1\textwidth]{alice.jpg}};
 
-\only<2>{\node (img1b) at (img1.east) [xshift=5mm] {\includegraphics[width=1.5cm]{../resources/images/create-right.png}};}
+\only<2>{\node (img1b) at (img1.east) [xshift=5mm] {\includegraphics[width=1.5cm]{create-right.png}};}
 
-\only<3>{\node (img1b) at (img1.east) [xshift=5mm] {\includegraphics[width=1.5cm]{../resources/images/create-left.png}};}
+\only<3>{\node (img1b) at (img1.east) [xshift=5mm] {\includegraphics[width=1.5cm]{create-left.png}};}
 
-% \only<3>{\node (img1)  [xshift=0mm, yshift = -20mm] {\includegraphics[width=3.5cm]{../resources/images/stage-commit.png}};}
+% \only<3>{\node (img1)  [xshift=0mm, yshift = -20mm] {\includegraphics[width=3.5cm]{stage-commit.png}};}
 
 \end{tikzpicture}
 
@@ -201,11 +201,11 @@ Alice (the author)
 
 \begin{tikzpicture}
 
-\node (img1) {\includegraphics[height = 1\textwidth]{../resources/images/alice.jpg}};
+\node (img1) {\includegraphics[height = 1\textwidth]{alice.jpg}};
 
-\only<2>{\node (img1b) at (img1.east) [xshift=7mm] {\includegraphics[width=1.5cm]{../resources/images/create-right.png}};}
+\only<2>{\node (img1b) at (img1.east) [xshift=7mm] {\includegraphics[width=1.5cm]{create-right.png}};}
 
-\only<3>{\node (img1)  [xshift=0mm, yshift = -20mm] {\includegraphics[width=3.5cm]{../resources/images/stage-commit.png}};}
+\only<3>{\node (img1)  [xshift=0mm, yshift = -20mm] {\includegraphics[width=3.5cm]{stage-commit.png}};}
 
 
 
@@ -216,7 +216,7 @@ Alice (the author)
 GitHub (remote repo)
 
 \begin{tikzpicture}
-\node (img2) {\includegraphics[height = 1\textwidth]{../resources/images/sample-project.png}};
+\node (img2) {\includegraphics[height = 1\textwidth]{sample-project.png}};
 \end{tikzpicture}
 
 \column{0.33\textwidth}
@@ -224,7 +224,7 @@ GitHub (remote repo)
 Carlos (the collaborator)
 
 \begin{tikzpicture}
-\node (img3) {\includegraphics[height = 1\textwidth]{../resources/images/carlos.jpg}};
+\node (img3) {\includegraphics[height = 1\textwidth]{carlos.jpg}};
 \end{tikzpicture}
 
 

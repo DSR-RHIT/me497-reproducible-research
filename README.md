@@ -41,7 +41,8 @@ help](cm/cm0004_getting-help.md)
 
   - [Course introduction](slides/slides001_introduction.pdf) \[slides
     001\]
-  - [Software overview](slides/slides002_software.pdf) \[slides
+  - [Framework for reproducible reports](slides/slides002_framework.pdf)
+    \[slides
 002\]
 
 <!-- *Project assignments* -->
