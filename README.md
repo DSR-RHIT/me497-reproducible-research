@@ -13,13 +13,15 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## week 0
 
-*Course management*
-
   - [Calendar](cm/cm0002_calendar.md) for schedule and assignments  
   - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures
-  - [Getting
-help](cm/cm0004_getting-help.md)
+  - [Getting help](cm/cm0004_getting-help.md)  
+  - [Course introduction](slides/slides001_introduction.pdf) \[slides
+    001\]
+  - [Framework for reproducible reports](slides/slides002_framework.pdf)
+    \[slides
+002\]
 
 <!-- *Reading assigments* -->
 
@@ -37,19 +39,13 @@ help](cm/cm0004_getting-help.md)
 
 <!-- - [Setup Git and GitHub](cm/cm0012_setup-git.md)   -->
 
-*Lecture slides*
-
-  - [Course introduction](slides/slides001_introduction.pdf) \[slides
-    001\]
-  - [Framework for reproducible reports](slides/slides002_framework.pdf)
-    \[slides
-002\]
-
 <!-- *Project assignments* -->
 
 <!-- - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597 students only -->
 
 ## week 1
+
+  - [Calendar](cm/cm0002_calendar.md)
 
 <!-- *Project assignments* -->
 
@@ -57,42 +53,59 @@ help](cm/cm0004_getting-help.md)
 
 ## week 2
 
+  - [Calendar](cm/cm0002_calendar.md)
+
 ## week 3
+
+  - [Calendar](cm/cm0002_calendar.md)
 
 ## week 4
 
+  - [Calendar](cm/cm0002_calendar.md)
+
 ## week 5
+
+  - [Calendar](cm/cm0002_calendar.md)
 
 ## week 6
 
+  - [Calendar](cm/cm0002_calendar.md)
+
 ## week 7
+
+  - [Calendar](cm/cm0002_calendar.md)
 
 ## week 8
 
+  - [Calendar](cm/cm0002_calendar.md)
+
 ## week 9
+
+  - [Calendar](cm/cm0002_calendar.md)
 
 ## week 10
 
-*Course management*
+  - [Calendar](cm/cm0002_calendar.md)
 
-*Reading assigments*
+<!-- *Course management* -->
 
-*File management*
+<!-- *Reading assigments* -->
 
-*Data*
+<!-- *File management* -->
 
-*Analysis*
+<!-- *Data* -->
 
-*Graphs*
+<!-- *Analysis* -->
 
-*Tutorials*
+<!-- *Graphs* -->
 
-*Project assignments*
+<!-- *Tutorials* -->
 
-*Reporting*
+<!-- *Project assignments* -->
 
-*Lecture
-slides*
+<!-- *Reporting* -->
+
+<!-- *Lecture slides* -->
 
 <!-- ## week 1 -->
 
