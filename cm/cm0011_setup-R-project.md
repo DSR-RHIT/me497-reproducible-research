@@ -6,6 +6,8 @@ reproducibility projects (2 projects for ME 497 and 3 projects for ME
 597) plus an additional R project for practice course work and
 tutorials.
 
+## directories
+
 I suggest that you create a course directory (folder) with sub-folders
 as shown:
 
@@ -112,6 +114,12 @@ package "plyr" successfully unpacked and MD5 sums checked
 
 >
 ```
+
+## install the tidyverse
+
+Once you have successfully completed this work, install the
+[tidyverse](https://www.tidyverse.org/) for a set of packages we will
+use regularly.
 
 -----
 

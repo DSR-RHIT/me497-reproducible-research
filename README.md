@@ -15,43 +15,44 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Course management*
 
-  - [Calendar](cm/cm0002_calendar.md) for an outline of our agendas and
-    due dates
+  - [Calendar](cm/cm0002_calendar.md) for schedule and assignments  
   - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures
-  - [Getting help](cm/cm0004_getting-help.md)
+  - [Getting
+help](cm/cm0004_getting-help.md)
 
-*Reading assigments*
+<!-- *Reading assigments* -->
 
-  - *Preface* pp. ix–xxv (physical copy) or
-    [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)  
-  - [Calibration report](resources/readings/calibration-report.pdf)
+<!-- - *Preface* pp. ix--xxv (physical copy) or  [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)           -->
 
-*Software getting started*
+<!-- - [Calibration report](resources/readings/calibration-report.pdf) -->
 
-  - [Install R and RStudio](cm/cm0010_install-R-RStudio.md). If you
-    already use R and RStudio, please update R, RStudio, and packages to
-    the most recent versions.
-  - [Set up an R Project](cm/cm0011_setup-R-project.md)  
-  - Install the [tidyverse](https://www.tidyverse.org)  
-  - [Setup Git and GitHub](cm/cm0012_setup-git.md)
+<!-- *Software getting started*  -->
+
+<!-- - [Install R and RStudio](cm/cm0010_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions.  -->
+
+<!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
+
+<!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
+
+<!-- - [Setup Git and GitHub](cm/cm0012_setup-git.md)   -->
 
 *Lecture slides*
 
   - [Course introduction](slides/slides001_introduction.pdf) \[slides
     001\]
-  - [Software overview](slides/slides002_software.pdf) \[slides 002\]
+  - [Software overview](slides/slides002_software.pdf) \[slides
+002\]
 
-*Project assignments*
+<!-- *Project assignments* -->
 
-  - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597
-    students only
+<!-- - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597 students only -->
 
 ## week 1
 
-*Project assignments*
+<!-- *Project assignments* -->
 
-  - [Project 1 getting started](cm/cm7101_project-1_start.md)
+<!-- - [Project 1 getting started](cm/cm7101_project-1_start.md)  -->
 
 ## week 2
 
