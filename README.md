@@ -64,6 +64,8 @@ deliberately
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 <!-- *Project assignments* -->
 
 <!-- - [Project 1 getting started](cm/cm7101_project-1_start.md)  -->
@@ -72,37 +74,55 @@ deliberately
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 ## week 3
 
   - [Calendar](cm/cm0002_calendar.md)
+
+*Reading*
 
 ## week 4
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 ## week 5
 
   - [Calendar](cm/cm0002_calendar.md)
+
+*Reading*
 
 ## week 6
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 ## week 7
 
   - [Calendar](cm/cm0002_calendar.md)
+
+*Reading*
 
 ## week 8
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 ## week 9
 
   - [Calendar](cm/cm0002_calendar.md)
 
+*Reading*
+
 ## week 10
 
   - [Calendar](cm/cm0002_calendar.md)
+
+*Reading*
 
 <!-- *Course management* -->
 

@@ -65,6 +65,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 ## project 1
 
   - [Project 1 getting started](cm7101_project-1_start.md)
+  - [Set up repo for project 1](cm7102_project-1_initial-repo.md)
 
 <!-- - [Initialize](cm019_project-2_start.md)  -->
 

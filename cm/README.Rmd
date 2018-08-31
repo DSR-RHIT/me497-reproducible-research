@@ -64,6 +64,7 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 ## project 1
 
 - [Project 1 getting started](cm7101_project-1_start.md) 
+- [Set up repo for project 1](cm7102_project-1_initial-repo.md) 
 
 <!-- - [Initialize](cm019_project-2_start.md)  -->
 <!-- - [Collaboration assignment](cm027_project-2_reviewers.md)  -->
