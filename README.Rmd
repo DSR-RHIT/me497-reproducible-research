@@ -38,7 +38,7 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 *Lecture slides*
 
 - [Course introduction](slides/slides001_introduction.pdf) [slides 001] 
-- [Framework for reproducible reports](slides/slides002_framework.pdf) [slides 002] 
+- [Framework for reproducible reports](slides/slides002_framework.pdf) [slides 002]  
 
 <!-- *Project assignments* -->
 
