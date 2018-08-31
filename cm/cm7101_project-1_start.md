@@ -19,8 +19,10 @@ The report has to include these features
   - Includes a graph to display quantitativeresults from the analysis
   - Show “in-line” results in the text of the report
   - Includes equation(s)
-  - Citations and
-references
+  - Citations and references
+
+Bring the reports to class per the
+calendar.
 
 <!-- ## set up a new repo -->
 
