@@ -39,6 +39,7 @@ Text chapters
 
   - *Preface* pp. ix–xxv (physical copy) or
     [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)
+  - [R Markdown 27.1, 27.2](http://r4ds.had.co.nz/r-markdown.html)
 
 Samples
 
