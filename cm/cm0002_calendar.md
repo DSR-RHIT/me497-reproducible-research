@@ -1,7 +1,7 @@
 
 ## calendar
 
-| week  | day | agenda                                     | reading                                                                       | 497 deadlines                                      | 597 deadlines                                                 |
+| week  | day | agenda                                     | reading                                                                       | due                                                | additional 597                                                |
 | :---- | :-- | :----------------------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------- | :------------------------------------------------------------ |
 | 0     | R   | Introduction to reproducible research      |                                                                               | [Install R & RStudio](cm0010_install-R-RStudio.md) |                                                               |
 |       | F   | Overview of creating a reproducible report | Preface pp. ix-xxv or [Introduction](http://r4ds.had.co.nz/introduction.html) | [Setup an R project](cm0011_setup-R-project.md)    | [proposal meeting with instructor](cm7301_project-3_start.md) |
