@@ -26,15 +26,15 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [Calibration report](resources/readings/calibration-report.pdf) in
     class
-  - Preface: text pp. ix–xxv, or online
-    [1.1–1.8](http://r4ds.had.co.nz/introduction.html)
-  - R Markdown: text pp. 423–426 or online [27.1
-    & 27.2](http://r4ds.had.co.nz/r-markdown.html)
+  - Preface, pp. ix–xxv. ([1.1–1.8
+    online](http://r4ds.had.co.nz/introduction.html))
+  - R Markdown, pp. 423–426. ([27.1 & 27.2
+    online](http://r4ds.had.co.nz/r-markdown.html))
 
 *Tips*
 
-  - If you Google for help, set the Tools \> Anytime \> Past year to
-    obtain recent advice and avoid advice that is out of date
+  - If you Google for help, avoid out-of-date advice by setting the
+    Google Tools \> Anytime \> Past year
   - When installing R and RStudio for the first time, make sure you
     login as an administrator (localmgr on Windows)  
   - Follow the instructions slowly and

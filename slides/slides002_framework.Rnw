@@ -527,16 +527,13 @@ output
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile]{Reading}
 
+\begin{frame}[fragile]{Review the course website}
 
-\bigskip
-\href{https://github.com/DSR-RHIT/me497-reproducible-research/blob/master/cm/cm0002_calendar.md}{Course calendar}
-regularly for assignments and due dates
-
-
-\bigskip
-\href{http://r4ds.had.co.nz/r-markdown.html#r-markdown-basics}{27.1 and 27.2} for more on R Markdown
+\begin{itemize}
+	\item Main page for weekly reading assignments
+	\item Calendar page for assignments and deadlines
+\end{itemize}
 
 
 \end{frame}

@@ -37,10 +37,10 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Text*
 
-  - Preface: text pp. ix–xxv, or online
-    [1.1–1.8](http://r4ds.had.co.nz/introduction.html)
-  - R Markdown: text pp. 423–426 or online [27.1
-    & 27.2](http://r4ds.had.co.nz/r-markdown.html)
+  - Preface, pp. ix–xxv. ([1.1–1.8
+    online](http://r4ds.had.co.nz/introduction.html))
+  - R Markdown, pp. 423–426. ([27.1 & 27.2
+    online](http://r4ds.had.co.nz/r-markdown.html))
 
 *Samples*
 
