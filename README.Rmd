@@ -31,13 +31,13 @@ kable(calendar)
 ```
 
 
-## reading
+<!-- ## reading -->
 
-*week 0*
+<!-- *week 0* -->
 
-- [Calibration report](resources/readings/calibration-report.pdf) in class 
-- Preface, pp. ix--xxv.  ([1.1--1.8 online](http://r4ds.had.co.nz/introduction.html)) 
-- R Markdown, pp. 423--426. ([27.1 &  27.2 online](http://r4ds.had.co.nz/r-markdown.html)) 
+<!-- - [Calibration report](resources/readings/calibration-report.pdf) in class  -->
+<!-- - Preface, pp. ix--xxv.  ([1.1--1.8 online](http://r4ds.had.co.nz/introduction.html))  -->
+<!-- - R Markdown, pp. 423--426. ([27.1 &  27.2 online](http://r4ds.had.co.nz/r-markdown.html))  -->
 
 
 
