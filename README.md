@@ -5,24 +5,66 @@ ME497 / ME597 Reproducible Research. An introductory course for the R
 novice by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [About the course](cm/cm0001_about-the-course.md)  
+  - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
+    study, policies, and procedures  
   - [Course index](cm/README.md)
+  - [Getting
+help](cm/cm0004_getting-help.md)
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
 
 ![](resources/images/rr-flow-2.png)
 
-## week 0
+## calendar
 
-  - [Calendar](cm/cm0002_calendar.md) for schedule and assignments  
-  - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
-    study, policies, and procedures
-  - [Getting help](cm/cm0004_getting-help.md)  
-  - [Course introduction](slides/slides001_introduction.pdf) \[slides
-    001\]
-  - [Framework for reproducible reports](slides/slides002_framework.pdf)
-    \[slides 002\]
+| week  | day | agenda                                                                                                                                                                 | exercises                                                                                                                                         | due                                                                                                          | additional 597                                     |
+| :---- | :-- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
+| 0     | R   | [Course introduction](slides/slides001_introduction.pdf)                                                                                                               |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   | [Framework for reproducible reports](slides/slides002_framework.pdf)                                                                                                   |                                                                                                                                                   | [Install R & RStudio](cm/cm0010_install-R-RStudio.md) and [Setup an R project](cm/cm0011_setup-R-project.md) | [Proposal meeting](cm/cm7301_project-3_start.md)   |
+| 1     | M   | Workflow, manage files, naming things                                                                                                                                  |                                                                                                                                                   | [Setup Git & GitHub](cm/cm0012_setup-git.md) and [Start project 1](cm/cm7101_project-1_start.md)             |                                                    |
+|       | T   | Graph basics with ggplot()                                                                                                                                             | [3.2.4](http://r4ds.had.co.nz/data-visualisation.html#exercises), [3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1) (p. 1-12)    | [Setup project 1 repo](cm/cm7102_project-1_initial-repo.md)                                                  |                                                    |
+|       | R   | Graph basics with ggplot()                                                                                                                                             | [3.5.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-2), [3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3) (p. 13-21) |                                                                                                              |                                                    |
+|       | F   | R code basics                                                                                                                                                          | [4.4](http://r4ds.had.co.nz/workflow-basics.html#practice) (p. 37-41)                                                                             | Bring potential project 1 reports to class.                                                                  | [Project 3 proposal](cm/cm7301_project-3_start.md) |
+| 2     | M   | Collaborating via GitHub                                                                                                                                               |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   | Discuss the [week 2](%5BWhat%20does%20research%20reproducibility%20mean?%5D\(resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf\)) reading. Project feedback. |                                                                                                                                                   | [Reading response](resources/readings/reading-response.pdf)                                                  |                                                    |
+|       | R   | Data basics: filter(), arrange()                                                                                                                                       | [5.2.4](http://r4ds.had.co.nz/transform.html#exercises-7), [5.3.1](http://r4ds.had.co.nz/transform.html#exercises-8) (p. 43-51)                   |                                                                                                              |                                                    |
+|       | F   | Data basics: select(), mutate()                                                                                                                                        | [5.4.1](http://r4ds.had.co.nz/transform.html#exercises-9), [5.5.2](http://r4ds.had.co.nz/transform.html#exercises-10), (p. 51-58)                 |                                                                                                              |                                                    |
+| 3     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| 4     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| 5     | M   | Version control: reverting                                                                                                                                             |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   | Project 2 startup                                                                                                                                                      |                                                                                                                                                   | Project 1 report                                                                                             |                                                    |
+|       | R   | Work on your project (I’m at a conference)                                                                                                                             |                                                                                                                                                   | Project 2 startup                                                                                            |                                                    |
+|       | F   | Work on your project (I’m at a conference)                                                                                                                             |                                                                                                                                                   |                                                                                                              |                                                    |
+| 6     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              | Project 3 progress report                          |
+| break | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| break | F   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| 7     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| 8     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   | Project 2 progress report                                                                                    |                                                    |
+| 9     | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+| 10    | M   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | T   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | R   |                                                                                                                                                                        |                                                                                                                                                   |                                                                                                              |                                                    |
+|       | F   |                                                                                                                                                                        |                                                                                                                                                   | Project 2 report                                                                                             | Project 3 report                                   |
 
-*Reading*
+## reading
+
+*week 0*
 
   - [Calibration report](resources/readings/calibration-report.pdf) in
     class
@@ -31,85 +73,65 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
   - R Markdown, pp. 423–426. ([27.1 & 27.2
     online](http://r4ds.had.co.nz/r-markdown.html))
 
-*Tips*
+*week 1*
 
-  - If you Google for help, avoid out-of-date advice by setting the
-    Google Tools \> Anytime \> Past year
-  - When installing R and RStudio for the first time, make sure you
-    login as an administrator (localmgr on Windows)  
-  - Follow the instructions slowly and
-deliberately
+*week 2*
 
-<!-- *Reading assigments* -->
+  - Reading for class discussion: [What does research reproducibility
+    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
 
-<!-- *Software getting started*  -->
+*week 3*
 
-<!-- - [Install R and RStudio](cm/cm0010_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions.  -->
+*week 4*
 
-<!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
+  - Reading for class discussion: [Shining light onto black
+    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)
 
-<!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
+*week 5*
 
-<!-- - [Setup Git and GitHub](cm/cm0012_setup-git.md)   -->
+*week 6*
+
+  - Reading for class discussion: [Ten simple rules for reproducible
+    computational
+    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
+
+*week 7*
+
+*week 8*
+
+  - Reading for class discussion: [Reproducible research can still be
+    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)
+
+*week 9*
+
+*week 10*
+
+  - Reading for class discussion: [Reproducible research: a dissenting
+    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf).
+
+<!-- *Tips* -->
+
+<!-- - If you Google for help, avoid out-of-date advice by setting the Google Tools > Anytime > Past year  -->
+
+<!-- - When installing R and RStudio for the first time, make sure you login as an administrator (localmgr on Windows)   -->
+
+<!-- - Follow the instructions slowly and deliberately  -->
 
 <!-- *Project assignments* -->
 
 <!-- - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597 students only -->
 
-## week 1
-
-  - [Calendar](cm/cm0002_calendar.md)
+<!-- ## week 1 -->
 
 <!-- *Project assignments* -->
 
 <!-- - [Project 1 getting started](cm/cm7101_project-1_start.md)  -->
 
-## week 2
+<!-- ## week 2 -->
 
-  - [Calendar](cm/cm0002_calendar.md)
-  - Reading for class discussion: [What does research reproducibility
-    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
+<!-- ## week 3 -->
 
-## week 3
-
-  - [Calendar](cm/cm0002_calendar.md)
-
-## week 4
-
-  - [Calendar](cm/cm0002_calendar.md)
-  - Reading for class discussion: [Shining light onto black
-    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)
-
-## week 5
-
-  - [Calendar](cm/cm0002_calendar.md)
-
-## week 6
-
-  - [Calendar](cm/cm0002_calendar.md)
-  - Reading for class discussion: [Ten simple rules for reproducible
-    computational
-    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
-
-## week 7
-
-  - [Calendar](cm/cm0002_calendar.md)
-
-## week 8
-
-  - [Calendar](cm/cm0002_calendar.md)
-  - Reading for class discussion: [Reproducible research can still be
-    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)
-
-## week 9
-
-  - [Calendar](cm/cm0002_calendar.md)
-
-## week 10
-
-  - [Calendar](cm/cm0002_calendar.md)
-  - Reading for class discussion: [Reproducible research: a dissenting
-    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf).
+<!-- ## week 4 -->
 
 <!-- *Course management* -->
 

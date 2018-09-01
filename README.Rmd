@@ -2,51 +2,85 @@
 output: github_document
 ---
 
+```{r echo = FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE)
+```
+
 # reproducible research 
 
 ME497 / ME597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
 
 - [About the course](cm/cm0001_about-the-course.md)  
-- [Course index](cm/README.md)  
+- [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies, and procedures  
+- [Course index](cm/README.md) 
+- [Getting help ](cm/cm0004_getting-help.md) 
+
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
 
 ![](resources/images/rr-flow-2.png)
 
-## week 0
+## calendar 
 
-- [Calendar](cm/cm0002_calendar.md) for schedule and assignments  
-- [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies, and procedures 
-- [Getting help ](cm/cm0004_getting-help.md)  
-- [Course introduction](slides/slides001_introduction.pdf) [slides 001] 
-- [Framework for reproducible reports](slides/slides002_framework.pdf) [slides 002]  
+```{r}
+library(readxl)
+calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
+calendar[is.na(calendar)] <- ""
+kable(calendar)
+```
 
 
-*Reading*
+## reading
+
+*week 0*
 
 - [Calibration report](resources/readings/calibration-report.pdf) in class 
-- Preface, pp. ix--xxv.  ([1.1--1.8 online](http://r4ds.had.co.nz/introduction.html))
-- R Markdown, pp. 423--426. ([27.1 &  27.2 online](http://r4ds.had.co.nz/r-markdown.html))
+- Preface, pp. ix--xxv.  ([1.1--1.8 online](http://r4ds.had.co.nz/introduction.html)) 
+- R Markdown, pp. 423--426. ([27.1 &  27.2 online](http://r4ds.had.co.nz/r-markdown.html)) 
+
+*week 1*
+
+*week 2*
+
+- Reading for class discussion: [What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf) 
+
+*week 3*
+
+*week 4*
+
+- Reading for class discussion: [Shining light onto black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
+
+*week 5* 
+
+*week 6*
+
+- Reading for class discussion: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
+
+
+*week 7*
+
+*week 8*
+
+- Reading for class discussion: [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf) 
+
+*week 9*
+
+*week 10*
+
+- Reading for class discussion: [Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf). 
 
 
 
-*Tips*
 
-- If you Google for help, avoid out-of-date advice by setting the Google Tools > Anytime > Past year 
-- When installing R and RStudio for the first time, make sure you login as an administrator (localmgr on Windows)  
-- Follow the instructions slowly and deliberately 
+<!-- *Tips* -->
 
-
-
-<!-- *Reading assigments* -->
+<!-- - If you Google for help, avoid out-of-date advice by setting the Google Tools > Anytime > Past year  -->
+<!-- - When installing R and RStudio for the first time, make sure you login as an administrator (localmgr on Windows)   -->
+<!-- - Follow the instructions slowly and deliberately  -->
 
 
-<!-- *Software getting started*  -->
 
-<!-- - [Install R and RStudio](cm/cm0010_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions.  -->
-<!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
-<!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
-<!-- - [Setup Git and GitHub](cm/cm0012_setup-git.md)   -->
 
 
 
@@ -56,92 +90,18 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 <!-- - [Project 3 getting started](cm/cm7301_project-3_start.md) ME 597 students only -->
 
-## week 1
-
-- [Calendar](cm/cm0002_calendar.md) 
-
-
-
+<!-- ## week 1 -->
 
 
 <!-- *Project assignments* -->
 
 <!-- - [Project 1 getting started](cm/cm7101_project-1_start.md)  -->
 
-## week 2
+<!-- ## week 2 -->
 
-- [Calendar](cm/cm0002_calendar.md) 
-- Reading for class discussion: [What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
+<!-- ## week 3 -->
 
-
-## week 3
-
-- [Calendar](cm/cm0002_calendar.md) 
-
-
-
-## week 4
-
-- [Calendar](cm/cm0002_calendar.md) 
-- Reading for class discussion: [Shining light onto black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf) 
-
-
-
-
-
-## week 5
-
-- [Calendar](cm/cm0002_calendar.md) 
-
-
-
-## week 6
-
-- [Calendar](cm/cm0002_calendar.md) 
-- Reading for class discussion: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
-
-
-
-
-
-
-
-## week 7
-
-- [Calendar](cm/cm0002_calendar.md) 
-
-
-
-## week 8
-
-- [Calendar](cm/cm0002_calendar.md) 
-- Reading for class discussion: [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf) 
-
-
-
-
-
-
-
-
-
-## week 9
-
-- [Calendar](cm/cm0002_calendar.md) 
-
-
-
-## week 10
-
-- [Calendar](cm/cm0002_calendar.md) 
-- Reading for class discussion: [Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf). 
-
-
-
-
-
-
-
+<!-- ## week 4 -->
 
 <!-- *Course management* -->
 
@@ -163,9 +123,6 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 <!-- *Lecture slides* -->
 
-
-
-
 <!-- ## week 1 -->
 
 <!-- Reading: Chapters 2 & 3 and *Having Git ignore files* (p.99).   -->
@@ -184,11 +141,6 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 <!-- - [Start your first script](cm/cm007_project-1_first-script.md)  -->
 <!-- - [Explore the data](cm/cm009_project-1_explore-data.md)  -->
 <!-- - [Tidy the data](cm/cm010_project-1_tidy-data.md)  -->
-
-
-
-
-
 
 <!-- ## week 2 -->
 
