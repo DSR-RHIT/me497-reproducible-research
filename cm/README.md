@@ -240,8 +240,6 @@ Optional reading
     and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)
   - [What computational scientists need to know about intellectual
     property law: A primer](https://osf.io/yi8k2/)
-  - [Reproducible research: a dissenting
-    opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf)
   - [Everybody makes mistakes (from Statistics Done
     Wrong)](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
   - [A guide to enhancing reproducibility in scientific results and

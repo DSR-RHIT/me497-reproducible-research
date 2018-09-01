@@ -39,38 +39,6 @@ kable(calendar)
 - Preface, pp. ix--xxv.  ([1.1--1.8 online](http://r4ds.had.co.nz/introduction.html)) 
 - R Markdown, pp. 423--426. ([27.1 &  27.2 online](http://r4ds.had.co.nz/r-markdown.html)) 
 
-*week 1*
-
-*week 2*
-
-- Reading for class discussion: [What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf) 
-
-*week 3*
-
-*week 4*
-
-- Reading for class discussion: [Shining light onto black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
-
-*week 5* 
-
-*week 6*
-
-- Reading for class discussion: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
-
-
-*week 7*
-
-*week 8*
-
-- Reading for class discussion: [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf) 
-
-*week 9*
-
-*week 10*
-
-- Reading for class discussion: [Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf). 
-
-
 
 
 <!-- *Tips* -->
