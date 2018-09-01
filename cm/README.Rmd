@@ -170,17 +170,34 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 <!-- - [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/)  -->
 <!-- - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf)  -->
 
-<!-- Optional reading  -->
+Reading
 
-<!-- - [A guide to enhancing reproducibility in scientific results and writing](http://ropensci.github.io/reproducibility-guide/)  -->
-<!-- - [Five concrete reasons your students should be learning to analyze data in the reproducible paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/)  -->
-<!-- - [Ten simple rules for reproducible computational research](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)  -->
-<!-- - [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)  -->
-<!-- - [Initial steps towards reproducible research](http://kbroman.org/steps2rr/)  -->
-<!-- - [Disseminating reproducible research is fundamentally a language and communication problem](http://simplystatistics.org/2016/05/13/reproducible-research-language/)  -->
-<!-- - [De-weaponizing reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/)  -->
-<!-- - [The real reason reproducible research is important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)  -->
-<!-- - [Top 10 readings in reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)  -->
+
+1. [What does research reproducibility mean?](../resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
+1. [Shining light onto black boxes](../resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf) 
+1. [Ten simple rules for reproducible computational  research](../resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
+1. [Reproducible research can still be wrong](../resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf) 
+1. [Reproducible research: a dissenting opinion](../resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
+
+
+
+
+
+
+
+Optional reading
+
+- [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
+- [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)
+- [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/) 
+- [Everybody makes mistakes (from Statistics Done Wrong)](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
+- [A guide to enhancing reproducibility in scientific results and writing](http://ropensci.github.io/reproducibility-guide/)
+- [Five concrete reasons your students should be learning to analyze data in the reproducible paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/)
+- [Initial steps towards reproducible research](http://kbroman.org/steps2rr/)
+- [Disseminating reproducible research is fundamentally a language and communication problem](http://simplystatistics.org/2016/05/13/reproducible-research-language/)
+- [De-weaponizing reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/)
+- [The real reason reproducible research is important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
+- [Top 10 readings in reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
 
 
 

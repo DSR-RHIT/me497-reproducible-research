@@ -42,10 +42,6 @@ deliberately
 
 <!-- *Reading assigments* -->
 
-<!-- - *Preface* pp. ix--xxv (physical copy) or  [Introduction](http://r4ds.had.co.nz/introduction.html) (e-copy)           -->
-
-<!-- - [Calibration report](resources/readings/calibration-report.pdf) -->
-
 <!-- *Software getting started*  -->
 
 <!-- - [Install R and RStudio](cm/cm0010_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions.  -->
@@ -64,8 +60,6 @@ deliberately
 
   - [Calendar](cm/cm0002_calendar.md)
 
-*Reading*
-
 <!-- *Project assignments* -->
 
 <!-- - [Project 1 getting started](cm/cm7101_project-1_start.md)  -->
@@ -73,56 +67,49 @@ deliberately
 ## week 2
 
   - [Calendar](cm/cm0002_calendar.md)
-
-*Reading*
+  - Reading for class discussion: [What does research reproducibility
+    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
 
 ## week 3
 
   - [Calendar](cm/cm0002_calendar.md)
 
-*Reading*
-
 ## week 4
 
   - [Calendar](cm/cm0002_calendar.md)
-
-*Reading*
+  - Reading for class discussion: [Shining light onto black
+    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)
 
 ## week 5
 
   - [Calendar](cm/cm0002_calendar.md)
 
-*Reading*
-
 ## week 6
 
   - [Calendar](cm/cm0002_calendar.md)
-
-*Reading*
+  - Reading for class discussion: [Ten simple rules for reproducible
+    computational
+    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
 
 ## week 7
 
   - [Calendar](cm/cm0002_calendar.md)
 
-*Reading*
-
 ## week 8
 
   - [Calendar](cm/cm0002_calendar.md)
-
-*Reading*
+  - Reading for class discussion: [Reproducible research can still be
+    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)
 
 ## week 9
 
   - [Calendar](cm/cm0002_calendar.md)
 
-*Reading*
-
 ## week 10
 
   - [Calendar](cm/cm0002_calendar.md)
-
-*Reading*
+  - Reading for class discussion: [Reproducible research: a dissenting
+    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf).
 
 <!-- *Course management* -->
 
@@ -248,8 +235,6 @@ deliberately
 
 <!-- Reading: Sections 4.1, 4.2, and 4.3     -->
 
-<!-- Reading for class discussion: [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)   -->
-
 <!-- Tutorials  -->
 
 <!-- - [Graph tour overview](cm/cm034_graph-tour-overview.md)   -->
@@ -276,7 +261,7 @@ deliberately
 
 <!-- Reading: Sections 9.1, 9.2.2, and 9.3.1     -->
 
-<!-- Reading for class discussion: [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation) and Hadley Wickham's [Style guide](http://adv-r.had.co.nz/Style.html)   -->
+<!-- Reading for class discussion: [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation) and Hadley Wickham's [Style guide](http://adv-r.had.co.nz/Style.html) -->
 
 <!-- Tutorials  -->
 
@@ -298,8 +283,6 @@ deliberately
 
 <!-- Reading: Sections 10.1.2, 10.2, and 10.4     -->
 
-<!-- Reading for class discussion: [Everybody makes mistakes](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf) -->
-
 <!-- Tutorials  -->
 
 <!-- - [practiceR: Scatterplot](cm/cm046_scatterplot.md)  -->
@@ -312,8 +295,6 @@ deliberately
 
 <!-- Reading: Sections 13.1 and 13.2     -->
 
-<!-- Reading for class discussion: [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/)  -->
-
 <!-- Reporting  -->
 
 <!-- - [practiceR: Numbering tables and figures](cm/cm050_Rmd-to-docx_table-numbers.md)  -->
@@ -324,7 +305,7 @@ deliberately
 
 <!-- ## week 10  -->
 
-<!-- Reading for class discussion: [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf)  -->
+<!-- Reading for class discussion:   -->
 
 <!-- - [Project 3 wrapup](cm/cm052_project-3_wrapup.md)  -->
 

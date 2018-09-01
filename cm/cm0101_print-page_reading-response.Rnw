@@ -1,0 +1,75 @@
+\documentclass[twoside]{tufte-handout}
+\title{Reading response}
+\author{ME447 Visualizing Data}
+\date{R. Layton}
+
+
+% Input LaTeX packages
+% the .Rnw file location is the working directory for LaTeX commands
+\input{../Common/LaTeXPackages}
+
+
+
+%----------------------------------------DESCRIPTION
+\begin{document}
+
+\maketitle
+
+\vspace*{-4\baselineskip}
+\begin{fullwidth}
+\raggedleft
+Name \rule[0pt]{8cm}{0.3pt}\\
+\bigskip
+Week number \rule[0pt]{3cm}{0.3pt}\\
+\bigskip
+CM \rule[0pt]{3cm}{0.3pt}\\
+\end{fullwidth}
+
+
+% \vspace{-1.5\baselineskip}
+% {\raggedright\small
+% %\includegraphics[scale=0.9]{../Common/CourseLogo3a.pdf}\\
+% {\em \normalsize ME447 Visualizing Data} \\
+% R. Layton\\
+% %\includegraphics[scale=0.9]{../Common/CourseLogo3b.pdf}
+% }%
+
+
+\bigskip
+
+\noindent {\em\large Author \& title of article} :  \rule[0pt]{128mm}{0.3pt}
+
+\bigskip
+
+\begin{fullwidth}
+
+\begin{compactitem}
+  \item First reading up to a week before the day of discussion.
+  \item Second reading for understanding. Make time to reflect and respond to the prompts.
+  \item Re-read the abstract or summary (if included) to identify the author's thesis.
+\end{compactitem}
+
+\end{fullwidth}
+
+\subsection{Answer these prompts before class}
+
+\begin{enumerate}
+
+\item Identify one or two of the author's theses. Briefly restate these ideas in your own words.
+
+\vfill
+\vfill
+
+\item Describe the evidence the author presents to support those ideas.
+
+\vfill
+\vfill
+
+\item Explain how the author's argument might be used to support a decision you would make in designing a display.\marginnote[-1\baselineskip]{For example, the argument that experiments have shown that judging position along a common horizontal scale is the most accurate of elementary graphical tasks supports the decision to redesign a pie chart as a dot plot.}
+
+\vfill
+
+
+\end{enumerate}
+
+\end{document}

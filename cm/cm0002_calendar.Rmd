@@ -16,7 +16,7 @@ library(readxl)
 ## calendar 
 
 ```{r}
-calendar <- read_excel("manage/calendar.xlsx")
+calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
 calendar[is.na(calendar)] <- ""
 kable(calendar)
 ```

@@ -1,0 +1,75 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+opts_chunk$set(collapse = TRUE)
+```
+
+# Ch 1 examples and exercises
+
+## examples
+
+Load the tidyverse packages
+
+```{r}
+library(tidyverse)
+```
+
+Examine the `mpg` data set
+
+```{r}
+mpg
+```
+
+First graph
+
+```{r}
+ggplot(data = mpg) +
+	geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+## exercises, p.6 
+
+
+1. Produces an empty graph because no geometric object has been specified. 
+
+```{r}
+ggplot(data = mpg)
+```
+
+2. Rows and columns in `mpg` from the output below 234 rows, 11 columns.  
+
+```{r}
+mpg
+```
+
+3. What does the drv variable describe? Read the help for ?mpg to find out.
+
+- f = front-wheel drive
+- r = rear wheel drive
+- 4 = 4wd
+
+4. Make a scatterplot of hwy vs cyl.
+
+```{r}
+ggplot(data = mpg) +
+	geom_point(mapping = aes(x = cyl, y = hwy))
+```
+
+
+5. What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
+
+```{r}
+ggplot(data = mpg) +
+	geom_point(mapping = aes(x = drv, y = class))
+```
+
+The plot is not particularly useful because class is generally independent of drive type, so no correlation between the two variables is seen. 
+
+
+
+
+
