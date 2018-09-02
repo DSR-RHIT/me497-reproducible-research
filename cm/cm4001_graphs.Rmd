@@ -1,0 +1,81 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo=TRUE)
+opts_chunk$set(collapse=TRUE)
+```
+
+# graphs: gettings started
+
+R for Data Science online [Sections 3.1 and 3.2](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
+
+## section 3.1.1
+
+```{r}
+library(tidyverse)
+```
+
+## section 3.2.1
+
+`mpg` is a data set in the tidyverse.
+
+```{r}
+mpg
+```
+
+
+## section 3.2.2
+
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+## exercises 3.2.4  
+
+Do the exercises on your own for practice with the concepts
+
+## section 3.3
+
+With `class` mapped to the `color` aesthetic. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+```
+
+With `class` mapped to the `size` aesthetic---produces a warning.  
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+
+With `class` mapped to the `alpha` aesthetic---produces a warning. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+```
+
+With `class` mapped to the `shape` aesthetic---produces a warning. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))
+```
+
+Set the aesthetic properties of the geom manually, outside of `aes()`. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+```
+
+## exercises 3.3.1 
+
+Do the exercises on your own for practice with the concepts

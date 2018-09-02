@@ -1,0 +1,113 @@
+---
+output: github_document
+---
+
+# Graphs 1
+
+Richard Layton    
+2018-09-03 
+
+"The goal of the first part of this book is to get you up to speed with the basic tools of data exploration as quickly as possible." 
+
+- text pages 1--12 
+- online [sections 3.1 and 3.2](http://r4ds.had.co.nz/data-visualisation.html#introduction-1) 
+
+```{r setup}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo=TRUE, collapse=TRUE)
+```
+
+## 3.1.1
+
+```{r}
+library(tidyverse)
+```
+
+## 3.2.1
+
+`mpg` is a data set in the tidyverse.
+
+```{r}
+mpg
+```
+
+## 3.2.2
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+## 3.2.4  exercises
+
+Do the exercises on your own for practice with the concepts. In this file, comment on what you see or what the exercise illustrates. 
+
+1. Run ggplot(data = mpg). What do you see?
+
+2. How many rows are in mpg? How many columns?
+
+3. What does the drv variable describe? Read the help for ?mpg to find out.
+
+4. Make a scatterplot of hwy vs cyl.
+
+5. What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
+
+## 3.3
+
+With `class` mapped to the `color` aesthetic. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+```
+
+With `class` mapped to the `size` aesthetic---produces a warning.  
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+
+With `class` mapped to the `alpha` aesthetic---produces a warning. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+```
+
+With `class` mapped to the `shape` aesthetic---produces a warning. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))
+```
+
+Set the aesthetic properties of the geom manually, outside of `aes()`. 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+```
+
+## 3.3.1 exercises
+
+
+Do the exercises on your own for practice with the concepts. In this file, comment on what you see or what the exercise illustrates. 
+
+1. What’s gone wrong with this code? Why are the points not blue?
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+```
+
+2. Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?
+
+3. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
+
+4. What happens if you map the same variable to multiple aesthetics?
+
+5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
+
+6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)?
