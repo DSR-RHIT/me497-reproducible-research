@@ -429,7 +429,45 @@ Prose to explain the conclusions
 
 
 
-
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{Always use paths relative to the .Rproj working directory}
+%
+% % \begin{itemize}
+% % 	\item Launching .Rproj sets its top-level directory as the working directory
+% % 	\item Paths in .R scripts are always relative to the top-level directory of the Rstudio Project
+% %
+% % \end{itemize}
+% %
+% % \includegraphics[scale = 0.5]{r-project-icon.png}
+%
+%
+%
+% \includegraphics[height = 0.4in]{r-project-icon.png}
+% Launching .Rproj sets its top-level directory as the working directory
+%
+%
+%
+% \includegraphics[height = 0.25in]{R-logo.png} Paths in R scripts are always relative to the working dirtectory
+%
+%
+%
+% \includegraphics[height = 0.3in]{rmd-icon.png}  Because our Rmd scripts are one level down from .Rproj, we reset the knitr root directory one level up
+%
+%
+% \begin{columns}
+% \column{0.1\textwidth}
+% \column{0.9\textwidth}
+% \begin{lstlisting}
+% ```{r echo=FALSE}
+% library(knitr)
+% opts_knit$set(root.dir="../")
+% ```
+% \end{lstlisting}
+% \end{columns}
+%
+% \end{frame}
+% }%%
 
 
 
