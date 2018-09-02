@@ -84,10 +84,13 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 ## project 3
 
   - [Project 3 getting started](cm7301_project-3_start.md) ME 597
-    students
-only
+    students only
 
 ## file management
+
+  - [Workflow, managing files, & naming
+    things](../slides/slides011_workflow-files-names.pdf) \[slides
+011\]
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 

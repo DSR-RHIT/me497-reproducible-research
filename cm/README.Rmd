@@ -86,6 +86,8 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 ## file management 
 
+- [Workflow, managing files, & naming things](../slides/slides011_workflow-files-names.pdf) [slides 011] 
+
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 <!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
 <!-- - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md)  -->
