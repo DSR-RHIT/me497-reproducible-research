@@ -10,11 +10,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- ![](../resources/images/rr-flow-2.png)  -->
 
-## analysis
-
-<!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
-
-## course management
+## course mangement
 
   - [Calendar](../README.md) for an outline of our agendas and due
     dates  
@@ -28,7 +24,39 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
 
-## data
+## file management
+
+  - [Workflow, managing files, & naming
+    things](../slides/slides011_workflow-files-names.pdf) \[slides
+    01-1\]
+
+<!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
+
+<!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
+
+<!-- - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md)  -->
+
+<!-- - [Deleting unnecessary files](cm037_unlink-files.md)  -->
+
+<!-- - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md)  -->
+
+<!-- - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md)  -->
+
+<!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
+
+## practice
+
+*Introduction*
+
+  - [Learn R by
+    doing](../practice_work/exercises/8001_practice-work-setup.md) \[Rmd
+    01-1\]
+
+*Analysis*
+
+<!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
+
+*Data*
 
 <!-- - [Review of tools for preparing data](cm022_review-data-prep.md)  -->
 
@@ -64,29 +92,9 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [practiceR: Data joining](cm048_data-joining.md)  -->
 
-## file management
+*Graphs*
 
-  - [Workflow, managing files, & naming
-    things](../slides/slides011_workflow-files-names.pdf) \[slides
-    01-1\]
-
-<!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
-
-<!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
-
-<!-- - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md)  -->
-
-<!-- - [Deleting unnecessary files](cm037_unlink-files.md)  -->
-
-<!-- - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md)  -->
-
-<!-- - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md)  -->
-
-<!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
-
-## graphs
-
-  - [Graph basics 1](../practice_work/exercises/8001_graphs_3-1-3-2.md)
+  - [Graph basics 1](../practice_work/exercises/8002_graphs_3-1-3-2.md)
     (text p. 1-12) \[Rmd
 01-2\]
 
@@ -108,7 +116,29 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [practiceR: Scatterplot](cm046_scatterplot.md)  -->
 
-## project 1
+*Reporting*
+
+  - [Framework for reproducible
+    reports](../slides/slides002_framework.pdf) \[slides
+00-2\]
+
+<!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
+
+<!-- - [When the data change](cm017_project-1_data-change.md)  (Project 1)  -->
+
+<!-- - [Adding references to a report](cm018_project-1_references.md) (Project 1)  -->
+
+<!-- - [Preparing a report for transmittal](cm016_project-1_report-transmittal.md) (Project 1)  -->
+
+<!-- - [Controlling Word styles](cm041_word-styles.md)  -->
+
+<!-- - [Numbering tables and figures](cm050_Rmd-to-docx_table-numbers.md)  -->
+
+<!-- ## reading -->
+
+## projects
+
+*Project 1*
 
   - [Getting started](cm7101_project-1_start.md)
   - [Set up a project repo](cm7102_project-1_initial-repo.md)
@@ -133,7 +163,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [Wrap-up](cm040_project-2_wrapup.md)  -->
 
-## project 2
+*Project 2*
 
 <!-- - [Abstracts](cm031_project-3-descriptions.md)  -->
 
@@ -141,11 +171,11 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
 
-## project 3 (597 only)
+*Project 3 (597 only)*
 
   - [Getting started](cm7301_project-3_start.md)
 
-## reading assignments
+## reading
 
 *For class discussion*
 
@@ -174,26 +204,6 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
     & 3.2
     online](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
 
-## reporting
-
-  - [Framework for reproducible
-    reports](../slides/slides002_framework.pdf) \[slides
-00-2\]
-
-<!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
-
-<!-- - [When the data change](cm017_project-1_data-change.md)  (Project 1)  -->
-
-<!-- - [Adding references to a report](cm018_project-1_references.md) (Project 1)  -->
-
-<!-- - [Preparing a report for transmittal](cm016_project-1_report-transmittal.md) (Project 1)  -->
-
-<!-- - [Controlling Word styles](cm041_word-styles.md)  -->
-
-<!-- - [Numbering tables and figures](cm050_Rmd-to-docx_table-numbers.md)  -->
-
-<!-- ## reading -->
-
 <!-- Gandrud C (2015) *Reproducible Research with R and RStudio*, CRC Press.  -->
 
 <!-- - Chapter 1  -->
@@ -215,20 +225,6 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 <!-- - Section 11.2  -->
 
 <!-- - Sections 13.1 and 13.2  -->
-
-<!-- Readings for class discussion  -->
-
-<!-- - [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)  -->
-
-<!-- - [Naming things](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html#1) (a slide presentation)     -->
-
-<!-- - [Style guide](http://adv-r.had.co.nz/Style.html) (by Hadley Wickham)  -->
-
-<!-- - [Everybody makes mistakes](../resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)  -->
-
-<!-- - [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/)  -->
-
-<!-- - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf)  -->
 
 ## software
 

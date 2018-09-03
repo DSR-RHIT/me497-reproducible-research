@@ -2,7 +2,7 @@
 
 % used by title slide and PDF settings
 \newcommand{\talktitle}   {The framework for a reproducible report}
-\newcommand{\talksubtitle}{ME 497 / ME 597 Reproducible Research}
+\newcommand{\talksubtitle}{497 / 597 Reproducible Research}
 \newcommand{\talkauthor}  {Richard Layton}
 
 \input{slides000_preamble.tex}
@@ -530,9 +530,14 @@ output
 
 \begin{frame}[fragile]{Review the course website}
 
+Calendar for assignments and due dates
+
+\medskip
 \begin{itemize}
-	\item Main page for weekly reading assignments
-	\item Calendar page for assignments and deadlines
+	\item projects
+	\item practice work
+	\item readings in the text
+	\item articles for class discussion
 \end{itemize}
 
 
