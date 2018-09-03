@@ -11,10 +11,10 @@ opts_chunk$set(echo = FALSE)
 
 ME497 / ME597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
 
-- [About the course](cm/cm0001_about-the-course.md)  
-- [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies, and procedures  
-- [Course index](cm/README.md) 
-- [Getting help ](cm/cm0004_getting-help.md) 
+- [About the course](cm/cm0001_about-the-course.md) for a quick introduction 
+- [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies, and procedures  
+- [Course index](cm/README.md) for class content organized by topic 
+- [Getting help ](cm/cm0004_getting-help.md) for links I've found useful 
 
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
@@ -23,10 +23,16 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 ## calendar 
 
-```{r}
+```{r include=FALSE}
+library(tidyverse)
 library(readxl)
 calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
 calendar[is.na(calendar)] <- ""
+calendar <- calendar %>%
+	select(1:6)
+```
+
+```{r}
 kable(calendar)
 ```
 

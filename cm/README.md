@@ -8,103 +8,25 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
   - [Main page](../README.md) to search course material organized
     chronologically
 
-![](../resources/images/rr-flow-2.png)
+<!-- ![](../resources/images/rr-flow-2.png)  -->
+
+## analysis
+
+<!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
 
 ## course management
 
-  - [Calendar](cm0002_calendar.md) for an outline of our agendas and due
+  - [Calendar](../README.md) for an outline of our agendas and due
     dates  
   - [Syllabus](cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm0004_getting-help.md)
   - [Course introduction](../slides/slides001_introduction.pdf) \[slides
-    001\]
+    00-1\]
 
 <!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
 
 <!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
-
-## software getting started
-
-  - [Install R and RStudio](cm0010_install-R-RStudio.md). If you already
-    use R and RStudio, please update R, RStudio, and packages to the
-    most recent versions.
-  - [Set up an R Project](cm0011_setup-R-project.md)  
-  - Install the [tidyverse](https://www.tidyverse.org)  
-  - [Setup Git and GitHub](cm0012_setup-git.md)
-
-## reading assignments
-
-*Text*
-
-  - Preface, pp. ix–xxv. ([1.1–1.8
-    online](http://r4ds.had.co.nz/introduction.html))
-  - R Markdown, pp. 423–426. ([27.1 & 27.2
-    online](http://r4ds.had.co.nz/r-markdown.html))
-
-*Samples*
-
-  - [Calibration report](../resources/readings/calibration-report.pdf)
-
-*For class discussion*
-
-<!-- ## project assignments -->
-
-<!-- - [Schedule of projects](cm002a_deadlines.md)  -->
-
-<!-- old Project 1 -->
-
-<!-- - [Overview](cm004_project-1_overview.md)  -->
-
-<!-- - [Initialize](cm005_project-1_initialize.md)  -->
-
-<!-- - [Start your first script](cm007_project-1_first-script.md)  -->
-
-<!-- - [Wrap-up](cm049_project-1_wrapup.md)  -->
-
-## project 1
-
-  - [Project 1 getting started](cm7101_project-1_start.md)
-  - [Set up repo for project 1](cm7102_project-1_initial-repo.md)
-
-<!-- - [Initialize](cm019_project-2_start.md)  -->
-
-<!-- - [Collaboration assignment](cm027_project-2_reviewers.md)  -->
-
-<!-- - [Wrap-up](cm040_project-2_wrapup.md)  -->
-
-## project 2
-
-<!-- - [Abstracts](cm031_project-3-descriptions.md)  -->
-
-<!-- - [Getting started](cm037_project-3_collabs.md)  -->
-
-<!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
-
-## project 3
-
-  - [Project 3 getting started](cm7301_project-3_start.md) ME 597
-    students only
-
-## file management
-
-  - [Workflow, managing files, & naming
-    things](../slides/slides011_workflow-files-names.pdf) \[slides
-011\]
-
-<!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
-
-<!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
-
-<!-- - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md)  -->
-
-<!-- - [Deleting unnecessary files](cm037_unlink-files.md)  -->
-
-<!-- - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md)  -->
-
-<!-- - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md)  -->
-
-<!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
 
 ## data
 
@@ -142,11 +64,31 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [practiceR: Data joining](cm048_data-joining.md)  -->
 
-## analysis
+## file management
 
-<!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
+  - [Workflow, managing files, & naming
+    things](../slides/slides011_workflow-files-names.pdf) \[slides
+    01-1\]
+
+<!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
+
+<!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
+
+<!-- - [GitHub: Managing changes and conflicts](cm030_change-conflict-revert.md)  -->
+
+<!-- - [Deleting unnecessary files](cm037_unlink-files.md)  -->
+
+<!-- - [Fixing the .Rproj won't launch problem](cm043_rstudio_Rproj-not-open.md)  -->
+
+<!-- - [Preventable version control conflicts](cm044_preventable-vc-conflicts.md)  -->
+
+<!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
 
 ## graphs
+
+  - [Graph basics 1](../practice_work/exercises/8001_graphs_3-1-3-2.md)
+    (text p. 1-12) \[Rmd
+01-2\]
 
 <!-- - [Visually check the data](cm011_project-1_graph-first-look.md) (Project 1)  -->
 
@@ -166,11 +108,77 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [practiceR: Scatterplot](cm046_scatterplot.md)  -->
 
+## project 1
+
+  - [Getting started](cm7101_project-1_start.md)
+  - [Set up a project repo](cm7102_project-1_initial-repo.md)
+
+<!-- ## project assignments -->
+
+<!-- - [Schedule of projects](cm002a_deadlines.md)  -->
+
+<!-- old Project 1 -->
+
+<!-- - [Overview](cm004_project-1_overview.md)  -->
+
+<!-- - [Initialize](cm005_project-1_initialize.md)  -->
+
+<!-- - [Start your first script](cm007_project-1_first-script.md)  -->
+
+<!-- - [Wrap-up](cm049_project-1_wrapup.md)  -->
+
+<!-- - [Initialize](cm019_project-2_start.md)  -->
+
+<!-- - [Collaboration assignment](cm027_project-2_reviewers.md)  -->
+
+<!-- - [Wrap-up](cm040_project-2_wrapup.md)  -->
+
+## project 2
+
+<!-- - [Abstracts](cm031_project-3-descriptions.md)  -->
+
+<!-- - [Getting started](cm037_project-3_collabs.md)  -->
+
+<!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
+
+## project 3 (597 only)
+
+  - [Getting started](cm7301_project-3_start.md)
+
+## reading assignments
+
+*For class discussion*
+
+  - [What does research reproducibility
+    mean?](../resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)  
+  - [Shining light onto black
+    boxes](../resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
+  - [Ten simple rules for reproducible computational
+    research](../resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)  
+  - [Reproducible research can still be
+    wrong](../resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)  
+  - [Reproducible research: a dissenting
+    opinion](../resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
+
+*Samples*
+
+  - [Calibration report](../resources/readings/calibration-report.pdf)
+
+*Text*
+
+  - Preface, pp. ix–xxv / [1.1–1.8
+    online](http://r4ds.had.co.nz/introduction.html)
+  - R Markdown, pp. 423–426 / [27.1 & 27.2
+    online](http://r4ds.had.co.nz/r-markdown.html)
+  - Data visualization: Introduction and first steps, pp. 1–12 / [3.1
+    & 3.2
+    online](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
+
 ## reporting
 
-  - [Framework for reproducible reports](slides/slides002_framework.pdf)
-    \[slides
-002\]
+  - [Framework for reproducible
+    reports](../slides/slides002_framework.pdf) \[slides
+00-2\]
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 
@@ -222,20 +230,16 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [Reproducible research: a dissenting opinion](http://cogprints.org/8675/1/ReproducibleResearch.pdf)  -->
 
-Reading
+## software
 
-1.  [What does research reproducibility
-    mean?](../resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)
-2.  [Shining light onto black
-    boxes](../resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)
-3.  [Ten simple rules for reproducible computational
-    research](../resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)
-4.  [Reproducible research can still be
-    wrong](../resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)
-5.  [Reproducible research: a dissenting
-    opinion](../resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
+  - [Install R and RStudio](cm0010_install-R-RStudio.md). If you already
+    use R and RStudio, please update R, RStudio, and packages to the
+    most recent versions.
+  - [Set up an R Project](cm0011_setup-R-project.md)  
+  - Install the [tidyverse](https://www.tidyverse.org)  
+  - [Setup Git and GitHub](cm0012_setup-git.md)
 
-Optional reading
+## appendix: optional reading
 
   - [Good enough practices for scientific
     computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
@@ -262,13 +266,6 @@ Optional reading
   - [Top 10 readings in
     reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
 
-## about
-
-  - [My data visualization
-    course](https://github.com/DSR-RHIT/me447-visualizing-data)
-  - [My data display blog](http://www.graphdoctor.com)
-  - [My music blog](http://www.richardlaytonmusic.com)
-
 -----
 
-[Main page](../README.md)
+[main page](../README.md)
