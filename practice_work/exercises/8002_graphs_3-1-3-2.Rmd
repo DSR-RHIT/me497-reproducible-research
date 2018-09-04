@@ -45,7 +45,22 @@ Do the exercises on your own for practice with the concepts. In this file, comme
 
 1. Run ggplot(data = mpg). What do you see?
 
+```{r}
+ggplot(data = mpg)
+```
+
+No points, no axis label, no scale, no grid. I see a empty graph space. Because there is no geom specified (geom defines how variables in your dataset are mapped to visual properties). 
+
 2. How many rows are in mpg? How many columns?
+
+```{r}
+mpg
+```
+ 
+From the tibble description  
+
+- 234 rows   
+- 11 columns 
 
 3. What does the drv variable describe? Read the help for ?mpg to find out.
 
@@ -110,4 +125,4 @@ ggplot(data = mpg) +
 
 5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
 
-6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)?
+6. What happens if you map an aesthetic to something other than a variable name, like aes(color = displ < 5)?

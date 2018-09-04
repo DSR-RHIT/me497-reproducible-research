@@ -1,7 +1,7 @@
 \documentclass[12pt, aspectratio = 1610]{beamer}
 
 % used by title slide and PDF settings
-\newcommand{\talktitle}   {Workflow, managing files, and naming things}
+\newcommand{\talktitle}   {Principles for a reproducible workflow}
 \newcommand{\talksubtitle}{497 / 597 Reproducible Research}
 \newcommand{\talkauthor}  {Richard Layton}
 
@@ -31,9 +31,20 @@
 
 
 
+% Plan your directory structure
+% Script everything
+% Link files explicitly
+% Strive for simplicity \& readability
+% Adopt a file naming scheme
+% DRY (don't repeat yourself)
+% Use version control
+
+
+
+
 {%% title slide =====================================================
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{}
+\begin{frame}[fragile, t]{}
 
 \bigskip
 {\Large\color{myviolet}\talktitle}
@@ -44,17 +55,18 @@
 \begin{columns}
 \column{0.008\textwidth}
 
-\column{0.492\textwidth}
-
-{\color{myviolet}\talkauthor}
+\column{0.642\textwidth}
 
 \bigskip
+{\color{myviolet}\talkauthor}
+
+\medskip
 {\scriptsize\color{gray} Rose-Hulman Institute of Technology\\
 Fall 2018\\
 }
 
-\column{0.5\textwidth}
-\includegraphics[width = 1\textwidth]{link-files.png}
+\column{0.35\textwidth}
+\includegraphics[width = 0.8\textwidth]{practice-directory.png}
 
 \end{columns}
 \end{frame}
@@ -67,43 +79,65 @@ Fall 2018\\
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Principles for reproducible research}
+
+\begin{frame}[fragile, c]{Organize for reproducibility from the beginning}
 
 \begin{itemize}
-	\item Organize for reproducibility from the beginning
-
-	\begin{itemize}
-	  \item Adopt a directory naming scheme
-	  \item Adopt a file naming scheme
-  \end{itemize}
-
-
-  	\item Everything you do (convert data files, clean data, analyze data) should be accomplished via code. Point /click /copy /paste are not reproducible.
-	\item Explicitly link files
-
-\lstinline{source(filename)}, \lstinline{save(filename)}, \lstinline{read(filename)}, \lstinline{includegraphics(filename)}
-
-
-	\item Don't repeat yourself (DRY)
-
-	\begin{itemize}
-	  \item create functions if you find yourself copying/pasting code
-	  \item execute a task from one location only
-  \end{itemize}
-
-
-
+	\item Plan your directory structure
+	\item Script everything --- point/click/copy/paste is not reproducible
+	\item Strive for simplicity \& readability
+  \item Link files explicitly
+	\item Adopt a file naming scheme
+	\item DRY (don't repeat yourself)
+  \item Use version control
 \end{itemize}
+
+
 
 \end{frame}
 }%%
 
 
 
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{Principles for reproducible research}
+%
+% \begin{itemize}
+% 	\item Organize for reproducibility from the beginning
+%
+% 	\begin{itemize}
+% 	  \item Adopt a directory naming scheme
+% 	  \item Adopt a file naming scheme
+%   \end{itemize}
+%
+%
+%   	\item Everything you do (convert data files, clean data, analyze data) should be accomplished via code. Point /click /copy /paste are not reproducible.
+% 	\item Explicitly link files
+%
+% \lstinline{source(filename)}, \lstinline{save(filename)}, \lstinline{read(filename)}, \lstinline{includegraphics(filename)}
+%
+%
+% 	\item Don't repeat yourself (DRY)
+%
+% 	\begin{itemize}
+% 	  \item create functions if you find yourself copying/pasting code
+% 	  \item execute a task from one location only
+%   \end{itemize}
+%
+%
+%
+% \end{itemize}
+%
+% \end{frame}
+% }%%
+
+
+
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Organize for reproducibility from the beginning}
+\begin{frame}[fragile, c]{From the beginning --- plan your directory structure}
 
 \bigskip
 \begin{columns}
@@ -128,52 +162,57 @@ Fall 2018\\
 }%%
 
 
-
-
-
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Do everything with a script: data}
 
-\bigskip
-\begin{columns}
-\column{0.67\textwidth}
+\begin{frame}[fragile]{Script everything}
+
+\begin{columns}[T]
+\column{0.65\textwidth}
 \includegraphics[width = 1\textwidth]{workflow-1.png}
 
 \column{0.35\textwidth}
-\vspace*{-2\baselineskip}
+\bigskip
+Use an R script to
+
+\medskip
 \begin{itemize}
-	\item<1-> raw data files
-	\item<1-> read by R scripts
-	\item<1-> produce tidy data saved in results
+	\item read a raw data file
+	\item produce tidy data saved to results
 \end{itemize}
 
-\end{columns}
 
+\bigskip
+Raw data files are stored unaltered.
+
+\end{columns}
 \end{frame}
 }%%
 
 
 
-
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Explicitly link files: start the report}
 
-\bigskip
-\begin{columns}
-\column{0.67\textwidth}
+\begin{frame}[fragile]{Link files explicitly}
+
+\begin{columns}[T]
+\column{0.65\textwidth}
 \includegraphics[width = 1\textwidth]{workflow-2.png}
 
 \column{0.35\textwidth}
-\vspace*{-2\baselineskip}
-\begin{itemize}
-	\item prose that explains the work
-	\item R code chunks to execute the scripts
-	\item import data to create data tables
-\end{itemize}
-\end{columns}
 
+\bigskip
+Start the Rmd script
+
+\medskip
+\begin{itemize}
+  \item write prose to explain the work
+	\item write R code chunks to execute the scripts
+	\item import data from results to create data tables
+\end{itemize}
+
+\end{columns}
 \end{frame}
 }%%
 
@@ -182,23 +221,26 @@ Fall 2018\\
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
 
-\begin{frame}[fragile, c]{Do everything with a script: analysis and graphs}
+\begin{frame}[fragile]{Script everything}
 
-\bigskip
-\begin{columns}
-\column{0.67\textwidth}
+\begin{columns}[T]
+\column{0.65\textwidth}
 \includegraphics[width = 1\textwidth]{workflow-3.png}
 
 \column{0.35\textwidth}
-\vspace*{-2\baselineskip}
+\bigskip
+Use an R script to
+
+\medskip
 \begin{itemize}
-	\item R scripts read tidy data from results
-	\item producing graphs saved in results
-	\item other images stored in resources
+	\item read tidy data from results
+	\item produce a graph saved to results
 \end{itemize}
 
-\end{columns}
+\bigskip
+Non-reproducible images stored in resources
 
+\end{columns}
 \end{frame}
 }%%
 
@@ -208,46 +250,53 @@ Fall 2018\\
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Explicitly link files: continue the report}
 
-\bigskip
-\begin{columns}
-\column{0.67\textwidth}
+\begin{frame}[fragile]{Link files explicitly}
+
+\begin{columns}[T]
+\column{0.65\textwidth}
 \includegraphics[width = 1\textwidth]{workflow-4.png}
 
 \column{0.35\textwidth}
-\vspace*{-2\baselineskip}
+\bigskip
+Continue the report
+
+\medskip
 \begin{itemize}
-	\item prose that explains the work
-	\item R code chunks to execute the scripts
+	\item write prose to explain the work
+	\item write R code chunks to execute the scripts
 	\item import images
 \end{itemize}
-\end{columns}
 
+\end{columns}
 \end{frame}
 }%%
 
 
 
 
+
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{One R Markdown script for each project report}
 
-\bigskip
-\begin{columns}
-\column{0.67\textwidth}
+\begin{frame}[fragile]{Strive for simplicity \& readability}
+
+\begin{columns}[T]
+\column{0.65\textwidth}
 \includegraphics[width = 1\textwidth]{workflow-5.png}
 
 \column{0.35\textwidth}
-\vspace*{-2\baselineskip}
+\bigskip
+One Rmd script for each project milestone
+
+\medskip
 \begin{itemize}
 	\item proposal
 	\item progress report
 	\item final report
 \end{itemize}
-\end{columns}
 
+\end{columns}
 \end{frame}
 }%%
 
@@ -256,8 +305,42 @@ Fall 2018\\
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
+\begin{frame}[fragile, c]{Strive for simplicity \& readability}
 
-\begin{frame}[fragile, c]{By the end of a project, you will have a lot of files! \newline Adopt a file naming scheme at the beginning.}
+\bigskip
+R scripts are generally short, between 60--100 lines, to
+
+\bigskip
+\begin{itemize}
+	\item produce one object written to file, e.g., CSV, PNG
+	\item simplify editing, testing, \& debugging
+	\item improve readability
+\end{itemize}
+
+
+\bigskip
+\includegraphics[width = 1\textwidth]{workflow-7.png}
+
+% \bigskip
+% \begin{tabular}{rcr}
+% \bftt{402\_data-tidy.R} & $\qquad\rightarrow$ creates $\rightarrow\qquad$ & \bftt{402\_data-tidy.rda}\\
+% &&\\
+% \bftt{403\_calibr-graph.R} & $\rightarrow$ creates $\rightarrow$ & \bftt{403\_calibr-graph.png}
+% \end{tabular}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[fragile, c]{From the beginning --- adopt a file naming scheme}
 
 \medskip
 \hspace*{-1.5em}
@@ -271,67 +354,61 @@ Fall 2018\\
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{Example file names for a calibration project}
 
+\begin{frame}[fragile]{From the beginning --- adopt a file naming scheme}
 
-\begin{columns}
+\begin{columns}[T]
 \column{0.5\textwidth}
 
-\bigskip
-Project directory
-
+{\em 000-series} manage
 \begin{lstlisting}
-load-cell-calibration\
-  |-- data\
-  |-- manage\
-  |-- reports\
-  |-- resources\
-  |-- results\
-  |-- scripts\
-  |-- load-cell-calibration.Rproj
-  |-- .Renviron
-  |-- .gitignore
-  `-- README.md
+001_RFP_2018-05-25.pdf
+002_contract_2018-06-05.pdf
+invoice_201801.pdf
+invoice_201802.pdf
 \end{lstlisting}
 
-Sub-directories
-
+\medskip
+{\em 100-series} data
 \begin{lstlisting}
-    data\
-      |-- 001_raw-data_2018-07-25.xlsx
-      `-- 002_raw-data_2018-08-01.xlsx
-
-    resources\
-      `-- 901_load-cell-setup-786x989px.png
+101_raw-data_2018-07-25.xlsx
+102_raw-data_2018-08-01.xlsx
 \end{lstlisting}
+
+\medskip
+{\em 200-series} resources
+\begin{lstlisting}
+201_apparatus_2018-08-12.png
+202_load-cell_2018-08-12.png
+\end{lstlisting}
+
 
 \column{0.5\textwidth}
+
+{\em 300-series} reports
 \begin{lstlisting}
-    reports\
-      |-- 101_proposal_2018-07-05.Rmd
-      |-- 102_progress_2018-08-12.Rmd
-      |-- 103_report_2018-09-03.Rmd
-      |-- 101_proposal_2018-07-05.docx
-      |-- 102_progress_2018-08-12.docx
-      `-- 103_report_2018-09-03.docx
+301_proposal_2018-07-05.Rmd
+302_progress_2018-08-12.Rmd
+303_report_2018-09-03.Rmd
+\end{lstlisting}
 
-    results\
-      |-- 401_data-wide.csv
-      |-- 402_data-tidy.csv
-      |-- 403_graph-draft.png
-      |-- 404_calibr_regression.png
-      `-- 405_calibr_graph.png
+\medskip
+{\em 400-series} scripts
+\begin{lstlisting}
+401_data-wide.R
+402_data-tidy.R
+403_calibr-graph.R
+\end{lstlisting}
 
-    scripts\
-      |-- 401_data-wide.R
-      |-- 402_data-tidy.R
-      |-- 403_graph-draft.R
-      |-- 404_calibr_regression.R
-      `-- 405_calibr_graph.R
+\medskip
+{\em 400-series} also used for results
+\begin{lstlisting}
+401_data-wide.rda
+402_data-tidy.rda
+403_calibr-graph.png
 \end{lstlisting}
 
 \end{columns}
-
 \end{frame}
 }%%
 
@@ -340,89 +417,182 @@ Sub-directories
 
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
-\begin{frame}[fragile, c]{A script does one thing}
 
-\begin{tabular}{rcl}
-one script & produces & one result\\
-&&\\
-\texttt{401\_data-wide.R}  & $\rightarrow$ & \texttt{401\_data-wide.csv}\\
-&&\\
-\texttt{403\_graph-draft.R} & $\rightarrow$ & \texttt{403\_graph-draft.png}
+\begin{frame}[fragile, c]{Use version control}
+
+See the website for instructions
+
+\bigskip
+\begin{tabular}{ >{\raggedleft\arraybackslash} m{1in} m{6in} }
+
+\includegraphics[scale = 0.45]{github-logo.png} &
+\color{gray} obtain a free account for remote, asynchronous collaboration\\
+
+\includegraphics[scale = 0.12]{github-repo.png} &
+\color{gray} create an online repository for each project\\
+
+\includegraphics[scale = 0.45]{r-project-icon.png} &
+\color{gray} link each repo to a local RStudio Project\\
+
+% \includegraphics[scale = 0.35]{R-logo.png} &
+% \color{gray} for data carpentry, analysis, and data graphics\
+
+% \includegraphics[scale = 0.35]{RStudio-Logo-Blue-Gradient.png} &
+% \color{gray} our interface to all the software\\
+%
+% \includegraphics[scale = 0.45]{rmarkdown-logo.png} &
+% \color{gray} for combining your code, its results, and your prose\\
+%
+% \includegraphics[scale = 0.30]{git-logo.png} &
+% \color{gray} for local version control\\
+
 \end{tabular}
 
-\bigskip
-
-\bigskip
-\begin{itemize}
-	\item short, between 60--100 lines
-	\item generally produces one object written to file, e.g., CSV, PNG
-	\item simplifies editing, testing, readability, debugging
-\end{itemize}
-
-
-
-
 \end{frame}
 }%%
 
 
 
+% setup a GitHub account
+% create project 1 repo
+% create project 1 Rproj
+% project 1 directories
+% practice commit push
 
-{%% slide -------------------------------------------
-\renewcommand\foottext{}
-\begin{frame}[fragile, c]{The full workflow is documented by the prose\newline and the R code chunks in the Rmd file}
 
-\begin{columns}[t]
-\column{0.4\textwidth}
-\begin{lstlisting}
----
-output: word_document
----
 
-```{r echo=FALSE}
-library(tidyverse)
-library(knitr)
-```
 
-# Introduction
-Prose to explain the context
-of the report
 
-# Data
-Prose to explain the data
 
-```{r echo=FALSE}
-# create tabulated data
-source("scripts/401_data-wide.R")
-```
-\end{lstlisting}
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{Example file names for a calibration project}
+%
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+%
+% \bigskip
+% Project directory
+%
+% \begin{lstlisting}
+% load-cell-calibration\
+%   |-- data\
+%   |-- manage\
+%   |-- reports\
+%   |-- resources\
+%   |-- results\
+%   |-- scripts\
+%   |-- load-cell-calibration.Rproj
+%   |-- .Renviron
+%   |-- .gitignore
+%   `-- README.md
+% \end{lstlisting}
+%
+% Sub-directories
+%
+% \begin{lstlisting}
+%     data\
+%       |-- 001_raw-data_2018-07-25.xlsx
+%       `-- 002_raw-data_2018-08-01.xlsx
+%
+%     resources\
+%       `-- 901_load-cell-setup-786x989px.png
+% \end{lstlisting}
+%
+% \column{0.5\textwidth}
+% \begin{lstlisting}
+%     reports\
+%       |-- 101_proposal_2018-07-05.Rmd
+%       |-- 102_progress_2018-08-12.Rmd
+%       |-- 103_report_2018-09-03.Rmd
+%       |-- 101_proposal_2018-07-05.docx
+%       |-- 102_progress_2018-08-12.docx
+%       `-- 103_report_2018-09-03.docx
+%
+%     results\
+%       |-- 401_data-wide.csv
+%       |-- 402_data-tidy.csv
+%       |-- 403_graph-draft.png
+%       |-- 404_calibr_regression.png
+%       `-- 405_calibr_graph.png
+%
+%     scripts\
+%       |-- 401_data-wide.R
+%       |-- 402_data-tidy.R
+%       |-- 403_graph-draft.R
+%       |-- 404_calibr_regression.R
+%       `-- 405_calibr_graph.R
+% \end{lstlisting}
+%
+% \end{columns}
+%
+% \end{frame}
+% }%%
+%
+%
+%
+%
 
-\column{0.6\textwidth}
-\begin{lstlisting}
-```{r echo=FALSE}
-# import and print tabulated data
-df <- read_csv("results/401_data-wide.csv")
-kable(df)
-```
-
-# Results
-Prose to explain the results
-
-```{r echo=FALSE}
-# create the graph
-source("scripts/405_calibr_graph.R")
-
-# import the graph
-includegraphics("results/405_calibr_graph.png")
-```
-
-# Conclusion
-Prose to explain the conclusions
-\end{lstlisting}
-\end{columns}
-
-\end{frame}
-}%%
+%
+%
+%
+%
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{The full workflow is documented by the prose\newline and the R code chunks in the Rmd file}
+%
+% \begin{columns}[t]
+% \column{0.4\textwidth}
+% \begin{lstlisting}
+% ---
+% output: word_document
+% ---
+%
+% ```{r echo=FALSE}
+% library(tidyverse)
+% library(knitr)
+% ```
+%
+% # Introduction
+% Prose to explain the context
+% of the report
+%
+% # Data
+% Prose to explain the data
+%
+% ```{r echo=FALSE}
+% # create tabulated data
+% source("scripts/401_data-wide.R")
+% ```
+% \end{lstlisting}
+%
+% \column{0.6\textwidth}
+% \begin{lstlisting}
+% ```{r echo=FALSE}
+% # import and print tabulated data
+% df <- read_csv("results/401_data-wide.csv")
+% kable(df)
+% ```
+%
+% # Results
+% Prose to explain the results
+%
+% ```{r echo=FALSE}
+% # create the graph
+% source("scripts/405_calibr_graph.R")
+%
+% # import the graph
+% includegraphics("results/405_calibr_graph.png")
+% ```
+%
+% # Conclusion
+% Prose to explain the conclusions
+% \end{lstlisting}
+% \end{columns}
+%
+% \end{frame}
+% }%%
 
 
 
