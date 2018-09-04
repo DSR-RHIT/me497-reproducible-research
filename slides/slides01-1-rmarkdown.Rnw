@@ -5,7 +5,7 @@
 \newcommand{\talksubtitle}{497 / 597 Reproducible Research}
 \newcommand{\talkauthor}  {Richard Layton}
 
-\input{slides000_preamble.tex}
+\input{preamble_slides.tex}
 
 
 \begin{document}

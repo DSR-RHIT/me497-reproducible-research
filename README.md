@@ -1,8 +1,8 @@
 
 # reproducible research
 
-ME497 / ME597 Reproducible Research. An introductory course for the R
-novice by Richard Layton at Rose-Hulman Institute of Technology.
+497 / 597 Reproducible Research. An introductory course for the R novice
+by Richard Layton at Rose-Hulman Institute of Technology.
 
   - [About the course](cm/cm0001_about-the-course.md) for a quick
     introduction

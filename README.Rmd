@@ -2,14 +2,16 @@
 output: github_document
 ---
 
-```{r echo = FALSE}
+```{r include=FALSE}
 library(knitr)
 opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(readxl)
 ```
 
 # reproducible research 
 
-ME497 / ME597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
+497 / 597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
 
 - [About the course](cm/cm0001_about-the-course.md) for a quick introduction 
 - [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies, and procedures  
@@ -23,19 +25,13 @@ ME497 / ME597 Reproducible Research. An introductory course for the R novice by 
 
 ## calendar 
 
-```{r include=FALSE}
-library(tidyverse)
-library(readxl)
+```{r}
 calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
 calendar[is.na(calendar)] <- ""
 calendar <- calendar %>%
 	select(1:6)
-```
-
-```{r}
 kable(calendar)
 ```
-
 
 <!-- ## reading -->
 
