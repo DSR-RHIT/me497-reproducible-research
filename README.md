@@ -299,7 +299,7 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## course mangement
 
-  - [Calendar](.) for an outline of our agendas and due dates  
+  - [calendar](#calendar) for an outline of our agendas and due dates  
   - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm/cm0004_getting-help.md)
