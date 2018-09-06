@@ -13,10 +13,10 @@ library(readxl)
 
 497 / 597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
 
-- [About the course](cm/cm0001_about-the-course.md) for a quick introduction 
-- [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies, and procedures  
-- [Index] for class content organized by topic 
-- [Getting help ](cm/cm0004_getting-help.md) for links I've found useful 
+- [About the course](cm/cm0001_about-the-course.md)  
+- [Syllabus](cm/cm0003_syllabus.md)   
+- [Help links](cm/cm0004_getting-help.md)  
+- [Index]  
 
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
@@ -256,8 +256,8 @@ kable(calendar)
 
 ## course mangement
 
-- [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies,  and procedures  
-- [Getting help ](cm/cm0004_getting-help.md) 
+- [Syllabus](cm/cm0003_syllabus.md)  
+- [Help links](cm/cm0004_getting-help.md) 
 - [Course introduction](slides/slides-00-01-introduction.pdf) [slides 00-01] 
 
 
