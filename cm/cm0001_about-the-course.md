@@ -33,4 +33,4 @@ Cut and paste no more\!
 
 -----
 
-[main page](../README.md)
+[main page](../)
