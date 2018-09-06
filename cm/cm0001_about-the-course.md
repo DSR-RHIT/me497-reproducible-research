@@ -18,8 +18,8 @@ Cut and paste no more\!
 
 *Why you?*
 
-  - You know that your workflow is disorganized but you donâ€™t know
-    what to do about it  
+  - You know that your workflow is disorganized but you don’t know what
+    to do about it  
   - You redo your analysis and graphs, and copy and paste them into a
     document—again and again  
   - You enjoy making software do your bidding and ultimately saving time
@@ -31,9 +31,6 @@ Cut and paste no more\!
   - Your collaborators  
   - Your organization
 
-See the [syllabus](cm001_syllabus.md) for more detail.
-
 -----
 
-[Main page](../README.md)  
-[Index](README.md)
+[main page](../README.md)
