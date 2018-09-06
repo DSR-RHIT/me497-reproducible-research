@@ -4,7 +4,7 @@
 ME497 / ME597 Reproducible Research. An introductory course for the R
 novice by Richard Layton at Rose-Hulman Institute of Technology.
 
-  - [About the course](cm0001_about-the-course.md)  
+  - [About the course](../cm/cm0001_about-the-course.md)  
   - [Main page](../README.md) to search course material organized
     chronologically
 
@@ -12,12 +12,11 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## course mangement
 
-  - [Calendar](../README.md) for an outline of our agendas and due
-    dates  
-  - [Syllabus](cm0003_syllabus.md) for the outline of the course of
+  - [Calendar](README.md) for an outline of our agendas and due dates  
+  - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
-  - [Getting help](cm0004_getting-help.md)
-  - [Course introduction](../slides/slides001_introduction.pdf) \[slides
+  - [Getting help](cm/cm0004_getting-help.md)
+  - [Course introduction](slides/slides001_introduction.pdf) \[slides
     00-1\]
 
 <!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
@@ -27,8 +26,8 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 ## file management
 
   - [Workflow, managing files, & naming
-    things](../slides/slides011_workflow-files-names.pdf) \[slides
-    01-1\]
+    things](slides/slides011_workflow-files-names.pdf) \[slides
+01-1\]
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 
@@ -49,7 +48,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 *Introduction*
 
   - [Learn R by
-    doing](../practice_work/exercises/8001_practice-work-setup.md) \[Rmd
+    doing](practice_work/exercises/8001_practice-work-setup.md) \[Rmd
     01-1\]
 
 *Analysis*
@@ -94,7 +93,7 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Graphs*
 
-  - [Graph basics 1](../practice_work/exercises/8002_graphs_3-1-3-2.md)
+  - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md)
     (text p. 1-12) \[Rmd
 01-2\]
 
@@ -118,8 +117,8 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Reporting*
 
-  - [Framework for reproducible
-    reports](../slides/slides002_framework.pdf) \[slides
+  - [Framework for reproducible reports](slides/slides002_framework.pdf)
+    \[slides
 00-2\]
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
@@ -140,8 +139,8 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Project 1*
 
-  - [Getting started](cm7101_project-1_start.md)
-  - [Set up a project repo](cm7102_project-1_initial-repo.md)
+  - [Getting started](cm/cm7101_project-1_start.md)
+  - [Set up a project repo](cm/cm7102_project-1_initial-repo.md)
 
 <!-- ## project assignments -->
 
@@ -173,26 +172,26 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Project 3 (597 only)*
 
-  - [Getting started](cm7301_project-3_start.md)
+  - [Getting started](cm/cm7301_project-3_start.md)
 
 ## reading
 
 *For class discussion*
 
   - [What does research reproducibility
-    mean?](../resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)  
+    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)  
   - [Shining light onto black
-    boxes](../resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
+    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
   - [Ten simple rules for reproducible computational
-    research](../resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)  
+    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)  
   - [Reproducible research can still be
-    wrong](../resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)  
+    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)  
   - [Reproducible research: a dissenting
-    opinion](../resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
+    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
 
 *Samples*
 
-  - [Calibration report](../resources/readings/calibration-report.pdf)
+  - [Calibration report](resources/readings/calibration-report.pdf)
 
 *Text*
 
@@ -228,12 +227,12 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## software
 
-  - [Install R and RStudio](cm0010_install-R-RStudio.md). If you already
-    use R and RStudio, please update R, RStudio, and packages to the
-    most recent versions.
-  - [Set up an R Project](cm0011_setup-R-project.md)  
+  - [Install R and RStudio](cm/cm0010_install-R-RStudio.md). If you
+    already use R and RStudio, please update R, RStudio, and packages to
+    the most recent versions.
+  - [Set up an R Project](cm/cm0011_setup-R-project.md)  
   - Install the [tidyverse](https://www.tidyverse.org)  
-  - [Setup Git and GitHub](cm0012_setup-git.md)
+  - [Setup Git and GitHub](cm/cm0012_setup-git.md)
 
 ## appendix: optional reading
 
@@ -266,4 +265,4 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 -----
 
-[main page](../README.md)
+[main page](README.md)
