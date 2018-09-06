@@ -258,7 +258,7 @@ kable(calendar)
 
 - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies,  and procedures  
 - [Getting help ](cm/cm0004_getting-help.md) 
-- [Course introduction](slides/slides001_introduction.pdf) [slides 00-1] 
+- [Course introduction](slides/slides-00-01-introduction.pdf) [slides 00-01] 
 
 
 
@@ -270,7 +270,7 @@ kable(calendar)
 
 ## file management
 
-- [Workflow, managing files, & naming things](slides/slides011_workflow-files-names.pdf) [slides 01-1] 
+- [Principles for a reproducible workflow](slides/slides-00-02-principles.pdf) [slides 00-02] 
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 <!-- - [GitHub: Collaborating](cm029_collaborating-github.md)  -->
@@ -341,7 +341,7 @@ kable(calendar)
 
 *Reporting*
 
-- [Framework for reproducible reports](slides/slides002_framework.pdf) [slides 00-2] 
+- [Getting started with R Markdown](slides/slides-01-01-rmarkdown.pdf) [slides 01-01] 
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 <!-- - [When the data change](cm017_project-1_data-change.md)  (Project 1)  -->

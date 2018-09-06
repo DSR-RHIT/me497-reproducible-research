@@ -20,9 +20,9 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 | week  | day | agenda / slides (p. text)                                                                                                                            | exercises                                                                                                                              | due                                                                                                          | additional 597                                     |
 | :---- | :-- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
-| 0     | R   | [Course introduction](slides/slides001_introduction.pdf) (p. ix–xxv)                                                                                 |                                                                                                                                        |                                                                                                              |                                                    |
-|       | F   | [Framework for reproducible reports](slides/slides002_framework.pdf) (p. 423–426)                                                                    |                                                                                                                                        | [Install R & RStudio](cm/cm0010_install-R-RStudio.md) and [Setup an R project](cm/cm0011_setup-R-project.md) | [Proposal meeting](cm/cm7301_project-3_start.md)   |
-| 1     | M   | [Workflow, managing files, & naming things](slides/slides011_workflow-files-names.pdf)                                                               |                                                                                                                                        | [Setup Git & GitHub](cm/cm0012_setup-git.md) and [Start project 1](cm/cm7101_project-1_start.md)             |                                                    |
+| 0     | R   | [Course introduction](slides/slides-00-01-introduction.pdf) (p. ix–xxv)                                                                              |                                                                                                                                        |                                                                                                              |                                                    |
+|       | F   | [Principles for a reproducible workflow](slides/slides-00-02-principles.pdf)                                                                         |                                                                                                                                        | [Install R & RStudio](cm/cm0010_install-R-RStudio.md) and [Setup an R project](cm/cm0011_setup-R-project.md) | [Proposal meeting](cm/cm7301_project-3_start.md)   |
+| 1     | M   | [Getting started with R Markdown](slides/slides-01-01-rmarkdown.pdf) (p. 423–426)                                                                    |                                                                                                                                        | [Setup Git & GitHub](cm/cm0012_setup-git.md) and [Start project 1](cm/cm7101_project-1_start.md)             |                                                    |
 |       | T   | [Learn R by doing](practice_work/exercises/8001_practice-work-setup.md) and [Graph basics](practice_work/exercises/8002_graphs_3-1-3-2.md) (p. 1-12) | [3.2.4](http://r4ds.had.co.nz/data-visualisation.html#exercises), [3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1)   | [Setup project 1 repo](cm/cm7102_project-1_initial-repo.md)                                                  |                                                    |
 |       | R   | Graph basics (p. 13-21)                                                                                                                              | [3.5.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-2), [3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3) |                                                                                                              |                                                    |
 |       | F   | R code basics (p. 37-41)                                                                                                                             | [4.4](http://r4ds.had.co.nz/workflow-basics.html#practice)                                                                             | Bring potential project 1 reports to class.                                                                  | [Project 3 proposal](cm/cm7301_project-3_start.md) |
@@ -302,8 +302,8 @@ by Richard Layton at Rose-Hulman Institute of Technology.
   - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm/cm0004_getting-help.md)
-  - [Course introduction](slides/slides001_introduction.pdf) \[slides
-    00-1\]
+  - [Course introduction](slides/slides-00-01-introduction.pdf) \[slides
+    00-01\]
 
 <!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
 
@@ -311,9 +311,9 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## file management
 
-  - [Workflow, managing files, & naming
-    things](slides/slides011_workflow-files-names.pdf) \[slides
-01-1\]
+  - [Principles for a reproducible
+    workflow](slides/slides-00-02-principles.pdf) \[slides
+00-02\]
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 
@@ -403,9 +403,9 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 *Reporting*
 
-  - [Framework for reproducible reports](slides/slides002_framework.pdf)
+  - [Getting started with R Markdown](slides/slides-01-01-rmarkdown.pdf)
     \[slides
-00-2\]
+01-01\]
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 
