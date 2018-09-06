@@ -237,6 +237,8 @@ novice by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## appendix: optional reading
 
+  - [Why you shouldn’t use Markdown for
+    documentation](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)  
   - [Good enough practices for scientific
     computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
   - [Facilitating reproducibility in scientific computing: Principles

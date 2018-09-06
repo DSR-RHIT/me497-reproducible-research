@@ -7,6 +7,15 @@
 
 \input{preamble_slides.tex}
 
+%  -------------------------------------------------
+% These slides support  the following student tasks
+%
+% setup a GitHub account
+% create project 1 repo
+% create project 1 Rproj
+% project 1 directories
+% practice commit push
+
 \begin{document}
 
 
@@ -80,7 +89,7 @@ Fall 2018\\
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
 
-\begin{frame}[fragile, c]{Organize for reproducibility from the beginning}
+\begin{frame}[fragile, c, label=organize]{Organize for reproducibility from the beginning}
 
 \begin{itemize}
 	\item Plan your directory structure
@@ -88,7 +97,7 @@ Fall 2018\\
 	\item Strive for simplicity \& readability
   \item Link files explicitly
 	\item Adopt a file naming scheme
-	\item DRY (don't repeat yourself)
+	% \item DRY (don't repeat yourself)
   \item Use version control
 \end{itemize}
 
@@ -97,40 +106,6 @@ Fall 2018\\
 \end{frame}
 }%%
 
-
-
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{Principles for reproducible research}
-%
-% \begin{itemize}
-% 	\item Organize for reproducibility from the beginning
-%
-% 	\begin{itemize}
-% 	  \item Adopt a directory naming scheme
-% 	  \item Adopt a file naming scheme
-%   \end{itemize}
-%
-%
-%   	\item Everything you do (convert data files, clean data, analyze data) should be accomplished via code. Point /click /copy /paste are not reproducible.
-% 	\item Explicitly link files
-%
-% \lstinline{source(filename)}, \lstinline{save(filename)}, \lstinline{read(filename)}, \lstinline{includegraphics(filename)}
-%
-%
-% 	\item Don't repeat yourself (DRY)
-%
-% 	\begin{itemize}
-% 	  \item create functions if you find yourself copying/pasting code
-% 	  \item execute a task from one location only
-%   \end{itemize}
-%
-%
-%
-% \end{itemize}
-%
-% \end{frame}
-% }%%
 
 
 
@@ -323,7 +298,7 @@ R scripts are generally short, between 60--100 lines, to
 
 % \bigskip
 % \begin{tabular}{rcr}
-% \bftt{402\_data-tidy.R} & $\qquad\rightarrow$ creates $\rightarrow\qquad$ & \bftt{402\_data-tidy.rda}\\
+% \bftt{402\_data-tidy.R} & $\qquad\rightarrow$ creates $\rightarrow\qquad$ & \bftt{402\_data-tidy.rds}\\
 % &&\\
 % \bftt{403\_calibr-graph.R} & $\rightarrow$ creates $\rightarrow$ & \bftt{403\_calibr-graph.png}
 % \end{tabular}
@@ -355,12 +330,17 @@ R scripts are generally short, between 60--100 lines, to
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
 
-\begin{frame}[fragile]{From the beginning --- adopt a file naming scheme}
+\begin{frame}[fragile]{In this scheme, every file name starts with 3 digits}
 
+\bigskip
+\hspace{-1em} Use ``slugs`` to facilitate file searches, for example \bftt{\_report\_}
+
+
+\bigskip
 \begin{columns}[T]
 \column{0.5\textwidth}
 
-{\em 000-series} manage
+{\em 000-series}\ \ \ {\color{myviolet} manage}
 \begin{lstlisting}
 001_RFP_2018-05-25.pdf
 002_contract_2018-06-05.pdf
@@ -369,14 +349,14 @@ invoice_201802.pdf
 \end{lstlisting}
 
 \medskip
-{\em 100-series} data
+{\em 100-series}\ \ \ {\color{myviolet} data}
 \begin{lstlisting}
 101_raw-data_2018-07-25.xlsx
 102_raw-data_2018-08-01.xlsx
 \end{lstlisting}
 
 \medskip
-{\em 200-series} resources
+{\em 200-series}\ \ \ {\color{myviolet} resources}
 \begin{lstlisting}
 201_apparatus_2018-08-12.png
 202_load-cell_2018-08-12.png
@@ -385,7 +365,7 @@ invoice_201802.pdf
 
 \column{0.5\textwidth}
 
-{\em 300-series} reports
+{\em 300-series}\ \ \ {\color{myviolet} reports}
 \begin{lstlisting}
 301_proposal_2018-07-05.Rmd
 302_progress_2018-08-12.Rmd
@@ -393,22 +373,26 @@ invoice_201802.pdf
 \end{lstlisting}
 
 \medskip
-{\em 400-series} scripts
+{\em 400-series}\ \ \ {\color{myviolet} scripts}
 \begin{lstlisting}
-401_data-wide.R
-402_data-tidy.R
-403_calibr-graph.R
+401_data-tidy.R
+402_data-wide.R
+403_data-graph.R
+404_calibr-graph.R
 \end{lstlisting}
 
 \medskip
-{\em 400-series} also used for results
+{\em 400-series}\ \ \ {\color{myviolet} also used for results}
 \begin{lstlisting}
-401_data-wide.rda
-402_data-tidy.rda
-403_calibr-graph.png
+401_data-tidy.rds
+402_data-wide.rds
+403_data-graph.rds
+404_calibr-graph.png
 \end{lstlisting}
 
 \end{columns}
+
+
 \end{frame}
 }%%
 
@@ -426,13 +410,16 @@ See the website for instructions
 \begin{tabular}{ >{\raggedleft\arraybackslash} m{1in} m{6in} }
 
 \includegraphics[scale = 0.45]{github-logo.png} &
-\color{gray} obtain a free account for remote, asynchronous collaboration\\
+\color{gray} obtain a free account for asynchronous collaboration\\
 
 \includegraphics[scale = 0.12]{github-repo.png} &
 \color{gray} create an online repository for each project\\
 
 \includegraphics[scale = 0.45]{r-project-icon.png} &
-\color{gray} link each repo to a local RStudio Project\\
+\color{gray} link each repository to a local RStudio Project\\
+
+\includegraphics[scale = 0.25]{push-right.png} &
+\color{gray} commit and push your changes to the repository\\
 
 % \includegraphics[scale = 0.35]{R-logo.png} &
 % \color{gray} for data carpentry, analysis, and data graphics\
@@ -453,278 +440,48 @@ See the website for instructions
 
 
 
-% setup a GitHub account
-% create project 1 repo
-% create project 1 Rproj
-% project 1 directories
-% practice commit push
 
 
 
 
 
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
 
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{Example file names for a calibration project}
-%
-%
-% \begin{columns}
-% \column{0.5\textwidth}
-%
-% \bigskip
-% Project directory
-%
-% \begin{lstlisting}
-% load-cell-calibration\
-%   |-- data\
-%   |-- manage\
-%   |-- reports\
-%   |-- resources\
-%   |-- results\
-%   |-- scripts\
-%   |-- load-cell-calibration.Rproj
-%   |-- .Renviron
-%   |-- .gitignore
-%   `-- README.md
-% \end{lstlisting}
-%
-% Sub-directories
-%
-% \begin{lstlisting}
-%     data\
-%       |-- 001_raw-data_2018-07-25.xlsx
-%       `-- 002_raw-data_2018-08-01.xlsx
-%
-%     resources\
-%       `-- 901_load-cell-setup-786x989px.png
-% \end{lstlisting}
-%
-% \column{0.5\textwidth}
-% \begin{lstlisting}
-%     reports\
-%       |-- 101_proposal_2018-07-05.Rmd
-%       |-- 102_progress_2018-08-12.Rmd
-%       |-- 103_report_2018-09-03.Rmd
-%       |-- 101_proposal_2018-07-05.docx
-%       |-- 102_progress_2018-08-12.docx
-%       `-- 103_report_2018-09-03.docx
-%
-%     results\
-%       |-- 401_data-wide.csv
-%       |-- 402_data-tidy.csv
-%       |-- 403_graph-draft.png
-%       |-- 404_calibr_regression.png
-%       `-- 405_calibr_graph.png
-%
-%     scripts\
-%       |-- 401_data-wide.R
-%       |-- 402_data-tidy.R
-%       |-- 403_graph-draft.R
-%       |-- 404_calibr_regression.R
-%       `-- 405_calibr_graph.R
-% \end{lstlisting}
-%
-% \end{columns}
-%
-% \end{frame}
-% }%%
-%
-%
-%
-%
+\begin{frame}[fragile, c]{Create the folders after version control is set up}
 
-%
-%
-%
-%
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{The full workflow is documented by the prose\newline and the R code chunks in the Rmd file}
-%
-% \begin{columns}[t]
-% \column{0.4\textwidth}
-% \begin{lstlisting}
-% ---
-% output: word_document
-% ---
-%
-% ```{r echo=FALSE}
-% library(tidyverse)
-% library(knitr)
-% ```
-%
-% # Introduction
-% Prose to explain the context
-% of the report
-%
-% # Data
-% Prose to explain the data
-%
-% ```{r echo=FALSE}
-% # create tabulated data
-% source("scripts/401_data-wide.R")
-% ```
-% \end{lstlisting}
-%
-% \column{0.6\textwidth}
-% \begin{lstlisting}
-% ```{r echo=FALSE}
-% # import and print tabulated data
-% df <- read_csv("results/401_data-wide.csv")
-% kable(df)
-% ```
-%
-% # Results
-% Prose to explain the results
-%
-% ```{r echo=FALSE}
-% # create the graph
-% source("scripts/405_calibr_graph.R")
-%
-% # import the graph
-% includegraphics("results/405_calibr_graph.png")
-% ```
-%
-% # Conclusion
-% Prose to explain the conclusions
-% \end{lstlisting}
-% \end{columns}
-%
-% \end{frame}
-% }%%
+\begin{columns}
+\column{0.25\textwidth}
+
+\smallskip
+\lstinline{practice_work/}
+
+\includegraphics[scale = 0.7]{sample-project-1.png}
+
+\smallskip
+\lstinline{project_1/}
+
+\includegraphics[scale = 0.7]{sample-project-2.png}
+
+\column{0.75\textwidth}
+See the website for instructions
+
+\medskip
+\begin{itemize}
+  \item the \bftt{.Rproj} file denotes the R Project working directory level
+	\item copy the \bftt{.Renviron} file to the top level of every project
+\end{itemize}
+
+\end{columns}
+\end{frame}
+}%%
 
 
 
+%% slide -------------------------------------------
+\againframe{organize}
 
 
 
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{Always use paths relative to the .Rproj working directory}
-%
-% % \begin{itemize}
-% % 	\item Launching .Rproj sets its top-level directory as the working directory
-% % 	\item Paths in .R scripts are always relative to the top-level directory of the Rstudio Project
-% %
-% % \end{itemize}
-% %
-% % \includegraphics[scale = 0.5]{r-project-icon.png}
-%
-%
-%
-% \includegraphics[height = 0.4in]{r-project-icon.png}
-% Launching .Rproj sets its top-level directory as the working directory
-%
-%
-%
-% \includegraphics[height = 0.25in]{R-logo.png} Paths in R scripts are always relative to the working dirtectory
-%
-%
-%
-% \includegraphics[height = 0.3in]{rmd-icon.png}  Because our Rmd scripts are one level down from .Rproj, we reset the knitr root directory one level up
-%
-%
-% \begin{columns}
-% \column{0.1\textwidth}
-% \column{0.9\textwidth}
-% \begin{lstlisting}
-% ```{r echo=FALSE}
-% library(knitr)
-% opts_knit$set(root.dir="../")
-% ```
-% \end{lstlisting}
-% \end{columns}
-%
-% \end{frame}
-% }%%
-
-
-
-
-
-
-%
-%
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile]{Explicitly link files}
-%
-%
-% \bigskip
-% For example, the first script
-%
-% \begin{lstlisting}
-%     01_calibr_data-wide.Rmd
-% \end{lstlisting}
-%
-% \bigskip
-% reads the raw data file
-%
-% \begin{lstlisting}
-%     data_received <- read_csv('data/007_wide-data.csv')
-% \end{lstlisting}
-%
-% \bigskip
-% and writes two files
-%
-% \begin{lstlisting}
-%     # to data directory for subsequent scripts
-%     write_csv(data_received, "data/01_calibr_data_active-report.csv")
-%
-%     # to results directory for final report
-%     write_csv(input_output_data, "results/01_calibr_data-wide.csv")
-% \end{lstlisting}
-%
-% \end{frame}
-% }%%
-%
-%
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[c]{Run the scripts in order to compile the report}
-%
-% \begin{columns}
-% \column{0.4\textwidth}
-%
-% \bigskip
-% \lstinline!01_calibr_data-wide.Rmd!
-%
-% \bigskip
-% \lstinline!02_calibr_data-tidy.Rmd!
-%
-% \bigskip
-% \lstinline!03_calibr_graph-draft.Rmd!
-%
-% \bigskip
-% \lstinline!04_calibr_regression.Rmd!
-%
-% \bigskip
-% \lstinline!05_calibr_graph.Rmd!
-%
-% \bigskip
-% \lstinline!06_calibr_report.Rmd!
-%
-% \column{0.6\textwidth}
-%
-% \bigskip
-% Compiling the scripts can be done
-%
-% \bigskip
-% \begin{itemize}
-% 	\item manually (OK for small projects)
-% 	\item automatically with an R script
-% 	\item automatically using make
-% \end{itemize}
-%
-% \bigskip
-% We'll discuss the automated methods later in the term (section 6.1 in the book).
-%
-%
-% \end{columns}
-% \end{frame}
-% }%%
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

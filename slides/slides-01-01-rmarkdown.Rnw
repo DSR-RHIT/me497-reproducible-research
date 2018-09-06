@@ -1,0 +1,897 @@
+\documentclass[12pt, aspectratio = 1610]{beamer}
+
+% used by title slide and PDF settings
+\newcommand{\talktitle}   {Getting started with R Markdown}
+\newcommand{\talksubtitle}{497 / 597 Reproducible Research}
+\newcommand{\talkauthor}  {Richard Layton}
+
+\input{preamble_slides.tex}
+
+% these slides support these student tasks
+%
+% invite me to collaborate
+% initialize project 1 Rmd
+% edit README
+% commit push
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+\begin{document}
+
+{%% title slide -------------------------------------------
+\renewcommand\foottext{Image from Wickham \& Grolemund, {\em R for Data Science}, \url{http://r4ds.had.co.nz/r-markdown.html}}
+
+\begin{frame}[c]{}
+
+\bigskip
+{\Large\color{myviolet}\talktitle}
+
+\medskip
+{\color{gray}\small\talksubtitle}
+
+\bigskip
+\bigskip
+\begin{tabular}{>{\centering\arraybackslash} m{1\textwidth}}
+\includegraphics[scale = 0.45]{RMarkdownFlow.png}
+% \includegraphics[scale = 0.35]{RStudio-Logo-Blue-Gradient.png}
+% \hspace{2em}\includegraphics[scale = 0.45]{rmarkdown-logo.png}
+% \hspace{2em}\includegraphics[scale = 0.35]{R-logo.png}
+% \hspace{2em}\includegraphics[scale = 0.30]{git-logo.png}
+% \hspace{2em}\includegraphics[scale = 0.45]{github-logo.png}
+\end{tabular}
+
+\bigskip
+\bigskip
+{\color{myviolet}\talkauthor}
+
+\bigskip
+{\scriptsize\color{gray} Rose-Hulman Institute of Technology\\
+Fall 2018\\
+}
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Tasks to complete before starting a report file}
+
+\bigskip
+\bigskip
+\begin{tabular}{ >{\raggedleft\arraybackslash} m{2in} m{5in} }
+
+\includegraphics[scale = 0.25]{RStudio-Logo-Blue-Gradient.png} \includegraphics[scale = 0.25]{R-logo.png} \includegraphics[scale = 0.20]{git-logo.png}&
+\color{gray} installed locally\\
+
+% \includegraphics[scale = 0.35]{R-logo.png} &
+% \color{gray} installed locally\\
+%
+% \includegraphics[scale = 0.30]{git-logo.png} &
+% \color{gray} installed locally\\
+
+\includegraphics[scale = 0.4]{github-logo.png} \includegraphics[scale = 0.10]{github-repo.png} &
+\color{gray} obtained an account, created a project 1 repo\\
+
+% \includegraphics[scale = 0.10]{github-repo.png} &
+% \color{gray} created an online repo for project 1\\
+
+\includegraphics[scale = 0.45]{r-project-icon.png} &
+\color{gray} created an R Project for project 1\\
+
+\includegraphics[scale = 0.45]{folders.png} &
+\color{gray} created your directory for project 1\\
+
+\includegraphics[scale = 0.25]{stage-commit-push.png} &
+\color{gray} pushed to the repo\\
+
+
+% \includegraphics[scale = 0.45]{rmarkdown-logo.png} &
+% \color{gray} for combining your code, its results, and your prose\\
+
+\end{tabular}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[fragile, c]{Plan to create separate Rproj/repos for each project}
+
+\begin{columns}
+\column{0.35\textwidth}
+497 students
+\smallskip
+\begin{lstlisting}
+me497_reproducible_research
+  |-- practice_work/
+  |-- project_1/
+  `-- project_2/
+\end{lstlisting}
+
+\bigskip
+597 students
+\smallskip
+\begin{lstlisting}
+me597_reproducible_research
+  |-- practice_work/
+  |-- project_1/
+  |-- project_2/
+  `-- project_3/
+\end{lstlisting}
+
+\column{0.65\textwidth}
+\begin{itemize}
+	\item the top level is the course folder
+	\item each project folder is an Rproj/repo
+    \lstinline{practice_work/}\newline
+	  \lstinline{project_1/}\newline
+	  \lstinline{project_2/}\newline
+    \lstinline{project_3/}
+\end{itemize}
+
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[fragile, c]{Launch your Rproj and open a new Rmd file}
+
+\begin{columns}[T]
+\column{0.4\textwidth}
+\includegraphics[scale = 0.75]{rmd-icon-2.png} {\color{gray} R Markdown is installed with RStudio}
+
+\bigskip
+In RStudio, launch the project, for example, \bftt{project\_1.Rproj}
+
+\bigskip
+Open an new Rmd file:
+
+\column{0.6\textwidth}
+
+\bigskip
+{\em File > New File > R Markdown > OK}
+
+\bigskip
+\includegraphics[width = 1\textwidth]{new-rmd.png}
+\end{columns}
+
+
+
+
+
+
+%
+% \bigskip
+% {\em Save As} to your reports directory
+%
+% \bigskip
+% Select a file name consistent with your file naming scheme, e.g., \bftt{301\_report\_2018-09-04.Rmd}
+
+
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[fragile, c]{Save the Rmd file to your reports directory}
+
+\begin{columns}[T]
+\column{0.60\textwidth}
+
+\bigskip
+Select a file name consistent with your file naming scheme, e.g.,\newline
+
+\bftt{301\_report\_2018-09-04.Rmd}
+
+\column{0.25\textwidth}
+\bigskip
+\includegraphics[width = 1\textwidth]{tree-reports.png}
+
+\column{0.15\textwidth}
+\end{columns}
+
+
+\end{frame}
+}%%
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{An R Markdown script has three types of text}
+
+% \begin{columns}[t]
+% \column{0.4\textwidth}
+% \column{0.6\textwidth}
+% \end{columns}
+
+\bigskip
+\bigskip
+\begin{itemize}
+	\item YAML header, surrounded by \lstinline{---}
+
+\begin{lstlisting}
+---
+title: "Sample report"
+author: "Richard Layton"
+date: "September 1, 2016"
+output: word_document
+---
+\end{lstlisting}
+
+\item Prose mixed with markup text, e.g.,
+\begin{lstlisting}
+# Section heading
+Prose with markup for *italics*, **bold**, `inline R code`,  etc.
+\end{lstlisting}
+
+\item Chunks of R code surrounded by \lstinline{```}
+
+\begin{lstlisting}
+```{r setup, echo=FALSE}
+# a hashtag in a R code chunk is a comment
+library(ggplot2)
+library(dplyr)
+smaller <- diamonds %>% filter(carat <= 2.5)
+```
+\end{lstlisting}
+\end{itemize}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{The default Rmd file illustrates common mark-ups}
+
+\begin{columns}[T]
+\column{0.3\textwidth}
+
+\begin{itemize}
+	\item YAML header
+	\item knitr setup
+	\item section heading
+	\item URL active link
+	\item \bftt{**bold**}
+	\item code chunks
+	\item \bftt{`inline code`}
+
+\end{itemize}
+
+\column{0.7\textwidth}
+\includegraphics[width = 1\textwidth]{default-rmd.png}
+\end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Image from Wickham \& Grolemund, {\em R for Data Science}, \url{http://r4ds.had.co.nz/r-markdown.html}}
+
+\begin{frame}[fragile]{Knit the document any time}
+
+\bigskip
+\includegraphics[scale = 1]{knit-word.png}
+\hspace{1em}\includegraphics[scale = 1]{knit-html.png}
+\hspace{1em}\includegraphics[scale = 1]{knit-pdf.png}
+
+\bigskip
+\hspace{2em}\includegraphics[scale = 0.45]{RMarkdownFlow.png}
+
+\bigskip
+\begin{itemize}
+	\item R Markdown sends the .Rmd file to knitr
+	\item knitr executes the code chunks and creates a markdown (.md) document that includes the code and its output
+	\item pandoc process the .md file to create the output file
+\end{itemize}
+
+
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile]{Writing an R Markdown script...}
+
+\begin{columns}[t]
+\column{0.4\textwidth}
+
+script
+
+\bigskip
+\begin{lstlisting}
+---
+title: "Sample report"
+author: "Richard Layton"
+date: "September 1, 2016"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting
+syntax for authoring HTML, PDF, and MS Word documents. For more
+details on using R Markdown see <http://rmarkdown.rstudio.com>.
+\end{lstlisting}
+
+% \pause
+\column{0.6\textwidth}
+%
+% Output document
+%
+% \bigskip
+% \minipage[c][0.5\textheight][s]{\columnwidth}
+% \includegraphics[width = 1\textwidth, trim = 0 7.5in 0 0, clip]{sample-report.pdf}
+% \vfill
+% \endminipage
+
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile]{Writing an R Markdown script...and knitting to Word}
+
+\begin{columns}[t]
+\column{0.4\textwidth}
+
+script
+
+\bigskip
+\begin{lstlisting}
+---
+title: "Sample report"
+author: "Richard Layton"
+date: "September 1, 2016"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting
+syntax for authoring HTML, PDF, and MS Word documents. For more
+details on using R Markdown see <http://rmarkdown.rstudio.com>.
+\end{lstlisting}
+
+% \pause
+\column{0.6\textwidth}
+
+output
+
+\bigskip
+\minipage[c][0.5\textheight][s]{\columnwidth}
+\includegraphics[width = 1\textwidth, trim = 0 7.5in 0 0, clip]{sample-report.pdf}
+\vfill
+\endminipage
+
+\end{columns}
+\end{frame}
+}%%
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile]{Add a code chunk}
+
+\begin{columns}[t]
+
+\column{0.4\textwidth}
+
+script
+
+\bigskip
+\minipage[c][0.6\textheight][s]{\columnwidth}
+\begin{lstlisting}
+When you click the **Knit** button
+a document will be generated that
+includes both content as well as the
+output of any embedded R code chunks
+within the document. You can embed
+an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+\end{lstlisting}
+\vfill
+\endminipage
+
+\pause
+\column{0.6\textwidth}
+
+output
+
+\bigskip
+\minipage[c][0.6\textheight][s]{\columnwidth}
+\includegraphics[width = 1\textwidth, trim = 0 5.2in 0 2.2in, clip]{sample-report.pdf}
+\vfill
+\endminipage
+
+\end{columns}
+\end{frame}
+}%%
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile]{Add a graph}
+
+\begin{columns}[t]
+
+\column{0.4\textwidth}
+\minipage[c][0.7\textheight][s]{\columnwidth}
+script
+
+\begin{lstlisting}
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter
+was added to the code chunk to prevent
+printing of the R code that generated
+the plot.
+\end{lstlisting}
+\vfill
+\endminipage
+
+\pause
+\column{0.6\textwidth}
+\minipage[c][0.7\textheight][s]{\columnwidth}
+output
+
+\includegraphics[width = 1\textwidth, trim = 0 0in 0 4.6in, clip]{sample-report.pdf}
+\vfill
+\endminipage
+
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{We typically write our code in stand-alone R scripts}
+
+\begin{columns}
+\column{0.25\textwidth}
+\includegraphics[width = 1\textwidth]{tree-scripts.png}
+
+
+\column{0.75\textwidth}
+{\small
+\vspace{1\baselineskip}
+\begin{tabular}{ll}
+\bftt{401\_data-tidy.R} & reads raw data, writes it in tidy format\\
+&\\
+\bftt{402\_data-wide.R} & reads tidy data,  writes it in wide format\\
+&\\
+\bftt{403\_data-graph.R} & reads tidy data, edits it for graph\\
+&\\
+\bftt{404\_calibr-graph.R} & reads graph data, creates the figure\\
+\end{tabular}
+}
+
+\column{0.05\textwidth}
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Then execute those scripts from the Rmd script}
+
+
+\begin{columns}
+\column{0.25\textwidth}
+\includegraphics[width = 1\textwidth]{tree-reports.png}
+
+
+\column{0.75\textwidth}
+\begin{lstlisting}
+---
+output: word_document
+---
+
+```{r echo=FALSE}
+library(knitr)
+opts_knit$set(root.dir="../")
+```
+
+# Introduction
+Prose to explain the context of the report
+
+# Data
+Prose to explain the data
+
+```{r echo=FALSE}
+# create the data in its 3 forms
+source("scripts/401_data-tidy.R")
+source("scripts/402_data-wide.R")
+source("scripts/403_data-graph.R")
+```
+
+More prose
+\end{lstlisting}
+\end{columns}
+
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Rmd script (continued)}
+
+
+\begin{columns}
+\column{0.25\textwidth}
+% \includegraphics[width = 1\textwidth]{tree-reports.png}
+
+
+\column{0.75\textwidth}
+\begin{lstlisting}
+Prose to discuss the data table
+
+```{r echo=FALSE}
+# import and print tabulated data
+df <- readRDS("results/402_data-wide.rds")
+kable(df)
+```
+
+# Results
+Prose to explain the results
+
+```{r echo=FALSE}
+# create the graph
+source("scripts/404_calibr-graph.R")
+
+# import the graph
+knitr::include_graphics("../results/404_calibr-graph.png")
+```
+
+# Conclusion
+Prose to explain the conclusions
+\end{lstlisting}
+\end{columns}
+
+
+
+
+
+\end{frame}
+}%%
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[fragile, c]{File paths are relative to the R working directory}
+
+\begin{columns}
+\column{0.22\textwidth}
+\includegraphics[width = 1\textwidth]{tree-top-dir.png}
+\column{0.78\textwidth}
+
+The {\em working directory} is where R, by default,
+
+\medskip
+\begin{itemize}
+\item looks for files you ask it to run
+\item saves file you write to disk
+\end{itemize}
+
+\bigskip
+\bigskip
+When you run an RStudio Project,
+
+\medskip
+\begin{itemize}
+\item the project directory is the working directory
+\item file paths are relative to the working directory
+\end{itemize}
+
+
+
+
+
+
+
+
+\end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Relative file paths support reproducibility}
+
+\begin{columns}
+\column{0.22\textwidth}
+\includegraphics[width = 1\textwidth]{tree-basic.png}
+
+\column{0.78\textwidth}
+\begin{itemize}
+
+\item Cloning your repo to my computer, I can run your code because all file paths are relative
+
+\item Absolute file paths are non-reproducible
+
+\end{itemize}
+\end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile]{Relative file paths are how we link files explicitly}
+
+\bigskip
+\bigskip
+The Rmd script includes code chunks that run other R scripts, for example,
+
+\bigskip
+\begin{itemize}
+
+  \item read the raw data file, tidy the data, and save it to file,
+\begin{lstlisting}
+    ```{r}
+    source("scripts/401_data-tidy.R")
+    ```
+\end{lstlisting}
+
+  \item read the tidy data, manipulate it for graphing, and write it to file,
+\begin{lstlisting}
+    ```{r}
+    source("scripts/403_data-graph.R")
+    ```
+\end{lstlisting}
+
+  \item read the graph-ready data, create the graph, and write it to file,
+\begin{lstlisting}
+    ```{r}
+    source("scripts/404_calibr-graph.R")
+    ```
+\end{lstlisting}
+
+\end{itemize}
+
+
+\end{frame}
+}%%
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Some tools assume the file folder is the  working directory}
+
+\bigskip
+\begin{itemize}
+
+\item {\em YAML} arguments: from Rmd, up to project directory, down to the file
+	\begin{lstlisting}
+    ---
+    bibliography: "../resources/portfolio.bib"
+    ---
+\end{lstlisting}\vspace{-0.5\baselineskip}
+
+	\item {\em knitr:} reset the knitr root directory one level up
+	\begin{lstlisting}
+    ```{r}
+    knitr::opts_knit$set(root.dir="../")
+    ```
+\end{lstlisting}\vspace{-0.5\baselineskip}
+
+\item importing graphics using knitr syntax
+  	\begin{lstlisting}
+    ```{r}
+    include_graphics("../results/404_calibr-graph.png")
+    ```
+  \end{lstlisting}\vspace{-0.5\baselineskip}
+
+\item importing graphics using Rmd syntax
+	\begin{lstlisting}
+    ![](../results/404_calibr-graph.png)
+  \end{lstlisting}\vspace{-0.5\baselineskip}
+
+\end{itemize}
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Next steps for your project}
+
+\bigskip
+From your GitHub repo, invite me (graphdr) to be a collaborator
+
+\bigskip
+\includegraphics[width = 1\textwidth]{github-collaborate.pdf}
+
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{For more information on writing a README file, see \url{https://github.com/noffle/art-of-readme}}
+\begin{frame}[fragile, c]{Edit the README file}
+
+\bigskip
+
+\begin{columns}[T]
+\column{0.25\textwidth}
+\includegraphics[width = 1\textwidth]{tree-with-readme.png}
+
+\column{0.75\textwidth}
+\begin{itemize}
+
+    \item README is the landing page of your repo
+
+		\item README introduces the reader to the project
+
+    \begin{itemize}
+	    \item project context and summary
+	    \item what the project looks like in action
+	    \item how the reader might use the project
+    \end{itemize}
+
+    \item README.Rmd resides at the top level of the directory
+
+	\item Knit README.Rmd using YAML GitHub output
+	\bftt{\small output: github\_document}
+
+\item Stage, commit, push
+
+\end{itemize}
+\end{columns}
+\end{frame}
+}%%
+
+
+
+
+
+
+\end{document}
