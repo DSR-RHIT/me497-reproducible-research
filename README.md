@@ -8,7 +8,7 @@ by Richard Layton at Rose-Hulman Institute of Technology.
     introduction
   - [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies,
     and procedures  
-  - [Course index](cm/README.md) for class content organized by topic
+  - [Course index](INDEX.md) for class content organized by topic
   - [Getting help](cm/cm0004_getting-help.md) for links I’ve found
     useful
 
