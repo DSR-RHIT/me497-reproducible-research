@@ -256,7 +256,7 @@ kable(calendar)
 
 ## course mangement
 
-- [Calendar](README.md) for an outline of our agendas and due dates  
+- [Calendar](.) for an outline of our agendas and due dates  
 - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies,  and procedures  
 - [Getting help ](cm/cm0004_getting-help.md) 
 - [Course introduction](slides/slides001_introduction.pdf) [slides 00-1] 
