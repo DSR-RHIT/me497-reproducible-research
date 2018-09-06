@@ -15,7 +15,7 @@ library(readxl)
 
 - [About the course](cm/cm0001_about-the-course.md) for a quick introduction 
 - [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies, and procedures  
-- [Course index] for class content organized by topic 
+- [Index] for class content organized by topic 
 - [Getting help ](cm/cm0004_getting-help.md) for links I've found useful 
 
 
@@ -252,11 +252,10 @@ kable(calendar)
 
 
 
-# index {#Course index}
+# Index
 
 ## course mangement
 
-- [calendar] for an outline of our agendas and due dates  
 - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of study, policies,  and procedures  
 - [Getting help ](cm/cm0004_getting-help.md) 
 - [Course introduction](slides/slides001_introduction.pdf) [slides 00-1] 
@@ -468,7 +467,7 @@ kable(calendar)
 
 
 
-# about
+# About
 
 - [My data visualization course](https://github.com/DSR-RHIT/me447-visualizing-data) 
 - [My data display blog](http://www.graphdoctor.com) 

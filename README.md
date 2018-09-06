@@ -8,7 +8,7 @@ by Richard Layton at Rose-Hulman Institute of Technology.
     introduction
   - [Syllabus](cm/cm0003_syllabus.md) for the course of study, policies,
     and procedures  
-  - \[Course index\] for class content organized by topic
+  - [Index](#index) for class content organized by topic
   - [Getting help](cm/cm0004_getting-help.md) for links I’ve found
     useful
 
@@ -295,11 +295,10 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 <!-- - [Project 3 wrapup](cm/cm052_project-3_wrapup.md)  -->
 
-# index {\#Course index}
+# Index
 
 ## course mangement
 
-  - [calendar](#calendar) for an outline of our agendas and due dates  
   - [Syllabus](cm/cm0003_syllabus.md) for the outline of the course of
     study, policies, and procedures  
   - [Getting help](cm/cm0004_getting-help.md)
@@ -550,7 +549,7 @@ by Richard Layton at Rose-Hulman Institute of Technology.
   - [Top 10 readings in
     reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
 
-# about
+# About
 
   - [My data visualization
     course](https://github.com/DSR-RHIT/me447-visualizing-data)
