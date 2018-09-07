@@ -29,7 +29,7 @@ library(readxl)
 calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
 calendar[is.na(calendar)] <- ""
 calendar <- calendar %>%
-	select(1:6)
+	select(1:7)
 kable(calendar)
 ```
 
@@ -391,11 +391,11 @@ kable(calendar)
 
 *For class discussion*
 
-- [What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)    
-- [Shining light onto black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)    
-- [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)    
-- [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)    
-- [Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)    
+- [R1: What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)    
+- [R2: Shining light onto black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)    
+- [R3: Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)    
+- [R4: Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)    
+- [R5: Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)    
 
 *Samples* 
 
