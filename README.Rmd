@@ -40,6 +40,11 @@ kable(df)
 
 # Index
 
+
+
+
+
+
 ## course mangement
 
 - [About the course](cm/cm0001_about-the-course.md) 
@@ -47,9 +52,19 @@ kable(df)
 - [Help links](cm/cm0004_getting-help.md) 
 - Course introduction [[S](slides/cm4001_introduction.pdf)] 
 
+
+
+
+
+
 ## file management
 
 - Reproducible workflows [[S](slides/cm4002_principles.pdf)]  
+
+
+
+
+
 
 ## practice 
 
@@ -69,6 +84,11 @@ kable(df)
 
 - Starting with R Markdown [[S](slides/cm4003_rmarkdown.pdf)]  
 
+
+
+
+
+
 ## projects 
 
 *All projects* 
@@ -86,6 +106,11 @@ kable(df)
 
 - [Proposal](cm/cm3301_project-3_start.md) 
 
+
+
+
+
+
 ## reading for discussion 
 
 - [R1: What does research reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)    
@@ -93,6 +118,11 @@ kable(df)
 - [R3: Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)    
 - [R4: Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)    
 - [R5: Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf) 
+
+
+
+
+
 
 ## software 
 

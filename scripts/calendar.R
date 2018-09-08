@@ -40,7 +40,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[Install R & RStudio](cm/cm1001_install-R-RStudio.md)",
 		"<br>",
-		"[Install git](cm1002_install-git.md)"
+		"[Install git](cm/cm1002_install-git.md)"
 		),
 	paste0(	# project
 		"[Meet 597](cm/cm3301_project-3_start.md)"
