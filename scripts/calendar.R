@@ -94,7 +94,7 @@ df[le_row, ] <- c(
 	paste0( # exercise
 		"[](http://r4ds.had.co.nz)"
 		),
-	paste0( # to-do
+	paste0( # activity
 		""#"[GH collabor]()"
 		),
 	paste0( # project
@@ -131,7 +131,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1)"
 		),
-	paste0( # to-do
+	paste0( # activity
 		"Browse R1"
 		),
 	paste0(	# project
@@ -160,7 +160,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3)"
 		),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 		),
 	paste0(	# project
@@ -183,7 +183,7 @@ df[le_row, ] <- c(
 	paste0( # exercise
 		"[4.4](http://r4ds.had.co.nz/workflow-basics.html#practice)"
 		),
-	paste0( # to-do
+	paste0( # activity
 		"[]()"
 		),
 	paste0( # project
@@ -201,7 +201,7 @@ df[le_row, ] <- c(
 	"2",    # week
 	"M",    # day
 	paste0(	# agenda
-		"[]()"
+		"Collaborating via GitHub"
 		),
 	paste0(	# book
 		"[](http://r4ds.had.co.nz)"
@@ -209,8 +209,8 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 		),
-	paste0(	# to-do
-		"[]()"
+	paste0(	# activity
+		"Study R1"
 		),
 	paste0(	# project
 		"[]()"
@@ -224,7 +224,7 @@ df[le_row, ] <- c(
 	"",  # week
 	"T", # day
 	paste0(	# agenda
-		"[]()"
+		"Discuss R1: [What does reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)"
 	),
 	paste0(	# book
 		"[](http://r4ds.had.co.nz)"
@@ -232,14 +232,14 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
 		"[]()"
 	),
 	paste0(	# milestones
-		"[]()"
+		"R1 [reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -255,7 +255,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -278,7 +278,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -302,7 +302,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -325,7 +325,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -348,7 +348,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -371,7 +371,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -395,7 +395,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -418,7 +418,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -441,7 +441,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
@@ -464,7 +464,7 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# to-do
+	paste0(	# activity
 		"[]()"
 	),
 	paste0(	# project
