@@ -16,51 +16,103 @@ links](cm/cm0004_getting-help.md)
 
 ## calendar
 
-| week  | day | agenda                                                                                                                                                                                                                                                                                                                                           | exercises                                                                                                                                | assignments                                                            | project assignments              | deliverables                                                   |
-| :---- | :-- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- | :------------------------------- | :------------------------------------------------------------- |
-| 0     | R   | [Course introduction](slides/slides-00-01-introduction.pdf)<br>Calendar<br>(p. ix–xxv)                                                                                                                                                                                                                                                           |                                                                                                                                          | [Syllabus]()<br>[Install R & RStudio]()<br>[Install git]()             | [597 meetings]()                 |                                                                |
-|       | F   | [Principles for a reproducible workflow](slides/slides-00-02-principles.pdf)                                                                                                                                                                                                                                                                     |                                                                                                                                          | [GH account]()<br>[Proj 1 repo]()<br>[Setup Rproj]()<br>[Proj 1 dir]() | [Proposal 1]()<br>[Proposal 3]() |                                                                |
-| 1     | M   | [Getting started with R Markdown](slides/slides-01-01-rmarkdown.pdf)<br>(p. 423–426)                                                                                                                                                                                                                                                             |                                                                                                                                          | [GH collabor]()                                                        | [Proj 1 Rmd]()<br>[README]()     |                                                                |
-|       | T   | [How to do practice work](practice_work/exercises/8001_practice-work-setup.md)<br>[3.1 Introduction](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)<br>[3.2 First steps](http://r4ds.had.co.nz/data-visualisation.html#first-steps)<br>[3.3 Aesthetic mappings](http://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings) | [3.2.4](http://r4ds.had.co.nz/data-visualisation.html#exercises)<br>[3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1)   | Browse R1                                                              |                                  |                                                                |
-|       | R   | [3.5 Facets](http://r4ds.had.co.nz/data-visualisation.html#facets)<br>[3.6 Geoms](http://r4ds.had.co.nz/data-visualisation.html#geometric-objects)                                                                                                                                                                                               | [3.5.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-2)<br>[3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3) |                                                                        |                                  |                                                                |
-|       | F   | R coding basics<br>(p. 37-41)                                                                                                                                                                                                                                                                                                                    | [4.4](http://r4ds.had.co.nz/workflow-basics.html#practice)                                                                               |                                                                        |                                  | Proposal 1<br>Proposal 3                                       |
-| 2     | M   | Collaborating via GitHub                                                                                                                                                                                                                                                                                                                         |                                                                                                                                          | Study R1                                                               | Project 1 README                 |                                                                |
-|       | T   | Discuss R1: [What does reproducibility mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf). Project feedback.                                                                                                                                                                                                                    |                                                                                                                                          |                                                                        |                                  | R1 [Reading response](resources/readings/reading-response.pdf) |
-|       | R   | Data basics: filter(), arrange()<br>(p. 43-51)                                                                                                                                                                                                                                                                                                   | [5.2.4](http://r4ds.had.co.nz/transform.html#exercises-7)<br>[5.3.1](http://r4ds.had.co.nz/transform.html#exercises-8)                   |                                                                        |                                  |                                                                |
-|       | F   | Data basics: select(), mutate()<br>(p. 51-58)                                                                                                                                                                                                                                                                                                    | [5.4.1](http://r4ds.had.co.nz/transform.html#exercises-9)<br>[5.5.2](http://r4ds.had.co.nz/transform.html#exercises-10)                  |                                                                        |                                  |                                                                |
-| 3     | M   | R Markdown basics                                                                                                                                                                                                                                                                                                                                |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | T   | Data basics: summarize()                                                                                                                                                                                                                                                                                                                         |                                                                                                                                          | Browse R2                                                              |                                  |                                                                |
-|       | R   | R code basics: tibble()                                                                                                                                                                                                                                                                                                                          |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   | Data input with readr                                                                                                                                                                                                                                                                                                                            |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 4     | M   | Formatting docx documents                                                                                                                                                                                                                                                                                                                        |                                                                                                                                          | Study R2                                                               |                                  |                                                                |
-|       | T   | Discuss R2: [Shining light into black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)                                                                                                                                                                                                                                   |                                                                                                                                          |                                                                        |                                  | R2 [Reading response](resources/readings/reading-response.pdf) |
-|       | R   | More on graphs                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   | More on graphs                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 5     | M   | Version control: revert to a prior version                                                                                                                                                                                                                                                                                                       |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | T   | Project 2 startup                                                                                                                                                                                                                                                                                                                                |                                                                                                                                          | Browse R3                                                              |                                  | Project 1 report                                               |
-|       | R   | Work on your project and catch up on exercises (I’m at a conference)                                                                                                                                                                                                                                                                             |                                                                                                                                          |                                                                        | Project 2 startup                |                                                                |
-|       | F   | Work on your project and catch up on exercises (I’m at a conference)                                                                                                                                                                                                                                                                             |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 6     | M   | Version control: conflicts                                                                                                                                                                                                                                                                                                                       |                                                                                                                                          | Study R3                                                               |                                  |                                                                |
-|       | T   | Discuss R3: [Ten simple rules for reproducible computational research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)                                                                                                                                                                                                                |                                                                                                                                          |                                                                        |                                  | R3 [Reading response](resources/readings/reading-response.pdf) |
-|       | W   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  | Project 3 progress report                                      |
-| break | R   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-| break | F   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 7     | M   | Topics in reproducible research                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | T   | Tidy data: spread(), gather()                                                                                                                                                                                                                                                                                                                    |                                                                                                                                          | Browse R4                                                              |                                  |                                                                |
-|       | R   | Tidy data: separate(), pull()                                                                                                                                                                                                                                                                                                                    |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 8     | M   | Topics in reproducible research                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          | Study R4                                                               |                                  |                                                                |
-|       | T   | Discuss R4: [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)                                                                                                                                                                                                                              |                                                                                                                                          |                                                                        |                                  | R4 [Reading response](resources/readings/reading-response.pdf) |
-|       | R   | Data joins                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   | Data joins                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                          |                                                                        |                                  | Project 2 progress report                                      |
-| 9     | M   | Topics in reproducible research                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | T   | Factors                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                          | Browse R5                                                              |                                  |                                                                |
-|       | R   | Vectors                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   | Lists                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                          |                                                                        |                                  |                                                                |
-| 10    | M   | Topics in reproducible research                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          | Study R5                                                               |                                  |                                                                |
-|       | T   | Discuss R5: [Reproducible research: A dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)                                                                                                                                                                                                                            |                                                                                                                                          |                                                                        |                                  | R5 [Reading response](resources/readings/reading-response.pdf) |
-|       | R   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  |                                                                |
-|       | F   |                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                          |                                                                        |                                  | Project 2 report<br>Project 3 report                           |
+| wk | dy | agenda                                                                         | book                                                                                                                                                                                                               | exercises                                                                                                                                   | activities                                                                                                                              | projects                                                                                 | due                      |
+| :- | :- | :----------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- | :----------------------- |
+| 0  | R  | Course introduction \[[S](slides/cm4001_introduction.pdf)\]<br>Review calendar | [1.1–1.6](http://r4ds.had.co.nz/introduction.html)                                                                                                                                                                 | []()                                                                                                                                        | [Read syllabus](cm/cm0003_syllabus.md)<br>[Install R & RStudio](cm/cm1001_install-R-RStudio.md)<br>[Install git](cm1002_install-git.md) | [Meet 597](cm/cm3301_project-3_start.md)                                                 | Meet 597                 |
+|    | F  | Reproducible workflows \[[S](slides/cm4002_principles.pdf)\]                   |                                                                                                                                                                                                                    |                                                                                                                                             | [Setup GitHub](cm/cm1003_setup-github.md)<br>[Create repo](cm/cm1004_create-repo.md)<br>[Repo to Rproj](cm/cm1005_setup-Rproj.md)<br>   | [Proposal 1](cm/cm3101_project-1_start.md)<br>[Proposal 3](cm/cm3301_project-3_start.md) | Meet 597                 |
+| 1  | M  | Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]                  | [27.1–27.7](http://r4ds.had.co.nz/r-markdown.html)                                                                                                                                                                 | [](http://r4ds.had.co.nz)                                                                                                                   |                                                                                                                                         | <br>                                                                                     | Meet 597                 |
+|    | T  | <br>Graphs basics<br>First steps<br>Aesthetic mappings                         | [3.1](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)<br>[3.2](http://r4ds.had.co.nz/data-visualisation.html#first-steps)<br>[3.3](http://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings) | [3.2.4](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)<br>[3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1) | Browse R1                                                                                                                               | []()                                                                                     | []()                     |
+|    | R  | Facets<br>Geoms                                                                | [3.5](http://r4ds.had.co.nz/data-visualisation.html#facets)<br>[3.6](http://r4ds.had.co.nz/data-visualisation.html#geometric-objects)                                                                              | [3.5.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-2)<br>[3.6.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-3)    | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | F  | R coding basics                                                                | [4.1–4.3](http://r4ds.had.co.nz/workflow-basics.html)                                                                                                                                                              | [4.4](http://r4ds.had.co.nz/workflow-basics.html#practice)                                                                                  | []()                                                                                                                                    | []()                                                                                     | Proposal 1<br>Proposal 3 |
+| 2  | M  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | T  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | R  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | F  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+| 3  | M  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | T  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | R  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | F  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+| 4  | M  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | T  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | R  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+|    | F  | []()                                                                           | [](http://r4ds.had.co.nz)                                                                                                                                                                                          | [](http://r4ds.had.co.nz)                                                                                                                   | []()                                                                                                                                    | []()                                                                                     | []()                     |
+
+# Index
+
+## course mangement
+
+  - [About the course](cm/cm0001_about-the-course.md)
+  - [Syllabus](cm/cm0003_syllabus.md)  
+  - [Help links](cm/cm0004_getting-help.md)
+  - Course introduction \[[S](slides/cm4001_introduction.pdf)\]
+
+## file management
+
+  - Reproducible workflows
+\[[S](slides/cm4002_principles.pdf)\]
+
+## practice
+
+*Introduction*
+
+<!-- - [Learn R by doing](practice_work/exercises/8001_practice-work-setup.md) [Rmd 01-1]  -->
+
+*Analysis*
+
+*Data*
+
+*Graphs*
+
+<!-- - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md) (text p. 1-12) [Rmd 01-2] -->
+
+*Reporting*
+
+  - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]
+
+## projects
+
+*All projects*
+
+  - [Create repo](cm/cm1004_create-repo.md)
+  - [Repo to Rproj](cm/cm1005_setup-Rproj.md)
+
+*Project 1*
+
+  - [Proposal](cm/cm3101_project-1_start.md)
+
+*Project 2*
+
+*Project 3 (597 only)*
+
+  - [Proposal](cm/cm3301_project-3_start.md)
+
+## reading for discussion
+
+  - [R1: What does research reproducibility
+    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)  
+  - [R2: Shining light onto black
+    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
+  - [R3: Ten simple rules for reproducible computational
+    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)  
+  - [R4: Reproducible research can still be
+    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)  
+  - [R5: Reproducible research: a dissenting
+    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
+
+## software
+
+  - [Install R and RStudio](cm/cm1001_install-R-RStudio.md). If you
+    already use R and RStudio, please update R, RStudio, and packages to
+    the most recent versions.
+  - [Install git](cm/cm1002_install-git.md)
+  - [Setup
+GitHub](cm/cm1003_setup-github.md)
+
+<!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
+
+<!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
+
+<!-- #################################################### -->
 
 <!-- ## reading -->
 
@@ -294,24 +346,15 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [Project 3 wrapup](cm/cm052_project-3_wrapup.md)  -->
 
-# Index
+<!-- # Index -->
 
-## course mangement
-
-  - [Syllabus](cm/cm0003_syllabus.md)  
-  - [Help links](cm/cm0004_getting-help.md)
-  - [Course introduction](slides/slides-00-01-introduction.pdf) \[slides
-    00-01\]
+<!-- ## course mangement -->
 
 <!-- - [Three principles of reproducibility](../slides/slides003_start-report.pdf) [slides]  -->
 
 <!-- - [Comprehensive checklist for reproducibility](http://ropensci.github.io/reproducibility-guide/sections/checklist/)  -->
 
-## file management
-
-  - [Principles for a reproducible
-    workflow](slides/slides-00-02-principles.pdf) \[slides
-00-02\]
+<!-- ## file management -->
 
 <!-- - [Git: Ignore files](cm008_project-1_gitignore.md)  -->
 
@@ -327,19 +370,15 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [Run all scripts in sequence](cm051_run-all-scripts.md)  -->
 
-## practice
+<!-- ## practice  -->
 
-*Introduction*
+<!-- *Introduction*  -->
 
-  - [Learn R by
-    doing](practice_work/exercises/8001_practice-work-setup.md) \[Rmd
-    01-1\]
-
-*Analysis*
+<!-- *Analysis*  -->
 
 <!-- - [Perform a linear regression](cm012_project-1_regression.md) (Project 1)  -->
 
-*Data*
+<!-- *Data* -->
 
 <!-- - [Review of tools for preparing data](cm022_review-data-prep.md)  -->
 
@@ -375,11 +414,7 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [practiceR: Data joining](cm048_data-joining.md)  -->
 
-*Graphs*
-
-  - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md)
-    (text p. 1-12) \[Rmd
-01-2\]
+<!-- *Graphs*  -->
 
 <!-- - [Visually check the data](cm011_project-1_graph-first-look.md) (Project 1)  -->
 
@@ -399,11 +434,7 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [practiceR: Scatterplot](cm046_scatterplot.md)  -->
 
-*Reporting*
-
-  - [Getting started with R Markdown](slides/slides-01-01-rmarkdown.pdf)
-    \[slides
-01-01\]
+<!-- *Reporting* -->
 
 <!-- - [Write the client report](cm015_project-1_report.md) (Project 1)  -->
 
@@ -419,12 +450,9 @@ links](cm/cm0004_getting-help.md)
 
 <!-- ## reading -->
 
-## projects
+<!-- ## projects  -->
 
-*Project 1*
-
-  - [Getting started](cm/cm7101_project-1_start.md)
-  - [Set up a project repo](cm/cm7102_project-1_initial-repo.md)
+<!-- *Project 1* -->
 
 <!-- ## project assignments -->
 
@@ -446,7 +474,7 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [Wrap-up](cm040_project-2_wrapup.md)  -->
 
-*Project 2*
+<!-- *Project 2* -->
 
 <!-- - [Abstracts](cm031_project-3-descriptions.md)  -->
 
@@ -454,38 +482,13 @@ links](cm/cm0004_getting-help.md)
 
 <!-- - [Project 3 wrapup](cm052_project-3_wrapup.md)  -->
 
-*Project 3 (597 only)*
+<!-- *Project 3 (597 only)* -->
 
-  - [Getting started](cm/cm7301_project-3_start.md)
+<!-- ## reading  -->
 
-## reading
+<!-- *Samples*  -->
 
-*For class discussion*
-
-  - [R1: What does research reproducibility
-    mean?](resources/readings/2016-Goodman-et-al-what-does-RR-mean.pdf)  
-  - [R2: Shining light onto black
-    boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)  
-  - [R3: Ten simple rules for reproducible computational
-    research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)  
-  - [R4: Reproducible research can still be
-    wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)  
-  - [R5: Reproducible research: a dissenting
-    opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
-
-*Samples*
-
-  - [Calibration report](resources/readings/calibration-report.pdf)
-
-*Text*
-
-  - Preface, pp. ix–xxv / [1.1–1.8
-    online](http://r4ds.had.co.nz/introduction.html)
-  - R Markdown, pp. 423–426 / [27.1 & 27.2
-    online](http://r4ds.had.co.nz/r-markdown.html)
-  - Data visualization: Introduction and first steps, pp. 1–12 / [3.1
-    & 3.2
-    online](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
+<!-- - [Calibration report](resources/readings/calibration-report.pdf)  -->
 
 <!-- Gandrud C (2015) *Reproducible Research with R and RStudio*, CRC Press.  -->
 
@@ -508,15 +511,6 @@ links](cm/cm0004_getting-help.md)
 <!-- - Section 11.2  -->
 
 <!-- - Sections 13.1 and 13.2  -->
-
-## software
-
-  - [Install R and RStudio](cm/cm0010_install-R-RStudio.md). If you
-    already use R and RStudio, please update R, RStudio, and packages to
-    the most recent versions.
-  - [Set up an R Project](cm/cm0011_setup-R-project.md)  
-  - Install the [tidyverse](https://www.tidyverse.org)  
-  - [Setup Git and GitHub](cm/cm0012_setup-git.md)
 
 ## appendix: optional reading
 

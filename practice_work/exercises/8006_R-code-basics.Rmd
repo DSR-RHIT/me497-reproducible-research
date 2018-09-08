@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+# R coding basics
+
+Richard Layton  
+2018-09-07  
+
+Source: *R for Data Science* Chapter 2 (text) /  Chapter 4 (online)  
+
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo=TRUE, collapse=TRUE)
+library(tidyverse)
+```
+
+## 4.1 Coding basics
+
+```{r}
+1 / 200 * 30
+(59 + 73 + 2) / 3
+sin(pi / 2)
+```
+
+
+```{r}
+x <- 3 * 4
+```
+
+## 4.2 What’s in a name?
+
+
+explain the variable .
+
+```{r}
+this_is_a_really_long_name <- 2.5
+```
+
+
+## 4.3 Calling functions
+
+
+
+```{r}
+z <- seq(from = 1, to = 10, by = 2)
+z
+
+z2 <- seq(1, 10)
+z2
+```
+
+
+```{r}
+x <- "hello world"
+x
+```
+
+
+```{r}
+(x <- "hello world")
+```
+
+## 4.4 Practice
+
+```{r}
+my_variable <- 10
+my_var1able
+```
+
