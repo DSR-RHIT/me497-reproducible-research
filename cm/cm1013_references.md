@@ -109,3 +109,24 @@ For example,
       address   = {Boca Raton, FL},
       edition   = {2},
     }
+
+## assignment
+
+For project 1
+
+  - Create a bib file  
+  - Add one reference from report
+  - Specify the bib file in the YAML header
+  - Add the citation to the report  
+  - Add a references heading
+
+Knit the document to make sure everything works.
+
+  - Browse the CSL files available
+  - Find one you like, download it
+  - Specify the CSL file in the YAML header
+
+Knit the document to make sure everything works.
+
+Lastly, as you work on your project, add references and citations as you
+work.
