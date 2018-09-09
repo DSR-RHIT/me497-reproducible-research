@@ -16,9 +16,6 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 
 ## calendar
 
-Note to students: The calendar is undergoing some major surgery this
-weekend. Links will be restored as soon as possible.
-
 Readings in the text refer to sections in the the online
 version.
 
