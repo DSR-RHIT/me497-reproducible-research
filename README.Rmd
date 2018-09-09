@@ -81,6 +81,7 @@ kable(df)
 *Reporting*
 
 - Starting with R Markdown [[S](slides/cm4003_rmarkdown.pdf)]  
+- [References](cm/cm1013_references.md)
 
 
 

@@ -108,9 +108,7 @@ df[le_row, ] <- c(
 		"[Edit&nbsp;README](cm/cm1012_edit-readme.md)"
 		),
 	paste0( # project
-		"",#"[Proj 1 Rmd]()",
-		"<br>",
-		""#"[README]()"
+		"<br>"
 		),
 	paste0( # milestones
 		"Meet&nbsp;597"
@@ -121,13 +119,11 @@ df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
 	paste0( # agenda
-		"",#"[How to do practice work](practice_work/exercises/8001_practice-work-setup.md)",
-		"<br>",
-		"Graphs basics",
+		"Intro graphs",
 		"<br>",
 		"First steps",
 		"<br>",
-	  "Aesthetic mappings"
+	  "Aesthetics"
 		),
 	paste0( # book
 		"[3.1](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)",
@@ -144,6 +140,8 @@ df[le_row, ] <- c(
 		"[3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1)"
 		),
 	paste0( # activity
+		"[Practice how-to](practice_work/exercises/8001_practice-work-setup.md)",
+		"<br>",
 		"Browse&nbsp;R1"
 		),
 	paste0(	# project
@@ -217,7 +215,9 @@ df[le_row, ] <- c(
 	"2",    # week
 	"M",    # day
 	paste0(	# agenda
-		"Collaborating via GitHub"
+		"References",
+		"<br>",
+		"Controlling Word styles"
 		),
 	paste0(	# book
 		"[](http://r4ds.had.co.nz)"
@@ -226,6 +226,10 @@ df[le_row, ] <- c(
 		"[](http://r4ds.had.co.nz)"
 		),
 	paste0(	# activity
+		"[References](cm/cm1013_references.md)",
+		"<br>",
+		"[Word&nbsp;styles](cm/cm1014_word-styles.md)",
+		"<br>",
 		"Study&nbsp;R1"
 		),
 	paste0(	# project
