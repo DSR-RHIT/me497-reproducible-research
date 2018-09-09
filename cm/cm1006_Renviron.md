@@ -1,0 +1,118 @@
+
+# installing R packages
+
+Packages are like “apps” for R. As Hadley states, “Packages are the
+fundamental units of reproducible R code. They include reusable
+functions, the documentation that describes how to use them, and sample
+data.” (Wickham & Grolemund, 2016)
+
+If we store packages in a library separate from the base R installation,
+then when you update R, you don’t have to reinstall every package,
+saving a lot of time.
+
+In this activity, you
+
+  - Create a stand-alone library (folder) for R packages
+  - Create a text file called `.Renviron` that tells R the path to your
+    stand-alone library
+  - Install a package to test that the process works
+
+## create an empty package library
+
+At the top level of your drive, create a new directory (folder) named
+“R”. In that directory create a new folder named “library”, for
+example,
+
+  - Windows: `C:/R/library`
+  - Linux: `~/R/library`
+
+## the *.Renviron* file
+
+The `.Renviron` file is a text file that directs R packages to be
+installed in the *R/library* directory you just created. To create the
+file, with RStudio open,
+
+  - Create a new text file, *File menu \> New File \> Text File*.
+  - Save the file to the `practice_work` main directory using the
+    filename *.Renviron*
+
+In this file, write one line of text,
+
+  - Windows: `R_LIBS_USER="C:/R/library"`
+  - Linux: `R_LIBS_USER="~/R/library"`
+
+**Important**
+
+  - Paste a copy of the `.Renviron` file at the top level of every R
+    project you start  
+  - Take a moment and paste a copy of this file to everyu project you
+    have started
+
+At this point, each of your project directories should look something
+like this,
+
+    project_folder
+        |-- .gitignore
+        |-- .Renviron
+        |-- project_name.Rproj
+        `-- README.md
+
+These files came about by
+
+  - `.gitignore` and `README.md` from setting up the repo
+  - `.Rproj` file from when you used the repo URL to create the R
+    project
+  - `.Renviron` from the instructions above
+
+## test it
+
+Now let’s see if the library path you made works.
+
+  - Find the RStudio pane with *Packages* in its ribbon. Select
+    *Packages \> Install*
+  - In the dialog box that appears, the *Install to Library* strip
+    should show `C:/R/library [Default]` (in Windows) or `~/R/library
+    [Default]` in Linux
+
+If the *Install to Library* is not correct, check that
+
+  - Your have correctly opened an R project
+  - The `.Renviron` file is in the project top level directory
+  - The `.Renviron` file has the correct contents described earlier  
+  - The file path in the `.Renviron` file agrees with the path to the
+    `R/library` directory you made earlier
+
+If the *Install to Library* is correct,
+
+  - Type `tidyverse` in the *Packages* box  
+  - *Install*
+
+If all goes well, you’ll see something like this in the R Console
+
+    ## > install.packages("tidyverse")
+    ## Installing package into ‘C:/R/library’
+    ## (as ‘lib’ is unspecified)
+    ## trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/tidyverse_1.2.1.zip'
+    ## Content type 'application/zip' length 92547 bytes (90 KB)
+    ## downloaded 90 KB
+    ## 
+    ## package ‘tidyverse’ successfully unpacked and MD5 sums checked
+
+## lastly
+
+Remember, every time you create a new project (with or without version
+control), paste a copy of the `.Renviron` file at the top level of the
+project directory
+
+## references
+
+<div id="refs" class="references">
+
+<div id="ref-wickhamgrolemund2016">
+
+Wickham, Hadley & Garrett Grolemund (2016) *R for Data Science*.
+Sebastopol, CA: O’Reilly Media, Inc.
+
+</div>
+
+</div>

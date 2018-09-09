@@ -1,0 +1,107 @@
+---
+output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
+---
+
+# setup directories 
+
+## prerequisites 
+
+You should have already created these R projects with version control and initialized them with README and gitignore files 
+
+- practice work 
+- project 1 
+- project 2 
+- project 3 (597 students only) 
+
+At this point, every project should look something like this, 
+
+    project_folder
+        |-- .gitignore
+        |-- .Renviron
+        |-- project_name.Rproj
+        `-- README.md
+
+## create a directory structure
+
+All we are going to do is create a set of empty sub-directories (folders). 
+
+- First, open one of your R projects 
+
+Next, use one of these two approaches  
+
+- In your OS, use your usual method for creating folders manually 
+- In RStudio, find  *Files* in the pane ribbon and select *New Folder* 
+
+Using either approach, create new folders for `data`, `manage`, etc. When done, the directory tree should look like this 
+
+    project_folder
+        |-- data
+        |-- manage
+        |-- reports
+        |-- resources
+        |-- results
+        |-- scripts
+        |-- .gitignore
+        |-- .Renviron
+        |-- project_name.Rproj
+        `-- README.md
+
+## gitignore
+
+The `.gitignore` file lists local files excused from version control and therefore not shared with collaborators. 
+
+Of the new folders we just created, I typically add the `manage` folder to `.gitignore` because project management files are typically not required for research  reproducibility. 
+
+You originally created the `.gitignore` file when you set up the repo. In RStudio, open `.gitignore`. If you set it up to ignore R, the first few lines of your file should look something like this, 
+
+
+```
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+... (etc) 
+```
+
+To the top of the file, add two new lines to tell git to ignore the `manage` directory. 
+
+```
+# Project management files 
+manage
+```
+
+
+Anytime you create a folder or a file you want git to igonre, just add its path to the `.gitignore` file 
+
+## repeat 
+
+Repeat the procedure for all your projects 
+
+- practice_work 
+- project 1 
+- project 2 
+- project 3 (597 students only) 
+
+---
+
+[main page](../README.md)
+
+
+

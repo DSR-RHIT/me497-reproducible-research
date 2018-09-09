@@ -95,6 +95,10 @@ df[le_row, ] <- c(
 		"[](http://r4ds.had.co.nz)"
 		),
 	paste0( # activity
+		"[Setup library](cm/cm1006_Renviron.md)",
+		"<br>",
+		"[Setup folders](cm/cm1007_setup-directories.md)",
+		"<br>",
 		""#"[GH collabor]()"
 		),
 	paste0( # project
@@ -325,8 +329,8 @@ df[le_row, ] <- c(
 	paste0(	# exercise
 		"[](http://r4ds.had.co.nz)"
 	),
-	paste0(	# activity
-		"[]()"
+	paste0( # activity
+		"Browse R2"
 	),
 	paste0(	# project
 		"[]()"
@@ -396,7 +400,7 @@ df[le_row, ] <- c(
 		"[](http://r4ds.had.co.nz)"
 	),
 	paste0(	# activity
-		"[]()"
+		"Study R2"
 	),
 	paste0(	# project
 		"[]()"
@@ -410,7 +414,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
 	paste0(	# agenda
-		"[]()"
+		"Discuss R2: [Shining light into black boxes](resources/readings/2012-Morin-Shining-light-into-black-boxes.pdf)"
 	),
 	paste0(	# book
 		"[](http://r4ds.had.co.nz)"
@@ -425,7 +429,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"[]()"
+		"R2 [reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day

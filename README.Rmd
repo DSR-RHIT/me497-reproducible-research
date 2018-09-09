@@ -99,6 +99,7 @@ kable(df)
 
 - [Create repo](cm/cm1004_create-repo.md) 
 - [Repo to Rproj](cm/cm1005_setup-Rproj.md) 
+- [Setup directories](cm/cm1007_setup-directories.md)
 
 *Project 1*
 
@@ -133,7 +134,7 @@ kable(df)
 - [Install R and RStudio](cm/cm1001_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
 - [Install git](cm/cm1002_install-git.md) 
 - [Setup GitHub](cm/cm1003_setup-github.md) 
-
+- [Setup .Renviron](cm/cm1006_Renviron.md) 
 
 <!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
 <!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
