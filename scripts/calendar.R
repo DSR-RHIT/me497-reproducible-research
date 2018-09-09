@@ -103,7 +103,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[Invite&nbsp;collaborator](cm/cm1010_invite-collab.md)",
 		"<br>",
-		"[Basic&nbsp;collab](cm/cm1011_basic-collab.md)",
+		"[Collab&nbsp;basics](cm/cm1011_basic-collab.md)",
 		"<br>",
 		"[Edit&nbsp;README](cm/cm1012_edit-readme.md)"
 		),
