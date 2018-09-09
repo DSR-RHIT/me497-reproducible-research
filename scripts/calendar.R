@@ -506,3 +506,565 @@ df[le_row, ] <- c(
 		"[]()"
 	)
 )
+#  week 5 ---------------------------------------------------- 5
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"5",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		""
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Browse&nbsp;R3"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"P1 Final report"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"Start project 2"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+#  week ---------------------------------------------------- 6
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"6",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Study&nbsp;R3"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		"Discuss R3: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)"
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"R3 [reading response](resources/readings/reading-response.pdf)",
+		"<br>",
+		"(Wed) P3 progress report"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		"break"
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		"break"
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+#  week ---------------------------------------------------- 7
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"7",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Browse&nbsp;R4"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		""
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"P2 progress report"
+	)
+)
+#  week ---------------------------------------------------- 8
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"8",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Study&nbsp;R4"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		"Discuss R4: [Reproducible research can still be wrong](resources/readings/2015-Leek-Peng-RR-can-still-be-wrong.pdf)"
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"R4 [reading response](resources/readings/reading-response.pdf)"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+#  week ---------------------------------------------------- 9
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"9",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Browse&nbsp;R5"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		""
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+#  week ---------------------------------------------------- 10
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"10",    # week
+	"M",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"Study&nbsp;R5"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"T",    # day
+	paste0(	# agenda
+		"Discuss R5: [Reproducible research: a dissenting opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf) "
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"R5 [reading response](resources/readings/reading-response.pdf)"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"R",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"[]()"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		""
+	),
+	paste0(	# book
+		"[]()"
+	),
+	paste0(	# exercise
+		"[]()"
+	),
+	paste0(	# activity
+		"[]()"
+	),
+	paste0(	# project
+		"[]()"
+	),
+	paste0(	# milestones
+		"P2 Final report",
+		"<br>",
+		"P3 Final report"
+	)
+)
