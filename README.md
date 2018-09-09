@@ -67,7 +67,7 @@ version.
 |    | R |                                                                                                                                   | []()                                                                                                                                                                                                               | []()                                                                                                                                                | []()                                                                                                                                                                                                                                          | []()                                                                                      | []()                                                                                       |
 |    | F |                                                                                                                                   | []()                                                                                                                                                                                                               | []()                                                                                                                                                | []()                                                                                                                                                                                                                                          | []()                                                                                      | P2 Final report<br>P3 Final report                                                         |
 
-# Index
+# index
 
 ## course mangement
 
@@ -81,35 +81,38 @@ version.
   - Reproducible workflows
 \[[S](slides/cm4002_principles.pdf)\]
 
-## practice
+<!-- ## practice  -->
 
-*Introduction*
+<!-- *Introduction*  -->
 
-<!-- - [Learn R by doing](practice_work/exercises/8001_practice-work-setup.md) [Rmd 01-1]  -->
+<!-- <!-- - [Learn R by doing](practice_work/exercises/8001_practice-work-setup.md) [Rmd 01-1]  -->
 
-*Analysis*
+<!-- *Analysis*  -->
 
-*Data*
+<!-- *Data* -->
 
-*Graphs*
+<!-- *Graphs*  -->
 
-<!-- - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md) (text p. 1-12) [Rmd 01-2] -->
+<!-- <!-- - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md) (text p. 1-12) [Rmd 01-2] -->
 
-*Reporting*
+## git things
 
-  - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]  
-  - [References](cm/cm1013_references.md)
+*Set up*
 
-## projects
+  - [Install git locally](cm/cm1002_install-git.md)
+  - [Setup a GitHub account](cm/cm1004_setup-github.md)
+  - [Edit the .gitignore file](cm/cm1009_gitignore.md)
 
-*All projects*
+*For a project*
 
   - [Create a repository](cm/cm1005_create-repo.md)
   - [Create a version-controlled R project](cm/cm1006_setup-Rproj.md)
   - [Setup the project directories](cm/cm1008_setup-directories.md)
   - [Invite a GitHub collaborator](cm/cm1010_invite-collab.md)
-  - [Repo commit](cm/cm1011_basic-collab.md)
+  - [Collaboration basics](cm/cm1011_basic-collab.md)
   - [Create the README.Rmd](cm/cm1012_edit-readme.md)
+
+## project assignments
 
 *Project 1*
 
@@ -121,6 +124,20 @@ version.
 *Project 3 (597 only)*
 
   - [Proposal](cm/cm3301_project-3_start.md)
+
+## r and rstudio things
+
+  - [Install R and RStudio](cm/cm1001_install-R-RStudio.md). If you
+    already use R and RStudio, please update R, RStudio, and packages to
+    the most recent versions.
+  - [Create a stand-alone package library](cm/cm1003_library.md)
+  - [Create the .Renviron file](cm/cm1007_Renviron.md)
+
+## r markdown things
+
+  - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]  
+  - [References](cm/cm1013_references.md)
+  - [Controlling Word styles](cm/cm1014_word-styles.md)
 
 ## reading for discussion
 
@@ -135,21 +152,42 @@ version.
   - R5: [Reproducible research: a dissenting
     opinion](resources/readings/2012-Drummond-RR-dissenting-opinion.pdf)
 
-## software
+*Optional reading*
 
-  - [Install R and RStudio](cm/cm1001_install-R-RStudio.md). If you
-    already use R and RStudio, please update R, RStudio, and packages to
-    the most recent versions.
-  - [Install git locally](cm/cm1002_install-git.md)
-  - [Create a stand-alone package library](cm/cm1003_library.md)
-  - [Setup a GitHub account](cm/cm1004_setup-github.md)
-  - [Create the .Renviron file](cm/cm1007_Renviron.md)
-  - [Edit the .gitignore
-file](cm/cm1009_gitignore.md)
+  - [Why you shouldn’t use Markdown for
+    documentation](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)  
+  - [Good enough practices for scientific
+    computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
+  - [Facilitating reproducibility in scientific computing: Principles
+    and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)
+  - [What computational scientists need to know about intellectual
+    property law: A primer](https://osf.io/yi8k2/)
+  - [Everybody makes mistakes (from Statistics Done
+    Wrong)](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
+  - [A guide to enhancing reproducibility in scientific results and
+    writing](http://ropensci.github.io/reproducibility-guide/)
+  - [Five concrete reasons your students should be learning to analyze
+    data in the reproducible
+    paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/)
+  - [Initial steps towards reproducible
+    research](http://kbroman.org/steps2rr/)
+  - [Disseminating reproducible research is fundamentally a language and
+    communication
+    problem](http://simplystatistics.org/2016/05/13/reproducible-research-language/)
+  - [De-weaponizing
+    reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/)
+  - [The real reason reproducible research is
+    important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
+  - [Top 10 readings in
+    reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
 
-<!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
+## about
 
-<!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
+  - [My data visualization
+    course](https://github.com/DSR-RHIT/me447-visualizing-data)
+  - [My data display blog](http://www.graphdoctor.com)
+  - [My music
+blog](http://www.richardlaytonmusic.com)
 
 <!-- #################################################### -->
 
@@ -550,39 +588,3 @@ file](cm/cm1009_gitignore.md)
 <!-- - Section 11.2  -->
 
 <!-- - Sections 13.1 and 13.2  -->
-
-## appendix: optional reading
-
-  - [Why you shouldn’t use Markdown for
-    documentation](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)  
-  - [Good enough practices for scientific
-    computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
-  - [Facilitating reproducibility in scientific computing: Principles
-    and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)
-  - [What computational scientists need to know about intellectual
-    property law: A primer](https://osf.io/yi8k2/)
-  - [Everybody makes mistakes (from Statistics Done
-    Wrong)](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)
-  - [A guide to enhancing reproducibility in scientific results and
-    writing](http://ropensci.github.io/reproducibility-guide/)
-  - [Five concrete reasons your students should be learning to analyze
-    data in the reproducible
-    paradigm](http://chance.amstat.org/2014/09/reproducible-paradigm/)
-  - [Initial steps towards reproducible
-    research](http://kbroman.org/steps2rr/)
-  - [Disseminating reproducible research is fundamentally a language and
-    communication
-    problem](http://simplystatistics.org/2016/05/13/reproducible-research-language/)
-  - [De-weaponizing
-    reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/)
-  - [The real reason reproducible research is
-    important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
-  - [Top 10 readings in
-    reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
-
-# About
-
-  - [My data visualization
-    course](https://github.com/DSR-RHIT/me447-visualizing-data)
-  - [My data display blog](http://www.graphdoctor.com)
-  - [My music blog](http://www.richardlaytonmusic.com)
