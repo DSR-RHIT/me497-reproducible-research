@@ -88,7 +88,7 @@ version.
 
 *Project 1*
 
-  - [Proposal](cm/cm3101_project-1_start.md)
+  - [Proposal](cm/cm3101_project-1-select.md)
   - [Begin first draft](cm/cm3102_project-1-draft.md)
 
 *Project 2*
