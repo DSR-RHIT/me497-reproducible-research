@@ -1,5 +1,5 @@
 
-# stage-commit-pull-push
+# collaboration basics
 
 We treat the repo as the master version of a project.
 
