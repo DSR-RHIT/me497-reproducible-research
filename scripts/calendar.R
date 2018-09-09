@@ -101,7 +101,9 @@ df[le_row, ] <- c(
 		"<br>",
 		"[Edit&nbsp;gitignore](cm/cm1009_gitignore.md)",
 		"<br>",
-		"[Invite&nbsp;collaborator]()",
+		"[Invite&nbsp;collaborator](cm/cm1010_invite-collab.md)",
+		"<br>",
+		"[Repo&nbsp;commit](cm/cm1011_repo-commit.md)",
 		"<br>",
 		"[Edit&nbsp;README]()"
 		),

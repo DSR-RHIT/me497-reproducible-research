@@ -1,5 +1,5 @@
 
-# first steps in collaborating via GitHub
+# invite a GitHub collaborator
 
 The way we are using version control for collaboration, we get four
 primary benefits:

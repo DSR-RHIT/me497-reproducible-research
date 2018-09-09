@@ -11,37 +11,11 @@ library(tidyverse)
 ```
 
 
-# first steps in collaborating via GitHub
+# stage-commit-pull-push
 
-The way we are using version control for collaboration, we get four primary benefits: 
+We treat the repo as the master version of a project. 
 
-- Reproducing one another's work 
-- Reviewing and commenting on one another's changes 
-- Resolving conflicts 
-- Revert to an earlier version of a file 
-
-
-
-
-
-## assignment 
-
-I will be your first collaborator. Navigate to one of your GitHub project repos and 
-
-1. Select the *Settings* tab 
-2. Select the *Collaborators* menu 
-3. In the *Search by user name* box, type my GitHub name, "graphdr" 
-4. *Add Collaborator* 
-5. Repeat for all your projects 
-
-
-
-```{r}
-include_graphics("../resources/images/github-collaborate-2.png")
-```
-
-
-
+The basic steps when collaborating via GitHub are to work locally, stage your edits and commit them, pull from the repo in case your collaborator has pushed changes, merge the changes with your own, then push to the repo. 
 
 
 
@@ -121,6 +95,26 @@ If you get such a message,
 
 ## assignment 
 
-For every project
+Open one of your projects  
+
+- Select the *Git* tab 
+
+
+If there are files shown in the Git pane, 
+
+- Click your cursor in the *git* pane 
+- Select all the files using the keyboard shortcut *Ctrl A* (*Command A* in the Mac OS) 
+- Stage all files by clicking in one of the *Staged* boxes 
+- Select *Commit* 
+- In the text box, write a short but descriptive message that summarizes the nature of the commit 
+- *Commit* 
+- *Pull* and you will see the message *Current branch master is up to date* (assuming Carlos has not yet made any changes) 
+- *Close* 
+- *Push* 
+- *Close* 
+
+Navigate to your online repo and you should find that it includes all your changes. 
+
+- Repeat for all your projects. 
 
 

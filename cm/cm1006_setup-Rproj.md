@@ -33,8 +33,8 @@ constraints, I agree with Jenny that all of your R projects should have
 exactly this set-up.
 
   - Navigate to the GitHub repo for your practice work
-  - Copy the HTTPS clone URL to your clipboard via the green “Clone or
-    Download” button (the URL will look something like this:
+  - Copy the HTTPS clone URL to your clipboard via the green â€œClone or
+    Downloadâ€ button (the URL will look something like this:
     <https://github.com/jennybc/myrepo.git>)
 
 In RStudio,
