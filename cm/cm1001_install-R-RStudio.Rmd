@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # install R and RStudio 
@@ -16,7 +18,7 @@ output: github_document
 
 - Stay logged in as localmgr. 
 
-- From [RStudio](http://www.rstudio.com/) > Products > RStudio > Desktop > Download RStudio Desktop > and select Windows 
+- From [RStudio](http://www.rstudio.com/) &gt; Products &gt; RStudio &gt; Desktop &gt; Download RStudio Desktop &gt; and select Windows 
 
 - Install the software in  _C:/Program Files_. Accept all defaults. 
 
@@ -52,6 +54,3 @@ RStudio is an integrated development environment (IDE) for R, so I rarely run R 
 
 -   Delete the shortcuts to R (if any) on your desktop  
 
----
-
-[main page](../README.md)

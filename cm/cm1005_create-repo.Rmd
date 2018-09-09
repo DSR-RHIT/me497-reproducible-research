@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # create a repo
@@ -79,16 +81,4 @@ Repeat the instructions above to create repos called
 
 
 <!-- Over time, of course, you will settle on you own approach to file organization. For this project, we'll all use this one.  -->
-
-
-
-
-
-
----
-
-[main page](../README.md)
-
-
-
 

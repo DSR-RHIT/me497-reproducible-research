@@ -33,7 +33,3 @@ ME497 Reproducible Research
     ggplot2`). The author’s [book
     website](https://www.stat.auckland.ac.nz/~paul/RG2e/) has the code
     for every figure in the book.
-
------
-
-[main page](../README.md)

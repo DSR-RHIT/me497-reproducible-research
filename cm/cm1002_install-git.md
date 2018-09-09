@@ -19,7 +19,3 @@ suggest you read all the instructions before starting.
   - [Linux](http://happygitwithr.com/install-git.html#linux) install
 
 That’s all for now. We’ll do more with git when we work with GitHub.
-
------
-
-[main page](../README.md)

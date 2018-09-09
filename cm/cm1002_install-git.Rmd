@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # install git
@@ -17,6 +19,3 @@ Jenny Bryan provided these instructions for a workshop I attended. I suggest you
 
 That's all for now. We'll do more with git when we work with GitHub.
 
----
-
-[main page](../README.md)

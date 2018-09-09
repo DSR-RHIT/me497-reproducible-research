@@ -8,14 +8,14 @@ library(knitr)
 mt40 <- rep("", 42)
 the_days <- c("R", "F", rep(c("M", "T", "R", "F"), 10))
 df <- tibble(
-	wk         = mt40,
-	dy         = mt40,
-	agenda     = mt40,
-	book       = mt40,
-	exercises  = mt40,
+	w      = mt40,
+	d      = mt40,
+	agenda = mt40,
+	text   = mt40,
+	exer   = mt40,
 	activities = mt40,
 	projects   = mt40,
-	due = mt40
+	due    = mt40
 	)
 
 le_row <- 0
@@ -30,23 +30,25 @@ df[le_row, ] <- c(
 		"Review calendar"
 		),
 	paste0(	# book
-		"[1.1--1.6](http://r4ds.had.co.nz/introduction.html)"
+		"[1.1 -- 1.6](http://r4ds.had.co.nz/introduction.html)"
 		),
 	paste0(	# exercise
 		"[]()"
 		),
 	paste0(	# activity
-		"[Read syllabus](cm/cm0003_syllabus.md)",
+		"[Read&nbsp;syllabus](cm/cm0003_syllabus.md)",
 		"<br>",
-		"[Install R & RStudio](cm/cm1001_install-R-RStudio.md)",
+		"[Install&nbsp;R&nbsp;&&nbsp;RStudio](cm/cm1001_install-R-RStudio.md)",
 		"<br>",
-		"[Install git](cm/cm1002_install-git.md)"
+		"[Install&nbsp;git](cm/cm1002_install-git.md)",
+		"<br>",
+		"[Create&nbsp;library](cm/cm1003_library.md)"
 		),
 	paste0(	# project
-		"[Meet 597](cm/cm3301_project-3_start.md)"
+		"[Meet&nbsp;597](cm/cm3301_project-3_start.md)"
 		),
 	paste0(	# milestones
-		"Meet 597"
+		"Meet&nbsp;597"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -57,27 +59,27 @@ df[le_row, ] <- c(
 		"Reproducible workflows [[S](slides/cm4002_principles.pdf)]"
 		),
 	paste0(	# book
-		""#"[](http://r4ds.had.co.nz)"
+		"[]()"
 		),
 	paste0(	# exercise
-		""#"[](http://r4ds.had.co.nz)"
+		"[]()"
 		),
 	paste0(	# activity
-		"[Setup GitHub](cm/cm1003_setup-github.md)",
+		"[Setup&nbsp;GitHub](cm/cm1004_setup-github.md)",
 		"<br>",
-		"[Create repo](cm/cm1004_create-repo.md)",
+		"[Create&nbsp;repos](cm/cm1005_create-repo.md)",
 		"<br>",
-		"[Repo to Rproj](cm/cm1005_setup-Rproj.md)",
+		"[Create&nbsp;Rproj](cm/cm1006_setup-Rproj.md)",
 		"<br>",
-		""#"[Proj 1 dir]()"
+		"[Create&nbsp;Renviron](cm/cm1007_Renviron.md)"
 		),
 	paste0(	# project
-		"[Proposal 1](cm/cm3101_project-1_start.md)",
+		"[Proposal&nbsp;1](cm/cm3101_project-1_start.md)",
 		"<br>",
-		"[Proposal 3](cm/cm3301_project-3_start.md)"
+		"[Proposal&nbsp;3](cm/cm3301_project-3_start.md)"
 		),
 	paste0(	# milestones
-		"Meet 597"
+		"Meet&nbsp;597"
 	)
 )
 #  week 1 ---------------------------------------------------- 1
@@ -89,17 +91,19 @@ df[le_row, ] <- c(
 		"Starting with R Markdown [[S](slides/cm4003_rmarkdown.pdf)]"
 		),
 	paste0( # book
-		"[27.1--27.7](http://r4ds.had.co.nz/r-markdown.html)"
+		"[27.1 -- 27.6](http://r4ds.had.co.nz/r-markdown.html)"
 		),
 	paste0( # exercise
 		"[](http://r4ds.had.co.nz)"
 		),
 	paste0( # activity
-		"[Setup library](cm/cm1006_Renviron.md)",
+		"[Setup&nbsp;directories](cm/cm1008_setup-directories.md)",
 		"<br>",
-		"[Setup folders](cm/cm1007_setup-directories.md)",
+		"[Edit&nbsp;gitignore](cm/cm1009_gitignore.md)",
 		"<br>",
-		""#"[GH collabor]()"
+		"[Invite&nbsp;collaborator]()",
+		"<br>",
+		"[Edit&nbsp;README]()"
 		),
 	paste0( # project
 		"",#"[Proj 1 Rmd]()",
@@ -107,7 +111,7 @@ df[le_row, ] <- c(
 		""#"[README]()"
 		),
 	paste0( # milestones
-		"Meet 597"
+		"Meet&nbsp;597"
 		)
 )
 le_row <- le_row + 1 # ----- day
@@ -131,12 +135,14 @@ df[le_row, ] <- c(
 	  "[3.3](http://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings)"
 	 ),
 	paste0( # exercise
+		"[]()",
+		"<br>",
 		"[3.2.4](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)",
 		"<br>",
 		"[3.3.1](http://r4ds.had.co.nz/data-visualisation.html#exercises-1)"
 		),
 	paste0( # activity
-		"Browse R1"
+		"Browse&nbsp;R1"
 		),
 	paste0(	# project
 		"[]()"
@@ -182,7 +188,11 @@ df[le_row, ] <- c(
 		"R coding basics"
 		),
 	paste0( # book
-		"[4.1--4.3](http://r4ds.had.co.nz/workflow-basics.html)"
+		"[4.1](http://r4ds.had.co.nz/workflow-basics.html)",
+		"<br>",
+		"[4.2](http://r4ds.had.co.nz/workflow-basics.html#whats-in-a-name)",
+		"<br>",
+		"[4.3](http://r4ds.had.co.nz/workflow-basics.html#calling-functions)"
 		),
 	paste0( # exercise
 		"[4.4](http://r4ds.had.co.nz/workflow-basics.html#practice)"
@@ -194,9 +204,9 @@ df[le_row, ] <- c(
 		"[]()"
 		),
 	paste0( # milestones
-		"Proposal 1",
+		"Proposal&nbsp;1",
 		"<br>",
-		"Proposal 3"
+		"Proposal&nbsp;3"
 		)
 )
 #  week 2 ---------------------------------------------------- 2
@@ -214,7 +224,7 @@ df[le_row, ] <- c(
 		"[](http://r4ds.had.co.nz)"
 		),
 	paste0(	# activity
-		"Study R1"
+		"Study&nbsp;R1"
 		),
 	paste0(	# project
 		"[]()"
@@ -251,13 +261,21 @@ df[le_row, ] <- c(
 	"",  # week
 	"R", # day
 	paste0(	# agenda
-		"[]()"
+		"Data basics: filter(), arrange()"
 	),
 	paste0(	# book
-		"[](http://r4ds.had.co.nz)"
+		"[5.1](http://r4ds.had.co.nz/transform.html#introduction-2)",
+		"<br>",
+		"[5.2](http://r4ds.had.co.nz/transform.html#filter-rows-with-filter)",
+		"<br>",
+		"[5.3](http://r4ds.had.co.nz/transform.html#arrange-rows-with-arrange)"
 	),
 	paste0(	# exercise
-		"[](http://r4ds.had.co.nz)"
+		"[]()",
+		"<br>",
+		"[5.2.4](http://r4ds.had.co.nz/transform.html#exercises-7)",
+		"<br>",
+		"[5.3.1](http://r4ds.had.co.nz/transform.html#exercises-8)"
 	),
 	paste0(	# activity
 		"[]()"
@@ -274,13 +292,17 @@ df[le_row, ] <- c(
 	"",  # week
 	"F", # day
 	paste0(	# agenda
-		"[]()"
+		"Data basics: select(), mutate()"
 	),
 	paste0(	# book
-		"[](http://r4ds.had.co.nz)"
+		"[5.4](http://r4ds.had.co.nz/transform.html#select)",
+		"<br>",
+		"[5.5](http://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate)"
 	),
 	paste0(	# exercise
-		"[](http://r4ds.had.co.nz)"
+		"[5.4.1](http://r4ds.had.co.nz/transform.html#exercises-9)",
+		"<br>",
+		"[5.5.2](http://r4ds.had.co.nz/transform.html#exercises-10)"
 	),
 	paste0(	# activity
 		"[]()"

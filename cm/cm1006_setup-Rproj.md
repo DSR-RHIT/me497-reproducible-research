@@ -1,112 +1,117 @@
----
-output: github_document
-bibliography: "../scripts/references-rr.bib"
-csl: "../scripts/jpr.csl"
----
 
-# repo to Rproj 
+# repo to Rproj
 
-The preferred procedure, outlined below, is to 
+The preferred procedure, outlined below, is to
 
-- set up a remote GitHub repo 
-- create a new RStudio project with version control linked to the repo 
+  - set up a remote GitHub repo
+  - create a new RStudio project with version control linked to the repo
 
-If you ever need to set up a repo for an existing RStudio Project, see the links at the bottom of this page
+If you ever need to set up a repo for an existing RStudio Project, see
+the links at the bottom of this page
 
-## prerequisites 
+## prerequisites
 
-Software setup 
+Software setup
 
-- Installed R and RStudio locally 
-- Installed git locally 
-- Obtained a free GitHub account 
-- Tested that RStudio and GitHub can talk to each other 
+  - Installed R and RStudio locally
+  - Installed git locally
+  - Obtained a free GitHub account
+  - Tested that RStudio and GitHub can talk to each other
 
-You should have already created these GitHub repos and initialized them with  README and gitignore files 
+You should have already created these GitHub repos and initialized them
+with README and gitignore files
 
-- practice work 
-- project 1 
-- project 2 
-- project 3 (597 students only) 
-
+  - practice work
+  - project 1
+  - project 2
+  - project 3 (597 students only)
 
 ## create the project
 
-Instructions adapted from [@bryan2018]. In the absence of other constraints, I agree with Jenny that all of your R projects should have exactly this set-up.
+Instructions adapted from (Bryan, 2018). In the absence of other
+constraints, I agree with Jenny that all of your R projects should have
+exactly this set-up.
 
-- Navigate to the GitHub repo for your practice work 
-- Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button (the URL will look something like this: https://github.com/jennybc/myrepo.git) 
+  - Navigate to the GitHub repo for your practice work
+  - Copy the HTTPS clone URL to your clipboard via the green “Clone or
+    Download” button (the URL will look something like this:
+    <https://github.com/jennybc/myrepo.git>)
 
-In RStudio, 
+In RStudio,
 
-- *File > New Project > Version Control > Git* 
-- Paste the repo URL into the *repository URL*  
-- Select a location on your computer to save the project  
-- Suggest you *Open in new session*
-- Click *Create Project* to create a new directory
-
+  - *File \> New Project \> Version Control \> Git*
+  - Paste the repo URL into the *repository URL*  
+  - Select a location on your computer to save the project  
+  - Suggest you *Open in new session*
+  - Click *Create Project* to create a new directory
 
 The new project directory will be all of these things:
 
-- a directory or "folder" on your computer 
-- a local Git repository linked to a remote GitHub repository 
-- an RStudio Project 
+  - a directory or “folder” on your computer
+  - a local Git repository linked to a remote GitHub repository
+  - an RStudio Project
 
-## repeat 
+## check yourself
 
-Repeat the procedure for your other repos 
+  - Close RStudio
+  - Restart RStudio
+  - You should see a `Git` tab in a pane ribbon as well as in the
+    RStudion top ribbon
 
-- project 1 
-- project 2 
-- project 3 (597 students only) 
+## repeat
 
+Repeat the procedure for your other repos
 
-## reading  
+  - project 1
+  - project 2
+  - project 3 (597 students only)
 
-Optional reading if you want to read more about it or if you need to setup a repo for an existing RStudio Project.  
+## reading
 
-- [New project, GitHub first](http://happygitwithr.com/new-github-first.html) These are the steps I summarized above. 
-- [Existing project, GitHub first](http://happygitwithr.com/existing-github-first.html) 
-- [Existing project, GitHub last](http://happygitwithr.com/existing-github-last.html) 
+Optional reading if you want to read more about it or if you need to
+setup a repo for an existing RStudio Project.
 
-
-
-
-
+  - [New project, GitHub
+    first](http://happygitwithr.com/new-github-first.html) These are the
+    steps I summarized above.
+  - [Existing project, GitHub
+    first](http://happygitwithr.com/existing-github-first.html)
+  - [Existing project, GitHub
+    last](http://happygitwithr.com/existing-github-last.html)
 
 ## references
-
-
-
-
-
-
-
-
 
 <!-- ## directories  -->
 
 <!-- I suggest that you create a course directory (folder) with sub-folders as shown:  -->
 
 <!--     me497_reproducible_research -->
+
 <!--       |-- practice_work -->
+
 <!--       |-- project_1 -->
+
 <!--       `-- project_2 -->
 
 <!-- For 597 students, I suggest:  -->
 
 <!--     me597_reproducible_research -->
+
 <!--       |-- practice_work -->
+
 <!--       |-- project_1 -->
+
 <!--       |-- project_2 -->
+
 <!--       `-- project_3 -->
 
 <!-- Each subfolder will become a separate R project. To create an R project for `practice_work` -->
 
 <!-- - Open RStudio. *File menu > New Project > Existing Directory*. Use the Browse button to find the `practice_work` folder you just created, then *Select > Create Project*.  -->
-<!-- - In the future, repeat the steps to create R projects for each of your reproducibility projects.  -->
-<!-- - In practice, you would create an R project for any specific piece of work that creates one or more reports, for example, an article, a contract, a workshop, a course---whatever you wish to define as a project.  -->
 
+<!-- - In the future, repeat the steps to create R projects for each of your reproducibility projects.  -->
+
+<!-- - In practice, you would create an R project for any specific piece of work that creates one or more reports, for example, an article, a contract, a workshop, a course---whatever you wish to define as a project.  -->
 
 <!-- ## test it  -->
 
@@ -117,8 +122,8 @@ Optional reading if you want to read more about it or if you need to setup a rep
 <!-- - If an RStudio project is open, *File > Close Project*. No errors?  -->
 
 <!-- - Open an RStudio project with *File > Open Project*. No -->
-<!-- errors?  -->
 
+<!-- errors?  -->
 
 <!-- ## create top level library for packages -->
 
@@ -127,8 +132,8 @@ Optional reading if you want to read more about it or if you need to setup a rep
 <!-- At the top level of your drive, create a new directory named "R". In that directory create a new folder named "library", for example, -->
 
 <!-- -   Windows: `C:/R/library` -->
-<!-- -   Linux: `~/R/library` -->
 
+<!-- -   Linux: `~/R/library` -->
 
 <!-- ## the *.Renviron* file -->
 
@@ -148,11 +153,12 @@ Optional reading if you want to read more about it or if you need to setup a rep
 
 <!-- Whenever you create a new RStudio Project, paste a copy of the *.Renviron* file in the project root directory. -->
 
-
 <!-- At this point, your `practice_work` directory should include: -->
 
 <!--     practice_work -->
+
 <!--         |-- practice_work.Rproj -->
+
 <!--         `-- .Renviron -->
 
 <!-- ## test it -->
@@ -164,20 +170,34 @@ Optional reading if you want to read more about it or if you need to setup a rep
 <!-- -   In the Packages entry box, type `plyr` and click Install. If all goes well, you'll see something like this in the lower left pane (the R Console). -->
 
 <!-- ``` r -->
+
 <!-- Installing package into "C:/R/library" (as "lib" is unspecified) -->
+
 <!-- trying URL "http://ftp.ussg.iu.edu/CRAN/bin/windows/contrib/3.1/plyr_1.8.1.zip" -->
+
 <!-- Content type "application/zip" length 1149242 bytes (1.1 Mb) -->
+
 <!-- opened URL -->
+
 <!-- downloaded 1.1 Mb -->
 
 <!-- package "plyr" successfully unpacked and MD5 sums checked -->
 
 <!-- > -->
+
 <!-- ``` -->
 
 <!-- ## install the tidyverse -->
 
 <!-- Once you have successfully completed this work, install the [tidyverse](https://www.tidyverse.org/) for a set of packages we will use regularly.  -->
 
+<div id="refs" class="references">
 
+<div id="ref-bryan2018">
 
+Bryan, Jenny (2018) Happy git and github for the useR
+(<http://happygitwithr.com/>).
+
+</div>
+
+</div>

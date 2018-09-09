@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # syllabus
@@ -96,16 +98,3 @@ Do not compare one another's code line by line, do not share your files, do not 
 ## caveat
 
 I reserve the right to modify the course content, schedule, policies, etc. outlined in this syllabus. I will do my best to give you adequate notice of revisions.  
-
----
-
-[Main page](../README.md)
-
-
-
-
-
-
-
-
-

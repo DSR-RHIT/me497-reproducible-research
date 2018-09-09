@@ -120,7 +120,3 @@ Rules and Procedures regarding academic misconduct.
 I reserve the right to modify the course content, schedule, policies,
 etc. outlined in this syllabus. I will do my best to give you adequate
 notice of revisions.
-
------
-
-[Main page](../README.md)

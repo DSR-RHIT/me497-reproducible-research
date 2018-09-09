@@ -1,42 +1,16 @@
 
-# installing R packages
-
-Packages are like “apps” for R. As Hadley states, “Packages are the
-fundamental units of reproducible R code. They include reusable
-functions, the documentation that describes how to use them, and sample
-data.” (Wickham & Grolemund, 2016)
-
-If we store packages in a library separate from the base R installation,
-then when you update R, you don’t have to reinstall every package,
-saving a lot of time.
-
-In this activity, you
-
-  - Create a stand-alone library (folder) for R packages
-  - Create a text file called `.Renviron` that tells R the path to your
-    stand-alone library
-  - Install a package to test that the process works
-
-## create an empty package library
-
-At the top level of your drive, create a new directory (folder) named
-“R”. In that directory create a new folder named “library”, for
-example,
-
-  - Windows: `C:/R/library`
-  - Linux: `~/R/library`
-
-## the *.Renviron* file
+# the *.Renviron* file
 
 The `.Renviron` file is a text file that directs R packages to be
-installed in the *R/library* directory you just created. To create the
+installed in the `R/library` directory created earlier. To create the
 file, with RStudio open,
 
   - Create a new text file, *File menu \> New File \> Text File*.
   - Save the file to the `practice_work` main directory using the
     filename *.Renviron*
 
-In this file, write one line of text,
+In this file, write the following line of text that tells R the path to
+the stand-alone package library you created earlier.
 
   - Windows: `R_LIBS_USER="C:/R/library"`
   - Linux: `R_LIBS_USER="~/R/library"`
@@ -45,7 +19,7 @@ In this file, write one line of text,
 
   - Paste a copy of the `.Renviron` file at the top level of every R
     project you start  
-  - Take a moment and paste a copy of this file to everyu project you
+  - Take a moment and paste a copy of this file to every project you
     have started
 
 At this point, each of your project directories should look something
@@ -105,14 +79,3 @@ control), paste a copy of the `.Renviron` file at the top level of the
 project directory
 
 ## references
-
-<div id="refs" class="references">
-
-<div id="ref-wickhamgrolemund2016">
-
-Wickham, Hadley & Garrett Grolemund (2016) *R for Data Science*.
-Sebastopol, CA: O’Reilly Media, Inc.
-
-</div>
-
-</div>

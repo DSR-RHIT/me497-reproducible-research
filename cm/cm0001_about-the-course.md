@@ -30,7 +30,3 @@ Cut and paste no more\!
   - Your future self  
   - Your collaborators  
   - Your organization
-
------
-
-[main page](../README)

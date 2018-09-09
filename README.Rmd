@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "scripts/references-rr.bib"
+csl: "scripts/jpr.csl"
 ---
 
 ```{r include=FALSE}
@@ -14,9 +16,11 @@ library(readxl)
 497 / 597 Reproducible Research. An introductory course for the R novice by Richard Layton at Rose-Hulman Institute of Technology. 
 
 - [About the course](cm/cm0001_about-the-course.md)  
-- [Syllabus](cm/cm0003_syllabus.md)   
+- [Syllabus](cm/cm0003_syllabus.md) 
+- [Index] 
 - [Help links](cm/cm0004_getting-help.md)  
-- [Index]  
+- [License](LICENSE.md) 
+ 
 
 
 <!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
@@ -97,9 +101,10 @@ kable(df)
 
 *All projects* 
 
-- [Create repo](cm/cm1004_create-repo.md) 
-- [Repo to Rproj](cm/cm1005_setup-Rproj.md) 
-- [Setup directories](cm/cm1007_setup-directories.md)
+- [Create a repository](cm/cm1005_create-repo.md) 
+- [Create a version-controlled R project](cm/cm1006_setup-Rproj.md) 
+- [Setup the project directories](cm/cm1008_setup-directories.md) 
+- [Invite a GitHub collaborator](cm/cm1010_first-steps.md)
 
 *Project 1*
 
@@ -132,9 +137,11 @@ kable(df)
 ## software 
 
 - [Install R and RStudio](cm/cm1001_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
-- [Install git](cm/cm1002_install-git.md) 
-- [Setup GitHub](cm/cm1003_setup-github.md) 
-- [Setup .Renviron](cm/cm1006_Renviron.md) 
+- [Install git locally](cm/cm1002_install-git.md) 
+- [Create a stand-alone package library](cm/cm1003_library.md) 
+- [Setup a GitHub account](cm/cm1004_setup-github.md) 
+- [Create the .Renviron file](cm/cm1007_Renviron.md) 
+- [Edit the .gitignore file](cm/cm1009_gitignore.md) 
 
 <!-- - [Set up an R Project](cm/cm0011_setup-R-project.md)   -->
 <!-- - Install the [tidyverse](https://www.tidyverse.org)   -->
@@ -558,5 +565,5 @@ kable(df)
 - [My data display blog](http://www.graphdoctor.com) 
 - [My music blog](http://www.richardlaytonmusic.com)
 
----
-[License](LICENSE.md)
+
+

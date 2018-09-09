@@ -63,7 +63,3 @@ rarely run R directly. For this reason, I suggest
   - Put a shortcut to RStudio on the desktop
 
   - Delete the shortcuts to R (if any) on your desktop
-
------
-
-[main page](../README.md)

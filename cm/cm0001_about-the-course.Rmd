@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # about the course
@@ -25,14 +27,4 @@ Cut and paste no more!
 - Your future self  
 - Your collaborators  
 - Your organization  
-
----
-
-[main page](../README) 
-
-
-
-
-
-
 

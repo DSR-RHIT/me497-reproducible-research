@@ -46,6 +46,15 @@ When done, the directory tree should look like this
         |-- project_name.Rproj
         `-- README.md
 
+## repeat
+
+Create the same directory structure for all of your projects.
+
+  - practice\_work
+  - project 1
+  - project 2
+  - project 3 (597 students only)
+
 ## gitignore
 
 The `.gitignore` file lists local files excused from version control and
@@ -91,13 +100,10 @@ its path to the `.gitignore` file
 
 ## repeat
 
-Repeat the procedure for all your projects
+Copy and paste your `.gitignore` file to the top level of every project
+directory
 
   - practice\_work
   - project 1
   - project 2
   - project 3 (597 students only)
-
------
-
-[main page](../README.md)

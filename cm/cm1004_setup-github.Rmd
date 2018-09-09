@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 # setup github
@@ -17,7 +19,7 @@ GitHub is a hosting service that provides an online home for your Git-based proj
 
 Jenny Bryan provided the instructions below for a workshop I attended. I suggest you read the full instructions for one of the steps before doing that step. 
 
-Some instructions ask you to type commands in the "shell". To access the shell, open RStudio and use the pulldown menu *Tools > Shell*.
+Some instructions ask you to type commands in the "shell". To access the shell, open RStudio and use the pulldown menu *Tools &gt; Shell*.
 
 - [Introduce yourself to Git](http://happygitwithr.com/hello-git.html#hello-git) using the name and  email you used with your GitHub account 
 - [Cache your username and password](http://happygitwithr.com/credential-caching.html#credential-caching) or  so you don't need to authenticate yourself to GitHub interactively ad nauseum. Alternatively, you can [set up SSH keys](http://happygitwithr.com/ssh-keys.html#ssh-keys).  
@@ -28,8 +30,5 @@ Some instructions ask you to type commands in the "shell". To access the shell, 
 Once everything is working OK, you may delete any temporary test repos you made. 
 
 - Delete the local test project directories 
-- Navigate to the repo on GitHub and go to *Settings > Danger Zone > Delete this repository*
+- Navigate to the repo on GitHub and go to *Settings &gt; Danger Zone &gt; Delete this repository*
 
----
-
-[main page](../README.md)

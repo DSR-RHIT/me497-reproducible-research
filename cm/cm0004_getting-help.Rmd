@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "../scripts/references-rr.bib"
+csl: "../scripts/jpr.csl"
 ---
 
 
@@ -24,6 +26,3 @@ ME497 Reproducible Research
 - [*R Graphics, 2/e*](https://www.crcpress.com/R-Graphics-Second-Edition/Murrell/p/book/9781439831762) by Paul Murrell, 2011, CRC Press. This is the book for learning about the four major R graphics systems (`base, grid, lattice, ggplot2`).  The author's [book website](https://www.stat.auckland.ac.nz/~paul/RG2e/) has the code for every figure in the book. 
 
 
----
-
-[main page](../README.md)
