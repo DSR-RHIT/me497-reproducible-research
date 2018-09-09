@@ -229,7 +229,7 @@ df[le_row, ] <- c(
 		"Study&nbsp;R1"
 		),
 	paste0(	# project
-		"[P1&nbsp;Begin&nbsp;draft](cm/cm3102_project-1-draft.md)"
+		"[P1&nbsp;Draft](cm/cm3102_project-1-draft.md)"
 		),
 	paste0(	# milestones
 		"[]()"
