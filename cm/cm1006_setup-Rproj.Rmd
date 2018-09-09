@@ -4,6 +4,11 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
 # repo to Rproj 
 
 The preferred procedure, outlined below, is to 

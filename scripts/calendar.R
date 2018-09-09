@@ -2,7 +2,7 @@
 # R Layton
 # 2018-09-07
 
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 library(knitr)
 
 mt40 <- rep("", 42)
@@ -74,7 +74,7 @@ df[le_row, ] <- c(
 		"[Create&nbsp;Renviron](cm/cm1007_Renviron.md)"
 		),
 	paste0(	# project
-		"[Proposal&nbsp;1](cm/cm3101_project-1_start.md)",
+		"[Proposal&nbsp;1](cm/cm3101_project-1-select.md)",
 		"<br>",
 		"[Proposal&nbsp;3](cm/cm3301_project-3_start.md)"
 		),
@@ -229,7 +229,7 @@ df[le_row, ] <- c(
 		"Study&nbsp;R1"
 		),
 	paste0(	# project
-		"[]()"
+		"[Begin&nbsp;draft](cm/cm3102_project-1-draft.md)"
 		),
 	paste0(	# milestones
 		"[]()"

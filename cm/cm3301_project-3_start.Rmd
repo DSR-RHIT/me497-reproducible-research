@@ -4,16 +4,12 @@ output: github_document
 
 # starting project 3
 
-
-```{r 017-01, include = FALSE}
+```{r include = FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
-opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
-options(echo = FALSE) # turns off echo in the console
 ```
 
 ME 597 students only 
-
 
 - Project 3 is the extra work you do in addition to the regular class work to satisfy the requirements of a 500-level course  
 - Project 3 is reproducible research that should contribute to your thesis/project work  

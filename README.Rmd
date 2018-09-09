@@ -6,9 +6,7 @@ csl: "scripts/jpr.csl"
 
 ```{r include=FALSE}
 library(knitr)
-opts_chunk$set(echo = FALSE)
-library(tidyverse)
-library(readxl)
+opts_chunk$set(echo=FALSE)
 ```
 
 # reproducible research 
@@ -32,14 +30,6 @@ library(readxl)
 Note to students: The calendar is undergoing some major surgery this weekend. Links will be restored as soon as possible. 
 
 Readings in the text refer to sections in the the online version. 
-
-```{r eval=FALSE}
-calendar <- read_excel("manage/calendar.xlsx", sheet = "final")
-calendar[is.na(calendar)] <- ""
-calendar <- calendar %>%
-	select(1:7)
-kable(calendar)
-```
 
 ```{r}
 source("scripts/calendar.R")
@@ -111,6 +101,7 @@ kable(df)
 *Project 1*
 
 - [Proposal](cm/cm3101_project-1_start.md) 
+- [Begin first draft](cm/cm3102_project-1-draft.md)
 
 *Project 2*
 

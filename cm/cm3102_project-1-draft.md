@@ -1,0 +1,48 @@
+
+# start drafting project 1
+
+From the potential project 1 reports submitted, I will select one per
+student. The report you are assigned will often be one of the reports
+you submitted, but I may select one submitted by someone else if I
+consider it a better fit to our goals for he project.
+
+## assignment
+
+If the report original is not available in PDF, scan the full report to
+PDF
+
+  - Save a PDF of the original report in the project `resources/` folder
+
+At this point you may not know enough R to do any analysis, but you can
+certainly start on the prose.
+
+  - Open project 1
+  - Open a new Rmd document with the filename `draft-01.Rmd`
+  - Save it in `reports/`  
+  - Transcribe the section headings from the original report into your
+    Rmd script
+  - Begin transcribing the prose from the original to your script
+  - Knit to Word, that is, your YAML should include
+
+<pre class="r"><code>---
+author: "your name"
+date:   "<code>`</code>r format(Sys.time(), '%Y--%m--%d')<code>`</code>"
+output: word_document
+<code>---</code>
+</code></pre>
+
+The optional date argument has several features. You can use it if you
+want the date to automatically update whenever you knit the script.
+
+  - `Sys.time()` is an R function that determines the current date
+  - `format()` is an R function that formats the date, here per ISO
+    standard.  
+  - R code output is placed in-line by enclosing it with `` `r ` ``.
+    This is called *inline code*.
+
+When you end your R session, make sure to
+
+  - Stage
+  - Commit
+  - Pull
+  - Push

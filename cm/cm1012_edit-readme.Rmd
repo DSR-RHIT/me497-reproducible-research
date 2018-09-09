@@ -4,11 +4,10 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
-```{r include=FALSE}
+```{r include = FALSE}
 library(knitr)
-opts_chunk$set(echo = FALSE)
+opts_knit$set(root.dir = "../")
 ```
-
 
 # the project README file 
 

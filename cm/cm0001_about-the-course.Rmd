@@ -4,6 +4,11 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
 # about the course
 
 *What is reproducible research?* 

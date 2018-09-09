@@ -4,6 +4,10 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
 
 # getting help
 

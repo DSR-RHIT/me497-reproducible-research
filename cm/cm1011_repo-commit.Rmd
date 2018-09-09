@@ -6,10 +6,9 @@ csl: "../scripts/jpr.csl"
 
 ```{r include=FALSE}
 library(knitr)
-opts_chunk$set(echo = FALSE)
+opts_knit$set(root.dir = "../")
 library(tidyverse)
 ```
-
 
 # stage-commit-pull-push
 

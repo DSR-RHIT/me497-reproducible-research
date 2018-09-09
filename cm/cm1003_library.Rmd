@@ -4,6 +4,11 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
 # create a library for packages 
 
 Packages are like "apps" for R. As Hadley states, "Packages are the fundamental units of reproducible R code. They include reusable functions, the documentation that describes how to use them, and sample data." [@wickhamgrolemund2016] 

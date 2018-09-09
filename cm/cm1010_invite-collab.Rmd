@@ -6,10 +6,8 @@ csl: "../scripts/jpr.csl"
 
 ```{r include=FALSE}
 library(knitr)
-opts_chunk$set(echo = FALSE)
-library(tidyverse)
+opts_knit$set(root.dir = "../")
 ```
-
 
 # invite a GitHub collaborator
 
@@ -33,8 +31,6 @@ I will be your first collaborator. Navigate to one of your GitHub project repos 
 3. In the *Search by user name* box, type my GitHub name, "graphdr" 
 4. *Add Collaborator* 
 5. Repeat for all your projects 
-
-
 
 ```{r}
 include_graphics("../resources/images/github-collaborate-2.png")

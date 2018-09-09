@@ -4,6 +4,11 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
 # gitignore
 
 The `.gitignore` file lists local files excused from version control and therefore not shared with collaborators. 

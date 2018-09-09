@@ -4,6 +4,11 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
 # the *.Renviron* file
 
 The `.Renviron` file is a text file that directs R packages to be installed in the `R/library` directory created earlier. To create the file, with RStudio open, 

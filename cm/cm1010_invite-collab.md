@@ -20,4 +20,10 @@ project repos and
 4.  *Add Collaborator*
 5.  Repeat for all your projects
 
+<!-- end list -->
+
+``` r
+include_graphics("../resources/images/github-collaborate-2.png")
+```
+
 ![](../resources/images/github-collaborate-2.png)<!-- -->
