@@ -11,14 +11,6 @@ and initialized them with README and gitignore files
   - project 2
   - project 3 (597 students only)
 
-At this point, every project should look something like this,
-
-    project_folder
-        |-- .gitignore
-        |-- .Renviron
-        |-- project_name.Rproj
-        `-- README.md
-
 ## create a directory structure
 
 All we are going to do is create a set of empty sub-directories
@@ -32,19 +24,18 @@ Next, use one of these two approaches
   - In RStudio, find *Files* in the pane ribbon and select *New Folder*
 
 Using either approach, create new folders for `data`, `manage`, etc.
-When done, the directory tree should look like this
+When done, the directory tree should look like this (you might have
+additional files such as `.gitignore` or `README.md`)
 
-    project_folder
-        |-- data
-        |-- manage
-        |-- reports
-        |-- resources
-        |-- results
-        |-- scripts
-        |-- .gitignore
+    project_folder/
+        |-- data/
+        |-- manage/
+        |-- reports/
+        |-- resources/
+        |-- results/
+        |-- scripts/
         |-- .Renviron
-        |-- project_name.Rproj
-        `-- README.md
+        `-- project_name.Rproj
 
 ## repeat
 

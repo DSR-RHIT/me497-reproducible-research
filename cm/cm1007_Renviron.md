@@ -22,22 +22,6 @@ the stand-alone package library you created earlier.
   - Take a moment and paste a copy of this file to every project you
     have started
 
-At this point, each of your project directories should look something
-like this,
-
-    project_folder
-        |-- .gitignore
-        |-- .Renviron
-        |-- project_name.Rproj
-        `-- README.md
-
-These files came about by
-
-  - `.gitignore` and `README.md` from setting up the repo
-  - `.Rproj` file from when you used the repo URL to create the R
-    project
-  - `.Renviron` from the instructions above
-
 ## test it
 
 Now let’s see if the library path you made works.
@@ -71,6 +55,17 @@ If all goes well, you’ll see something like this in the R Console
     ## downloaded 90 KB
     ## 
     ## package â€˜tidyverseâ€™ successfully unpacked and MD5 sums checked
+
+## check yourself
+
+Let’s check your project directory. While you may have additional files
+or folders (for example, when you initialized your repo you may have
+created `.gitignore` or `README.md`), you should have at least the
+following folders and files,
+
+    project_folder/
+        |-- .Renviron
+        `-- project_name.Rproj
 
 ## lastly
 

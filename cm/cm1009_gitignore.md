@@ -92,3 +92,17 @@ project directory).
 If you select the `Git` tab in the RStudio pane, all files you
 identified in `.gitignore` should disappear from the list of unstaged
 files.
+
+Lastly, let’s check your project directory. While you may have
+additional files or folders, you should have at least the following:
+
+    project_folder/
+        |-- data/
+        |-- manage/
+        |-- reports/
+        |-- resources/
+        |-- results/
+        |-- scripts/
+        |-- .gitignore
+        |-- .Renviron
+        `-- project_name.Rproj

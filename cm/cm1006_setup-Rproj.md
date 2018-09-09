@@ -58,6 +58,14 @@ The new project directory will be all of these things:
   - You should see a `Git` tab in a pane ribbon as well as in the
     RStudion top ribbon
 
+Lastly, let’s check your project directory. While you may have
+additional files or folders (for example, when you initialized your repo
+you may have created `.gitignore` or `README.md`), you should have at
+least the following folders and files,
+
+    project_folder/
+        `-- project_name.Rproj
+
 ## repeat
 
 Repeat the procedure for your other repos

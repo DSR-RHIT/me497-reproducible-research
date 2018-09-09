@@ -4,8 +4,86 @@ bibliography: "../scripts/references-rr.bib"
 csl: "../scripts/jpr.csl"
 ---
 
-# edit the README file 
+```{r include=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE)
+```
+
+
+# the project README file 
+
+The README file that resides at the top level of your project directory is the landing page of your repo. This is the first glimpse a reader has of your project. 
+
+When you created your project repo, if you checked the box for *Initialize the repo with a README*, then your project should have a `README.md` file. If not, no worries. We're going to edit it using R Markdown anyway. 
+
+## create README.Rmd
+
+We're going to create an R Markdown file to edit or create the README file. 
+
+- In RStudio, *File > New File > R Markdown ... > OK*
+- Delete the default script 
+- *Save As*  to the top level of your project with the filename `README.Rmd` 
+- Add the YAML header for a GitHub document and your name 
+- Project name format as level-1 heading 
+- Section headings formatted as level-2 headings 
+
+```
+---
+author: "your name"
+output: github_document
+---
+	
+# catchy project name 
+Some prose 
+
+## sub-heading
+Some prose 
+
+## next sub-heading 
+Some more prose 
+```
 
 
 
+Knit the document and you should see both the `README.Rmd` file and the `README.md` file in the directory. Your project directory should look something like this, 
 
+    project_folder/
+        |-- data/
+        |-- manage/
+        |-- reports/
+        |-- resources/
+        |-- results/
+        |-- scripts/
+        |-- .gitignore
+        |-- .Renviron
+        |-- README.md
+        |-- README.Rmd
+        `-- project_name.Rproj
+
+
+
+Start writing the prose to describe the project. The README should include 
+
+- project context and summary 
+- what the project looks like in action 
+- how the reader might use the project 
+
+When you end your R session, make sure to 
+
+- Stage 
+- Commit 
+- Pull 
+- Push 
+
+For more information on writing a good README file, see <https://github.com/noffle/art-of-readme>
+
+
+
+## repeat 
+
+Repeat these steps for all your projects 
+
+- practice_work 
+- project 1 
+- project 2 
+- project 3 (597 students only) 

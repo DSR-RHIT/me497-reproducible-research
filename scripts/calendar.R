@@ -105,7 +105,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[Repo&nbsp;commit](cm/cm1011_repo-commit.md)",
 		"<br>",
-		"[Edit&nbsp;README]()"
+		"[Edit&nbsp;README](cm/cm1012_edit-readme.md)"
 		),
 	paste0( # project
 		"",#"[Proj 1 Rmd]()",
