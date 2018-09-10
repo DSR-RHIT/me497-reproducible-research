@@ -1,10 +1,10 @@
 
-# collaboration basics
+# commit to a repo
 
-Before attempting the assignment, please read the [lecture
-notes](cm5005_how-to-collab.md).
+Before attempting the assignment, please read the lecture nites on
+[collaboration basics](cm5005_how-to-collab.md).
 
-## assignment
+## activities
 
 Open one of your projects
 
