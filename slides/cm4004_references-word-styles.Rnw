@@ -329,46 +329,49 @@ bibliography: "../resources/project_name.bib"
 
 
 
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{headline}
-%
-%
-% \begin{itemize}
-% 	\item
-% 	\item
-% \end{itemize}
-%
-% \begin{columns}
-% \column{0.5\textwidth}
-% \column{0.5\textwidth}
-% \includegraphics[width = 1\textwidth]{}
-% \end{columns}
-%
-% \end{frame}
-% }%%
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Rmd document design with Word styles}
+
+\bigskip
+The basic steps to use a style reference document to format docx output:
+
+
+\bigskip
+\begin{itemize}
+	\item Use R Markdown to create a Word document
+	\item Save this document as your style reference docx file
+	\item Edit the Word styles you find there, Save, and Close
+	\item Specify the docx file in the YAML header of the Rmd script
+
+
+	\bigskip
+\begin{lstlisting}
+  ---
+  output:
+    word_document:
+      reference_docx: "../resources/word-styles-01.docx"
+  ---
+\end{lstlisting}
+
+\item For all the details, see \href{https://rmarkdown.rstudio.com/articles_docx.html}{Happy collaboration with Rmd to docx}
+\end{itemize}
+
+
+\end{frame}
+}%%
 
 
 
 
-% {%% slide -------------------------------------------
-% \renewcommand\foottext{}
-% \begin{frame}[fragile, c]{headline}
-%
-%
-% \begin{itemize}
-% 	\item
-% 	\item
-% \end{itemize}
-%
-% \begin{columns}
-% \column{0.5\textwidth}
-% \column{0.5\textwidth}
-% \includegraphics[width = 1\textwidth]{}
-% \end{columns}
-%
-% \end{frame}
-% }%%
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{And those are the basics}
+
+\hspace{0.25\textwidth}\includegraphics[width = 0.5\textwidth]{styles-and-references.png}
+
+\end{frame}
+}%%
 
 
 
