@@ -8,6 +8,14 @@ they are avcailable.
 Make sure that when next you open the project, you *Pull* from GitHub
 before doing any further work.
 
+In general, for all projects,
+
+  - Read my comments in your README file and in your report file and
+    edit your work accordingly.
+  - Please do not delete my comments. We can comment them out, we can
+    even move them to a different file if you would like them out of
+    your way. But we do want to keep track of the reviews.
+
 ## project 1
 
 General comments

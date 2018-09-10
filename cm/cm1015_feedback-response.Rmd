@@ -15,6 +15,13 @@ Once I have reviewed and comments on your project work to date, I will push the 
 
 Make sure that when next you open the project, you *Pull* from GitHub before doing any further work. 
 
+In general, for all projects, 
+
+- Read my comments in your README file and in your report file and edit your work accordingly. 
+- Please do not delete my comments. We can comment them out, we can even move them to a different file if you would like them out of your way. But we do want to keep track of the reviews. 
+
+
+
 ## project 1
 
 General comments
@@ -22,6 +29,8 @@ General comments
 - Start work on the [README](cm1012_edit-readme.md) 
 - Set up the full [directory structure](cm1008_setup-directories.md) 
 - docx files can typically be excused from version control using [gitignore](cm1009_gitignore.md) 
+
+
 
 
 
