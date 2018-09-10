@@ -18,7 +18,7 @@ We will use the bib format (from BiBTeX) for bibliographies. The  basic steps ar
 - add the citation to the report  
 - add a references heading 
 
-See the [lecture notes](cm5011_references.pdf) for how to manage references and citations. 
+See the [lecture notes](cm5011_references.md) for how to manage references and citations. 
 
 
 ## assignment 

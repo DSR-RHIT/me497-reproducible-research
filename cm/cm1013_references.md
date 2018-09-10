@@ -9,7 +9,7 @@ steps are:
   - add the citation to the report  
   - add a references heading
 
-See the [lecture notes](cm5011_references.pdf) for how to manage
+See the [lecture notes](cm5011_references.md) for how to manage
 references and citations.
 
 ## assignment
