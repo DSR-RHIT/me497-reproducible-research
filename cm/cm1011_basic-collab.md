@@ -2,7 +2,7 @@
 # collaboration basics
 
 Before attempting the assignment, please read the [lecture
-notes](cm5005_how-to-collab).
+notes](cm5005_how-to-collab.md).
 
 ## assignment
 
