@@ -233,7 +233,9 @@ df[le_row, ] <- c(
 		"Study&nbsp;R1"
 		),
 	paste0(	# project
-		"[P1&nbsp;Draft](cm/cm3102_project-1-draft.md)"
+		"[P1&nbsp;Draft](cm/cm3102_project-1-draft.md)",
+		"<br>",
+		"[Feedback response](cm/cm1015_feedback-response.md)"
 		),
 	paste0(	# milestones
 		"[]()"
@@ -259,7 +261,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"R1 [reading response](resources/readings/reading-response.pdf)"
+		"R1 [Reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -317,7 +319,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"[]()"
+		"Revised proposal 3"
 	)
 )
 #  week 3 ---------------------------------------------------- 3
@@ -457,7 +459,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"R2 [reading response](resources/readings/reading-response.pdf)"
+		"R2 [Reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -643,7 +645,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"R3 [reading response](resources/readings/reading-response.pdf)",
+		"R3 [Reading response](resources/readings/reading-response.pdf)",
 		"<br>",
 		"(Wed) P3 progress report"
 	)
@@ -831,7 +833,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"R4 [reading response](resources/readings/reading-response.pdf)"
+		"R4 [Reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -1017,7 +1019,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# milestones
-		"R5 [reading response](resources/readings/reading-response.pdf)"
+		"R5 [Reading response](resources/readings/reading-response.pdf)"
 	)
 )
 le_row <- le_row + 1 # ----- day

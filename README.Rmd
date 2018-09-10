@@ -112,6 +112,7 @@ kable(df)
 *Project 1*
 
 - [Proposal](cm/cm3101_project-1-select.md) 
+- [Feedback response](cm/cm1015_feedback-response.md)
 - [Begin first draft](cm/cm3102_project-1-draft.md)
 
 *Project 2*
@@ -119,7 +120,7 @@ kable(df)
 *Project 3 (597 only)*
 
 - [Proposal](cm/cm3301_project-3_start.md) 
-
+- [Feedback response](cm/cm1015_feedback-response.md)
 
 
 
