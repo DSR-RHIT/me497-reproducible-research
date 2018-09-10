@@ -135,7 +135,7 @@ version.
 ## r markdown things
 
   - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]  
-  - References \[[L](cm/cm5011_references.md)\]
+  - References and citations \[[L](cm/cm5011_references.md)\]
     \[[S](slides/cm4004_references-word-styles.pdf)\]
   - [Controlling Word styles](cm/cm1014_word-styles.md)
 

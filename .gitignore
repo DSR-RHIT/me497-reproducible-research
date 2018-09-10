@@ -1,10 +1,7 @@
 # ignore course management folders
 manage
-practiceR
 print_pages
 student_work
-using-github-with-rstudio
-archive
 
 # files
 render_cm.R
