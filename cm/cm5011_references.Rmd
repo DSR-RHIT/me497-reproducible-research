@@ -1,7 +1,7 @@
 ---
 output: github_document
 bibliography: "../scripts/references-rr.bib"
-csl: "../scripts/jpr.csl"
+csl: "../resources/style-files/journal-of-simulation.csl"
 ---
 
 ```{r include=FALSE}
@@ -108,13 +108,14 @@ bibliography: "../resources/project_name.bib"
 
 In the report Rmd file, add the citation at the appropriate location in the paragraph, for example,
 
-<pre class="r"><code>The test procedure follows the ANSI/ISA standard [@ansi-isa-1995].
-</code></pre>
+    The test procedure follows the ANSI/ISA standard [@ansi-isa-1995].
 
 When you knit the document, the citation is automatically formatted.
 
-> The test procedure follows the ANSI/ISA standard (*Process Instrumentation
-Terminology* 1995).
+> The test procedure follows the ANSI/ISA standard (*Process Instrumentation Terminology* 1995).
+
+
+
 
 
 
@@ -134,13 +135,34 @@ All references cited in your report will be automatically formatted and listed h
 reaffirmed 1995. Research Triangle Park, NC: Instrument Society of America.
 
 
+## example 
 
+For example, suppose this entry for our course text is in the bib file, 
+
+    @book{wickhamgrolemund2016,
+        author    	= {Hadley Wickham and Garrett Grolemund},
+        title     	= {R for Data Science},
+        year      	= {2016},
+        publisher 	= {O'Reilly Media, Inc.},
+        address     = {Sebastopol, CA}
+    }
+
+And in the document we write this sentnce to cite the book, 
+
+    Our course text describes the importance of learning the 
+    tools of data science [@wickhamgrolemund2016]. 
+
+The knitted output looks like this, 
+
+> Our course text describes the importance of learning the tools of data science [@wickhamgrolemund2016]. 
+
+And the reference itself is shown at the end of this page. 
 
 
 
 ## changing the format
 
-Citations and references are both formatted automatically. To change the format, we use a CSL file. You don't have to create one. Just find the one that meets your needs online and download it.
+Citations and references are both formatted automatically. To change the format, we use a CSL file. You don't have to create one. Just find the one that meets your needs online and download it. 
 
 - Find a [CSL style file](https://citationstyles.org/authors/) that suits your needs, for example `chicago-author-date.csl` or `ieee.csl`
 - Download the CSL file and save it in your `resources/` folder
@@ -156,3 +178,4 @@ csl: "../resources/chicago-author-date.csl"
 ---</code></pre>
 
 
+## references

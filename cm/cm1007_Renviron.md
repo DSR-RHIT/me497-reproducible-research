@@ -48,13 +48,13 @@ If the *Install to Library* is correct,
 If all goes well, you’ll see something like this in the R Console
 
     ## > install.packages("tidyverse")
-    ## Installing package into â€˜C:/R/libraryâ€™
-    ## (as â€˜libâ€™ is unspecified)
+    ## Installing package into ‘C:/R/library’
+    ## (as ‘lib’ is unspecified)
     ## trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/tidyverse_1.2.1.zip'
     ## Content type 'application/zip' length 92547 bytes (90 KB)
     ## downloaded 90 KB
     ## 
-    ## package â€˜tidyverseâ€™ successfully unpacked and MD5 sums checked
+    ## package ‘tidyverse’ successfully unpacked and MD5 sums checked
 
 ## check yourself
 

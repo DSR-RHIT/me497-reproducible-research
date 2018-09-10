@@ -87,11 +87,9 @@ bibliography: "../resources/project_name.bib"
   - `ref_label` is the reference label you assigned in the bib file
 
 In the report Rmd file, add the citation at the appropriate location in
-the paragraph, for
-example,
+the paragraph, for example,
 
-<pre class="r"><code>The test procedure follows the ANSI/ISA standard [@ansi-isa-1995].
-</code></pre>
+    The test procedure follows the ANSI/ISA standard [@ansi-isa-1995].
 
 When you knit the document, the citation is automatically formatted.
 
@@ -114,6 +112,30 @@ listed here, at the end of the report, for example,
 > reaffirmed 1995. Research Triangle Park, NC: Instrument Society of
 > America.
 
+## example
+
+For example, suppose this entry for our course text is in the bib file,
+
+    @book{wickhamgrolemund2016,
+        author      = {Hadley Wickham and Garrett Grolemund},
+        title       = {R for Data Science},
+        year        = {2016},
+        publisher   = {O'Reilly Media, Inc.},
+        address     = {Sebastopol, CA}
+    }
+
+And in the document we write this sentnce to cite the book,
+
+    Our course text describes the importance of learning the 
+    tools of data science [@wickhamgrolemund2016]. 
+
+The knitted output looks like this,
+
+> Our course text describes the importance of learning the tools of data
+> science (Wickham & Grolemund, 2016).
+
+And the reference itself is shown at the end of this page.
+
 ## changing the format
 
 Citations and references are both formatted automatically. To change the
@@ -135,3 +157,16 @@ output: word_document
 bibliography: "../resources/project_name.bib"
 csl: "../resources/chicago-author-date.csl"
 ---</code></pre>
+
+## references
+
+<div id="refs" class="references">
+
+<div id="ref-wickhamgrolemund2016">
+
+Wickham, H. & Grolemund, G. (2016) *R for data science*. O’Reilly Media,
+Inc.: Sebastopol, CA.
+
+</div>
+
+</div>
