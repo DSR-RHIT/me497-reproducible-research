@@ -120,7 +120,7 @@ Citations and references are both formatted automatically. To change the
 format, we use a CSL file. You don’t have to create one. Just find the
 one that meets your needs online and download it.
 
-  - Find a [CSL style file](http://citationstyles.org/styles/) that
+  - Find a [CSL style file](https://citationstyles.org/authors/) that
     suits your needs, for example `chicago-author-date.csl` or
     `ieee.csl`
   - Download the CSL file and save it in your `resources/` folder

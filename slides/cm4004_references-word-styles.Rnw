@@ -283,9 +283,9 @@ bibliography: "../resources/project_name.bib"
 
 
 {%% slide -------------------------------------------
-\renewcommand\foottext{}
-\begin{frame}[fragile, c]{Citations and references are formatted automatically}
+\renewcommand\foottext{CSL files available from Citation Style language \url{https://citationstyles.org/authors/}. See the links under ``Finding and installing styles.''}
 
+\begin{frame}[fragile, c]{Citations and references are formatted automatically}
 
 \begin{itemize}
 	\item Use a CSL file to change the format to suit your audience
