@@ -136,10 +136,10 @@ directories](cm/cm1008_setup-directories.md)
 ## r markdown things
 
   - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]  
-  - References and citations \[[L](cm/cm5011_references.md)\]
+  - [References and citations](cm/cm5011_references.md)
     \[[S](slides/cm4004_references-word-styles.pdf)\]
-  - Controlling Word styles
-    \[[L](http://rmarkdown.rstudio.com/articles_docx.html)\]
+  - [Controlling Word
+    styles](http://rmarkdown.rstudio.com/articles_docx.html)
 
 ## reading for discussion
 
