@@ -1,0 +1,444 @@
+\documentclass[12pt, aspectratio = 1610]{beamer}
+
+% used by title slide and PDF settings
+\newcommand{\talktitle}   {Document design --- References and Word styles}
+\newcommand{\talksubtitle}{497 / 597 Reproducible Research}
+\newcommand{\talkauthor}  {Richard Layton}
+
+\input{preamble_slides.tex}
+
+% these slides support these student tasks
+%
+% invite me to collaborate
+% initialize project 1 Rmd
+% edit README
+% commit push
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+\begin{document}
+
+{%% title slide -------------------------------------------
+\renewcommand\foottext{}
+
+\begin{frame}[c]{}
+
+\bigskip
+{\Large\color{myviolet}\talktitle}
+
+\medskip
+{\color{gray}\small\talksubtitle}
+
+\begin{columns}
+\column{0\textwidth}
+\column{0.5\textwidth}
+
+\bigskip
+{\color{myviolet}\talkauthor}
+
+\medskip
+{\scriptsize\color{gray} Rose-Hulman Institute of Technology\\
+Fall 2018\\
+}
+
+\column{0.5\textwidth}
+\includegraphics[width = 0.8\textwidth]{styles-and-references.png}
+
+\end{columns}
+\end{frame}
+}%%
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{We will save references in bib format (from BiBTeX)}
+
+The basic steps for creating references and citations are
+
+\medskip
+\begin{itemize}
+	\item create the bib file
+	\item specify the bib file in the YAML header of the Rmd script
+	\item add the citation to the report
+	\item add a references heading
+\end{itemize}
+
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Create the bib file}
+
+
+\begin{itemize}
+	\item Open a new text file in RStudio {\em File > New File > Text File}
+	\item {\em Save As}\ \ \bftt{project\_name.bib}\ \ in the resources directory
+\end{itemize}
+
+
+
+
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Create reference entries in the bib file}
+
+% \begin{lstlisting}
+% @manual{ansi-isa-1995,
+%     title        = {Process instrumentation terminology},
+%     edition      = {ANSI/ISA-S51.1-1979, reaffirmed 1995},
+%     organization = {Instrument Society of America},
+%     address      = {Research Triangle Park, NC},
+%     year         = {1995},
+%     note         = {ISBN 0-87664-390-4},
+% }
+% \end{lstlisting}
+
+\begin{figure}
+\includegraphics[width = 0.7\textwidth]{bib-details.png}
+\end{figure}
+
+\bigskip
+\bigskip
+See \href{https://verbosus.com/bibtex-style-examples.html}{verbosus} for \hologo{BibTeX} style examples (article, proceedings, book, etc.)
+
+
+\end{frame}
+}%%
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Forcing capitalization in the reference}
+
+\bigskip
+When knit, references are sometimes not capitalized the way you expect
+
+
+\bigskip
+In the bib file, place braces \{\} around letters you want capitalized
+
+\bigskip
+For example
+
+\bigskip
+\begin{lstlisting}
+@book{gandrud2015,
+  author    = {Christopher Gandrud},
+  title     = {Reproducible {R}esearch with {R} and {RS}tudio},
+  publisher = {CRC Press},
+  year      = {2015},
+  address   = {Boca Raton, FL},
+  edition   = {2},
+}
+\end{lstlisting}
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Specify the bib file in the YAML header}
+
+
+
+\begin{itemize}
+	\item Add the bibliography argument to the YAML header
+	\item Include the relative path
+\end{itemize}
+
+
+\bigskip
+\begin{lstlisting}
+---
+title:  "Load-cell calibration report"
+author: "name"
+date:   "date"
+output: word_document
+bibliography: "../resources/project_name.bib"
+---
+\end{lstlisting}
+
+
+\end{frame}
+}%%
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Add the citation to the report}
+
+
+\begin{itemize}
+	\item Citation syntax has the form \bftt{\small [@ref\_label]}
+	\item \bftt{\small ref\_label} is the reference label you assigned in the bib file
+	\item In the Rmd file, add the citation at the appropriate location, for example,
+
+\bigskip
+\texttt{The test procedure follows the ANSI/ISA standard [@ansi-isa-1995].}
+
+\item When you knit the document, the citation is automatically formatted
+
+\bigskip
+{\rm The test procedure follows the ANSI/ISA standard ({\em Process Instrumentation Terminology} 1995).}
+
+\end{itemize}
+
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Add a references heading}
+
+
+\begin{itemize}
+	\item At the end of the Rmd script, add a references section heading
+
+  \bigskip
+	\texttt{\# References}
+
+	\item All references cited in your report will be automatically formatted and listed at the end of the report
+
+\bigskip
+\bigskip
+{\large\rm\em References}
+
+\bigskip
+{\rm {\em Process Instrumentation Terminology}. 1995. ANSI/ISA-S51.1-1979, reaffirmed 1995. Research Triangle Park, NC: Instrument Society of America.}
+
+\end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{}
+\begin{frame}[fragile, c]{Citations and references are formatted automatically}
+
+
+\begin{itemize}
+	\item Use a CSL file to change the format to suit your audience
+
+	\item Find one online and download it, for example,
+
+\bigskip
+\begin{lstlisting}
+  chicago-author-date.csl
+  ieee.csl
+\end{lstlisting}
+
+	\item Download the CSL file and save it in your resources folder
+
+	\item Edit the YAML header to specify the path to the CSL file
+
+	\bigskip
+\begin{lstlisting}
+  ---
+  csl: "../resources/chicago-author-date.csl"
+  ---
+\end{lstlisting}
+
+\end{itemize}
+
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+
+\end{frame}
+}%%
+
+
+
+
+
+
+
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+% {%% slide -------------------------------------------
+% \renewcommand\foottext{}
+% \begin{frame}[fragile, c]{headline}
+%
+%
+% \begin{itemize}
+% 	\item
+% 	\item
+% \end{itemize}
+%
+% \begin{columns}
+% \column{0.5\textwidth}
+% \column{0.5\textwidth}
+% \includegraphics[width = 1\textwidth]{}
+% \end{columns}
+%
+% \end{frame}
+% }%%
+
+
+
+
+
+
+\end{document}

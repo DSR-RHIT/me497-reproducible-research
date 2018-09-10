@@ -215,7 +215,7 @@ df[le_row, ] <- c(
 	"2",    # week
 	"M",    # day
 	paste0(	# agenda
-		"References",
+		"References [[S](slides/cm4004_references-word-styles.pdf)]",
 		"<br>",
 		"Controlling Word styles"
 		),
