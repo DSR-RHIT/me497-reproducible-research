@@ -5,6 +5,18 @@
 suppressPackageStartupMessages(library(tidyverse))
 library(knitr)
 
+# ------------------------------------------------------------
+# things to remember to add or work with
+
+# workflow, file management, and naming things
+# Gandrud Ch. 2 & 4
+# Hadley's style guide
+
+
+
+
+# ------------------------------------------------------------
+
 mt40 <- rep("", 42)
 the_days <- c("R", "F", rep(c("M", "T", "R", "F"), 10))
 df <- tibble(
@@ -334,16 +346,28 @@ df[le_row, ] <- c(
 	"3",  # week
 	"M", # day
 	paste0(	# agenda
-		"[]()"
+		"Page breaks",
+		"<br>",
+		"Numbering figures & tables",
+		"<br>",
+		"Preparing work for transmittal"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[[L](cm/cm5012_page-breaks.md)]",
+		"<br>",
+		"L", # [[L](cm/cm5013_numbering-figs.md)]
+		"<br>",
+		"L" # [[L](cm/cm5014_report-transmittal.md)]
 	),
 	paste0(	# exercises
 		"[](http://r4ds.had.co.nz)"
 	),
 	paste0(	# activities
-		"[]()"
+		"[Page breaks](cm/cm1016_page-breaks.md)",
+		"<br>",
+		"Numbering figures", # [](cm/cm1017_numbering-figs.md)
+		"<br>",
+		"[File functions](cm/cm1018_manipulate-files.Rmd)"
 	),
 	paste0(	# projects
 		"[]()"
@@ -357,13 +381,13 @@ df[le_row, ] <- c(
 	"",  # week
 	"T", # day
 	paste0(	# agenda
-		"[]()"
+		"Data basics: summarize()"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[5.6](http://r4ds.had.co.nz/transform.html#grouped-summaries-with-summarise)"
 	),
 	paste0(	# exercises
-		"[](http://r4ds.had.co.nz)"
+		"[5.6.7](http://r4ds.had.co.nz/transform.html#exercises-11)"
 	),
 	paste0( # activities
 		"Browse R2"
@@ -380,13 +404,19 @@ df[le_row, ] <- c(
 	"",  # week
 	"R", # day
 	paste0(	# agenda
-		"[]()"
+		"R code basics: tibble()"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[10.1](http://r4ds.had.co.nz/tibbles.html)",
+		"<br>",
+		"[10.2](http://r4ds.had.co.nz/tibbles.html#tibbles)",
+		"<br>",
+		"[10.3](http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame)",
+		"<br>",
+		"[10.4](http://r4ds.had.co.nz/tibbles.html#interacting-with-older-code)"
 	),
 	paste0(	# exercises
-		"[](http://r4ds.had.co.nz)"
+		"[10.5](http://r4ds.had.co.nz/tibbles.html#exercises-18)"
 	),
 	paste0(	# activities
 		"[]()"
@@ -403,14 +433,28 @@ df[le_row, ] <- c(
 	"",  # week
 	"F", # day
 	paste0(	# agenda
-		"[]()"
+		"Data basics: read and write"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[11.1](http://r4ds.had.co.nz/data-import.html#introduction-5)",
+		"<br>",
+		"[11.2](http://r4ds.had.co.nz/data-import.html#getting-started)",
+		"<br>",
+		"[11.3](http://r4ds.had.co.nz/data-import.html#parsing-a-vector)",
+		"<br>",
+		"[11.4](http://r4ds.had.co.nz/data-import.html#parsing-a-file)",
+		"<br>",
+		"[11.5](http://r4ds.had.co.nz/data-import.html#writing-to-a-file)"
 	),
 	paste0(	# exercises
-		"[](http://r4ds.had.co.nz)"
-	),
+		"<br>",
+		"[11.2.2](http://r4ds.had.co.nz/data-import.html#exercises-19)",
+		"<br>",
+		"[11.3.5](http://r4ds.had.co.nz/data-import.html#exercises-20)",
+		"<br>",
+		"<br>",
+		"<br>"
+		),
 	paste0(	# activities
 		"[]()"
 	),

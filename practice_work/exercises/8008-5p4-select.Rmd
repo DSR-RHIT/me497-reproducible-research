@@ -1,0 +1,87 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+suppressPackageStartupMessages(library(tidyverse))
+# library(tidyverse)
+library(nycflights13)
+```
+
+
+## 5.4  select()
+
+
+```{r}
+df <- flights %>% 
+	select(day, month, year)
+
+glimpse(df)
+```
+
+
+```{r}
+df <- flights %>% 
+	select(year:day)
+
+glimpse(df)
+```
+
+
+
+
+```{r}
+df <- flights %>% 
+	select(-(year:day))
+
+glimpse(df)
+```
+
+
+```{r}
+df <- flights %>% 
+	select(-(1:3))
+
+glimpse(df)
+```
+
+
+
+
+```{r}
+df <- flights %>% 
+	select(starts_with("d"))
+
+glimpse(df)
+```
+
+
+```{r}
+df <- flights %>% 
+	rename(tail_num = tailnum, yyyy = year, mm = month)
+
+glimpse(df)
+```
+
+
+I learned a new argumnet: `everything()`
+
+
+```{r}
+df <- flights %>% 
+	select(time_hour, air_time, everything())
+
+glimpse(df)
+```
+
+
+```{r}
+
+```
+

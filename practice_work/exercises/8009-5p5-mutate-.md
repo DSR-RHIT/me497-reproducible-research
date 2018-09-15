@@ -1,0 +1,53 @@
+
+``` r
+suppressPackageStartupMessages(library(tidyverse))
+library(nycflights13)
+```
+
+## 5.5 mutate()
+
+``` r
+df <- flights %>% 
+    select(year:day
+         , ends_with("delay")
+         , distance
+         , air_time
+                 )
+
+glimpse(df)
+```
+
+    ## Observations: 336,776
+    ## Variables: 7
+    ## $ year      <int> 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+    ## $ month     <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+    ## $ day       <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+    ## $ dep_delay <dbl> 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+    ## $ arr_delay <dbl> 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+    ## $ distance  <dbl> 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+    ## $ air_time  <dbl> 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+
+comments
+
+``` r
+df <- df %>% 
+    mutate(gain  = dep_delay - arr_delay
+                 , speed = distance / air_time * 60
+                 , air_time_hr = air_time / 60
+                 ) %>% 
+    select(-air_time)
+
+glimpse(df)
+```
+
+    ## Observations: 336,776
+    ## Variables: 9
+    ## $ year        <int> 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 20...
+    ## $ month       <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+    ## $ day         <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+    ## $ dep_delay   <dbl> 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -...
+    ## $ arr_delay   <dbl> 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, ...
+    ## $ distance    <dbl> 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, ...
+    ## $ gain        <dbl> -9, -16, -31, 17, 19, -16, -24, 11, 5, -10, 0, 1, ...
+    ## $ speed       <dbl> 370.0441, 374.2731, 408.3750, 516.7213, 394.1379, ...
+    ## $ air_time_hr <dbl> 3.7833333, 3.7833333, 2.6666667, 3.0500000, 1.9333...

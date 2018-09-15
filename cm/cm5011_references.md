@@ -1,4 +1,8 @@
 
+<!-- csl: "../resources/styles/journal-of-simulation.csl" -->
+
+<!-- csl: "../resources/styles/advances-in-building-energy-research.csl" -->
+
 # references and citations
 
 <img src="../resources/images/styles-and-references.png" width="350px" />
@@ -158,14 +162,23 @@ bibliography: "../resources/project_name.bib"
 csl: "../resources/chicago-author-date.csl"
 ---</code></pre>
 
+stuff blah blah blah (“Aluminum 1100-H14,” n.d.).
+
 ## references
 
 <div id="refs" class="references">
 
+<div id="ref-matweb-alum-1100">
+
+Aluminum 1100-H14. (n.d.). <http://matweb.com/> \[Online, accessed
+2018-09-11\]; MatWeb Materials Property Data.
+
+</div>
+
 <div id="ref-wickhamgrolemund2016">
 
-Wickham, H. & Grolemund, G. (2016) *R for data science*. O’Reilly Media,
-Inc.: Sebastopol, CA.
+Wickham, H., & Grolemund, G. (2016). *R for data science*. Sebastopol,
+CA: O’Reilly Media, Inc.
 
 </div>
 

@@ -1,0 +1,86 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+suppressPackageStartupMessages(library(tidyverse))
+library(nycflights13)
+```
+
+
+## 5.5   mutate()
+
+
+```{r}
+df <- flights %>% 
+	select(year:day
+         , ends_with("delay")
+         , distance
+         , air_time
+				 )
+
+glimpse(df)
+```
+
+comments
+
+```{r}
+df <- df %>% 
+	mutate(gain = dep_delay - arr_delay
+				 , hours = air_time / 60
+				 , gain_per_hour = gain / hours
+				 )
+
+glimpse(df)
+```
+
+
+
+
+```{r}
+df <- flights %>% 
+	transmute(
+  gain = dep_delay - arr_delay,
+  hours = air_time / 60,
+  gain_per_hour = gain / hours
+)
+
+glimpse(df)
+```
+
+
+```{r}
+
+```
+
+
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+

@@ -152,6 +152,15 @@ To obtain the results he wanted, he altered data in several ways. To date (2018)
 \end{frame}
 }%%
 
+
+
+
+
+
+
+
+
+
 {%% slide -------------------------------------------
 \renewcommand\foottext{Freed Pearce, \href{https://www.theguardian.com/environment/2010/feb/09/hockey-stick-michael-mann-steve-mcintyre}{Climate change debate overheated after skeptic grasped 'hockey stick'}, {\em The Guardian}, 2010-02-09.\newline
 Brad Keyes, \href{https://cliscep.com/2016/05/08/mann-retirement-analysis-reax}{Mann retirement: Analysis, reax}, {\em Climate Sceptic}, 2016-05-08. \newline
@@ -183,16 +192,41 @@ Mann's work has withstood 15 years of scrutiny---and still holds up. But he refu
 
 
 
+
+{%% slide -------------------------------------------
+\renewcommand\foottext{Steven Goodman, Daniele Fanelli, and John Ioannidis (2016) \href{http://stm.sciencemag.org/content/8/341/341ps12}{What does research reproducibility mean?}, {\em Science Translational Medicine}, 8(341).}
+
+\begin{frame}[fragile,c]{New terminology is proposed to clarify  meaning}
+
+\bigskip
+\hspace{-1em}\begin{tabular}{@{} p{1.8in} p{3.2in}}
+& \\
+{\em methods reproducibility} & same data, same analysis, same results ({\em transparency})\\
+& \\
+{\em results reproducibility} & replication: corroborative results in a new study\\
+& \\
+{\em inferential reproducibility} & independently replicate or re-analyze data and draw draw qualitatively similar conclusions
+\end{tabular}
+\end{frame}
+}%%
+
+
+
+
 {%% slide -------------------------------------------
 \renewcommand\foottext{}
 
-\begin{frame}[fragile, c]{Our focus is on explicitly linking the report, paper, or talk to the data and scripts that generate the findings}
+\begin{frame}[fragile, c]{Our focus is on {\em methods reproducibility}}
+
 
 \begin{columns}[c]
-\column{0.5\textwidth}
+\column{0.4\textwidth}
 \includegraphics[width = 1\textwidth]{rr-flow-2.png}
 {\small R Markdown (.Rmd) files are the central link}
-\column{0.5\textwidth}
+\column{0.6\textwidth}
+Explicitly linking the report, paper, or talk to the data and scripts that generate the findings
+
+\bigskip
 Changes are automatically updated and embedded in the output document.
 
 \bigskip

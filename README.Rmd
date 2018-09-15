@@ -140,7 +140,7 @@ kable(df)
 - Starting with R Markdown [[S](slides/cm4003_rmarkdown.pdf)]  
 - [References and citations](cm/cm5011_references.md)   [[S](slides/cm4004_references-word-styles.pdf)] 
 - [Controlling Word styles](http://rmarkdown.rstudio.com/articles_docx.html) 
-
+- [Page breaks in Rmd/docx](cm/cm5012_page-breaks.md)
 
 
 

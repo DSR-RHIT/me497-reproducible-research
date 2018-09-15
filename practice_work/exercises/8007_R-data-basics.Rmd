@@ -1,0 +1,61 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+```
+
+## 5.2
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+```
+
+Flights is a dataframe in the package `nycflights13` 
+
+```{r}
+glimpse(flights)
+```
+
+
+```{r}
+filter(flights, month == 1, day == 1)
+```
+
+```{r}
+df <- flights %>% 
+	filter(month == 1, day == 1)
+
+glimpse(df)
+```
+
+
+
+```{r}
+filter(flights, month == 11 | month == 12)
+# filter(flights, month == 11 & month == 12)
+
+
+filter(flights, month == 11 | 12)
+```
+
+```{r}
+unique(is.na(df))
+```
+
+## 5.3
+
+
+```{r}
+df <-  flights %>% 
+	arrange(year, month, day) 
+
+df <-  flights %>% 
+	arrange(desc(dep_delay))
+
+glimpse(df)
+```
+
