@@ -365,7 +365,7 @@ df[le_row, ] <- c(
 	paste0(	# activities
 		"[Page breaks](cm/cm1016_page-breaks.md)",
 		"<br>",
-		"Numbering figures", # [](cm/cm1017_numbering-figs.md)
+		"Auto-numbering", # [](cm/cm1017_numbering-figs.md)
 		"<br>",
 		"[File functions](cm/cm1018_manipulate-files.Rmd)"
 	),
