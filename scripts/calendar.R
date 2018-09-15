@@ -369,7 +369,7 @@ df[le_row, ] <- c(
 	paste0(	# activities
 		"[Page breaks](cm/cm1016_page-breaks.md)",
 		"<br>",
-		"Centering", # [](cm/cm1017_numbering-figs.md)
+		"[Centering](cm/cm1017_centering-figs.md)",
 		"<br>",
 		"Auto-numbering", # [](cm/cm1018_numbering-figs.md)
 		"<br>",

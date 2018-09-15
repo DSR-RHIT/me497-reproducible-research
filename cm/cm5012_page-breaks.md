@@ -7,7 +7,7 @@ Word styles-reference document for a work-around for docx output.
 ## use heading 5
 
 For page breaks, I suggest modifying the rarely used *Heading 5* as
-suggested by Norbert KÃ¶hler, in his article [R Markdown: How to insert
+suggested by Norbert Köhler, in his article [R Markdown: How to insert
 page breaks in a MS Word
 document](http://datascienceplus.com/r-markdown-how-to-insert-page-breaks-in-a-ms-word-document/).
 
