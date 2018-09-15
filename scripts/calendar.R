@@ -348,6 +348,8 @@ df[le_row, ] <- c(
 	paste0(	# agenda
 		"Page breaks",
 		"<br>",
+		"Centering figures & tables",
+		"<br>",
 		"Numbering figures & tables",
 		"<br>",
 		"Preparing work for transmittal"
@@ -355,9 +357,11 @@ df[le_row, ] <- c(
 	paste0(	# text
 		"[[L](cm/cm5012_page-breaks.md)]",
 		"<br>",
-		"L", # [[L](cm/cm5013_numbering-figs.md)]
+		"L", # [[L](cm/cm5013_centering-figs.md)]
 		"<br>",
-		"L" # [[L](cm/cm5014_report-transmittal.md)]
+		"L", # [[L](cm/cm5014_numbering-figs.md)]
+		"<br>",
+		"L" # [[L](cm/cm5015_report-transmittal.md)]
 	),
 	paste0(	# exercises
 		"[](http://r4ds.had.co.nz)"
@@ -365,9 +369,11 @@ df[le_row, ] <- c(
 	paste0(	# activities
 		"[Page breaks](cm/cm1016_page-breaks.md)",
 		"<br>",
-		"Auto-numbering", # [](cm/cm1017_numbering-figs.md)
+		"Centering", # [](cm/cm1017_numbering-figs.md)
 		"<br>",
-		"[File functions](cm/cm1018_manipulate-files.Rmd)"
+		"Auto-numbering", # [](cm/cm1018_numbering-figs.md)
+		"<br>",
+		"File functions" # [File functions](cm/cm1018_manipulate-files.Rmd)
 	),
 	paste0(	# projects
 		"[]()"
