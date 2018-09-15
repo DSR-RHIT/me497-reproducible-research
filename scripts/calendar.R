@@ -357,7 +357,7 @@ df[le_row, ] <- c(
 	paste0(	# text
 		"[[L](cm/cm5012_page-breaks.md)]",
 		"<br>",
-		"L", # [[L](cm/cm5013_centering-figs.md)]
+		"[[L](cm/cm5013_centering-figs.md)]", #
 		"<br>",
 		"L", # [[L](cm/cm5014_numbering-figs.md)]
 		"<br>",

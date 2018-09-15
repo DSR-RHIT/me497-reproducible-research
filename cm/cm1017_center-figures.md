@@ -5,10 +5,10 @@ R Markdown does not have a feature for centering figures and captions,
 but the word-styles-reference document provides a work-around for docx
 output.
 
-## use heading 5
+## use heading 6
 
 For centering figures and captions, I suggest modifying the rarely used
-*Heading 5* as suggested by Norbert Köhler, in his article [R Markdown:
+*Heading 5* as suggested by Norbert KÃ¶hler, in his article [R Markdown:
 How to insert page breaks in a MS Word
 document](http://datascienceplus.com/r-markdown-how-to-insert-page-breaks-in-a-ms-word-document/),
 

@@ -162,7 +162,7 @@ bibliography: "../resources/project_name.bib"
 csl: "../resources/chicago-author-date.csl"
 ---</code></pre>
 
-stuff blah blah blah (“Aluminum 1100-H14,” n.d.).
+stuff blah blah blah (*Aluminum 1100-H14*, n.d.).
 
 ## references
 
@@ -170,7 +170,7 @@ stuff blah blah blah (“Aluminum 1100-H14,” n.d.).
 
 <div id="ref-matweb-alum-1100">
 
-Aluminum 1100-H14. (n.d.). <http://matweb.com/> \[Online, accessed
+*Aluminum 1100-H14*. (n.d.). <http://matweb.com/> \[Online, accessed
 2018-09-11\]; MatWeb Materials Property Data.
 
 </div>

@@ -1,12 +1,19 @@
 ---
 output: github_document
---- 
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
+---
+
+```{r include=FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(out.width = "350px")
+```
+
 
 # page breaks
 
 R Markdown does not have a feature for page breaks, but we can use the Word styles-reference document for a work-around for docx output. 
-
-
 
 
 ## use heading 5
