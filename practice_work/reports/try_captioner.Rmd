@@ -1,0 +1,90 @@
+---
+title: "Testing *captioner*"
+author: "RAL"
+date: "2018-09-17"
+output:
+  word_document:
+    reference_docx: "../resources/styles/word-styles-reference-03.docx"
+---
+
+
+## The usual setup
+
+```{r}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE)
+```
+
+## Captioner package 
+
+```{r}
+library(captioner)
+```
+
+## Make some data
+
+```{r}
+df1 <- head(mtcars, n = 5L)
+```
+
+
+## Assign the general prefixes used by captioner
+
+```{r}
+# ensure you assign these once at the beginning
+table_id  <- captioner(prefix = "Table")
+figure_id <- captioner(prefix = "Figure")
+```
+
+## Assign a specific table caption
+
+```{r results = 'hide'}
+table_id(name = "ref_idx_1", caption = "A descriptive caption for the table.")
+```
+
+## Use the table ID in-line 
+
+An excerpt of data from our fabulous experiment is shown in 
+`r table_id("ref_idx_1", display = "cite")`. 
+
+
+## Use the table ID in the code chunk
+
+```{r echo = FALSE}
+kable(df1, caption = table_id("ref_idx_1"), row.names = FALSE)
+```
+
+
+## again
+
+```{r}
+table_id(name = "another_table", caption = "A better caption")
+kable(df1, caption = table_id("another_table"), row.names = FALSE)
+```
+
+
+This sentence refers to `r table_id("another_table", display = "cite")`.
+
+
+This sentence refers to `r table_id("ref_idx_1", display = "cite")`.
+
+##### page break
+
+
+###### ![](../resources/images/hockey-stick-graph.png) 
+###### Figure 1: Michael Mann's famous hockery-stick graph 
+
+
+```{r results = 'hide'}
+figure_id(name = "hockey", caption = "Michael Mann's famous hockery-stick graph")
+```
+
+
+###### ![](../resources/images/hockey-stick-graph.png) 
+###### `r figure_id("hockey")` 
+
+
+Using Heading 6 does not center a table. 
+
+###### `r kable(df1, caption = table_id("another_table"), row.names = FALSE)`

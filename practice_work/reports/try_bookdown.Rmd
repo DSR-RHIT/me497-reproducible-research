@@ -1,0 +1,36 @@
+---
+title: "Try bookdown for auto-numbering"
+output: bookdown::word_document2
+---
+
+# First section
+
+```{r fig.cap = "An amazing plot"}
+plot(cars)
+```
+
+
+```{r fig.cap = "Another amazing plot"}
+plot(cars)
+```
+
+
+# Second section {#intro}
+
+This is Chapter \@ref(intro)
+
+
+See Table \@ref(tab:mtcars)
+
+```{r mtcars}
+knitr::kable(mtcars[1:5, 1:5], caption = "A caption")
+```
+
+See equation \@ref(eq:linear)
+
+$$
+a + bx = c  (\#eq:linear)
+$$
+
+
+

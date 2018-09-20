@@ -348,7 +348,7 @@ df[le_row, ] <- c(
 	paste0(	# agenda
 		"Page breaks",
 		"<br>",
-		"Centering figures & tables",
+		"Centering figures",
 		"<br>",
 		"Numbering figures & tables",
 		"<br>",

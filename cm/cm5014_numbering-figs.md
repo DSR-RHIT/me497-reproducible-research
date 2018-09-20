@@ -1,5 +1,5 @@
 
-# Rmd to docx: numbering tables and figures
+# numbering tables and figures
 
 As Norbert Köhler says, “R Markdown has no native method to number and
 reference table and figure captions”. The `captioner` packages gives us
@@ -18,19 +18,18 @@ numbers.
 
 ## install
 
-  - Install the `captioner` package
-  - Install the `devtools` package
-  - In your Console: `devtools::install_github('yihui/knitr',
-    build_vignettes = TRUE)`
+  - Install the `captioner`
+package
 
-The purpose of last line above is to install the latest development
-version of `knitr` so we can take advantage of the knitr option
-`row.names = FALSE` when using `kable()` to print a table. Plus we get
-recent bug fixes.
+<!-- - Install the `devtools` package  -->
+
+<!-- - In your Console: `devtools::install_github('yihui/knitr', build_vignettes = TRUE)`  -->
+
+<!-- The purpose of last line above is to install the latest development version of `knitr` so we can take advantage of the knitr option `row.names = FALSE` when using `kable()` to print a table. Plus we get recent bug fixes.  -->
 
 ## getting started
 
-  - Launch your `practiceR` project
+  - Launch your `practice_work` project
   - Open a new Rmd file. Mine is called `test-captioner.Rmd`.
   - Both `word_document` and `html_document` can be used in the YAML
     header.  
@@ -71,11 +70,11 @@ abbreviations, “Fig.” and “Tab.”.
 
 ``` r
 # assign the prefixes
-auto_tab_ID <- captioner(prefix = "Table")
-auto_fig_ID <- captioner(prefix = "Figure")
+table_id  <- captioner(prefix = "Table")
+figure_id <- captioner(prefix = "Figure")
 ```
 
-The function names on the left, `auto_tab_ID` and `auto_fig_ID`, are
+The function names on the left, `table_id` and `figure_id`, are
 arbitrary.
 
 ## create a table caption
@@ -84,17 +83,17 @@ Begin the report. Start with a level 1 heading.
 
     # Tables 
 
-We create *table captions* using `auto_tab_ID()`. The `name` argument is
-a unique string to identify the table prefix and `caption` string.
+We create *table captions* using `table_id()`. The `name` argument is a
+unique string to identify the table prefix and `caption` string.
 
 ``` r
 # assign the table prefix, number, and caption 
-auto_tab_ID(name = "a_table", caption = "A descriptive caption for the table.")
+table_id(name = "a_table", caption = "A descriptive caption for the table.")
 ```
 
 The table number (in this case, Table 1) is determined by the order of
-appearance of the `auto_tab_ID()` function in the script. This is its
-first use, so the table number is “1”.
+appearance of the `table_id()` function in the script. This is its first
+use, so the table number is “1”.
 
 ## refer to the table inline
 
@@ -104,11 +103,11 @@ includes an inline reference to the table. For example:
 > An excerpt of data from our fabulous experiment is shown in Table 1.
 
 To construct this sentence, we an inline code chunk and the function
-`auto_tab_ID()` with an added argument `display = "cite"` to print the
+`table_id()` with an added argument `display = "cite"` to print the
 table number but not the caption.
 
 <pre><code>An excerpt of data from our fabulous experiment is shown in 
-<code>`</code>r auto_tab_ID("a_table", display = "cite")<code>`</code>. 
+<code>`</code>r table_id("a_table", display = "cite")<code>`</code>. 
 </code></pre>
 
 ## kable() the table
@@ -117,23 +116,28 @@ Keeping things simple, I’ll use `knitr::kable()` to print data from the
 `cars` data set.
 
 The `kable()` function has a `caption` argument we use to invoke the
-`auto_tab_ID()` function.
+`table_id()` function.
 
 ``` r
 # get some data
 df <- head(cars, n = 5L)
 
 # print the table with caption
-kable(df, caption = auto_tab_ID("a_table"), row.names = FALSE)
+kable(df, caption = table_id("a_table"), row.names = FALSE)
 ```
 
-I haven’t printed the table here, but it should appear in your docx
-output.
+| speed | dist |
+| ----: | ---: |
+|     4 |    2 |
+|     4 |   10 |
+|     7 |    4 |
+|     7 |   22 |
+|     8 |   16 |
+
+Table 1: A descriptive caption for the table.
 
 In docx output, table captions are formatted with the *Table Caption*
-style. The style can be edited using methods described in [Controlling
-Word
-Styles](https://github.com/DSR-RHIT/me497-RR/blob/master/cm/cm041_word-styles.md).
+style.
 
 ## make a second table
 
@@ -142,7 +146,7 @@ indeed assigned the number “2”.
 
 ``` r
 # create a caption for a second table 
-auto_tab_ID("another_table", "A boring table.")
+table_id("another_table", "A boring table.")
 ```
 
 Having created another caption, I can make an inline reference to the
@@ -153,7 +157,7 @@ next table.
 Created using this Rmd script:
 
 <pre><code>More amazing results are shown in 
-<code>`</code>r auto_tab_ID("another_table", display = "cite")<code>`</code>. 
+<code>`</code>r table_id("another_table", display = "cite")<code>`</code>. 
 </code></pre>
 
 New table:
@@ -163,8 +167,18 @@ New table:
 df <- tail(cars, n = 5L)
 
 # print the table with caption
-kable(df, caption = auto_tab_ID("another_table"), row.names = FALSE)
+kable(df, caption = table_id("another_table"), row.names = FALSE)
 ```
+
+| speed | dist |
+| ----: | ---: |
+|    24 |   70 |
+|    24 |   92 |
+|    24 |   93 |
+|    24 |  120 |
+|    25 |   85 |
+
+Table 2: A boring table.
 
 All tables are automatically renumbered if tables are added or deleted.
 
@@ -175,14 +189,14 @@ Create another level 1 heading.
     # Figures 
 
 Create my first figure caption using
-`auto_fig_ID()`.
+`figure_id()`.
 
 ``` r
-auto_fig_ID(name = "one_figure", caption = "An auto-numbered figure caption.")
+figure_id(name = "one_figure", caption = "An auto-numbered figure caption.")
 ```
 
 The figure number (in this case, Figure 1) is determined by the order of
-appearance of the `auto_fig_ID()` function in the script. This is its
+appearance of the `figure_id()` function in the script. This is its
 first use, so the figure number is “1”.
 
 ## refer to the figure inline
@@ -194,7 +208,7 @@ Inline references are typical.
 Created using this Rmd script:
 
 <pre><code>More amazing results are shown in 
-<code>`</code>r auto_fig_ID("one_figure", display = "cite")<code>`</code>. 
+<code>`</code>r figure_id("one_figure", display = "cite")<code>`</code>. 
 </code></pre>
 
 ## make a figure
@@ -204,7 +218,7 @@ In contrast to table captions, we create *figure captions* using the
 
 For example, create a code chunk with these arguments:
 
-<pre><code>```{r fig.cap = auto_fig_ID("one_figure"), fig.height = 3}
+<pre><code>```{r fig.cap = figure_id("one_figure"), fig.height = 3}
 
 <code>```</code></code></pre>
 
@@ -230,7 +244,7 @@ New caption:
 
 ``` r
 # create a caption for a second figure 
-auto_fig_ID("another_figure", "Same data with a linear fit.")
+figure_id("another_figure", "Same data with a linear fit.")
 ```
 
 New inline reference:
@@ -240,13 +254,12 @@ New inline reference:
 Created using this Rmd script:
 
 <pre><code>If we do the same graph with a linear fit, we get 
-<code>`</code>r auto_fig_ID("another_figure", display = "cite")<code>`</code>. 
+<code>`</code>r figure_id("another_figure", display = "cite")<code>`</code>. 
 </code></pre>
 
-New code
-chunk:
+New code chunk:
 
-<pre><code>```{r fig.cap = auto_fig_ID("another_figure"), fig.height = 3}
+<pre><code>```{r fig.cap = figure_id("another_figure"), fig.height = 3}
 
 <code>```</code></code></pre>
 
@@ -258,6 +271,9 @@ ggplot(data = cars, aes(x = speed, y = dist)) +
     geom_smooth(method = "lm", se = FALSE)
 ```
 
+![Figure 2: Same data with a linear
+fit.](cm5014_numbering-figs_files/figure-gfm/unnamed-chunk-12-1.png)
+
 That’s all folks\!
 
 ## references
@@ -267,7 +283,3 @@ That’s all folks\!
 2.  Andrew Dolman (2016) [Testing
     captioner](https://onedrive.live.com/?authkey=%21AApYWBGHNR06Y5I&cid=FCFCD3FD042AF7F1&id=FCFCD3FD042AF7F1%2118306&parId=FCFCD3FD042AF7F1%21322&action=locate)
     from the comments section of Norbert’s blog post.
-
------
-
-[main page](../README.md)
