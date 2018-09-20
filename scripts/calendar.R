@@ -359,7 +359,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[[L](cm/cm5013_centering-figs.md)]", #
 		"<br>",
-		"L", # [[L](cm/cm5014_numbering-figs.md)]
+		"[[L](cm/cm5014_captioner.md)]", #
 		"<br>",
 		"L" # [[L](cm/cm5015_report-transmittal.md)]
 	),

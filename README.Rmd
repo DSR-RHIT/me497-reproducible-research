@@ -142,8 +142,7 @@ kable(df)
 - [Controlling Word styles](http://rmarkdown.rstudio.com/articles_docx.html) 
 - [Page breaks in Rmd/docx](cm/cm5012_page-breaks.md) 
 - [Centering figures and captions](cm/cm5013_centering-figs.md) 
-
-
+- [Numbering figures and tables](cm/cm5014_captioner.md) 
 
 
 ## reading for discussion 
