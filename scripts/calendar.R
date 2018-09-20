@@ -371,7 +371,7 @@ df[le_row, ] <- c(
 		"<br>",
 		"[Centering](cm/cm1017_centering-figs.md)",
 		"<br>",
-		"Auto-numbering", # [](cm/cm1018_numbering-figs.md)
+		"[Auto-numbering](cm/cm1018_captioner.md)", #
 		"<br>",
 		"File functions" # [File functions](cm/cm1018_manipulate-files.Rmd)
 	),
