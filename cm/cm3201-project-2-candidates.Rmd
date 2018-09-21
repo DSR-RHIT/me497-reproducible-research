@@ -4,13 +4,6 @@ output: github_document
 
 # candidate reproducibility projects 
 
-```{r setup, echo = FALSE}
-library(knitr)
-opts_knit$set(root.dir = "../")
-opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = FALSE, fig.keep = 'high')
-```
-
-
 ## getting started 
 
 Please consider which project listed below you might prefer for your Project 2. Read the brief descriptions below and use the links to read the source material for more detail. 
