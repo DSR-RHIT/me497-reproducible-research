@@ -489,7 +489,7 @@ df[le_row, ] <- c(
 		"Study R2"
 	),
 	paste0(	# projects
-		"[]()"
+		"[Project 2 list](cm/cm3201-project-2-candidates.Rmd)"
 	),
 	paste0(	# due
 		"[]()"

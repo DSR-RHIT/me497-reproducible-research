@@ -118,6 +118,8 @@ kable(df)
 
 *Project 2*
 
+- [Project list](cm/cm3201-project-2-candidates.Rmd)
+
 *Project 3 (597 only)*
 
 - [Proposal](cm/cm3301_project-3_start.md) 
