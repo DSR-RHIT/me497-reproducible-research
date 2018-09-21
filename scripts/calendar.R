@@ -465,7 +465,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# projects
-		"[]()"
+		"[Project 2 list](cm/cm3201-project-2-candidates.Rmd)"
 	),
 	paste0(	# due
 		"[]()"
@@ -489,7 +489,7 @@ df[le_row, ] <- c(
 		"Study R2"
 	),
 	paste0(	# projects
-		"[Project 2 list](cm/cm3201-project-2-candidates.Rmd)"
+		"[]()"
 	),
 	paste0(	# due
 		"[]()"
@@ -561,7 +561,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"P2 preferences"
 	)
 )
 #  week 5 ---------------------------------------------------- 5
