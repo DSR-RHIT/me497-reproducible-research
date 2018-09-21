@@ -123,7 +123,8 @@ kable(df)
 *Project 3 (597 only)*
 
 - [Proposal](cm/cm3301_project-3_start.md) 
-- [Feedback response](cm/cm1015_feedback-response.md)
+- [Feedback response](cm/cm1015_feedback-response.md) 
+- [Meeting the week-6 goals](cm/cm3302_project-3_meet-week-6-goals.md)
 
 
 

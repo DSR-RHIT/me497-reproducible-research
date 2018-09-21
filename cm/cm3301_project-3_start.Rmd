@@ -44,12 +44,3 @@ As your collaborator, I can clone the project to my local machine, make comments
 
 
 
-
-
----
-
-[main page](../README.md)
-
-
-
-

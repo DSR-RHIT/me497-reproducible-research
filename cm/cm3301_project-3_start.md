@@ -45,7 +45,3 @@ ME 597 students only
 As your collaborator, I can clone the project to my local machine, make
 comments directly in your files, and push to GitHub. You can then pull
 from GitHub, and open the files or knit them to see my comments.
-
------
-
-[main page](../README.md)
