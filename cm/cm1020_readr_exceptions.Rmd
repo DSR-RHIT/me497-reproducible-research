@@ -1,0 +1,102 @@
+---
+output: github_document
+--- 
+
+# data import
+
+In this chapter, I've listed below the specific tools and exercises on which we'll focus.  
+
+
+
+
+### [11.1 Introduction](http://r4ds.had.co.nz/data-import.html#introduction-5)  
+
+- Read
+
+
+
+### [11.2 Getting started](http://r4ds.had.co.nz/data-import.html#getting-started) 
+
+- `read_csv()` is the useful function to read about in this section 
+- Including the message produced when using `read_csv()` that tells you what column specifications have been assigned  
+
+```
+#> Parsed with column specification:
+#> cols(
+#>   earn = col_double(),
+#>   height = col_double(),
+#>   sex = col_character(),
+#>   ed = col_integer(),
+#>   age = col_integer(),
+#>   race = col_character()
+#> )
+```
+
+- [11.2.2 exercises](http://r4ds.had.co.nz/data-import.html#exercises-19) do problems 4 and 5 only 
+
+
+
+
+### [11.3 Parsing a vector](http://r4ds.had.co.nz/data-import.html#parsing-a-vector) 
+
+- `problem()` is the useful function to read about in this section 
+- skip the rest of the section 
+- [11.3.5 exercises](http://r4ds.had.co.nz/data-import.html#exercises-20) do problem 5 only 
+
+
+### [11.4 Parsing a file](http://r4ds.had.co.nz/data-import.html#parsing-a-file)  
+- `problem()` is the useful function to read about in this section 
+- Assign column types, as in the example
+
+```
+challenge <- read_csv(
+  readr_example("challenge.csv"), 
+  col_types = cols(
+    x = col_integer(),
+    y = col_character()
+  )
+)
+```
+
+### [11.5 Writing to a file](http://r4ds.had.co.nz/data-import.html#writing-to-a-file)  
+
+- `write_csv()` 
+
+And when you want to preserve the column types, 
+
+- `write_rds()` 
+- `read_rds()` 
+
+A typical workflow: 
+
+- Receive raw data in CSV format  
+- Read it the first time using `read_csv()` 
+- Examine the default column types 
+- Read the file again using the `col_types` argument to assign a default to all variables, then specify column types for specific variables that are not the default, for example, 
+
+```
+df <- read_csv('filepath.csv',
+  col_types = cols(.default = col_character(),
+  	variable_name = col_double(),
+  	another_variable_name  = col_double()
+    ))
+```
+
+- Again, examine the variables to ensure that are all the types I want 
+- Use `problem()` on the data to check for problems 
+
+
+Once I'm satisfied that the variable are the correct type, 
+
+- Use `write_rds()` to save the data set to the `data\` directory. 
+- In subsequent analysis, use `read_rds()` to read the data
+
+
+
+
+
+### [11.6 Other types of data](http://r4ds.had.co.nz/data-import.html#other-types-of-data) 
+
+Read to be aware of how to input other data types. 
+
+

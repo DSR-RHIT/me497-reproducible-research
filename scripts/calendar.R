@@ -439,35 +439,21 @@ df[le_row, ] <- c(
 	"",  # week
 	"F", # day
 	paste0(	# agenda
-		"Data basics: read and write"
+		"Read and write data"
 	),
 	paste0(	# text
-		"[11.1](http://r4ds.had.co.nz/data-import.html#introduction-5)",
-		"<br>",
-		"[11.2](http://r4ds.had.co.nz/data-import.html#getting-started)",
-		"<br>",
-		"[11.3](http://r4ds.had.co.nz/data-import.html#parsing-a-vector)",
-		"<br>",
-		"[11.4](http://r4ds.had.co.nz/data-import.html#parsing-a-file)",
-		"<br>",
-		"[11.5](http://r4ds.had.co.nz/data-import.html#writing-to-a-file)"
-	),
-	paste0(	# exercises
-		"<br>",
-		"[11.2.2](http://r4ds.had.co.nz/data-import.html#exercises-19)",
-		"<br>",
-		"[11.3.5](http://r4ds.had.co.nz/data-import.html#exercises-20)",
-		"<br>",
-		"<br>",
-		"<br>"
-		),
-	paste0(	# activities
 		"[]()"
 	),
+	paste0(	# exercises
+		"[]()"
+		),
+	paste0(	# activities
+		"[Data import](cm/cm1020_readr_exceptions.md)"
+	),
 	paste0(	# projects
-		"[P2 select](cm/cm3201-project-2-candidates.md)",
+		"[P2&nbsp;selection](cm/cm3201-project-2-candidates.md)",
 		"<br>",
-		"[P3 progress](cm/cm3302_project-3_meet-week-6-goals.md)"
+		"[P3&nbsp;schedule](cm/cm3302_project-3_meet-week-6-goals.md)"
 	),
 	paste0(	# due
 		"[]()"
@@ -563,7 +549,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2 preferences"
+		"P2&nbsp;preference"
 	)
 )
 #  week 5 ---------------------------------------------------- 5
@@ -587,7 +573,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P3 progress](cm/cm3302_project-3_meet-week-6-goals.md)"
+		"[P3&nbsp;progress](cm/cm3302_project-3_meet-week-6-goals.md)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -610,7 +596,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P1 Final report"
+		"P1&nbsp;Final&nbsp;report"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -630,7 +616,9 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# projects
-		"Start project 2"
+		"[P2&nbsp;start-up](cm/cm3203_project-2_startup.md)",
+		"<br>",
+		"[P2&nbsp;schedule](cm/cm3202_project-2_schedule.md)"
 	),
 	paste0(	# due
 		"[]()"
@@ -680,7 +668,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P3 progress](cm/cm3302_project-3_meet-week-6-goals.md)"
+		"[P3&nbsp;progress](cm/cm3302_project-3_meet-week-6-goals.md)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -749,7 +737,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
 	)
 )
 #  week ---------------------------------------------------- 7
@@ -773,7 +761,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P3 progress](cm/cm3302_project-3_meet-week-6-goals.md)"
+		"[P3&nbsp;progress](cm/cm3302_project-3_meet-week-6-goals.md)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -842,7 +830,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
 	)
 )
 #  week ---------------------------------------------------- 8
@@ -866,7 +854,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2 progress report"
+		"[]()"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -935,7 +923,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
 	)
 )
 #  week ---------------------------------------------------- 9
@@ -1121,8 +1109,8 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2 Final report",
+		"P2&nbsp;Final&nbsp;report",
 		"<br>",
-		"P3 Final report"
+		"P3&nbsp;Final&nbsp;report"
 	)
 )

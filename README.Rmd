@@ -108,6 +108,9 @@ kable(df)
 
 
 
+
+
+
 ## project assignments 
 
 *Project 1*
@@ -118,7 +121,10 @@ kable(df)
 
 *Project 2*
 
-- [Project list](cm/cm3201-project-2-candidates.md)
+- [List of candidate projects](cm/cm3201-project-2-candidates.md)
+- [Start-up information](cm/cm/cm3203_project-2_startup.md)
+- [Brief progress schedule](cm/cm3202_project-2_schedule.md)
+
 
 *Project 3 (597 only)*
 
