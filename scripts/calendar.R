@@ -465,16 +465,18 @@ df[le_row, ] <- c(
 	"4",    # week
 	"M",    # day
 	paste0(	# agenda
-		"[]()"
+		"Managing version control changes and conflicts"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[[L](cm/cm1021_conflict-revert.md)]"
 	),
 	paste0(	# exercises
 		"[](http://r4ds.had.co.nz)"
 	),
 	paste0(	# activities
-		"Study R2"
+		"Study R2",
+		"<br>",
+		"[Resolve v-c conflict](cm/cm1022_conflict-assignment.md)"
 	),
 	paste0(	# projects
 		"[]()"
