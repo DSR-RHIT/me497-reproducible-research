@@ -593,7 +593,7 @@ df[le_row, ] <- c(
 		"Browse&nbsp;R3"
 	),
 	paste0(	# projects
-		"[]()"
+		"P2&nbsp;assigned"
 	),
 	paste0(	# due
 		"P1&nbsp;Final&nbsp;report"
@@ -737,7 +737,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
+		"[]()"
 	)
 )
 #  week ---------------------------------------------------- 7
@@ -761,6 +761,8 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)",
+		"<br>",
 		"[P3&nbsp;progress](cm/cm3302_project-3_meet-week-6-goals.md)"
 	)
 )
@@ -830,7 +832,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
+		"[]()"
 	)
 )
 #  week ---------------------------------------------------- 8
@@ -854,7 +856,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -923,7 +925,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
+		"[]()"
 	)
 )
 #  week ---------------------------------------------------- 9
@@ -947,7 +949,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"[P2&nbsp;progress](cm/cm3202_project-2_schedule.md)"
 	)
 )
 le_row <- le_row + 1 # ----- day
