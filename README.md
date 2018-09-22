@@ -121,7 +121,7 @@ directories](cm/cm1008_setup-directories.md)
 *Project 2*
 
   - [List of candidate projects](cm/cm3201-project-2-candidates.md)
-  - [Start-up information](cm/cm/cm3203_project-2_startup.md)
+  - [Start-up information](cm/cm3203_project-2_startup.md)
   - [Brief progress schedule](cm/cm3202_project-2_schedule.md)
 
 *Project 3 (597 only)*
