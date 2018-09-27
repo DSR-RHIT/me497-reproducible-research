@@ -513,36 +513,27 @@ df[le_row, ] <- c(
 	"",     # week
 	"R",    # day
 	paste0(	# agenda
-		"[]()"
+		"Factors"
 	),
 	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
+		"[15.1](http://r4ds.had.co.nz/factors.html#introduction-9)",
+		"<br>",
+		"[15.2](http://r4ds.had.co.nz/factors.html#creating-factors)",
+		"<br>",
+		"[15.3](http://r4ds.had.co.nz/factors.html#general-social-survey)",
+		"<br>",
+		"[15.4](http://r4ds.had.co.nz/factors.html#modifying-factor-order)",
+		"<br>",
+		"[15.5](http://r4ds.had.co.nz/factors.html#modifying-factor-levels)"
 	),
 	paste0(	# exercises
-		"[](http://r4ds.had.co.nz)"
-	),
-	paste0(	# activities
-		"[]()"
-	),
-	paste0(	# projects
-		"[]()"
-	),
-	paste0(	# due
-		"[]()"
-	)
-)
-le_row <- le_row + 1 # ----- day
-df[le_row, ] <- c(
-	"",     # week
-	"F",    # day
-	paste0(	# agenda
-		"[]()"
-	),
-	paste0(	# text
-		"[](http://r4ds.had.co.nz)"
-	),
-	paste0(	# exercises
-		"[](http://r4ds.had.co.nz)"
+		"<br>",
+		"<br>",
+		"[15.3.1](http://r4ds.had.co.nz/factors.html#exercise)",
+		"<br>",
+		"[15.4.1](http://r4ds.had.co.nz/factors.html#exercises-43)",
+		"<br>",
+		"[15.5.1](http://r4ds.had.co.nz/factors.html#exercises-44s)"
 	),
 	paste0(	# activities
 		"[]()"
@@ -552,6 +543,29 @@ df[le_row, ] <- c(
 	),
 	paste0(	# due
 		"P2&nbsp;preference"
+	)
+)
+le_row <- le_row + 1 # ----- day
+df[le_row, ] <- c(
+	"",     # week
+	"F",    # day
+	paste0(	# agenda
+		"Graph tour"
+	),
+	paste0(	# text
+		"[[L](cm/cm5016_graph-tour-overview.md)]"
+	),
+	paste0(	# exercises
+		"[]()"
+	),
+	paste0(	# activities
+		"[]()"
+	),
+	paste0(	# projects
+		"[]()"
+	),
+	paste0(	# due
+		"[]()"
 	)
 )
 #  week 5 ---------------------------------------------------- 5
