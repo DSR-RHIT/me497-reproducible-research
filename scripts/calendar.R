@@ -451,7 +451,7 @@ df[le_row, ] <- c(
 		"[Data import](cm/cm1020_readr_exceptions.md)"
 	),
 	paste0(	# projects
-		"[P2&nbsp;selection](cm/cm3201-project-2-candidates.md)"
+		"[P2&nbsp;candidates](cm/cm3201-project-2-candidates.md)"
 	),
 	paste0(	# due
 		"[]()"
@@ -480,7 +480,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"[]()"
+		"P3&nbsp;raw&nbsp;data"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -609,7 +609,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P3&nbsp;progress"
+		"P3&nbsp;tidy&nbsp;data"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -702,7 +702,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P3&nbsp;progress"
+		"P3&nbsp;results"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -795,9 +795,9 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2&nbsp;progress",
+		"P2&nbsp;raw&nbsp;data",
 		"<br>",
-		"P3&nbsp;progress"
+		"P3&nbsp;deliverables"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -890,7 +890,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2&nbsp;progress"
+		"P2&nbsp;tidy&nbsp;data"
 	)
 )
 le_row <- le_row + 1 # ----- day
@@ -983,7 +983,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# due
-		"P2&nbsp;progress"
+		"P2&nbsp;results"
 	)
 )
 le_row <- le_row + 1 # ----- day

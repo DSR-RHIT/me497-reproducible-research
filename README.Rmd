@@ -34,7 +34,13 @@ source("scripts/calendar.R")
 kable(df)
 ```
 
+
+
+
+
 # index
+
+
 
 ## course mangement
 
@@ -57,33 +63,9 @@ kable(df)
 
 
 
+## graph things 
 
-<!-- ## practice  -->
-
-<!-- *Introduction*  -->
-
-<!-- <!-- - [Learn R by doing](practice_work/exercises/8001_practice-work-setup.md) [Rmd 01-1]  --> 
-
-<!-- *Analysis*  -->
-
-<!-- *Data* -->
-
-<!-- *Graphs*  -->
-
-<!-- <!-- - [Graph basics 1](practice_work/exercises/8002_graphs_3-1-3-2.md) (text p. 1-12) [Rmd 01-2] --> 
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Dot plots](cm/cm5019_dot-plot.md) 
 
 
 
@@ -135,11 +117,15 @@ kable(df)
 
 
 
+
+
 ## r and rstudio things 
 
 - [Install R and RStudio](cm/cm1001_install-R-RStudio.md).  If you already use R and RStudio, please update R, RStudio, and packages to the most recent versions. 
 - [Create a stand-alone package library](cm/cm1003_library.md) 
 - [Create the .Renviron file](cm/cm1007_Renviron.md) 
+
+
 
 
 
@@ -152,6 +138,8 @@ kable(df)
 - [Page breaks in Rmd/docx](cm/cm5012_page-breaks.md) 
 - [Centering figures and captions](cm/cm5013_centering-figs.md) 
 - [Numbering figures and tables](cm/cm5014_captioner.md) 
+
+
 
 
 ## reading for discussion 
@@ -179,6 +167,8 @@ kable(df)
 - [De-weaponizing reproducibility](http://simplystatistics.org/2015/03/13/de-weaponizing-reproducibility/)
 - [The real reason reproducible research is important](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
 - [Top 10 readings in reproducibility](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.8jzbyn33h)
+
+
 
 
 
