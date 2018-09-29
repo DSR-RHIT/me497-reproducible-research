@@ -594,10 +594,18 @@ df[le_row, ] <- c(
 	"5",    # week
 	"M",    # day
 	paste0(	# agenda
-		""
+		"Multiway data & graphs",
+		"<br>",
+		"Scales",
+		"<br>",
+		"Sizing and saving"
 	),
 	paste0(	# text
-		"[]()"
+		"[[L](cm/cm5020_multiway.md)]",
+		"<br>",
+		"[28.4](http://r4ds.had.co.nz/graphics-for-communication.html#scales)",
+		"<br>",
+		"[28.7](http://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots)"
 	),
 	paste0(	# exercises
 		"[]()"
@@ -640,7 +648,9 @@ df[le_row, ] <- c(
 	"",     # week
 	"R",    # day
 	paste0(	# agenda
-		""
+		"Work on projects",
+		"<br>",
+		"(prof at conference)"
 	),
 	paste0(	# text
 		"[]()"
@@ -663,7 +673,9 @@ df[le_row, ] <- c(
 	"",     # week
 	"F",    # day
 	paste0(	# agenda
-		""
+		"Work on projects",
+		"<br>",
+		"(prof at conference)"
 	),
 	paste0(	# text
 		"[]()"

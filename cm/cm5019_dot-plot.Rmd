@@ -32,7 +32,6 @@ Recall that in R, factors are categorical variables that have been encoded with 
 
 Create `dot_plot.Rmd` in your `practice_work/exercises/` directory. Write the code chunks in the tutorial with as much of the prose as you like  to explain the work. 
 
-
 ```{r}
 library(tidyverse)
 library(forcats)

@@ -1,0 +1,265 @@
+---
+output: github_document
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
+--- 
+
+
+# multiway graphs
+
+```{r setup, echo = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, fig.keep = 'high')
+opts_chunk$set(fig.height=6)
+```
+
+
+```{r echo = FALSE}
+library(tidyverse)
+library(readxl)
+library(stringr)
+```
+
+Multiway data have a specific structure
+
+- a categorical variable with *m* levels
+- a second categorical variable with *n* levels 
+- a quantitative variable with  *m x n* values, one value for each combination of the two categories
+
+
+## data
+
+Create `multiway.Rmd` in your `practice_work/exercises/` directory. Write the code chunks in the tutorial with as much of the prose as you like  to explain the work. 
+
+```{r}
+library(tidyverse)
+library(forcats)
+```
+
+An untidy data file `midfield-student-data.csv` adapted from [@layton2009] is saved to the course data directory on GitHub. You can download the file and save it in your `practice_work/data/` directory. Once the file is saved on your machine, read the file with your Rmd script. 
+
+```{r}
+df1 <- read_csv('data/midfield-student-data.csv')
+
+glimpse(df1)
+```
+
+Multiway data are often displayed in a wide table. The *m* levels of the first category are in the rows of first column; the *n* levels of the second category are in the other column headings; and the *m x n* values of the quantitative variable fill the table cells---no cell is empty. 
+
+```{r}
+kable(df1)
+```
+
+Categorical variable 1---a student's major after 4 years---has 8 levels: 
+
+- Arts and Humanities
+- Business
+- Computer Science
+- Engineering
+- Other Non-STM disciplines (STM: Science, Technology, and Math)
+- Other STM disciplines
+- Social Sciences
+- TOLEDO: Destination unknown (left the dataset)
+
+Categorical variable 2---a student's race/ethinicty and sex---has 10 levels: 
+
+- Asian American Female and Male
+- Black (African American) Female and Male
+- Hispanic (Latin) Female and Male
+- Native American Female and Male
+- White (non-Hispanic) Female and Male
+
+Quantitative variable has 8 x 10 = 80 values 
+
+- Number of students enrolled in a major for each race/ethnicity/sex group 
+
+
+
+## tidying the data 
+
+Use *gather()* to tidy the data (wide form to long form).
+
+```{r}
+df2 <- df1 %>%
+	gather(demogr, N, AsianFem:WhiteMle)
+
+glimpse(df2)
+```
+
+Save the tidy data as a new CSV file in your `data/` directory. 
+
+```{r}
+write_csv(df2, 'data/midfield-student-data-tidy.csv')
+```
+
+
+
+
+## graphing multiway data
+
+Read the tidy CSV data file from your data directory.
+
+```{r}
+df3 <- read_csv('data/midfield-student-data-tidy.csv')
+
+glimpse(df3)
+```
+
+Plot it with rows (y) the demographic category and facets the destination major category. The x-variable is the number of students N. 
+
+
+```{r}
+f1 <- ggplot(df3, aes(x = N, y = demogr)) +
+	geom_point() +
+	facet_wrap(vars(DestMajor), ncol = 3)
+
+print(f1)
+```
+
+The multiway categorical variables must be recoded as factors that are ordered by N. 
+
+```{r}
+df3 <- df3 %>% 
+  mutate(demogr = fct_reorder(demogr, N, sum)) %>%
+  mutate(DestMajor = fct_reorder(DestMajor, N, sum))
+```
+
+```{r}
+f3 <- ggplot(df3, aes(x = N, y = demogr)) +
+  geom_point() +
+  facet_wrap(vars(DestMajor), ncol = 3, as.table = FALSE)
+
+print(f3)
+```
+
+
+
+
+
+## applying a log scale
+
+With data spanning several orders of magnitude, a logarithmic scale let us see small and large differences.
+
+```{r}
+f3 <- f3 + scale_x_log10()
+print(f3)
+```
+
+Your console may show a warning message about a transformation error. 
+
+```
+Warning message:
+Transformation introduced infinite values in continuous x-axis 
+```
+
+The warning was issued because I tried to graph log(0) which is undefined. We can filter the data to keep only those rows with $N > 0$.
+
+```{r}
+df4 <- df3 %>%
+  filter(N > 0)
+
+# how many observations did we lose?
+glimpse(df4)
+```
+
+
+
+
+
+
+## using %+% to replace a current data frame
+
+We want to use the data frame `df4` that has been filtered to remove entries with $N = 0$.
+
+We replace a data frame in a ggplot graph we've already defined using the `%+%` operator---similar to using `+` to add a new layer.
+
+```{r}
+f4 <- f3 %+% df4 
+print(f4)
+```
+
+
+
+
+## recoding row and panel labels
+
+In preparing the graph for sharng with others, we will typically replace the categorical levels with easier to read labels. Following the suggestion is [section 15.5](http://r4ds.had.co.nz/factors.html#modifying-factor-levels) of the text [@wickhamgrolemund2016]:
+
+
+```{r}
+df5 <- df4 %>% 
+  mutate(demogr = fct_recode(demogr,
+    "Asian Male"           = "AsianMle",
+    "Asian Female"         = "AsianFem",
+    "Black Male"           = "BlackMle",
+    "Black Female"         = "BlackFem",
+    "Hispanic Male"        = "HispMle",
+    "Hispanic Female"      = "HispFem",
+    "Native American Male" = "NatAmMle",
+    "Native American Female" = "NatAmFem", 
+    "White Male"           = "WhiteMle",
+    "White Female"         = "WhiteFem"
+  )) %>% 
+  mutate(DestMajor = fct_recode(DestMajor,
+    "Arts &Humanities"  = "AH",
+    "Business"          = "Bus",
+    "Computer Science"  = "CS",
+    "Engineering"       = "Engr",
+    "Other Non-STM"     = "otherNonSTM",
+    "Other STM"         = "otherSTM",
+    "Left the database" = "TOLEDO",
+    "Social Sciences"   = "SocSci", 
+  ))
+
+# replace df and add labels 
+f5 <- f4 %+%
+	df5 +
+  labs(x = "Number of students (log 10 scale)", 
+      y = "", 
+      title = "The year-4 destinations of students starting in engineering")
+	
+print(f5)
+```
+
+
+
+
+
+## the dual multiway
+
+In a multiway graph, numbers in a panel are more easily compared than numbers in different panels. 
+
+Every multiway has dual form in which we swap the categories---rows become panels and panels become rows. All we have to do is change the variables assigned to `y` and `facet`. 
+
+
+```{r fig.height=7.5}
+f6 <- ggplot(df5, aes(x = N, y = DestMajor)) +
+	geom_point() +
+	facet_wrap(vars(demogr), ncol = 3, as.table = FALSE) +
+	scale_x_log10() + 
+	labs(x = "Number of students (log 10 scale)", 
+      y = "", 
+      title = "The year-4 destinations of students starting in engineering")
+
+print(f6)
+```
+
+
+
+
+
+
+
+
+
+
+## references
+
+<div id="refs"></div>
+
+
+
+<!-- other stuff can go after -->
+
+

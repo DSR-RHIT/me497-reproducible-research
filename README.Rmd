@@ -42,7 +42,7 @@ kable(df)
 
 
 
-## course mangement
+## course things
 
 - [About the course](cm/cm0001_about-the-course.md) 
 - [Syllabus](cm/cm0003_syllabus.md)  
@@ -66,7 +66,7 @@ kable(df)
 ## graph things 
 
 - [Dot plots](cm/cm5019_dot-plot.md) 
-
+- [Multiway data and graphs](cm/cm5020_multiway.md) 
 
 
 
