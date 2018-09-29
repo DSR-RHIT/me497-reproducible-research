@@ -18,8 +18,8 @@ As you work through the tour, create a new script for each graph type in
 your `practice_work/` directory.
 
   - Cleveland dot plot
+  - multiway plot
   - histogram
   - box and whisker plot
   - scatter plot
   - time series
-  - multiway plot

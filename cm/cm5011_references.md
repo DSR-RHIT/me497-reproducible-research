@@ -177,7 +177,7 @@ stuff blah blah blah (*Aluminum 1100-H14*, n.d.).
 
 <div id="ref-wickhamgrolemund2016">
 
-Wickham, H., & Grolemund, G. (2016). *R for data science*. Sebastopol,
+Wickham, H., & Grolemund, G. (2016). *R for Data Science*. Sebastopol,
 CA: O’Reilly Media, Inc.
 
 </div>

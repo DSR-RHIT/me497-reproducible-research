@@ -594,18 +594,14 @@ df[le_row, ] <- c(
 	"5",    # week
 	"M",    # day
 	paste0(	# agenda
-		"Multiway data & graphs",
-		"<br>",
-		"Scales",
-		"<br>",
-		"Sizing and saving"
+		"Tidy data: spread() and gather()"
 	),
 	paste0(	# text
-		"[[L](cm/cm5020_multiway.md)]",
+		"[12.1](http://r4ds.had.co.nz/tidy-data.html)",
 		"<br>",
-		"[28.4](http://r4ds.had.co.nz/graphics-for-communication.html#scales)",
+		"[12.2](http://r4ds.had.co.nz/tidy-data.html#tidy-data-1)",
 		"<br>",
-		"[28.7](http://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots)"
+		"[12.3](http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering)"
 	),
 	paste0(	# exercises
 		"[]()"
@@ -624,14 +620,27 @@ le_row <- le_row + 1 # ----- day
 df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
+
 	paste0(	# agenda
-		""
+		"Multiway data & graphs",
+		"<br>",
+		"Scales",
+		"<br>",
+		"Sizing and saving"
 	),
 	paste0(	# text
-		"[]()"
+		"[[L](cm/cm5020_multiway.md)]",
+		"<br>",
+		"[28.4](http://r4ds.had.co.nz/graphics-for-communication.html#scales)",
+		"<br>",
+		"[28.7](http://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots)"
 	),
 	paste0(	# exercises
-		"[]()"
+		"[]()",
+		"<br>",
+		"[]()",
+		"<br>",
+		"[12.3.3](http://r4ds.had.co.nz/tidy-data.html#exercises-22)"
 	),
 	paste0(	# activities
 		"Browse&nbsp;R3"
