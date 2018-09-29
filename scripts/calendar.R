@@ -604,10 +604,14 @@ df[le_row, ] <- c(
 		"[12.3](http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering)"
 	),
 	paste0(	# exercises
-		"[]()"
+		"[]()",
+		"<br>",
+		"[]()",
+		"<br>",
+		"[12.3.3](http://r4ds.had.co.nz/tidy-data.html#exercises-22)"
 	),
 	paste0(	# activities
-		""
+		"[]()"
 	),
 	paste0(	# projects
 		"[]()"
@@ -636,11 +640,7 @@ df[le_row, ] <- c(
 		"[28.7](http://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots)"
 	),
 	paste0(	# exercises
-		"[]()",
-		"<br>",
-		"[]()",
-		"<br>",
-		"[12.3.3](http://r4ds.had.co.nz/tidy-data.html#exercises-22)"
+		"[]()"
 	),
 	paste0(	# activities
 		"Browse&nbsp;R3"
