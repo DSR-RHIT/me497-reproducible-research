@@ -1,51 +1,51 @@
-abbr,name,area,region
-AL,Alabama,51609,South
-AK,Alaska,589757,West
-AZ,Arizona,113909,West
-AR,Arkansas,53104,South
-CA,California,158693,West
-CO,Colorado,104247,West
-CT,Connecticut,5009,Northeast
-DE,Delaware,2057,South
-FL,Florida,58560,South
-GA,Georgia,58876,South
-HI,Hawaii,6450,West
-ID,Idaho,83557,West
-IL,Illinois,56400,North Central
-IN,Indiana,36291,North Central
-IA,Iowa,56290,North Central
-KS,Kansas,82264,North Central
-KY,Kentucky,40395,South
-LA,Louisiana,48523,South
-ME,Maine,33215,Northeast
-MD,Maryland,10577,South
-MA,Massachusetts,8257,Northeast
-MI,Michigan,58216,North Central
-MN,Minnesota,84068,North Central
-MS,Mississippi,47716,South
-MO,Missouri,69686,North Central
-MT,Montana,147138,West
-NE,Nebraska,77227,North Central
-NV,Nevada,110540,West
-NH,New Hampshire,9304,Northeast
-NJ,New Jersey,7836,Northeast
-NM,New Mexico,121666,West
-NY,New York,49576,Northeast
-NC,North Carolina,52586,South
-ND,North Dakota,70665,North Central
-OH,Ohio,41222,North Central
-OK,Oklahoma,69919,South
-OR,Oregon,96981,West
-PA,Pennsylvania,45333,Northeast
-RI,Rhode Island,1214,Northeast
-SC,South Carolina,31055,South
-SD,South Dakota,77047,North Central
-TN,Tennessee,42244,South
-TX,Texas,267339,South
-UT,Utah,84916,West
-VT,Vermont,9609,Northeast
-VA,Virginia,40815,South
-WA,Washington,68192,West
-WV,West Virginia,24181,South
-WI,Wisconsin,56154,North Central
-WY,Wyoming,97914,West
+abbr,name,area,region,population,income,illiteracy,murder,frost
+AL,Alabama,51609,South,3615,3624,2.1,15.1,20
+AK,Alaska,589757,West,365,6315,1.5,11.3,152
+AZ,Arizona,113909,West,2212,4530,1.8,7.8,15
+AR,Arkansas,53104,South,2110,3378,1.9,10.1,65
+CA,California,158693,West,21198,5114,1.1,10.3,20
+CO,Colorado,104247,West,2541,4884,0.7,6.8,166
+CT,Connecticut,5009,Northeast,3100,5348,1.1,3.1,139
+DE,Delaware,2057,South,579,4809,0.9,6.2,103
+FL,Florida,58560,South,8277,4815,1.3,10.7,11
+GA,Georgia,58876,South,4931,4091,2,13.9,60
+HI,Hawaii,6450,West,868,4963,1.9,6.2,0
+ID,Idaho,83557,West,813,4119,0.6,5.3,126
+IL,Illinois,56400,Midwest,11197,5107,0.9,10.3,127
+IN,Indiana,36291,Midwest,5313,4458,0.7,7.1,122
+IA,Iowa,56290,Midwest,2861,4628,0.5,2.3,140
+KS,Kansas,82264,Midwest,2280,4669,0.6,4.5,114
+KY,Kentucky,40395,South,3387,3712,1.6,10.6,95
+LA,Louisiana,48523,South,3806,3545,2.8,13.2,12
+ME,Maine,33215,Northeast,1058,3694,0.7,2.7,161
+MD,Maryland,10577,South,4122,5299,0.9,8.5,101
+MA,Massachusetts,8257,Northeast,5814,4755,1.1,3.3,103
+MI,Michigan,58216,Midwest,9111,4751,0.9,11.1,125
+MN,Minnesota,84068,Midwest,3921,4675,0.6,2.3,160
+MS,Mississippi,47716,South,2341,3098,2.4,12.5,50
+MO,Missouri,69686,Midwest,4767,4254,0.8,9.3,108
+MT,Montana,147138,West,746,4347,0.6,5,155
+NE,Nebraska,77227,Midwest,1544,4508,0.6,2.9,139
+NV,Nevada,110540,West,590,5149,0.5,11.5,188
+NH,New Hampshire,9304,Northeast,812,4281,0.7,3.3,174
+NJ,New Jersey,7836,Northeast,7333,5237,1.1,5.2,115
+NM,New Mexico,121666,West,1144,3601,2.2,9.7,120
+NY,New York,49576,Northeast,18076,4903,1.4,10.9,82
+NC,North Carolina,52586,South,5441,3875,1.8,11.1,80
+ND,North Dakota,70665,Midwest,637,5087,0.8,1.4,186
+OH,Ohio,41222,Midwest,10735,4561,0.8,7.4,124
+OK,Oklahoma,69919,South,2715,3983,1.1,6.4,82
+OR,Oregon,96981,West,2284,4660,0.6,4.2,44
+PA,Pennsylvania,45333,Northeast,11860,4449,1,6.1,126
+RI,Rhode Island,1214,Northeast,931,4558,1.3,2.4,127
+SC,South Carolina,31055,South,2816,3635,2.3,11.6,65
+SD,South Dakota,77047,Midwest,681,4167,0.5,1.7,172
+TN,Tennessee,42244,South,4173,3821,1.7,11,70
+TX,Texas,267339,South,12237,4188,2.2,12.2,35
+UT,Utah,84916,West,1203,4022,0.6,4.5,137
+VT,Vermont,9609,Northeast,472,3907,0.6,5.5,168
+VA,Virginia,40815,South,4981,4701,1.4,9.5,85
+WA,Washington,68192,West,3559,4864,0.6,4.3,32
+WV,West Virginia,24181,South,1799,3617,1.4,6.7,100
+WI,Wisconsin,56154,Midwest,4589,4468,0.7,3,149
+WY,Wyoming,97914,West,376,4566,0.6,6.9,173
