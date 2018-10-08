@@ -726,7 +726,7 @@ df[le_row, ] <- c(
 	paste0(	# activities
 		"Study&nbsp;R3",
 		"<br>",
-		"[Complete 12.6](http://r4ds.had.co.nz/tidy-data.html#case-study)"
+		"[Case study](cm/cm5021_case-study.md)"
 	),
 	paste0(	# projects
 		"[]()"

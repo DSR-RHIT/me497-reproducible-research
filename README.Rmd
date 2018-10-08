@@ -52,6 +52,12 @@ kable(df)
 
 
 
+## data things
+
+- [Tidy data case study](cm/cm5021_case-study.md) 
+
+
+
 
 
 ## file management

@@ -4,20 +4,21 @@
 From section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) in
 R for Data Science.
 
-The `who` dataset is in the tidyr package, part of the tidyverse
+The `who` dataset is in the tidyr package, part of the
+    tidyverse
 
 ``` r
 library(tidyverse)
 ```
 
-    ## -- Attaching packages --------
+    ## -- Attaching packages --------------------------------------- tidyverse 1.2.1 --
 
     ## v ggplot2 3.0.0.9000     v purrr   0.2.5     
     ## v tibble  1.4.2          v dplyr   0.7.6     
     ## v tidyr   0.8.1          v stringr 1.3.1     
     ## v readr   1.1.1          v forcats 0.3.0
 
-    ## -- Conflicts -----------------
+    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -714,4 +715,4 @@ ggplot(who7, aes(x = cases)) +
     scale_x_log10(breaks = 10^c(0:5))
 ```
 
-![](tidy-data-case-study_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](cm5021_case-study_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->

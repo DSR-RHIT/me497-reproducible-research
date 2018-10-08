@@ -1,13 +1,15 @@
 ---
 output: github_document
-bibliography: "../../resources/bib-etc/references-rr.bib"
-csl: "../../resources/styles/apa.csl"
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
 --- 
 
 
 # Case study in tidying data
 
 From section  [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) in R for Data Science. 
+
+I've added a few bits that I find useful, especially when attempting to understand a new data set for the first time. 
 
 
 The `who` dataset is in the tidyr package, part of the tidyverse
