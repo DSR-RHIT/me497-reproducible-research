@@ -594,21 +594,25 @@ df[le_row, ] <- c(
 	"5",    # week
 	"M",    # day
 	paste0(	# agenda
-		"Tidy data: spread() and gather()"
+		"Tidy data: spread(), gather(), separate(), unite()"
 	),
 	paste0(	# text
 		"[12.1](http://r4ds.had.co.nz/tidy-data.html)",
 		"<br>",
 		"[12.2](http://r4ds.had.co.nz/tidy-data.html#tidy-data-1)",
 		"<br>",
-		"[12.3](http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering)"
+		"[12.3](http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering)",
+		"<br>",
+		"[12.4](http://r4ds.had.co.nz/tidy-data.html#separating-and-uniting)"
 	),
 	paste0(	# exercises
 		"[]()",
 		"<br>",
 		"[]()",
 		"<br>",
-		"[12.3.3](http://r4ds.had.co.nz/tidy-data.html#exercises-22)"
+		"[12.3.3](http://r4ds.had.co.nz/tidy-data.html#exercises-22)",
+		"<br>",
+		"[12.4.3](http://r4ds.had.co.nz/tidy-data.html#exercises-23)"
 	),
 	paste0(	# activities
 		"[]()"
@@ -708,16 +712,21 @@ df[le_row, ] <- c(
 	"6",    # week
 	"M",    # day
 	paste0(	# agenda
-		""
+		"Missing values, case study in tidying data"
 	),
 	paste0(	# text
-		"[]()"
+		"[12.5](http://r4ds.had.co.nz/tidy-data.html#missing-values-3)",
+		"<br>",
+		"[12.6](http://r4ds.had.co.nz/tidy-data.html#case-study)"
 	),
 	paste0(	# exercises
-		"[]()"
+		"<br>",
+		"[12.6.1](http://r4ds.had.co.nz/tidy-data.html#exercises-25)"
 	),
 	paste0(	# activities
-		"Study&nbsp;R3"
+		"Study&nbsp;R3",
+		"<br>",
+		"[Complete 12.6](http://r4ds.had.co.nz/tidy-data.html#case-study)"
 	),
 	paste0(	# projects
 		"[]()"

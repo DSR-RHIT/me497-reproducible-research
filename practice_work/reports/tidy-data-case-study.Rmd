@@ -1,0 +1,167 @@
+---
+output: github_document
+bibliography: "../../resources/bib-etc/references-rr.bib"
+csl: "../../resources/styles/apa.csl"
+--- 
+
+
+# Case study in tidying data
+
+From section  [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) in R for Data Science. 
+
+
+The `who` dataset is in the tidyr package, part of the tidyverse
+
+```{r}
+library(tidyverse)
+glimpse(who)
+```
+
+- The first three apprear to be redundant encodings of the country name. 
+- Year appears to be a variable 
+- The remnaining column headings appear to encode another variable 
+
+Type `? who` in the Console to see what the authors state are the variables. 
+
+```
+? who
+```
+
+The data under the encoded columns are "Counts of new TB cases recorded by group". 
+
+```{r}
+who1 <- who %>% 
+  gather(new_sp_m014:newrel_f65, key = "key", value = "cases", na.rm = TRUE)
+
+who1
+```
+
+Use count to assess the new key column
+
+```{r}
+who1 %>% 
+  count(key)
+```
+
+
+From the help page: 
+
+
+> The data uses the original codes given by the World Health Organization. 
+>
+> The column names for columns five through 60 are made by combining new_ to a code for method of diagnosis new = new cases, old = old cases    
+> 
+> type of TB 
+rel = relapse    
+sn = negative pulmonary smear    
+sp = positive pulmonary smear    
+ep = extrapulmonary    
+>
+> Sex   
+f = female    
+m = male    
+>
+> Age group   
+014 = 0-14 yrs of age    
+1524 = 15-24 years of age    
+2534 = 25 to 34 years of age    
+3544 = 35 to 44 years of age    
+4554 = 45 to 54 years of age    
+5564 = 55 to 64 years of age    
+65 = 65 years of age or older    
+
+
+Let's look for unique values of "key". We find an error in the data encoding
+
+```{r}
+who1 %>% 
+  count(key) %>% 
+  select(key) %>% 
+  as.data.frame() %>% 
+  unique() %>% 
+  print()
+```
+
+
+
+```{r}
+who2 <- who1 %>% 
+  mutate(key = stringr::str_replace(key, "newrel", "new_rel"))
+
+who2
+```
+
+We can separate the values in each code with two passes of separate(). The first pass will split the codes at each underscore.
+
+```{r}
+who3 <- who2 %>% 
+  separate(key, c("new", "type", "sexage"), sep = "_")
+
+who3
+```
+
+Then we might as well drop the new column because it’s constant in this dataset. 
+
+
+```{r}
+who3 %>% 
+  count(new)
+```
+
+While we’re dropping columns, let’s also drop iso2 and iso3 since they’re redundant.
+
+
+```{r}
+who4 <- who3 %>% 
+  select(-new, -iso2, -iso3)
+
+glimpse(who4)
+```
+
+Next we’ll separate sexage into sex and age by splitting after the first character:
+
+
+```{r}
+who5 <- who4 %>% 
+  separate(sexage, c("sex", "age"), sep = 1)
+
+who5
+```
+
+Lastly, we'rte in tidy form, let's recode the entries.  
+
+```{r}
+who6 <- who5 %>% 
+	mutate(
+    sex = recode(sex
+      , "m" = "male"
+      , "f" = "female"
+    )
+	) %>% 
+	mutate(
+    type = recode(type
+      , "sp" = "pos pulm smear"
+      , "sn" = "neg pulm smear"
+      , "ep" = "extrapulmonary"
+    )
+	)	
+
+
+who6
+```
+
+
+Summary
+
+```{r}
+summary(who6)
+```
+
+```{r}
+who7 <- filter(who6, cases > 0)
+ggplot(who7, aes(x = cases)) +
+	geom_density() +
+	scale_x_log10(breaks = 10^c(0:5)) +
+	geom_vline(data = who7, mapping = aes(xintercept = median(cases)))
+```
+
