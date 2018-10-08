@@ -4,6 +4,9 @@
 From section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) in
 R for Data Science.
 
+I’ve added a few bits that I find useful, especially when attempting to
+understand a new data set for the first time.
+
 The `who` dataset is in the tidyr package, part of the
     tidyverse
 
@@ -11,14 +14,14 @@ The `who` dataset is in the tidyr package, part of the
 library(tidyverse)
 ```
 
-    ## -- Attaching packages --------------------------------------- tidyverse 1.2.1 --
+    ## -- Attaching packages -------------------------------------------------------------------- tidyverse 1.2.1 --
 
     ## v ggplot2 3.0.0.9000     v purrr   0.2.5     
     ## v tibble  1.4.2          v dplyr   0.7.6     
     ## v tidyr   0.8.1          v stringr 1.3.1     
     ## v readr   1.1.1          v forcats 0.3.0
 
-    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+    ## -- Conflicts ----------------------------------------------------------------------- tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
