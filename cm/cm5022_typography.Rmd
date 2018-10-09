@@ -1,22 +1,26 @@
 ---
-output: github_document
+output:
+  tufte::tufte_html: default
 bibliography: "../resources/bib-etc/references-rr.bib"
 csl: "../resources/styles/apa.csl"
+link-citations: yes
 --- 
 
 
-# notes on typography
+# Notes on document design 
 
-Useful things to know about typography.  
+Useful things to know about punctuation, headings, typography, and so forth.  
 
 
-## hyphens and dashes
+## Hyphens and dashes
 
 Adapted from *The Punctuation Guide* [@penn2018]. 
 
-1. `-` hyphen for compound words such as "advanced-level" or "first-year" or for numbers that are not inclusive such as phone numbers 1-812-555-8900. 
-2. `--` n-dash (the width of the letter N) means "through", e.g., July 9--August 17 or pages 37--59. These values designate an inclusive span. 
-2. `---`m-dash (the width of the letter M) is a punctuation mark that can be used to replace commas, parentheses, or a colon, but the em-dash is more emphatic. Examples of the em-dash include, 
+- `-` hyphen for compound words such as "advanced-level" or "first-year" or for numbers that are not inclusive such as phone numbers 1-812-555-8900. 
+- `--` n-dash (the width of the letter N) means "through", e.g., July 9--August 17 or pages 37--59. These values designate an inclusive span. 
+- `---`m-dash (the width of the letter M) is a punctuation mark that can be used to replace commas, parentheses, or a colon, but the em-dash is more emphatic. 
+
+Examples of the em-dash include, 
 
 > And yet, when the car was finally delivered---nearly three months after it was ordered---she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell. 
 
@@ -24,6 +28,15 @@ Adapted from *The Punctuation Guide* [@penn2018].
 
 > The white sand, the warm water, the sparkling sun---this is what brought them to Hawaii.
 
+## Headings and typography 
+
+This section based on the recommendations posted by Baker [-@baker2001] and Tufte [-@tufte2018].
+
+- Other than the title, plan on having two levels of headings only
+- Accent text can be a third level if needed. 
+- Headings and subheadings can be a sans-serif typeface  
+- But the main body of text should be a serif typeface 
 
 
-## references
+
+

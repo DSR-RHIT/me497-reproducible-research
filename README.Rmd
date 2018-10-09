@@ -2,6 +2,7 @@
 output: github_document
 bibliography: "scripts/references-rr.bib"
 csl: "scripts/jpr.csl"
+link-citations: yes
 ---
 
 ```{r include=FALSE}
