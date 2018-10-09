@@ -75,7 +75,8 @@ version.
 
 ## data things
 
-  - [Tidy data case study](cm/cm5021_case-study.md)
+  - [Tidy data case study](cm/cm5021_case-study.md), an adaptation of
+    text section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study)
 
 ## file management
 
