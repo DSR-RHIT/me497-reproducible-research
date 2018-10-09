@@ -742,7 +742,7 @@ df[le_row, ] <- c(
 	paste0(	# agenda
 		"Discuss R3: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)",
 		"<br>",
-		"[Notes on typography](cm/cm/cm5022_typography.md)"
+		"[Notes on typography](cm/cm5022_typography.md)"
 	),
 	paste0(	# text
 		"[]()"
