@@ -11,12 +11,12 @@ and initialized them with README and gitignore files
   - project 2
   - project 3 (597 students only)
 
-## create a directory structure
+## directories for shorter projects
 
 All we are going to do is create a set of empty sub-directories
 (folders).
 
-  - First, open one of your R projects
+  - First, open the R project for project 1.
 
 Next, use one of these two approaches
 
@@ -37,11 +37,41 @@ additional files such as `.gitignore` or `README.md`)
         |-- .Renviron
         `-- project_name.Rproj
 
-## repeat
-
-Create the same directory structure for all of your projects.
+Repeat this organization for
 
   - practice\_work
-  - project 1
+
+## directories for substantive projects
+
+For substantive projects, students have found it useful to separate raw
+data from tidy data by having two data directories.
+
+  - The `raw` folder is for data as first obtained in whatever form it
+    happens to be.
+  - Raw data are never operated on manually.  
+  - R scripts operate on raw data to create tidy data frames which are
+    written to the `tidy` directory.  
+  - R scripts operate on the tidy data for analysis and to produce
+    graphs.
+
+Some practitioners like this arrangement because they can omit the raw
+folder from version control because the raw data files are so large.
+
+    project_folder/
+        |-- manage/
+        |-- raw/
+        |-- reports/
+        |-- resources/
+        |-- results/
+        |-- scripts/
+        |-- tidy/
+        |-- .Renviron
+        `-- project_name.Rproj
+
+Create this directory structure for
+
   - project 2
   - project 3 (597 students only)
+
+If you prefer of course you could use this directory structure for all
+your projects.
