@@ -740,7 +740,9 @@ df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
 	paste0(	# agenda
-		"Discuss R3: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)"
+		"Discuss R3: [Ten simple rules for reproducible computational  research](resources/readings/2013-Sandve-et-al-Ten-simple-rules.pdf)",
+		"<br>",
+		"[Notes on typography](cm/cm/cm5022_typography.md)"
 	),
 	paste0(	# text
 		"[]()"

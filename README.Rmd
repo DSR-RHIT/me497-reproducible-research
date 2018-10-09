@@ -143,7 +143,7 @@ kable(df)
 - [Page breaks in Rmd/docx](cm/cm5012_page-breaks.md) 
 - [Centering figures and captions](cm/cm5013_centering-figs.md) 
 - [Numbering figures and tables](cm/cm5014_captioner.md) 
-
+- [Notes on typography](cm/cm5022_typography.md)
 
 
 
