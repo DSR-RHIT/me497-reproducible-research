@@ -21,15 +21,15 @@ How we will manage the projects:
 
 ## project descriptions 
 
-**Can you trust Microsoft Excel 2015 for accurate computing?**
+<!-- **Can you trust Microsoft Excel 2015 for accurate computing?** -->
 
-In 2008, [B.D. McCullough and David Heiser](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) published a paper documenting that "Excel 2007, like its predecessors, fails a standard set of intermediate-level accuracy tests in three areas: statistical distributions, random number generation, and estimation." In this project I want you to update this analysis, apply the intermediate tests they describe to Excel 2015 and R and compare the results. Specifically, I suggest you use the following Excel functions
+<!-- In 2008, [B.D. McCullough and David Heiser](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) published a paper documenting that "Excel 2007, like its predecessors, fails a standard set of intermediate-level accuracy tests in three areas: statistical distributions, random number generation, and estimation." In this project I want you to update this analysis, apply the intermediate tests they describe to Excel 2015 and R and compare the results. Specifically, I suggest you use the following Excel functions -->
 
-- `LOGEST` for exponential curve-fitting 
-- `RAND` for random number generation (per Wichmann-Hill) 
-- `Exponential smoothing` 
+<!-- - `LOGEST` for exponential curve-fitting  -->
+<!-- - `RAND` for random number generation (per Wichmann-Hill)  -->
+<!-- - `Exponential smoothing`  -->
 
-and do the same computations in R and compare the results. 
+<!-- and do the same computations in R and compare the results.  -->
 
 
 
@@ -51,11 +51,11 @@ Using data from 1975--2012, [Karl Case, John Quigley, and  Robert Shiller](http:
 
 
 
-**How trustworthy are electronic voting systems in the US?**
+<!-- **How trustworthy are electronic voting systems in the US?** -->
 
-In 2015, [Beth Clarkson](https://www.statslife.org.uk/politics/2288-how-trustworthy-are-electronic-voting-systems-in-the-us), a professor of statistics at Wichita State University, analyzed election returns in Kansas, Ohio, and Wisconsin over several elections and found patterns that indicate votes are being manipulated in the voting machines. Her assessment is that "the data reveals multiple (at least two) agents working independently to successfully alter voting results." In this project, I want you to reproduce her analysis. Links to the data she used are given at the end of the paper. 
+<!-- In 2015, [Beth Clarkson](https://www.statslife.org.uk/politics/2288-how-trustworthy-are-electronic-voting-systems-in-the-us), a professor of statistics at Wichita State University, analyzed election returns in Kansas, Ohio, and Wisconsin over several elections and found patterns that indicate votes are being manipulated in the voting machines. Her assessment is that "the data reveals multiple (at least two) agents working independently to successfully alter voting results." In this project, I want you to reproduce her analysis. Links to the data she used are given at the end of the paper.  -->
 
-If you are successful in reproducing the reults, it would be interesting to apply the same analysis to data from a State of your choosing from the 2012 election. 
+<!-- If you are successful in reproducing the reults, it would be interesting to apply the same analysis to data from a State of your choosing from the 2012 election.  -->
 
 
 

@@ -1,18 +1,17 @@
 ---
-output:
-  tufte::tufte_html: default
+output: github_document
 bibliography: "../resources/bib-etc/references-rr.bib"
 csl: "../resources/styles/apa.csl"
 link-citations: yes
 --- 
 
 
-# Notes on document design 
+# notes on document design 
 
 Useful things to know about punctuation, headings, typography, and so forth.  
 
 
-## Hyphens and dashes
+## hyphens and dashes
 
 Adapted from *The Punctuation Guide* [@penn2018]. 
 
@@ -28,15 +27,15 @@ Examples of the em-dash include,
 
 > The white sand, the warm water, the sparkling sun---this is what brought them to Hawaii.
 
-## Headings and typography 
+## headings and typography 
 
 This section based on the recommendations posted by Baker [-@baker2001] and Tufte [-@tufte2018].
 
 - Other than the title, plan on having two levels of headings only
 - Accent text can be a third level if needed. 
 - Headings and subheadings can be a sans-serif typeface  
-- But the main body of text should be a serif typeface 
+- The main body of text should be a serif typeface  (which I can't figure out how to do with a `github_document` output in R Markdown). 
 
-
+## references
 
 

@@ -8,15 +8,17 @@ forth.
 
 Adapted from *The Punctuation Guide* (Penn, [2018](#ref-penn2018)).
 
-1.  `-` hyphen for compound words such as “advanced-level” or
+  - `-` hyphen for compound words such as “advanced-level” or
     “first-year” or for numbers that are not inclusive such as phone
     numbers 1-812-555-8900.
-2.  `--` n-dash (the width of the letter N) means “through”, e.g., July
+  - `--` n-dash (the width of the letter N) means “through”, e.g., July
     9–August 17 or pages 37–59. These values designate an inclusive
     span.
-3.  `---`m-dash (the width of the letter M) is a punctuation mark that
+  - `---`m-dash (the width of the letter M) is a punctuation mark that
     can be used to replace commas, parentheses, or a colon, but the
-    em-dash is more emphatic. Examples of the em-dash include,
+    em-dash is more emphatic.
+
+Examples of the em-dash include,
 
 > And yet, when the car was finally delivered—nearly three months after
 > it was ordered—she decided she no longer wanted it, leaving the dealer
@@ -28,20 +30,16 @@ Adapted from *The Punctuation Guide* (Penn, [2018](#ref-penn2018)).
 > The white sand, the warm water, the sparkling sun—this is what brought
 > them to Hawaii.
 
-## headings
+## headings and typography
 
 This section based on the recommendations posted by Baker
 ([2001](#ref-baker2001)) and Tufte ([2018](#ref-tufte2018)).
 
   - Other than the title, plan on having two levels of headings only
   - Accent text can be a third level if needed.
-
-## typography
-
   - Headings and subheadings can be a sans-serif typeface  
-  - But the main body of text should be a serif typeface
-
-## spacing
+  - The main body of text should be a serif typeface (which I can’t
+    figure out how to do with a `github_document` output in R Markdown).
 
 ## references
 

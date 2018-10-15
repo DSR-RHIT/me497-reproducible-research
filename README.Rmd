@@ -136,7 +136,7 @@ kable(df)
 
 
 
-## r markdown things 
+## r markdown and document design  
 
 - Starting with R Markdown [[S](slides/cm4003_rmarkdown.pdf)]  
 - [References and citations](cm/cm5011_references.md)   [[S](slides/cm4004_references-word-styles.pdf)] 

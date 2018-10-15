@@ -18,26 +18,22 @@ How we will manage the projects:
     output (unlike the original articles in which the analysis is
     discussed but not explicitly shown).
   - Ultimately you obtain results that are compatible (or not) with the
-    original findings. If not, you explain the cause of the discrepancy.
+    original findings. If not, you explain the cause of the
+discrepancy.
 
 ## project descriptions
 
-**Can you trust Microsoft Excel 2015 for accurate computing?**
+<!-- **Can you trust Microsoft Excel 2015 for accurate computing?** -->
 
-In 2008, [B.D. McCullough and David
-Heiser](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf)
-published a paper documenting that “Excel 2007, like its predecessors,
-fails a standard set of intermediate-level accuracy tests in three
-areas: statistical distributions, random number generation, and
-estimation.” In this project I want you to update this analysis, apply
-the intermediate tests they describe to Excel 2015 and R and compare the
-results. Specifically, I suggest you use the following Excel functions
+<!-- In 2008, [B.D. McCullough and David Heiser](http://www.pucrs.br/famat/viali/tic_literatura/artigos/planilhas/McHe08.pdf) published a paper documenting that "Excel 2007, like its predecessors, fails a standard set of intermediate-level accuracy tests in three areas: statistical distributions, random number generation, and estimation." In this project I want you to update this analysis, apply the intermediate tests they describe to Excel 2015 and R and compare the results. Specifically, I suggest you use the following Excel functions -->
 
-  - `LOGEST` for exponential curve-fitting
-  - `RAND` for random number generation (per Wichmann-Hill)
-  - `Exponential smoothing`
+<!-- - `LOGEST` for exponential curve-fitting  -->
 
-and do the same computations in R and compare the results.
+<!-- - `RAND` for random number generation (per Wichmann-Hill)  -->
+
+<!-- - `Exponential smoothing`  -->
+
+<!-- and do the same computations in R and compare the results.  -->
 
 **Does mortality increase with income inequality?**
 
@@ -62,23 +58,14 @@ analysis and findings. How do these results inform our understanding of
 the consequences of the 2008 financial crisis? For a big-picture view of
 the causes and effects of the 2008 financial crisis, read [this 2009
 article](http://faculty.econ.ucdavis.edu/faculty/kdsalyer/LECTURES/Ecn200e/krugman_macro.pdf)
-by Paul Krugman.
+by Paul
+Krugman.
 
-**How trustworthy are electronic voting systems in the US?**
+<!-- **How trustworthy are electronic voting systems in the US?** -->
 
-In 2015, [Beth
-Clarkson](https://www.statslife.org.uk/politics/2288-how-trustworthy-are-electronic-voting-systems-in-the-us),
-a professor of statistics at Wichita State University, analyzed election
-returns in Kansas, Ohio, and Wisconsin over several elections and found
-patterns that indicate votes are being manipulated in the voting
-machines. Her assessment is that “the data reveals multiple (at least
-two) agents working independently to successfully alter voting results.”
-In this project, I want you to reproduce her analysis. Links to the data
-she used are given at the end of the paper.
+<!-- In 2015, [Beth Clarkson](https://www.statslife.org.uk/politics/2288-how-trustworthy-are-electronic-voting-systems-in-the-us), a professor of statistics at Wichita State University, analyzed election returns in Kansas, Ohio, and Wisconsin over several elections and found patterns that indicate votes are being manipulated in the voting machines. Her assessment is that "the data reveals multiple (at least two) agents working independently to successfully alter voting results." In this project, I want you to reproduce her analysis. Links to the data she used are given at the end of the paper.  -->
 
-If you are successful in reproducing the reults, it would be interesting
-to apply the same analysis to data from a State of your choosing from
-the 2012 election.
+<!-- If you are successful in reproducing the reults, it would be interesting to apply the same analysis to data from a State of your choosing from the 2012 election.  -->
 
 **Magnitude-based inference is a flawed statistical method**
 

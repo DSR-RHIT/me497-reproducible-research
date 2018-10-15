@@ -133,7 +133,7 @@ version.
   - [Create a stand-alone package library](cm/cm1003_library.md)
   - [Create the .Renviron file](cm/cm1007_Renviron.md)
 
-## r markdown things
+## r markdown and document design
 
   - Starting with R Markdown \[[S](slides/cm4003_rmarkdown.pdf)\]  
   - [References and citations](cm/cm5011_references.md)
