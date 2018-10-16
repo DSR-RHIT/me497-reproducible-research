@@ -812,7 +812,7 @@ df[le_row, ] <- c(
 	"7",    # week
 	"M",    # day
 	paste0(	# agenda
-		""
+		"Work on projects"
 	),
 	paste0(	# text
 		"[]()"
@@ -837,7 +837,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
 	paste0(	# agenda
-		""
+		"Talk with research librarian"
 	),
 	paste0(	# text
 		"[]()"
