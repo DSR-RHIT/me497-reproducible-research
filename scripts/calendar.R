@@ -812,7 +812,7 @@ df[le_row, ] <- c(
 	"7",    # week
 	"M",    # day
 	paste0(	# agenda
-		"Work on projects"
+		"Project status review"
 	),
 	paste0(	# text
 		"[]()"
@@ -847,9 +847,10 @@ df[le_row, ] <- c(
 	),
 	paste0(	# activities
 		"Browse&nbsp;R4"
+
 	),
 	paste0(	# projects
-		"[]()"
+		"[Project notes](cm/cm3204_project-2_followup.md)"
 	),
 	paste0(	# due
 		""
