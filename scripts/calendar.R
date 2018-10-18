@@ -712,7 +712,7 @@ df[le_row, ] <- c(
 	"6",    # week
 	"M",    # day
 	paste0(	# agenda
-		"Missing values, case study in tidying data"
+		"Missing values, tidying data with odd encodings"
 	),
 	paste0(	# text
 		"[12.5](http://r4ds.had.co.nz/tidy-data.html#missing-values-3)",
@@ -861,7 +861,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"R",    # day
 	paste0(	# agenda
-		""
+		"Tidying a file with multiple data tables"
 	),
 	paste0(	# text
 		"[]()"
@@ -870,7 +870,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# activities
-		"[]()"
+		"[Case study](cm/cm5023_jailbreakr.md)"
 	),
 	paste0(	# projects
 		"[]()"

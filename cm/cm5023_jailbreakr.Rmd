@@ -1,0 +1,283 @@
+---
+output: github_document
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
+link-citations: yes
+--- 
+
+
+
+```{r}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo=TRUE, collapse=TRUE)
+```
+
+
+# reading messy spreadsheet data
+
+I tried the jailbreakr package, but it isn't on CRAN and the repo doesn't have any useful vignettes. There is a blog post though at  https://www.brodrigues.co/blog/2017-02-17-how_to_use_jailbreakr/ 
+
+```{r}
+# install just once
+# devtools::install_github(c("hadley/xml2",
+#                            "rsheets/linen",
+#                            "rsheets/cellranger",
+#                            "rsheets/rexcel",
+#                            "rsheets/jailbreakr"))
+```
+
+
+Following the instructions at the blog, 
+
+```{r}
+library("rexcel")
+library("jailbreakr")
+
+path_to_data <- "data/us_income.xlsx"
+my_sheet     <- rexcel_read(path_to_data, sheet = "us_income")
+tables       <- split_sheet(my_sheet)
+```
+
+Not sure what that all is. But keep going 
+
+```{r}
+library(purrr)
+list_of_data <-  map(tables, (function(x) (x$values())))
+map(list_of_data, head)
+```
+
+The variable `list_of_data` contains the discrete chunks of the messy spreadsheet. 
+
+```{r}
+j <- 1
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+
+j <- 2
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+
+j <- 3
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+j <- 4
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+
+j <- 5
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+j <- 6
+dataset_j <- list_of_data[[j]]
+dataset_j
+
+
+j <- 7
+dataset_j <- list_of_data[[j]]
+dataset_j
+```
+
+
+## using the tidyverse
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+rawlines <- read_lines("data/us_income.csv")
+head(rawlines)
+```
+
+Find the row with Alabama
+
+```{r}
+str(rawlines)
+
+grep("Alabama", rawlines, ignore.case = TRUE)
+grep("Alaska", rawlines, ignore.case = TRUE)
+```
+
+Find all 50 state names, using the built-in state data. 
+
+```{r}
+state.name
+```
+
+
+```{r}
+state_name <- state.name
+indices <- sapply(state_name, function(x) grep(x, rawlines, ignore.case = TRUE, fixed = FALSE))
+str(indices)
+```
+
+Some have two results because "kansas" as a string is also in Arkansas. Virginia is also in West Virginia. washingtom is in the footnotes
+
+```{r}
+indices$Kansas     <- indices$Kansas[2]
+indices$Virginia   <- indices$Virginia[1]
+indices$Washington <- indices$Washington[1]
+str(indices)
+```
+
+```{r}
+first_row <- unname(unlist(indices))
+str(first_row)
+
+delta <- diff(first_row)
+delta <- diff(first_row)[1] - 3
+delta
+```
+
+Cnstruct data frame with indices
+
+```{r}
+df_indices <- data_frame(state = state_name) %>% 
+	mutate(first_row = first_row) %>% 
+	mutate(last_row = first_row + delta)
+
+
+
+glimpse(df_indices)
+```
+
+Extract one state and write to file
+
+```{r}
+j = 6
+this_state <- df_indices$state[j]
+state_data <- rawlines[df_indices$first_row[j]:df_indices$last_row[j]]
+state_data
+
+this_path <- paste0("data/", this_state, ".csv")
+write_lines(state_data, this_path)
+```
+
+Read the file , keep only the columns we need
+
+```{r}
+df <- read_csv(this_path, skip = 2, col_names = FALSE) %>% 
+	mutate(state = this_state) 
+
+kable(df)
+```
+
+Extract the first row (total numbetr of households) and last row (median income). Each column represents a different household size: 1-person, 2-perosn, etc. 
+
+```{r}
+m = dim(df)[1]
+N_households   <- df[1, 2:8]
+median_dollars <- df[m, 2:8]
+
+
+N_households
+median_dollars
+```
+
+Summarize the number of households total and the median income. 
+
+```{r}
+N_households <- unname(unlist(N_households[1, 1]))
+N_households
+median_dollars <- unname(unlist(median_dollars[1, 1]))
+median_dollars
+```
+
+Omit the first and last row, add the median column 
+
+```{r}
+df <- df[2:(m-1), ] %>% 
+	mutate(median_income =  median_dollars) %>% 
+	select(state, X2, median_income, X1) %>% 
+	rename(bracket = X1, households = X2)
+
+m = dim(df)[1]
+knitr::kable(df)
+```
+
+
+
+
+Separate the brackets
+
+```{r}
+df <- df %>%
+	separate(bracket, into = c("lower", "upper"), sep = "to")
+
+knitr::kable(df)
+```
+
+Move the first row "less than" 
+
+```{r}
+df <- df %>% 
+	mutate(lower = str_replace(lower, "Less than", "")) %>% 
+	mutate(lower = str_replace(lower, "or more", ""))
+
+df$upper[1] <- df$lower[1]
+df$lower[1] <- 0
+df$upper[m] <- NA
+
+knitr::kable(df)
+```
+
+Now remove all the dollar signs
+
+```{r}
+df <- df %>% 
+	mutate(lower = str_replace(lower, "\\$", "")) %>% 
+	mutate(lower = str_replace(lower, ",", "")) %>% 
+	mutate(lower = as.integer(lower))
+
+df <- df %>% 
+	mutate(upper = str_replace(upper, "\\$", "")) %>% 
+	mutate(upper = str_replace(upper, ",", "")) %>% 
+	mutate(upper = as.integer(upper))
+
+glimpse(df)
+
+knitr::kable(df)
+```
+
+The max bracket can't be averged because there is no upper limnit, so I'll just assign lwower to upper for that row. 
+
+```{r}
+df$upper[m] <- df$lower[m]
+```
+
+
+use the mean of the bracket to estimate the income for that bracket's households. 
+
+```{r}
+df <- df %>%
+	mutate(bracket_mean = round((lower + upper) / 2, 0))
+
+knitr::kable(df)
+```
+
+Finally, tyhe product of mean income and the number of households gives a total income for each bracket. Use these results to find the total income. 
+
+```{r}
+df <- df %>% 
+	mutate(bracket_income = households * bracket_mean)
+
+knitr::kable(df)
+```
+
+
+Filter for all households with income less than or equal to the median. Use these results to find the total income of low-income households. 
+
+```{r}
+low_income <- df %>% 
+	filter(lower <= median_income)
+
+
+knitr::kable(low_income)
+```
+

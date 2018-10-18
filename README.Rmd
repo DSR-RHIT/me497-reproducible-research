@@ -55,7 +55,8 @@ kable(df)
 
 ## data things
 
-- [Tidy data case study](cm/cm5021_case-study.md), an adaptation of text section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study)
+- [Tidy data case study](cm/cm5021_case-study.md), an adaptation of text section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) 
+- [Messy data case study](cm/cm5023_jailbreakr.md), reading data from a messy spreadsheet using jailbreakr or readr 
 
 
 
