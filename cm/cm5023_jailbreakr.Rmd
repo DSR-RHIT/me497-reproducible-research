@@ -44,7 +44,7 @@ Not sure what that all is. But keep going
 ```{r}
 library(purrr)
 list_of_data <-  map(tables, (function(x) (x$values())))
-map(list_of_data, head)
+# map(list_of_data, head)
 ```
 
 The variable `list_of_data` contains the discrete chunks of the messy spreadsheet. 
@@ -82,6 +82,9 @@ j <- 7
 dataset_j <- list_of_data[[j]]
 dataset_j
 ```
+
+
+Stop here and compare an approach using the tidyverse. At this point I can pull a matrix for each state. 
 
 
 ## using the tidyverse
@@ -135,7 +138,7 @@ delta <- diff(first_row)[1] - 3
 delta
 ```
 
-Cnstruct data frame with indices
+Construct data frame with indices
 
 ```{r}
 df_indices <- data_frame(state = state_name) %>% 
@@ -168,7 +171,16 @@ df <- read_csv(this_path, skip = 2, col_names = FALSE) %>%
 kable(df)
 ```
 
-Extract the first row (total numbetr of households) and last row (median income). Each column represents a different household size: 1-person, 2-perosn, etc. 
+At this point I have accomplished just about the same as I did earlier using jailbreakr. 
+
+
+
+
+##  tidying the data for one state
+
+Whether I used jailbreakr or readr, I have the data for one state in a form that can be manipulated to find the data i need. 
+
+Extract the first row (total number of households) and last row (median income). Each column represents a different household size: total households, 1-person, 2-person, 3-person, etc. 
 
 ```{r}
 m = dim(df)[1]
@@ -245,7 +257,18 @@ glimpse(df)
 knitr::kable(df)
 ```
 
-The max bracket can't be averged because there is no upper limnit, so I'll just assign lwower to upper for that row. 
+
+The data are now tidy and can be used to compute the income inequality values I'm looking for. 
+
+This is a point at which i would write the state data to file and repeat (using a for loop for example) for all 50 states. 
+
+## analysis 
+
+My goal is to determine income inequality of the state, defined as the ratio of the total income of all households earning the state median income or less to the total income of all households in the state. 
+
+
+
+The max bracket can't be averaged because there is no upper limit, so I'll just assign lower to upper for that row. 
 
 ```{r}
 df$upper[m] <- df$lower[m]
@@ -261,7 +284,7 @@ df <- df %>%
 knitr::kable(df)
 ```
 
-Finally, tyhe product of mean income and the number of households gives a total income for each bracket. Use these results to find the total income. 
+Finally, the product of mean income and the number of households gives a total income for each bracket. Use these results to find the total income. 
 
 ```{r}
 df <- df %>% 
@@ -270,14 +293,34 @@ df <- df %>%
 knitr::kable(df)
 ```
 
+Group and summarize
 
-Filter for all households with income less than or equal to the median. Use these results to find the total income of low-income households. 
+```{r}
+all_income <- df %>% 
+	group_by(state) %>% 
+	summarize(all_income_M = sum(bracket_income) / 1e+6)
+
+all_income 
+```
+
+Filter for all households with income less than or equal to the median. Use these results to find the total income of low-income households. Income is now in millions of dollars. 
 
 ```{r}
 low_income <- df %>% 
-	filter(lower <= median_income)
+	filter(lower <= median_income)%>% 
+	group_by(state) %>% 
+	summarize(low_income_M = sum(bracket_income) / 1e+6)
 
-
-knitr::kable(low_income)
+low_income
 ```
 
+Join the two df
+
+```{r}
+inequality_df <- left_join(low_income, all_income, by = "state") %>% 
+	mutate(ineq = round(low_income_M / all_income_M, 3))
+
+kable(inequality_df)
+```
+
+Write this to file or add it as a new row to a data frame used for collecting each state or province in a loop. 
