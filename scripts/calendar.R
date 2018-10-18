@@ -884,7 +884,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"F",    # day
 	paste0(	# agenda
-		""
+		"[Data tools review](cm/cm5024_data-tools-outline.md)"
 	),
 	paste0(	# text
 		"[]()"
