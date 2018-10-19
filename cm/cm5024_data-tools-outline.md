@@ -19,6 +19,8 @@ other folks at RStudio. I recommend it.
   - `read_csv()` and `write_csv()`
   - `read_lines()` and `write_lines()`
   - `read_table()`
+  - `read_excel()`
+  - readr argument `convert = TRUE`
 
 ## examining the data structure
 
@@ -34,10 +36,12 @@ other folks at RStudio. I recommend it.
   - `attributes()` yields metadata about the object
   - `kable()` print a knitr table
   - `print()` write an object in the Console
+  - `class()`
+  - `unique()`
+  - `levels()`
 
 ## basic functions in R
 
-  - `max()` and `min()` are R functions that do the obvious
   - `abs()` absolute value
   - `log10()` for base 10
   - `log()` for base *e*
@@ -46,6 +50,7 @@ other folks at RStudio. I recommend it.
   - `c()` concatenate elements to create a vector  
   - `unname()` removes the names from named numbers
   - `unlist()`
+  - `mean()`, `sum()`, `median()`, `sd()`, `max()`, `min()`, `lm()`
 
 ## subsetting data
 
@@ -65,6 +70,8 @@ other folks at RStudio. I recommend it.
   - `arrange()`  
   - `mutate()`
   - `group_by()` and `summarize()`
+  - `n()`
+  - `as.integer()`, `as.double()`, `as.character()`
 
 ## editing strings
 
@@ -74,6 +81,7 @@ other folks at RStudio. I recommend it.
   - `str_c()` concatenate strings
   - `separate()` turns one column of strings into multiple columns of
     strings
+  - other stringr package
 
 ## control of code execution
 
