@@ -78,8 +78,6 @@ kable(df)
 
 
 
-
-
 ## graph things 
 
 - [Dot plots](cm/cm5019_dot-plot.md) 
