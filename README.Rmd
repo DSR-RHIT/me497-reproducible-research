@@ -55,7 +55,7 @@ kable(df)
 
 
 
-
+ 
 ## data things
 
 - [Tidying data with odd encodings](cm/cm5021_case-study.md), an adaptation of text section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) 
