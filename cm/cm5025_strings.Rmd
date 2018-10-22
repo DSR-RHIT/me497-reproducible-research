@@ -1,0 +1,157 @@
+---
+output: github_document
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
+link-citations: yes
+--- 
+
+# strings
+
+Based on [Chapter 14](http://r4ds.had.co.nz/strings.html) in [@wickhamgrolemund2016].
+
+```{r setup, include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(stringr)
+```
+
+
+I recommend a focus on these sections: 
+
+- 14.2.1 `str_length()`   
+- 14.2.2 `str_c()`  
+- 14.2.3 `str_sub()` 
+- 14.3.1 basic matches using regular expressions 
+- 14.3.2 anchor the regular expression 
+- 14.4.1 `str_detect()` 
+- 14.4.5 `str_replace()` 
+- 14.4.6 `str_split()` 
+
+
+
+
+## basics 
+
+```{r}
+string1 <- "This is a string"
+string2 <- 'If I want to include a "quote" inside a string, I use single quotes'
+
+string1
+
+string2
+```
+
+Or juse a backslash to inmclude the string 
+
+```{r}
+string3 <- "Or I can use a backslash to \"escape\" the quotes inside a string"
+
+string3
+```
+
+Note that the output of the string shows the backslashes. To see just the string, use `writeLines()`
+
+```{r}
+writeLines(string3)
+```
+
+## special characters 
+
+- `\n` newline 
+- `\t` tab 
+- `\\` backslash 
+- `\'` single quote (apostrophe) 
+- `\"` quote mark 
+
+Unicode character codes when used in strings in R will print special characters on all platforms. This is just a sample, more codes can be found [here](https://www.rapidtables.com/code/text/unicode-characters.html). 
+
+- `\u03B1`  `r "\u03B1"` 
+- `\u03B2`  `r "\u03B2"` 
+- `\u20AC`  `r "\u20AC"` 
+- `\u00A5`  `r "\u00A5"` 
+- `\u00A9`  `r "\u00A9"` 
+
+## combine strings
+
+Combine strings with `str_c()`. 
+
+```{r}
+str_c("x", "y")
+
+str_c("x", "y", "z")
+
+```
+
+If you ant them separated, use the `sep` arguments 
+
+```{r}
+str_c("x", "y", sep = ", ")
+```
+
+Vectorized 
+
+```{r}
+str_c("prefix-", c("a", "b", "c"), "-suffix")
+```
+
+
+
+To collapse a vector of strings into a single string, use `collapse`:
+
+```{r}
+a <- c("x", "y", "z")
+
+length(a)
+
+b <- str_c(a, collapse = ", ")
+
+b
+
+length(b)
+```
+
+## collapse a string with `|` (or) to search 
+
+Collapse is also useful for creating a string for OR searches. For example, I can create a searchable state data frame, 
+
+```{r}
+df <- as.data.frame(state.x77)
+df$State <- row.names(state.x77)
+df <- as_tibble(df)
+df
+```
+
+Then use collapse to create a search string with the OR operator `|` 
+
+```{r}
+search_terms <- c("California", "Oregon", "Washington")
+search_string <- str_c(search_terms, collapse = "|")
+search_string 
+```
+
+Then filter by detecting any of the terms in any column. `filter_all()` and `any_vars()` are dplyr functions. 
+
+```{r}
+filter_all(df, any_vars(str_detect(., search_string)))
+```
+
+Note also the use of `.` as a placeholder for `df` 
+
+
+
+
+
+
+
+
+
+
+
+
+## references

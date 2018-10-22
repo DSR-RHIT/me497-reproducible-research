@@ -53,11 +53,17 @@ kable(df)
 
 
 
+
+
+
 ## data things
 
 - [Tidying data with odd encodings](cm/cm5021_case-study.md), an adaptation of text section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) 
 - [Tidying a file with multiple data tables](cm/cm5023_jailbreakr.md), reading data from a messy spreadsheet using jailbreakr or readr  
 - [Data tools review](cm/cm5024_data-tools-outline.md) 
+- [String extras](cm/cm5025_strings.md) 
+
+
 
 
 
@@ -71,10 +77,18 @@ kable(df)
 
 
 
+
+
+
 ## graph things 
 
 - [Dot plots](cm/cm5019_dot-plot.md) 
 - [Multiway data and graphs](cm/cm5020_multiway.md) 
+
+
+
+
+
 
 
 

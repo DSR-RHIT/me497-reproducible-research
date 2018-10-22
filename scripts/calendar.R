@@ -908,16 +908,24 @@ df[le_row, ] <- c(
 	"8",    # week
 	"M",    # day
 	paste0(	# agenda
-		""
+		"String and regex basics with str_c(), str_sub(), str_detect(), str_replace()"
 	),
 	paste0(	# text
-		"[]()"
+		"[14.1](http://r4ds.had.co.nz/strings.html#detect-matches)",
+		"<br>",
+		"[14.2](http://r4ds.had.co.nz/strings.html#string-basics)",
+		"<br>",
+		"[14.3](http://r4ds.had.co.nz/strings.html#matching-patterns-with-regular-expressions)",
+		"<br>",
+		"[14.4](http://r4ds.had.co.nz/strings.html#tools)"
 	),
 	paste0(	# exercises
-		"[]()"
+		"[14.2.5](http://r4ds.had.co.nz/strings.html#exercises-30)"
 	),
 	paste0(	# activities
-		"Study&nbsp;R4"
+		"Study&nbsp;R4",
+		"<br>",
+		"[String extras](cm/cm5025_strings.md)"
 	),
 	paste0(	# projects
 		"[]()"
