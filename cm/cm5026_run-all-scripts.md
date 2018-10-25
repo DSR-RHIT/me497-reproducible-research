@@ -94,6 +94,19 @@ can remove them using `unlink()`.
 unlink("reports/*.html")
 ```
 
+## tips
+
+Before rendering all scripts,
+
+  - restart R so the environment is blank
+  - package conflicts, for example if you use both plyr and dplyr, you
+    have to load plyr first. If a subsequent script calls plyr, you
+    would first have to unload dplyr, load plyr, load dplyr
+
+Other ideas
+
+  - Use read\_lines() and write\_lines() to append all mds into one md?
+
 ## references
 
 <div id="refs" class="references">

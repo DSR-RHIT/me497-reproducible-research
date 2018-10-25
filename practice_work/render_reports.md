@@ -34,7 +34,12 @@ report_filenames <- list.files(
     , pattern = "\\.Rmd$"
     , full.names = TRUE
 )
+
+report_filenames
 ```
+
+    ## [1] "reports/tidy-data-case-study.Rmd" "reports/try_bookdown.Rmd"        
+    ## [3] "reports/try_captioner.Rmd"
 
 ## knit the Rmd scripts
 
