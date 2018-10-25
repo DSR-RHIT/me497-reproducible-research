@@ -962,7 +962,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"R",    # day
 	paste0(	# agenda
-		""
+		"One file to rule them all"
 	),
 	paste0(	# text
 		"[]()"
@@ -971,7 +971,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# activities
-		"[]()"
+		"[Run all Rmds](cm/cm5026_run-all-scripts.md)"
 	),
 	paste0(	# projects
 		"[]()"

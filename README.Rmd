@@ -72,7 +72,7 @@ kable(df)
 
 - Reproducible workflows [[S](slides/cm4002_principles.pdf)]  
 - [Setup the project directories](cm/cm1008_setup-directories.md) 
-
+- [One file to rule them all](cm/cm5026_run-all-scripts.md)
 
 
 

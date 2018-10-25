@@ -4,20 +4,21 @@
 From section [12.6](http://r4ds.had.co.nz/tidy-data.html#case-study) in
 R for Data Science.
 
-The `who` dataset is in the tidyr package, part of the tidyverse
+The `who` dataset is in the tidyr package, part of the
+    tidyverse
 
 ``` r
 library(tidyverse)
 ```
 
-    ## -- Attaching packages --------
+    ## -- Attaching packages --------------------------------------- tidyverse 1.2.1 --
 
     ## v ggplot2 3.0.0.9000     v purrr   0.2.5     
     ## v tibble  1.4.2          v dplyr   0.7.6     
     ## v tidyr   0.8.1          v stringr 1.3.1     
     ## v readr   1.1.1          v forcats 0.3.0
 
-    ## -- Conflicts -----------------
+    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -289,8 +290,8 @@ who3
     ## 10 Afghanistan AF    AFG    2006 new   sp    m014     193
     ## # ... with 76,036 more rows
 
-Then we might as well drop the new column because it’s constant in this
-dataset.
+Then we might as well drop the new column because itâ€™s constant in
+this dataset.
 
 ``` r
 who3 %>% 
@@ -302,8 +303,8 @@ who3 %>%
     ##   <chr> <int>
     ## 1 new   76046
 
-While we’re dropping columns, let’s also drop iso2 and iso3 since
-they’re redundant.
+While weâ€™re dropping columns, letâ€™s also drop iso2 and iso3 since
+theyâ€™re redundant.
 
 ``` r
 who4 <- who3 %>% 
@@ -320,8 +321,8 @@ glimpse(who4)
     ## $ sexage  <chr> "m014", "m014", "m014", "m014", "m014", "m014", "m014"...
     ## $ cases   <int> 0, 30, 8, 52, 129, 90, 127, 139, 151, 193, 186, 187, 2...
 
-Next we’ll separate sexage into sex and age by splitting after the first
-character:
+Next weâ€™ll separate sexage into sex and age by splitting after the
+first character:
 
 ``` r
 who4 %>% 

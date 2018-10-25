@@ -2,9 +2,7 @@
 title: "Testing *captioner*"
 author: "RAL"
 date: "2018-09-17"
-output:
-  word_document:
-    reference_docx: "../resources/styles/word-styles-reference-03.docx"
+output: github_document
 ---
 
 

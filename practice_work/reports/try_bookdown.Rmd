@@ -1,6 +1,6 @@
 ---
 title: "Try bookdown for auto-numbering"
-output: bookdown::word_document2
+output: github_document
 ---
 
 # First section

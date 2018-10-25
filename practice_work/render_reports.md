@@ -1,0 +1,54 @@
+
+# render all Rmd in reports
+
+``` r
+library(knitr)
+opts_knit$set(root.dir = ".")
+opts_chunk$set(echo = TRUE)
+```
+
+## start
+
+We’ll need the rmarkdpown package.
+
+``` r
+library(rmarkdown)
+```
+
+Name the path to the directory that contains the scripts we want to
+knit.
+
+``` r
+path_to_Rmds <- "reports"
+```
+
+## find the Rmd files
+
+Use `list.files()` to find all the Rmd scripts in that directory and
+save them in `report_filenames`, a vector of character strings.
+
+``` r
+# find all files that end in .Rmd
+report_filenames <- list.files(
+    path = path_to_Rmds
+    , pattern = "\\.Rmd$"
+    , full.names = TRUE
+)
+```
+
+## knit the Rmd scripts
+
+For each filename in `report_filenames`, apply the `render()` function
+one file at a time. The “one-file-at-a-time” process is managed by the
+`sapply()` function.
+
+``` r
+# render each script
+sapply(report_filenames, function(x) render(x))
+```
+
+Remove the html files
+
+``` r
+unlink("reports/*.html")
+```
