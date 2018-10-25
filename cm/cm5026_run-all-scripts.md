@@ -1,18 +1,29 @@
 
 # run all Rmd scripts
 
+To run an entire project’s worth of R markdown scripts from beginning to
+end, we
+
+  - create a script (in Rmd or in R)  
+  - that acquires the names of all your Rmd files  
+  - and uses rmarkdown to render every file in order
+
+The approach I show you here runs all the scripts every time—so it takes
+more time than *makefiles*. For most of our projects, however, the time
+penalty shouldn’t be too annoying.
+
+## you could save time with make
+
+Which we won’t be doing.
+
 When you want to run an entire project’s worth of R markdown scripts
-from beginning to end, the “proper” approach is to use *makefiles*.
-Makefiles save time by only executing those the scripts that have
-changed since the last time the makefile was run.
+from beginning to end, the most effective approach is to use
+*makefiles*. Makefiles save time. Unlike our approach above, *make* only
+renders those scripts that have changed since the last update.
 
 We won’t discuss makefiles in class, but Gandrud
 ([2014](#ref-gandrud2014)) gives a good introduction if you are
 interested.
-
-The approach I show you here runs all the scripts every time—so it takes
-more time than makefiles. For most of our projects, however, the time
-penalty shouldn’t be too annoying.
 
 ## start
 
