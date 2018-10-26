@@ -66,13 +66,23 @@ standards](https://www.rose-hulman.edu/campus-life/student-services/registrar/ru
 for example, an “A” is an *honor grade*, a “B” is awarded for *thorough
 competence*, and a “C” indicates that *minimum standards have been met*.
 
-The major deliverables and their relative weights are:
+For students enrolled in 497, the major deliverables and their relative
+weights are:
 
   - (25%) Project 1: Recreating one’s own prior report in reproducible
     form
   - (40%) Project 2: Major term-project in data gathering, data
     carpentry, analysis, and reporting
   - (25%) Cloning, reproducing, and evaluating someone else’s project
+  - (10%) Participation, readings, discussions
+
+For students enrolled in 597, the major deliverables and their relative
+weights are:
+
+  - (15%) Project 1 (same as above)
+  - (30%) Project 2 (same as above)
+  - (30%) Project 3 on a topic related to your thesis or master project
+  - (15%) Cloning, reproducing, and evaluating someone else’s project  
   - (10%) Participation, readings, discussions
 
 ## academic accommodations
