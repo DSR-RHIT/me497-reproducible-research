@@ -125,7 +125,8 @@ kable(df)
 
 - [List of candidate projects](cm/cm3201-project-2-candidates.md)
 - [Start-up information](cm/cm3203_project-2_startup.md)
-- [Brief progress schedule](cm/cm3202_project-2_schedule.md)
+- [Brief progress schedule](cm/cm3202_project-2_schedule.md) 
+- [Project checklist](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
 
 
 *Project 3 (597 only)*
@@ -133,7 +134,7 @@ kable(df)
 - [Proposal](cm/cm3301_project-3_start.md) 
 - [Feedback response](cm/cm1015_feedback-response.md) 
 - [Meeting the week-6 goals](cm/cm3302_project-3_meet-week-6-goals.md)
-
+- [Project checklist](http://ropensci.github.io/reproducibility-guide/sections/checklist/) 
 
 
 
@@ -176,7 +177,7 @@ kable(df)
 *Optional reading* 
 
 - [Why you shouldn't use Markdown for documentation](http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/)  
-- [Good enough practices for scientific computing](http://swcarpentry.github.io/good-enough-practices-in-scientific-computing/)
+- [Good enough practices for scientific computing](https://arxiv.org/pdf/1609.00037.pdf)
 - [Facilitating reproducibility in scientific computing: Principles and practice](http://web.stanford.edu/~vcs/papers/reprod2014.pdf)
 - [What computational scientists need to know about intellectual property law: A primer](https://osf.io/yi8k2/) 
 - [Everybody makes mistakes (from Statistics Done Wrong)](resources/readings/Reinhart2015-Ch10-Everybody-makes-mistakes.pdf)

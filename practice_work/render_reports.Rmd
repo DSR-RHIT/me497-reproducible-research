@@ -24,7 +24,7 @@ library(rmarkdown)
 Name the path to the directory that contains the scripts we want to knit.
 
 ```{r}
-path_to_Rmds <- "reports"
+path_to_Rmds <- "reports/"
 ```
 
 
@@ -36,7 +36,7 @@ Use `list.files()` to find all the Rmd scripts in that directory and save them i
 # find all files that end in .Rmd
 report_filenames <- list.files(
 	path = path_to_Rmds
-	, pattern = "\\.Rmd$"
+	, pattern = ".Rmd$"
 	, full.names = TRUE
 )
 

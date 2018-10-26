@@ -985,7 +985,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"F",    # day
 	paste0(	# agenda
-		""
+		"Work on projects"
 	),
 	paste0(	# text
 		"[]()"
@@ -997,7 +997,7 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# projects
-		"[]()"
+		"[Project checklist](http://ropensci.github.io/reproducibility-guide/sections/checklist/)"
 	),
 	paste0(	# due
 		"[]()"
