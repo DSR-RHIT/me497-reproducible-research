@@ -66,24 +66,28 @@ standards](https://www.rose-hulman.edu/campus-life/student-services/registrar/ru
 for example, an “A” is an *honor grade*, a “B” is awarded for *thorough
 competence*, and a “C” indicates that *minimum standards have been met*.
 
-For students enrolled in 497, the major deliverables and their relative
-weights are:
+For all students, 70% of the grade is project work and 30% of the grade
+is for particpation, reading, discussion, and their collaborator role:
+cloning, reproducing, reviewing, and commenting on someone else’s
+reproducible project 2.
 
-  - (25%) Project 1: Recreating one’s own prior report in reproducible
+  - (20%) Collaborator role
+  - (10%) Participation, readings, discussions
+
+Project work for 497 students is weighted:
+
+  - (30%) Project 1: Recreating one’s own prior report in reproducible
     form
   - (40%) Project 2: Major term-project in data gathering, data
-    carpentry, analysis, and reporting
-  - (25%) Cloning, reproducing, and evaluating someone else’s project
-  - (10%) Participation, readings, discussions
+    carpentry, analysis, and milestone documentation
 
-For students enrolled in 597, the major deliverables and their relative
-weights are:
+Project work for 597 students is weighted:
 
-  - (15%) Project 1 (same as above)
-  - (30%) Project 2 (same as above)
-  - (30%) Project 3 on a topic related to your thesis or master project
-  - (15%) Cloning, reproducing, and evaluating someone else’s project  
-  - (10%) Participation, readings, discussions
+  - (16%) Project 1: Recreating one’s own prior report in reproducible
+    form
+  - (27%) Project 2: Major term-project in data gathering, data
+    carpentry, analysis, and milestone documentation
+  - (27%) Project 3 on a topic related to your thesis or master project
 
 ## academic accommodations
 
