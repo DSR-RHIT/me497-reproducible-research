@@ -62,7 +62,7 @@ kable(df)
 - [Tidying a file with multiple data tables](cm/cm5023_jailbreakr.md), reading data from a messy spreadsheet using jailbreakr or readr  
 - [Data tools review](cm/cm5024_data-tools-outline.md) 
 - [String extras](cm/cm5025_strings.md) 
-
+- [Web scrape ASCII data](cm/cm5027_web-scrape-1.md)
 
 
 

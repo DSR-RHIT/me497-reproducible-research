@@ -1009,7 +1009,7 @@ df[le_row, ] <- c(
 	"9",    # week
 	"M",    # day
 	paste0(	# agenda
-		""
+		"Project work"
 	),
 	paste0(	# text
 		"[]()"
@@ -1032,7 +1032,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"T",    # day
 	paste0(	# agenda
-		""
+		"Web scrape ASCII"
 	),
 	paste0(	# text
 		"[]()"
@@ -1041,7 +1041,9 @@ df[le_row, ] <- c(
 		"[]()"
 	),
 	paste0(	# activities
-		"Browse&nbsp;R5"
+		"Browse&nbsp;R5",
+		"<br>",
+		"[Web scrape ASCII data](cm/cm5027_web-scrape-1.md)"
 	),
 	paste0(	# projects
 		"[]()"

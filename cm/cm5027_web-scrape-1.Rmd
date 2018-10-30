@@ -1,0 +1,207 @@
+---
+output: github_document
+bibliography: "../resources/bib-etc/references-rr.bib"
+csl: "../resources/styles/apa.csl"
+link-citations: yes
+--- 
+
+# web-scraping ASCII data 
+
+```{r include = FALSE}
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(fig.width = 6, fig.asp = 1/1.6, out.width = "70%", fig.align = "center", collapse = TRUE)
+```
+
+The purpose of web-scraping is to write scripts to download data from online sources to avoid manual download operations, thereby enhancing the project's reproducibility. 
+
+The packages and functions we might  use depend on the manner in which the data is stored online, e.g., HTML, XML, or a text file with no XML or HTML tags. 
+
+In this example, we have data sets comprised of rows of ASCII text with no additional markup tags. 
+
+```{r}
+library(utils)
+suppressPackageStartupMessages(library(tidyverse))
+```
+
+The sample data are from the Canadian human mortality database [@canadianmortality]. If you select one of the provinces in the left-hand margin (Alberta, in this example), a table of links to data appears. 
+
+```{r echo=FALSE}
+include_graphics("../resources/images/canadian-mortality-1.png")
+```
+
+<br>
+
+Selecting the *Population size* link under the *1 x 1* column takes us to a data page. While population counts would be expected to be integers, the  *Data Explanation* page explains that "Some of these numbers are estimates (not actual counts), and therefore may be expressed as non-integers."
+
+```{r echo=FALSE}
+include_graphics("../resources/images/canadian-mortality-2.png")
+```
+
+<br>
+
+While in this window, we can view the page source code underlying the data table using Crtl-U (Windows) or right-clicking in the window to bring up the menu shown. Select View page source.
+
+```{r echo=FALSE}
+include_graphics("../resources/images/canadian-mortality-3.png")
+```
+
+<br>
+
+In this example, the page source shows no markup (no HTML tags). It is an  ASCII text file. Thus we can use `read.table()` from the utils package. 
+
+
+
+
+
+
+## URL argument with `read.table()`
+
+`read.table()` accepts a URL as the name of the file to be read (Internet connection required). 
+
+From our glimpse of the data earlier, the first two rows are not data and the third row contains the variable names.
+
+```{r}
+url <- "http://www.prdh.umontreal.ca/BDLC/data/alb/Population.txt"
+df  <- read.table(url, skip = 2, header = TRUE, stringsAsFactors = FALSE)
+
+head(df)
+```
+
+For compatibility with later data tidying, we convert the data set to a tibble. 
+
+```{r}
+df <- as_tibble(df)
+
+df
+```
+
+Age is a character because the of the "110+" entry. 
+
+```{r}
+unique(df$Age)
+```
+
+To change Age to a numeric value, we first remove the "+" but must remember that the count represents all ages 110 or more. 
+
+```{r}
+df <- df %>% 
+	mutate(Age = str_replace(Age, "\\+", "")) %>% 
+	mutate(Age = as.numeric(Age))
+
+glimpse(df)
+```
+
+We can filter the tibble if we are interested in specific years, for example, 
+
+```{r}
+df <- df %>% 
+	filter(Year >= 1990 & Year <= 1999)
+
+df
+```
+
+
+
+
+
+
+
+## automating the download for all provinces
+
+In this example, the data for each Canadian province has a unique URL. Examining the naming convention for the data URLs, we find that each is named 
+
+    http://www.prdh.umontreal.ca/BDLC/data/abbr/Population.txt
+
+where `abbr` is the abbreviation for the province. Thus, if we can capture the abbreviations, we do not have to copy and paste all the URLs. Here, I'll use the first three provinces to illustrate the process. 
+
+First, create a tibble row by row using `tribble()`. The abbreviations are found manually from the website. 
+
+```{r}
+province_url <- tribble(
+	~province, ~abbr, 
+	"Newfoundland", "nfl", 
+	"Prince Edward Island", "pei", 
+	"Nova Scotia", "nsc")
+
+province_url
+```
+
+
+Then create the URL string using the abbreviation, 
+
+```{r}
+province_url <- province_url %>% 
+	mutate(url = str_c("http://www.prdh.umontreal.ca/BDLC/data/", abbr, "/Population.txt"))
+
+province_url
+```
+
+Use a for loop to read each data set one at a time and bind it to the collected data frame and add the province abbreviation to the data frame. (
+The loop could be vectorized using functions from the purrr package. 
+)
+
+```{r}
+# empty df to collect 
+collect_df <- tribble(
+	~Province, ~Year, ~Age, ~Female, ~Male, ~Total
+	) 
+
+for (j in seq_along(province_url)){
+	
+	abbr <- province_url$abbr[j]
+	url  <- province_url$url[j]
+	df   <- read.table(url, skip = 2, header = TRUE, stringsAsFactors = FALSE)
+	df   <- as_tibble(df) %>% 
+		mutate(Province = abbr)
+
+	collect_df <- bind_rows(collect_df, df)
+	
+}
+```
+
+Then apply the data tidying to the full data frame. I recomputed the Total so it would be consistent with the rounded integer counts. 
+
+```{r}
+collect_df <- collect_df %>% 
+  	mutate(Age = str_replace(Age, "\\+", "")) %>% 
+  	mutate(Age = as.numeric(Age)) %>% 
+  	mutate(Female = round(Female, 0), 
+           Male   = round(Male, 0), 
+           Total  = Male + Female) %>% 
+  	filter(Year >= 1990 & Year <= 1999) 
+
+glimpse(collect_df)
+```
+
+
+Use `complete()` to create explicit NAs for any missing observations by province, year, and age. 
+
+```{r}
+df <- df %>% 
+  complete(Province, Year, Age)
+```
+
+Check for NA in each column 
+
+```{r}
+# apply to columns (MARGIN = 2)
+apply(df, MARGIN = 2, function(x) any(is.na(x)))
+```
+
+Examine the result
+
+```{r}
+head(collect_df)
+
+tail(collect_df)
+
+glimpse(collect_df)
+```
+
+With 111 age groups, 10 years, and three provinces, the number of rows is correct. 
+
+
+## references
+
+
