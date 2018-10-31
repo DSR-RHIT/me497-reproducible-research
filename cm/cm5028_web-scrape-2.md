@@ -398,7 +398,8 @@ head(df, n = 12L)
 Try splitting the columns on the dollar sign.
 
 ``` r
-df <- separate(df, col = state, into = c("state", year), sep = "[$]")
+df <- df %>% 
+    separate(col = state, into = c("state", year), sep = "[$]")
 glimpse(df)
 ## Observations: 50
 ## Variables: 8
