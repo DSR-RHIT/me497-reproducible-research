@@ -120,7 +120,7 @@ First, create a tibble row by row using `tribble()`. The abbreviations are found
 ```{r}
 province_url <- tribble(
 	~province, ~abbr, 
-	"Newfoundland", "nfl", 
+	"Newfoundland", "alb", 
 	"Prince Edward Island", "pei", 
 	"Nova Scotia", "nsc")
 
