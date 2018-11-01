@@ -421,15 +421,17 @@ df <- df %>%
     mutate(year = as.integer(year)) %>% 
     mutate(state = str_trim(state)) %>% 
     mutate(price = str_trim(price)) %>% 
+    arrange(year, state) %>% 
     glimpse()
 ## Observations: 350
 ## Variables: 3
 ## $ state <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California"...
-## $ year  <int> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
-## $ price <chr> "85,100", "144,200", "121,300", "72,800", "211,500", "16...
+## $ year  <int> 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 19...
+## $ price <chr> "16,800", "NA", "14,600", "11,400", "36,700", "21,800", ...
 ```
 
-Remove the comma from price, omit NA rows, convert price to numeric.
+To convert price to numerical values, I have to remove the comma and NA
+values.
 
 ``` r
 df <- df %>%
@@ -439,76 +441,29 @@ df <- df %>%
     glimpse()
 ## Observations: 348
 ## Variables: 3
+## $ state <chr> "Alabama", "Arizona", "Arkansas", "California", "Colorad...
+## $ year  <int> 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 19...
+## $ price <int> 16800, 14600, 11400, 36700, 21800, 48000, 43300, 23100, ...
+```
+
+To ensure that missing values are explicit, use `complete()` to
+re-insert explicit NAs.
+
+``` r
+df <- df %>% 
+    complete(state, year) %>% 
+    arrange(year, state) %>% 
+    glimpse()
+## Observations: 350
+## Variables: 3
 ## $ state <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California"...
-## $ year  <int> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
-## $ price <int> 85100, 144200, 121300, 72800, 211500, 166600, 166900, 13...
+## $ year  <int> 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 19...
+## $ price <int> 16800, NA, 14600, 11400, 36700, 21800, 48000, 43300, 231...
 ```
 
 These data are tidy
 
-## analysis
-
-For the analysis, we only need the year 2000 data
-
-``` r
-df <- df %>% 
-    filter(year == 2000)
-
-kable(df)
-```
-
-| state          | year |  price |
-| :------------- | ---: | -----: |
-| Alabama        | 2000 |  85100 |
-| Alaska         | 2000 | 144200 |
-| Arizona        | 2000 | 121300 |
-| Arkansas       | 2000 |  72800 |
-| California     | 2000 | 211500 |
-| Colorado       | 2000 | 166600 |
-| Connecticut    | 2000 | 166900 |
-| Delaware       | 2000 | 130400 |
-| Florida        | 2000 | 105500 |
-| Georgia        | 2000 | 111200 |
-| Hawaii         | 2000 | 272700 |
-| Idaho          | 2000 | 106300 |
-| Illinois       | 2000 | 130800 |
-| Indiana        | 2000 |  94300 |
-| Iowa           | 2000 |  82500 |
-| Kansas         | 2000 |  83500 |
-| Kentucky       | 2000 |  86700 |
-| Louisiana      | 2000 |  85000 |
-| Maine          | 2000 |  98700 |
-| Maryland       | 2000 | 146000 |
-| Massachusetts  | 2000 | 185700 |
-| Michigan       | 2000 | 115600 |
-| Minnesota      | 2000 | 122400 |
-| Mississippi    | 2000 |  71400 |
-| Missouri       | 2000 |  89900 |
-| Montana        | 2000 |  99500 |
-| Nebraska       | 2000 |  88000 |
-| Nevada         | 2000 | 142000 |
-| New Hampshire  | 2000 | 133300 |
-| New Jersey     | 2000 | 170800 |
-| New Mexico     | 2000 | 108100 |
-| New York       | 2000 | 148700 |
-| North Carolina | 2000 | 108300 |
-| North Dakota   | 2000 |  74400 |
-| Ohio           | 2000 | 103700 |
-| Oklahoma       | 2000 |  70700 |
-| Oregon         | 2000 | 152100 |
-| Pennsylvania   | 2000 |  97000 |
-| Rhode Island   | 2000 | 133000 |
-| South Carolina | 2000 |  94900 |
-| South Dakota   | 2000 |  79600 |
-| Tennessee      | 2000 |  93000 |
-| Texas          | 2000 |  82500 |
-| Utah           | 2000 | 146100 |
-| Vermont        | 2000 | 111500 |
-| Virginia       | 2000 | 125400 |
-| Washington     | 2000 | 168300 |
-| West Virginia  | 2000 |  72800 |
-| Wisconsin      | 2000 | 112200 |
-| Wyoming        | 2000 |  96600 |
+## conclusion
 
 This data frame can be written to file
 
@@ -517,3 +472,31 @@ This data frame can be written to file
 or to an RDS data file,
 
     saveRDS(df, "data/house_price.rds")
+
+By limiting the scope of this script to data acquisition and tidying, we
+write the entire data frame to file.
+
+## the next script
+
+We would generally start any additional subsetting of the data to the
+next script. We start by reading the CSV file,
+
+    df <- read_csv("data/house_price.csv")
+
+or the RDS file,
+
+    df <- readRDS("data/house_price.rds")
+
+This is the point at which we would filter by year if, for example, the
+analysis was focused on a specific year.
+
+``` r
+df <- df %>% 
+    filter(year == 2000) %>% 
+    glimpse
+## Observations: 50
+## Variables: 3
+## $ state <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California"...
+## $ year  <int> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
+## $ price <int> 85100, 144200, 121300, 72800, 211500, 166600, 166900, 13...
+```

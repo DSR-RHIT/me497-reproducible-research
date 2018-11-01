@@ -193,10 +193,11 @@ df <- df %>%
 	mutate(year = as.integer(year)) %>% 
 	mutate(state = str_trim(state)) %>% 
 	mutate(price = str_trim(price)) %>% 
+	arrange(year, state) %>% 
 	glimpse()
 ```
 
-Remove the comma from price, omit NA rows, convert price to numeric. 
+To  convert price to numerical values, I have to  remove the comma and NA values. 
 
 ```{r}
 df <- df %>%
@@ -206,18 +207,18 @@ df <- df %>%
 	glimpse()
 ```
 
-These data are tidy
-
-## analysis
-
-For the analysis, we only need the year 2000 data
+To ensure that missing values are explicit, use `complete()` to re-insert explicit NAs. 
 
 ```{r}
 df <- df %>% 
-	filter(year == 2000)
-
-kable(df)
+	complete(state, year) %>% 
+	arrange(year, state) %>% 
+	glimpse()
 ```
+
+These data are tidy
+
+## conclusion
 
 This data frame can be written to file 
 
@@ -227,7 +228,26 @@ or to an RDS data file,
 
     saveRDS(df, "data/house_price.rds")
 
+By limiting the scope of this script to data acquisition and tidying, we write the entire data frame to file.
 
 
 
+
+## the next script 
+
+We would generally start any additional subsetting of the data to the next script. We start by reading the CSV file,  
+
+    df <- read_csv("data/house_price.csv")
+
+or the RDS file, 
+
+    df <- readRDS("data/house_price.rds")
+
+This is the point at which we would filter by year if, for example, the analysis was focused on a specific year. 
+
+```{r}
+df <- df %>% 
+	filter(year == 2000) %>% 
+	glimpse
+```
 
