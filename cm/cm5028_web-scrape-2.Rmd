@@ -119,11 +119,11 @@ These data are not tidy: years are spread across as column headings. Extract the
 
 ```{r}
 year_row <- which(str_detect(webdata, "2000"))[1]
-year     <- str_squish(webdata[year_row])
-year
+year_row     <- str_squish(webdata[year_row])
+year_row
 
-year <- unlist(str_split(year, " "))
-year
+year_row <- unlist(str_split(year_row, " "))
+year_row
 ```
 
 This data set has two major chunks: the upper chunk in constant dollars (adjusted for inflation) and the lower chunk in nominal dollars (not adjusted for inflation). Comparisons should always be made in constant dollars, so we need only the top chunk. 
@@ -181,7 +181,7 @@ Try splitting the columns on the dollar sign.
 
 ```{r}
 df <- df %>% 
-	separate(col = state, into = c("state", year), sep = "[$]")
+	separate(col = state, into = c("state", year_row), sep = "[$]")
 glimpse(df)
 ```
 

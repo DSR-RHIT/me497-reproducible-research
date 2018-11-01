@@ -261,12 +261,12 @@ column names of the tibble to come.
 
 ``` r
 year_row <- which(str_detect(webdata, "2000"))[1]
-year     <- str_squish(webdata[year_row])
-year
+year_row     <- str_squish(webdata[year_row])
+year_row
 ## [1] "2000 1990 1980 1970 1960 1950 1940"
 
-year <- unlist(str_split(year, " "))
-year
+year_row <- unlist(str_split(year_row, " "))
+year_row
 ## [1] "2000" "1990" "1980" "1970" "1960" "1950" "1940"
 ```
 
@@ -399,7 +399,7 @@ Try splitting the columns on the dollar sign.
 
 ``` r
 df <- df %>% 
-    separate(col = state, into = c("state", year), sep = "[$]")
+    separate(col = state, into = c("state", year_row), sep = "[$]")
 glimpse(df)
 ## Observations: 50
 ## Variables: 8
