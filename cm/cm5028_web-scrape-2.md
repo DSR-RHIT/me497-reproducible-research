@@ -17,6 +17,17 @@ Census
 
 <img src="../resources/images/census-housing-1.png" width="70%" style="display: block; margin: auto;" />
 
+<br>
+
+The outline of the process to obtain data from an HTML source is
+
+  - `read_html()` to read one online page identified by a URL
+  - Manually use SelectorGadget to determine the CSS selector of the
+    data on the page  
+  - `html_nodes()` to extract the data  
+  - `html_text()` to convert the result to a single text string
+  - Conventional tidyverse functions to transform and tidy the data
+
 ## getting started
 
 The basic methodology is adapted from an RStudio [blog
@@ -42,7 +53,7 @@ bar.
 
 <img src="../resources/images/census-housing-2.png" width="70%" style="display: block; margin: auto;" />
 
-## work with the HTML page
+## `read_html()`
 
 `read_html()` is a function in **xml2**. The argument is the URL of the
 online data set, in this case,
@@ -58,23 +69,26 @@ webdata
 ## [2] <body>\n\n<script language="JavaScript">\r\n<!--\r\n\r\nfunction WM_ ...
 ```
 
-To use *SelectorGadget* interactively, open your browser and:
+## `html_nodes()`
+
+We use *SelectorGadget* to interactively find the CSS selector that tags
+our data. The result is used as the argument for the `html_nodes()`
+function.
+
+Open your browser and:
 
   - Navigate to the data URL, in this case,
     <https://www.census.gov/hhes/www/housing/census/historic/values.html>
   - In this window, click on the selector gadget in the browser
     bookmarks
-  - Move down to the data and click
-  - In the window at the bottom of the page, the selector appears
+  - Move your cursor to the location of the data and select the data
+  - In the window at the bottom of the page, the selector appears (in
+    this example, the results is `pre`))
   - For selecting more than one or toggling selections on and off, see
     the detailed tutorial at the [SelectorGadget
     vignette](https://cran.r-project.org/web/packages/rvest/vignettes/selectorgadget.html).
 
-In this case the selector is `pre`.
-
-## use the CSS selector
-
-The CSS selector is the argument for `html_nodes()`.
+Use the selector(s) you found as the `html_nodes()` argument.
 
 ``` r
 webdata <- webdata %>%
@@ -85,9 +99,9 @@ webdata
 ## [1] <pre>\nMedian Home Values\n\n                     2000      1990     ...
 ```
 
-## data transformation
+## `html_text()`
 
-First we convert the webdata object to a single text string using
+Convert the webdata object to a single text string using
 `rvest::html_text()`.
 
 ``` r
@@ -97,6 +111,8 @@ webdata <- webdata %>%
 str(webdata)
 ##  chr "\nMedian Home Values\n\n                     2000      1990      1980      1970     1960     1950    1940\n\n  "| __truncated__
 ```
+
+## data transformation
 
 The string includes newline tags (`\n`) that we can use to separate the
 one long string into a vector of strings.
@@ -452,13 +468,23 @@ re-insert explicit NAs.
 ``` r
 df <- df %>% 
     complete(state, year) %>% 
-    arrange(year, state) %>% 
-    glimpse()
-## Observations: 350
-## Variables: 3
-## $ state <chr> "Alabama", "Alaska", "Arizona", "Arkansas", "California"...
-## $ year  <int> 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 1940, 19...
-## $ price <int> 16800, NA, 14600, 11400, 36700, 21800, 48000, 43300, 231...
+    arrange(year, state)
+
+df
+## # A tibble: 350 x 3
+##    state        year price
+##    <chr>       <int> <int>
+##  1 Alabama      1940 16800
+##  2 Alaska       1940    NA
+##  3 Arizona      1940 14600
+##  4 Arkansas     1940 11400
+##  5 California   1940 36700
+##  6 Colorado     1940 21800
+##  7 Connecticut  1940 48000
+##  8 Delaware     1940 43300
+##  9 Florida      1940 23100
+## 10 Georgia      1940 20400
+## # ... with 340 more rows
 ```
 
 These data are tidy
