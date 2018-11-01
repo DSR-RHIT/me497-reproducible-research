@@ -487,11 +487,7 @@ df
 ## # ... with 340 more rows
 ```
 
-These data are tidy
-
-## conclusion
-
-This data frame can be written to file
+These data are tidy. This data frame can be written to file
 
     write_csv(df, "data/house_price.csv")
 
@@ -501,6 +497,18 @@ or to an RDS data file,
 
 By limiting the scope of this script to data acquisition and tidying, we
 write the entire data frame to file.
+
+## conclusion
+
+Obtaining our data by webscraping will sometimes require a manual step
+or two, making it not fully reproducible. As Christopher Gangrud
+([2014](#ref-gandrud2015), p. 126) observes,
+
+> The techniques we can use to gather online data also make it easy to
+> update our data when new information becomes available. Of course, it
+> may not always be possible to have really reproducible data gathering.
+> Nonetheless, you should always aim to make it clear to others (and
+> yourself) how you gathered your data.
 
 ## the next script
 
@@ -526,3 +534,16 @@ df <- df %>%
 ## $ year  <int> 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 20...
 ## $ price <int> 85100, 144200, 121300, 72800, 211500, 166600, 166900, 13...
 ```
+
+## references
+
+<div id="refs" class="references">
+
+<div id="ref-gandrud2015">
+
+Gandrud, C. (2014). *Reproducible Research with R and RStudio, 2/e*. CRC
+Press, Taylor & Francis Group.
+
+</div>
+
+</div>

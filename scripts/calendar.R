@@ -1080,7 +1080,7 @@ df[le_row, ] <- c(
 	"",     # week
 	"F",    # day
 	paste0(	# agenda
-		""
+		"Work on projects"
 	),
 	paste0(	# text
 		"[]()"
