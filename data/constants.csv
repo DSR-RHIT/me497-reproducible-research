@@ -1,0 +1,6 @@
+quantity,value,units
+$D$,12.1,mm
+$L$,20,cm
+$\rho$,1000,kg/m3
+$\epsilon$,0.0015,mm
+$\mu$,0.00089,Pa-s

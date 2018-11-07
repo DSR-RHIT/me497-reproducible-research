@@ -1,0 +1,256 @@
+\documentclass{tufte-handout}
+% this is the tufte-hound.cls "class" of document
+
+\title[friction factor]{Experimental determination of friction factor}
+\date{2018--10--31}
+\author{Richard Layton}
+
+% packages
+\usepackage{amsmath}
+\usepackage{fdsymbol} % for \middlebar
+\usepackage{booktabs} % with xtable, does nice spacing
+
+% custom commands
+\newcommand{\Vdot}{\overset{.}{\middlebar{V}}}
+
+\begin{document}
+
+\bibliographystyle{plain}
+% \nobibliography{../resources/bib-etc/project_1}
+\maketitle
+
+<<echo=FALSE, >>=
+library(knitr)
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+suppressPackageStartupMessages(library(tidyverse))
+library(xtable)
+options(xtable.comment = FALSE)
+options(xtable.booktabs = TRUE)
+@
+
+
+
+\section{Introduction}
+
+To partially fulfill our course requirements for ME 321 Measurement Systems, we planned and conducted an experiment to determine the friction factor of a straight PVC pipe. The apparatus is an Armfield flow bench instrumented for measuring pressure and flow rate. The experiment findings are compared to published values in a Moody chart. Results within 30\% of expected values are considered successful.
+
+
+
+\section{Apparatus}
+
+The apparatus, illustrated in Figure~\ref{fig-flow-bench},  is an Armfield flow bench. Water in the reservoir is pumped through the piping system and drains back into the reservoir. The pump speed is adjustable. A flow meter is used to measure flow rate. Two manometers 20 cm apart are used to determine the pressure difference between the two points at steady flow.
+
+\begin{figure}
+\caption{Configuration of the flow bench}
+\label{fig-flow-bench}
+\includegraphics{../resources/images/010_flow-bench-configuration.png}
+\end{figure}
+\FloatBarrier
+
+
+
+\section{Modeling}
+
+The fluid is water at room temperature, so incompressible flow is safely assumed. The relevant model for the pressure difference between the two pressure taps is given by the Darcy-Weisbach equation\cite{gerhart},
+  \begin{equation}\label{darcy-weisbach}
+  \Delta{p} = f \frac{L}{D} \frac{\rho v^2}{2}
+  \end{equation}
+where $L$ is length between pressure taps, $D$ is the pipe inner diameter, $v$ is the fluid velocity, and $f$ is the friction factor, as illustrated in Figure~\ref{data-schematic}
+
+\begin{figure}
+\caption{Illustrating the variables that appear in the data reduction equation}
+\label{data-schematic}
+\includegraphics{../resources/images/011_illustration-data-reduction-eqn.jpg}
+\end{figure}
+\FloatBarrier
+
+We rearrange (\ref{darcy-weisbach}) to obtain an expression the experimental friction factor $f$,
+  \begin{equation}\label{fricfac-1}
+  f = \Delta p \frac{D}{L} \frac{2}{\rho v^2},
+  \end{equation}
+where $D$ and $L$ are measurands.
+
+The gage pressure at the base of each manometer is given by $\rho gh$, where $\rho$ is the fluid density and $h$ is the height of the fluid in the manometer. Thus $\Delta p$ is given by
+  \begin{equation}\label{delta-p}
+  \Delta p = \rho g (h_1 - h_2)
+  \end{equation}
+where $h_1$ and $h_2$ are measurands.
+
+Flow rate $\Vdot = Av$, where $A$ is the pipe cross-sectional area and $\Vdot$ is a measurand. Thus velocity is given by
+  \begin{equation}\label{velocity}
+  v = \frac{\Vdot}{A}.
+  \end{equation}
+
+Substituting (\ref{delta-p}) and (\ref{velocity}) into (\ref{fricfac-1}) and expressing area $A$ in terms of the pipe diameter $D$ yields the data reduction equation for $f$,
+  \begin{equation}\label{fricfac-2}
+  f = \left( \frac{g \pi^2 D^5}{8L} \right)
+  \left( \frac{h_1 - h_2}{\Vdot^2} \right),
+  \end{equation}
+in which the first parenthetical term is constant and the second parenthetical term depends on the measurands $(h_1, h_2, \Vdot)$.
+
+Friction factor is usually displayed in a Moody chart as a function of Reynolds number $Re$. For a circular pipe,
+  \begin{equation}\label{Re-1}
+  Re = \frac{\rho D}{\mu} v,
+  \end{equation}
+where $\mu$ is the dynamic viscosity of the fluid. Substituting (\ref{velocity} for velocity and expressing area $A$ in terms of the pipe diameter $D$ yields an expression for Reynolds number in terms of the measurands,
+  \begin{equation}\label{Re-2}
+  Re = \left( \frac{4 \rho}{\pi D \mu} \right)\Vdot,
+  \end{equation}
+
+We compute $f$ and $Re$ and compare our results to published values from a Moody chart.
+
+
+
+\section{Procedure}
+
+The test sequence is based on ten trials of three operating conditions. The operating conditions are a low, medium, and high flow rate (determined by the pump speeds available that produce steady flow). In this case, the three flow rates are approximately 1.5, 2.5, and 3.5 gallons per minute. Ten observations are planned for each flow rate and the test sequence is randomized.
+
+For each observation, the pump motor speed is adjusted until flow rate is steady at the desired rate. Manometer readings for that observation are recorded.
+
+Calipers are used to measure $D$ and a tape measure is used to measure $L$.
+
+shown in Figure~\ref{procedure},
+
+\begin{figure}
+\caption{Elements of the apparatus important for the procedure}
+\label{procedure}
+\includegraphics{../resources/images/012_apparatus-elements.jpg}
+\end{figure}
+\FloatBarrier
+
+
+
+\section{Data}
+
+The thirty observations are shown in Table~\ref{data}. The data have been organized by flow rate.
+
+<<>>=
+data <- read.csv("data/complete-experimental-data.csv")
+data <- data[-1, ] # units
+
+caption    <- "Manometer measurements at three flow rates"
+data_table <- xtable(data, caption = caption, label = "data")
+
+addtorow     <- list()
+addtorow$pos <- list(0, 0)
+addtorow$command <- c(
+	"$\\Vdot$ & $h_1$ & $h_2$ & $\\Vdot$ & $h_1$ & $h_2$ & $\\Vdot$ & $h_1$ & $h_2$ \\\\\n"
+, "(gpm) & (mm) & (mm) & (gpm) & (mm) & (mm) & (gpm) & (mm) & (mm) \\\\\n"
+)
+@
+
+<<results='asis'>>=
+print(data_table
+      , size = "small"
+      , include.rownames = FALSE
+			, include.colnames = FALSE
+			, add.to.row = addtorow
+)
+@
+
+Table~\ref{properties} lists one-time measurands and reference look-up values for PVC pipe roughness and water properties\cite{toolbox}. Published values for PVC pipe roughness are on the range $0.0015 \leq \epsilon \leq 0.007$ mm. We assume the lowest value is reasonable given that the pipe in the apparatus is in good condition.
+
+<<>>=
+# options(scipen = 999)
+data <- read_csv("data/constants.csv")  %>%
+	mutate(units = str_replace(units, "kg/m3","kg/m$^3$")) %>%
+	mutate(value = as.character(value)) %>%
+	mutate(value = str_c(value, units, sep = " ")) %>%
+	select(-units) %>%
+	mutate(Quantity = c("pipe diameter", "pipe length", "water density", "pipe roughness", "water dynamic viscosity")) %>%
+	select(Quantity, quantity, value) %>%
+	rename(Symbol = quantity, Value = value)
+
+caption    <- "One-time measurements and reference properties"
+data_table2 <- xtable(data
+										, caption = caption
+										, label = "properties"
+										, align = c("l", "l", "c", "r") # one more than Ncol
+)
+@
+
+<<results='asis'>>=
+print(data_table2
+      , size = "small"
+      , include.rownames = FALSE
+			, include.colnames = TRUE
+			# , add.to.row = addtorow
+			, sanitize.text.function = function(x){x} # to print math mode
+)
+@
+
+\section{Analysis}
+
+For each flow rate, a Thompson tau test\cite{thompson} is performed to identify potential outliers. The test is repeated for each flow rate.
+
+For every trial, friction factor (\ref{fricfac-2}) and Reynolds number (\ref{Re-2}) are computed. At each of the three operating conditions (low, medium, and high flow rate) a mean friction factor and mean Reynolds number are determined.
+
+These three mean values are graphed on a conventional Moody chart for comparison to expected values and a percent difference from expected values is determined.
+
+
+
+\section{Results}
+
+The outlier tests were negative. All data in Table~\ref{data} were used in the analysis.
+
+Average results for friction factor and Reynolds number at each operating condition are shown in Table 3.
+
+<<>>=
+data <- read_csv("results/mean-fricfac-reynum.csv")
+names(data) <- c("Flowrate", "gpm", "$f$", "Re")
+
+data <- data %>%
+	mutate(Flowrate = tolower(Flowrate)) %>%
+	rename("Flow condition" = Flowrate)
+
+caption    <- "Mean friction factor and Reynolds number at three operating conditions"
+data_table3 <- xtable(data
+										, caption = caption
+										, label = "results"
+										, digits = c(0, 0, 1, 3, 0)
+										, align = c("l", "l", "r", "r", "r") # one more than Ncol
+)
+@
+
+
+<<results='asis'>>=
+print(data_table3
+      , size = "small"
+      , include.rownames = FALSE
+			, include.colnames = TRUE
+			, sanitize.text.function = function(x){x} # to print math mode
+)
+@
+
+\bigskip
+
+The results show that as flow rate increases, the Reynolds number increases. This agrees with expectations because $Re$ is a function of fluid velocity.
+
+As flow rate increases the experimental friction factor decreases. This too agrees with expectations as illustrated in the Moody chart.
+
+In Figure~\ref{moody}, the results are superimposed on a Moody chart\cite{davis}. Circles are data; triangles are published values.
+
+\begin{figure*}
+\includegraphics[width=0.6\linewidth, angle=270]{../resources/images/013_moody-diagram-w-data.png}
+\vspace*{5mm}
+\caption{Comparing experimental results to published values. Circles are data; triangles are published values.\label{moody}}
+\end{figure*}
+\FloatBarrier
+
+\newpage
+Overall, the experimental friction factors are higher than expected, though all  values are within 30\% of the expected values---an acceptable result in fluids experiments of this type.
+
+
+
+\section{Conclusion}
+
+The goal of this experiment was to determine friction factor of a straight pipe. That goal was achieved for three flow rates. Percent differences to expected values are within 30\% and relative uncertainties are within 30\%. Both are acceptable norms for experiments of this type.
+
+
+\bibliography{../resources/bib-etc/project_1}
+
+% Rnw does not accept CSL for formatting bibliography
+% use \bibliographystyle{}
+\end{document}

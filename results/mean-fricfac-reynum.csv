@@ -1,0 +1,4 @@
+Flow rate level,Flow rate (gpm),Mean friction factor,Reynolds number
+Low,1.5,0.044,1.12e+04
+Medium,2.5,0.0383,1.86e+04
+High,3.5,0.0347,2.61e+04
