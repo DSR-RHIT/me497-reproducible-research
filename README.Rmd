@@ -1,8 +1,7 @@
 ---
-output: github_document
-bibliography: "resources/bib-etc/references-rr.bib"
-csl: "resources/styles/jpr.csl"
-link-citations: yes
+output:
+  html_document:
+    css: resources/styles/kable.css
 ---
 
 ```{r include=FALSE}
@@ -37,9 +36,9 @@ source("scripts/auto-calendar.R")
 # kable(df)
 ```
 
-<small>
+
 `r kable(df)`
-</small>
+
 
 
 
