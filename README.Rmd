@@ -1,7 +1,8 @@
 ---
-output:
-  html_document:
-    css: resources/styles/kable.css
+output: github_document
+bibliography: "resources/bib-etc/references-rr.bib"
+csl: "resources/styles/jpr.csl"
+link-citations: yes
 ---
 
 ```{r include=FALSE}
@@ -31,13 +32,12 @@ opts_chunk$set(echo=FALSE)
 Readings in the text refer to sections in the the online version. 
 
 ```{r}
-# source("scripts/calendar.R")
-source("scripts/auto-calendar.R")
-# kable(df)
+source("scripts/calendar.R")
+# source("scripts/auto-calendar.R")
+kable(df)
 ```
 
 
-`r kable(df)`
 
 
 
