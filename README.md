@@ -19,8 +19,6 @@ by Richard Layton at Rose-Hulman Institute of Technology.
 Readings in the text refer to sections in the the online
 version.
 
-<font size="-2">
-
 | week | day | agenda                                                                                | text                                                                                        | exercise | activity                                                                                                                                                                                                                                | project                                                                                   | due      |
 | :--- | :-- | :------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------ | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :------- |
 | 1    | M   | Course introduction \[[S](slides/cm4001_introduction.pdf)\]<br>Review calendar        | [1.1 – 1.6](http://r4ds.had.co.nz/introduction.html)                                        |          | [Read syllabus](cm/cm0003_syllabus.md)<br>[Install R & RStudio](cm/cm1001_install-R-RStudio.md)<br>[Install git](cm/cm1002_install-git.md)<br>[Create library](cm/cm1003_library.md)                                                    | [Meet 597](cm/cm3301_project-3_start.md)                                                  | Meet 597 |
@@ -63,8 +61,6 @@ version.
 |      | T   |                                                                                       |                                                                                             |          |                                                                                                                                                                                                                                         |                                                                                           |          |
 |      | R   |                                                                                       |                                                                                             |          |                                                                                                                                                                                                                                         |                                                                                           |          |
 |      | F   |                                                                                       |                                                                                             |          |                                                                                                                                                                                                                                         |                                                                                           |          |
-
-</font>
 
 # index
 

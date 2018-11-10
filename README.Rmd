@@ -1,6 +1,6 @@
 ---
 output: github_document
-bibliography: "resources/bib-etc//references-rr.bib"
+bibliography: "resources/bib-etc/references-rr.bib"
 csl: "resources/styles/jpr.csl"
 link-citations: yes
 ---
@@ -26,6 +26,7 @@ opts_chunk$set(echo=FALSE)
 
 ![](resources/images/rr-flow-2.png)
 
+
 ## calendar 
 
 Readings in the text refer to sections in the the online version. 
@@ -33,11 +34,11 @@ Readings in the text refer to sections in the the online version.
 ```{r}
 # source("scripts/calendar.R")
 source("scripts/auto-calendar.R")
+kable(df)
 ```
 
-<font size="-2">
-`r kable(df)`
-</font>
+
+
 
 
 
