@@ -34,10 +34,12 @@ Readings in the text refer to sections in the the online version.
 ```{r}
 # source("scripts/calendar.R")
 source("scripts/auto-calendar.R")
-kable(df)
+# kable(df)
 ```
 
-
+<small>
+`r kable(df)`
+</small>
 
 
 
