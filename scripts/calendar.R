@@ -63,6 +63,8 @@ df[le_row, ] <- c(
 		"Meet&nbsp;597"
 	)
 )
+
+
 le_row <- le_row + 1 # ----- day
 df[le_row, ] <- c(
 	"",     # week

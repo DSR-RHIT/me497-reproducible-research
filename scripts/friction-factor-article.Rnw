@@ -1,0 +1,31 @@
+\documentclass{article}
+
+% preamble
+\title{Experimental determination of friction factor}
+\author{Richard Layton}
+\date{2018--10--31}
+
+\begin{document}
+\maketitle{}
+
+\section{Introduction}
+
+An experiment is conducted to determine the friction factor of a straight PVC pipe. The apparatus is an Armfield flow bench instrumented for measuring pressure and flow rate. The experiment findings are compared to published values in a Moody chart. Results within 30\% of expected values are considered successful.
+
+\section{Apparatus}
+
+The apparatus, illustrated in Figure~\ref{fig-flow-bench}, is an Armfield flow bench. Water in the reservoir is pumped through the piping system and drains back into the reservoir. The pump speed is adjustable. A flow meter is used to measure flow rate. Two manometers 20 cm apart are used to determine the pressure difference between the two points at steady flow.
+
+\begin{figure}
+\centering
+\includegraphics{../resources/images/010_flow-bench-configuration.png}
+\caption{Configuration of the flow bench\label{fig-flow-bench}}
+\end{figure}
+
+
+
+
+
+
+
+\end{document}

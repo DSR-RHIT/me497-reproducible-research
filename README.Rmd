@@ -1,7 +1,7 @@
 ---
 output: github_document
-bibliography: "scripts/references-rr.bib"
-csl: "scripts/jpr.csl"
+bibliography: "resources/bib-etc//references-rr.bib"
+csl: "resources/styles/jpr.csl"
 link-citations: yes
 ---
 
@@ -31,11 +31,13 @@ opts_chunk$set(echo=FALSE)
 Readings in the text refer to sections in the the online version. 
 
 ```{r}
-source("scripts/calendar.R")
-kable(df)
+# source("scripts/calendar.R")
+source("scripts/auto-calendar.R")
 ```
 
-
+<font size="-1">
+`r kable(df)`
+</font>
 
 
 

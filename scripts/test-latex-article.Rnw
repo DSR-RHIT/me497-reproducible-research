@@ -1,0 +1,16 @@
+\documentclass{article}
+
+% preamble
+\title{Experimental determination of friction factor}
+\author{Richard Layton}
+\date{2018--10--31}
+
+\begin{document}
+\maketitle{}
+
+
+
+
+
+
+\end{document}
