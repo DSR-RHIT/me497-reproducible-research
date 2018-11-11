@@ -3,30 +3,41 @@
 
 *What is reproducible research?*
 
-Reproducible research is about explicitly linking a technical report,
-paper, or talk to the software, scripts, and data files that generate
-the findings.
+Reproducible research comprises a set of software tools and workflow
+practices that can improve your productivity over the lifetime of a
+project, especially for data-intensive, computationally-intensive work.
+Reproducible research is about explicitly linking the data files and
+computer code that generate your findings to the technical documents and
+presentations in which you present your findings.
 
-![](../resources/images/rr-flow-2.png)
-
-Learn to write explicitly connected scripts to link your prose to the
-computing that performs data carpentry and analysis, creates data
-graphics and tables of results, and places the results directly in the
-output document.
-
-Cut and paste no more\!
+<img src="../resources/images/rr-flow-3.png" width="60%" />
 
 *Why you?*
 
-  - You know that your workflow is disorganized but you don’t know what
-    to do about it  
-  - You redo your analysis and graphs, and copy and paste them into a
-    document—again and again  
-  - You enjoy making software do your bidding and ultimately saving time
-    over the life of a project
+You sense that your effectiveness on computationally-intensive projects
+could be improved if you knew better how to
+
+  - automate typically manual operations such as copying-and-pasting
+    results from one software package to another
+  - use version control to keep track of changes and return to earlier
+    versions if necessary
+  - organize your work to save time when work has to be revised or
+    repeated
+  - manage the seemingly endless growth of the number of files
+  - reproduce your own work when revisiting it after a hiatus
+
+*What are the costs?*
+
+The costs are your time and effort to
+
+  - learn, adopt, and use the tools and practices
+  - collaborate with others not using reproducible methods
 
 *Who benefits?*
 
-  - Your future self  
-  - Your collaborators  
-  - Your organization
+Even if no one ever attempts to reproduce your work, you will. Thus the
+primary beneficiaries are
+
+  - your future self  
+  - your collaborators  
+  - your organization
