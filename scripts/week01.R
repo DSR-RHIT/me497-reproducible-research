@@ -6,7 +6,7 @@ df <- assign_lesson(
 		"Review calendar",
 		sep = "<br>"),
 	itext     = str_c(
-		"[1.1 -- 1.6](http://r4ds.had.co.nz/introduction.html)",
+		"[1.1--1.6](http://r4ds.had.co.nz/introduction.html)",
 		sep = "<br>"),
 	iexercise = str_c(
 		"",
@@ -57,7 +57,7 @@ df <- assign_lesson(
 		"Collaboration basics",
 		sep = "<br>"),
 	itext     = str_c(
-		"[27.1 -- 27.6](http://r4ds.had.co.nz/r-markdown.html)",
+		"[27.1--27.6](http://r4ds.had.co.nz/r-markdown.html)",
 		"[[L](cm/cm5005_how-to-collab.md)]",
 		sep = "<br>"),
 	iexercise = str_c(

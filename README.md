@@ -1,8 +1,8 @@
 
 # reproducible research
 
-497 / 597 Reproducible Research. An introductory course for the R novice
-by Richard Layton at Rose-Hulman Institute of Technology.
+497 / 597 Reproducible Research. An introductory course by Richard
+Layton at Rose-Hulman Institute of Technology.
 
   - [About the course](cm/cm0001_about-the-course.md)  
   - [Syllabus](cm/cm0003_syllabus.md)
@@ -10,14 +10,14 @@ by Richard Layton at Rose-Hulman Institute of Technology.
   - [Help links](cm/cm0004_getting-help.md)  
   - [License](LICENSE.md)
 
-<!-- - [Project due dates](cm/cm002a_deadlines.md)  -->
-
-![](resources/images/rr-flow-2.png)
+<img src="resources/images/rr-flow-3.png" width="60%" />
 
 ## calendar
 
-Readings in the text refer to sections in the the online
-version.
+Text sections refer to the online version of [R for Data
+Science](https://r4ds.had.co.nz/). (The same sections in the printed
+book are numbered
+differently.)
 
 | w  | d | agenda                                                                                                                                                                              | text                                                                                                                                                                                                                                                                                                                                    | exer                                                                                                                                                                                     | activities                                                                                                                                                                                                                              | projects                                                                                                       | due                                                                             |
 | :- | :- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ |
